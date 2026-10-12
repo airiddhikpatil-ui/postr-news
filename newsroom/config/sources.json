@@ -1,0 +1,38 @@
+{
+  "_note": "Every source starts disabled. Before enabling one: open the URL, confirm it is the official feed, read its terms of use, then set enabled to true and termsChecked to the date.",
+  "sources": [
+    {
+      "id": "pib-national-en",
+      "name": "Press Information Bureau (English)",
+      "type": "rss",
+      "url": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+      "region": "IN",
+      "lang": "en",
+      "official": true,
+      "enabled": false,
+      "termsChecked": null
+    },
+    {
+      "id": "rbi-press",
+      "name": "Reserve Bank of India press releases",
+      "type": "rss",
+      "url": "https://www.rbi.org.in/pressreleases_rss.xml",
+      "region": "IN",
+      "lang": "en",
+      "official": true,
+      "enabled": false,
+      "termsChecked": null
+    },
+    {
+      "id": "example-publisher",
+      "name": "Example publisher headlines feed (replace)",
+      "type": "rss",
+      "url": "https://example.com/rss.xml",
+      "region": "IN",
+      "lang": "en",
+      "official": false,
+      "enabled": false,
+      "termsChecked": null
+    }
+  ]
+}

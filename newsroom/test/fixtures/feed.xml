@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Test feed</title>
+<item><title><![CDATA[RBI cuts repo rate by 0.25% to 5.25%]]></title><link>https://example.org/rbi-cut</link><pubDate>Mon, 12 Oct 2026 05:30:00 GMT</pubDate><description><![CDATA[The Reserve Bank of India cut the repo rate by 0.25 percentage points to 5.25% on Monday.]]></description></item>
+<item><title>Actor spotted at airport in new look</title><link>https://example.org/actor</link><pubDate>Mon, 12 Oct 2026 05:00:00 GMT</pubDate><description>Celebrity gossip item.</description></item>
+<item><title>MLA arrested in land case, says police</title><link>https://example.org/mla</link><pubDate>Mon, 12 Oct 2026 04:00:00 GMT</pubDate><description>Police said the MLA was arrested on Sunday.</description></item>
+</channel></rss>

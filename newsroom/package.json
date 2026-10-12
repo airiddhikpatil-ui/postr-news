@@ -1,0 +1,15 @@
+{
+  "name": "@postr-news/newsroom",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Postr News newsroom loop: collect, cluster, score, route, AI write, red team, validate, render.",
+  "main": "src/loop.js",
+  "scripts": {
+    "once": "node src/loop.js",
+    "watch": "node src/loop.js --watch",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
