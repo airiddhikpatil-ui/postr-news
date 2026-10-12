@@ -1,0 +1,14 @@
+{
+  "_note": "Public account identifiers only. Never put tokens, keys or passwords in this file; those go in GitHub Secrets.",
+  "meta": {
+    "businessPortfolioId": "1073858382114949",
+    "facebookPageId": "1424098180779619",
+    "instagramBusinessAccountId": null,
+    "instagramHandle": null
+  },
+  "launch": {
+    "cities": ["Mumbai", "Pune", "Delhi NCR", "Bengaluru"],
+    "languages": ["en", "hi"],
+    "personalisationMinAge": 18
+  }
+}
