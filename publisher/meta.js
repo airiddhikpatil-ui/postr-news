@@ -86,4 +86,47 @@ async function publishPoster(file, { facebookCaption, instagramCaption, targets 
   return result;
 }
 
-module.exports = { publishPoster, uploadToPage, postToInstagram, instagramQuota, pageToken };
+async function waitReady(containerId) {
+  for (let i = 0; i < 30; i++) {
+    const s = await call('GET', containerId, { fields: 'status_code' });
+    if (s.status_code === 'FINISHED') return;
+    if (s.status_code === 'ERROR' || s.status_code === 'EXPIRED') throw new Error(`Instagram could not process an image (${s.status_code})`);
+    await sleep(3000);
+  }
+  throw new Error('Instagram took too long to process the images');
+}
+
+// A carousel (2-10 pages): one Facebook post with all pages, and one Instagram carousel.
+// Pages are uploaded to the Page unpublished first; their image URLs feed Instagram.
+async function publishCarousel(files, { facebookCaption, instagramCaption, targets = ['facebook', 'instagram'], pageId = accounts.facebookPageId, igId = accounts.instagramBusinessAccountId }) {
+  if (files.length < 2) return publishPoster(files[0], { facebookCaption, instagramCaption, targets });
+  const pt = await pageToken(pageId);
+  const uploads = [];
+  for (const f of files) uploads.push(await uploadToPage(f, undefined, { published: false, pageId }));
+  const result = {};
+  if (targets.includes('instagram')) {
+    const q = await instagramQuota(igId);
+    if (q.used >= q.total) throw new Error(`Instagram daily limit reached (${q.used}/${q.total})`);
+    const children = [];
+    for (const u of uploads) {
+      const c = await call('POST', `${igId}/media`, { image_url: u.imageUrl, is_carousel_item: 'true' });
+      await waitReady(c.id);
+      children.push(c.id);
+    }
+    const parent = await call('POST', `${igId}/media`, { media_type: 'CAROUSEL', children: children.join(','), caption: instagramCaption });
+    await waitReady(parent.id);
+    const pub = await call('POST', `${igId}/media_publish`, { creation_id: parent.id });
+    const media = await call('GET', pub.id, { fields: 'permalink' });
+    result.instagram = { mediaId: pub.id, permalink: media.permalink || null };
+  }
+  if (targets.includes('facebook')) {
+    const params = { message: facebookCaption };
+    uploads.forEach((u, i) => { params[`attached_media[${i}]`] = JSON.stringify({ media_fbid: u.photoId }); });
+    const post = await call('POST', `${pageId}/feed`, params, pt);
+    const link = await call('GET', post.id, { fields: 'permalink_url' }, pt);
+    result.facebook = { postId: post.id, permalink: link.permalink_url || null };
+  }
+  return result;
+}
+
+module.exports = { publishPoster, publishCarousel, uploadToPage, postToInstagram, instagramQuota, pageToken };

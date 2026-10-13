@@ -17,6 +17,34 @@
       "UPIScam",
       "ScamAlert",
       "SBI"
+    ],
+    "slides": [
+      {
+        "label": "HOW THE SCAM WORKS",
+        "title": "It starts with a 'gift'",
+        "points": [
+          "A stranger sends a small amount to your account",
+          "They call: 'Sent by mistake, please return it fast'",
+          "Then a UPI request arrives for a much bigger amount",
+          "You enter your PIN without checking. The money is gone."
+        ]
+      },
+      {
+        "label": "WHAT TO DO",
+        "title": "Stop. Check. Block.",
+        "points": [
+          "Never enter your UPI PIN to receive money",
+          "Check the amount on every request before you approve",
+          "Block the number and tell your bank right away",
+          "Report fraud: call 1930 or visit cybercrime.gov.in"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Send this to your family WhatsApp group",
+        "body": "Scammers count on people trusting a phone call. Two seconds of forwarding can save someone's savings."
+      }
     ]
   },
   {
@@ -39,6 +67,39 @@
       "RBI",
       "EMI",
       "HomeLoan"
+    ],
+    "slides": [
+      {
+        "label": "WHAT HAPPENED",
+        "title": "RBI raised the repo rate by 0.25%",
+        "body": "On 7 October, RBI's rate-setting committee voted unanimously to take the repo rate from 5.25% to 5.5%. It also changed its stance to 'calibrated tightening'."
+      },
+      {
+        "label": "WHY",
+        "title": "Oil, the monsoon and food prices",
+        "points": [
+          "Oil prices are high",
+          "The south-west monsoon was weak",
+          "Bad weather could push food prices up",
+          "RBI expects 5.2% inflation this year (FY27)"
+        ]
+      },
+      {
+        "label": "WHAT IT MEANS FOR YOU",
+        "title": "Your EMI, if your bank passes it on",
+        "points": [
+          "₹30 lakh, 20-year home loan: about ₹477 more a month",
+          "That is about ₹5,700 more a year",
+          "Floating-rate loans move first: check your next reset date",
+          "The Governor says rate cuts are 'off the table' for now"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Tag someone with a home loan",
+        "body": "Most people find out when the EMI changes. Help them find out now."
+      }
     ]
   },
   {
@@ -60,6 +121,48 @@
       "Petrol",
       "Mumbai",
       "Delhi"
+    ],
+    "slides": [
+      {
+        "label": "THE PRICES",
+        "title": "Petrol per litre, 11 October",
+        "stats": [
+          {
+            "label": "Hyderabad",
+            "value": "₹115.69",
+            "num": 115.69
+          },
+          {
+            "label": "Mumbai",
+            "value": "₹111.21",
+            "num": 111.21,
+            "hi": true
+          },
+          {
+            "label": "Bengaluru",
+            "value": "₹110.82",
+            "num": 110.82
+          },
+          {
+            "label": "Delhi",
+            "value": "₹102.12",
+            "num": 102.12,
+            "hi": true
+          }
+        ],
+        "statsNote": "Bars start at ₹0: the gap is small per litre, big per tank."
+      },
+      {
+        "label": "WHY THE GAP",
+        "title": "Mostly state taxes",
+        "body": "The price oil companies charge is similar across India. What changes is the VAT and other levies each state adds on top, so the same litre costs more in some states."
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Which city in your circle pays the most?",
+        "body": "Tell us in the comments, and send this to the friend who always complains about fuel prices."
+      }
     ]
   },
   {
@@ -79,6 +182,24 @@
       "FactCheck",
       "FakeNews",
       "Banks"
+    ],
+    "slides": [
+      {
+        "label": "THE FORWARD",
+        "title": "A fake 'gazette' is going around",
+        "body": "It claims the Finance Ministry has declared every Saturday a public holiday for all public sector banks, including SBI."
+      },
+      {
+        "label": "THE FACT",
+        "title": "No such notification exists",
+        "body": "PIB Fact Check says the document is fake: the Finance Ministry issued no such notification. Check your bank's official holiday list before you plan around a forward."
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Got this forward? Reply with this post.",
+        "body": "Fakes spread because nobody checks. Be the one in the group who does."
+      }
     ]
   },
   {
@@ -105,6 +226,46 @@
     "tags": [
       "Gold",
       "Dhanteras"
+    ],
+    "slides": [
+      {
+        "label": "THE NUMBERS",
+        "title": "24K gold, per 10 grams",
+        "stats": [
+          {
+            "label": "13 Oct 2025",
+            "value": "₹1,24,750",
+            "num": 124750
+          },
+          {
+            "label": "13 Sep 2026",
+            "value": "₹1,53,260",
+            "num": 153260
+          },
+          {
+            "label": "13 Oct 2026",
+            "value": "₹1,49,770",
+            "num": 149770,
+            "hi": true
+          }
+        ],
+        "statsNote": "Up about 20% in a year, but below last month."
+      },
+      {
+        "label": "BEFORE YOU BUY",
+        "title": "The shop price will be higher",
+        "points": [
+          "Jewellers add making charges",
+          "3% GST is added on gold",
+          "Rates vary by city and by jeweller"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Buying for Dhanteras?",
+        "body": "Save this so you can check the rate before you walk into a shop. Tag the person in your family who buys the gold."
+      }
     ]
   },
   {
@@ -124,6 +285,37 @@
       "Mumbai",
       "WaterCut",
       "BMC"
+    ],
+    "slides": [
+      {
+        "label": "THE CUT",
+        "title": "Who gets less water",
+        "points": [
+          "10% less water across Mumbai",
+          "20% less for industry, shops and sports clubs",
+          "Supply is about 4,100 MLD; the city needs about 4,664 MLD"
+        ]
+      },
+      {
+        "label": "WHY",
+        "title": "A weak monsoon",
+        "body": "BMC blames this year's rainfall deficit and an early monsoon withdrawal, linked to El Niño and the Indian Ocean Dipole. It is planning drinking water up to 31 August 2027."
+      },
+      {
+        "label": "WHAT BMC ASKS",
+        "title": "Save water at home",
+        "points": [
+          "Fix leaking taps and pipes",
+          "Use borewell or treated water for cars, gardens and floors",
+          "Don't use drinking water for swimming pools"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Share with your building group",
+        "body": "The cut affects every home. Make sure your neighbours know before the tanks run low."
+      }
     ]
   },
   {
@@ -144,6 +336,37 @@
     "tags": [
       "Silver",
       "Gold"
+    ],
+    "slides": [
+      {
+        "label": "THE NUMBERS",
+        "title": "Silver 999, per kilo",
+        "stats": [
+          {
+            "label": "13 Oct 2025",
+            "value": "₹1,54,880",
+            "num": 154880
+          },
+          {
+            "label": "13 Sep 2026",
+            "value": "₹2,34,690",
+            "num": 234690
+          },
+          {
+            "label": "13 Oct 2026",
+            "value": "₹2,23,100",
+            "num": 223100,
+            "hi": true
+          }
+        ],
+        "statsNote": "Up 44% in a year. Gold rose about 20%."
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Did your family buy silver last year?",
+        "body": "Tag them. And save this before you buy for Diwali."
+      }
     ]
   },
   {
@@ -163,6 +386,24 @@
       "INDvWI",
       "Cricket",
       "TeamIndia"
+    ],
+    "slides": [
+      {
+        "label": "RANCHI, 9 OCT",
+        "title": "India made 249, and still lost",
+        "body": "West Indies chased 250 with 9 balls to spare. Shai Hope made 102 not out and Sherfane Rutherford 84. It was their highest successful T20I chase, and the second-highest in men's T20Is."
+      },
+      {
+        "label": "INDORE, 11 OCT",
+        "title": "India hit back",
+        "body": "India made 223 and won by 14 runs. Abhishek Sharma hit 69 off 30 balls and Arshdeep Singh took 3 for 44. India lead the five-match series 2-1."
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Who wins the series?",
+        "body": "Comment your prediction and tag your cricket group."
+      }
     ]
   },
   {
@@ -184,6 +425,35 @@
     "tags": [
       "UPIScam",
       "SBI"
+    ],
+    "slides": [
+      {
+        "label": "स्कैम कैसे होता है",
+        "title": "शुरुआत एक 'तोहफ़े' से",
+        "points": [
+          "कोई अनजान आपके खाते में छोटी रकम भेजता है",
+          "फिर कॉल आता है: 'गलती से भेज दिए, जल्दी लौटा दीजिए'",
+          "फिर बड़ी रकम की UPI रिक्वेस्ट आती है",
+          "बिना देखे PIN डाला, तो पैसे गए"
+        ]
+      },
+      {
+        "label": "क्या करें",
+        "title": "रुकें। जांचें। ब्लॉक करें।",
+        "points": [
+          "पैसे लेने के लिए कभी UPI PIN न डालें",
+          "हर रिक्वेस्ट पर रकम ज़रूर देखें",
+          "नंबर ब्लॉक करें और तुरंत बैंक को बताएं",
+          "शिकायत: 1930 पर कॉल करें या cybercrime.gov.in"
+        ]
+      },
+      {
+        "label": "शेयर करें",
+        "kind": "share",
+        "followLabel": "रोज़ की ख़बरें, पोस्टर में",
+        "title": "इसे परिवार के WhatsApp ग्रुप में भेजें",
+        "body": "ठग फ़ोन कॉल पर भरोसा करने वालों को निशाना बनाते हैं। दो सेकंड का फ़ॉरवर्ड किसी की बचत बचा सकता है।"
+      }
     ]
   },
   {
@@ -207,6 +477,29 @@
     "tags": [
       "RBI",
       "EMI"
+    ],
+    "slides": [
+      {
+        "label": "क्या हुआ",
+        "title": "RBI ने रेपो रेट 0.25% बढ़ाया",
+        "body": "7 अक्टूबर को RBI की मौद्रिक नीति समिति ने सर्वसम्मति से रेपो रेट 5.25% से बढ़ाकर 5.5% कर दिया।"
+      },
+      {
+        "label": "आपके लिए",
+        "title": "अगर बैंक बढ़ोतरी आगे बढ़ाए",
+        "points": [
+          "₹30 लाख, 20 साल का होम लोन: हर महीने लगभग ₹477 ज़्यादा",
+          "यानी साल में लगभग ₹5,700 ज़्यादा",
+          "गवर्नर: अभी दरों में कटौती की उम्मीद नहीं"
+        ]
+      },
+      {
+        "label": "शेयर करें",
+        "kind": "share",
+        "followLabel": "रोज़ की ख़बरें, पोस्टर में",
+        "title": "होम लोन वाले को टैग करें",
+        "body": "ज़्यादातर लोगों को तब पता चलता है जब EMI बदल जाती है। उन्हें अभी बता दीजिए।"
+      }
     ]
   }
 ]

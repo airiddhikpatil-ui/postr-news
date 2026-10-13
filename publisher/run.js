@@ -8,9 +8,9 @@
 const fs = require('fs');
 const path = require('path');
 const { renderIntro, CAPTION } = require('./intro');
-const { publishPoster } = require('./meta');
+const { publishPoster, publishCarousel } = require('./meta');
 const { buildCaption } = require('./caption');
-const { renderAll } = require('../poster-engine/src/render');
+const { renderAll, renderCarousel } = require('../poster-engine/src/render');
 
 const gh = process.env.GITHUB_ACTIONS === 'true';
 const note = (msg, level = 'notice') => {
@@ -32,10 +32,9 @@ async function postNext(outDir, targets) {
   const stories = JSON.parse(fs.readFileSync(batchFile, 'utf8'));
   const next = stories.find((s) => !posted.some((p) => p.id === s.id));
   if (!next) return note(`Batch ${date} is fully posted.`);
-  const report = await renderAll([next], outDir, ['feed']);
-  if (report.rejected.length) throw new Error(`${next.id} failed the brand rules: ${report.rejected[0].errors.join('; ')}`);
-  const file = report.rendered[0];
-  const r = await publishPoster(file, { facebookCaption: buildCaption(next, 'facebook'), instagramCaption: buildCaption(next, 'instagram'), targets });
+  const { files, errors } = await renderCarousel(next, outDir);
+  if (errors.length) throw new Error(`${next.id} failed the brand rules: ${errors.join('; ')}`);
+  const r = await publishCarousel(files, { facebookCaption: buildCaption(next, 'facebook'), instagramCaption: buildCaption(next, 'instagram'), targets });
   posted.push({ id: next.id, at: new Date().toISOString(), instagram: r.instagram && r.instagram.permalink, facebook: r.facebook && r.facebook.permalink });
   fs.writeFileSync(postedFile, `${JSON.stringify(posted, null, 2)}\n`);
   note(`${next.id}: IG ${r.instagram ? r.instagram.permalink : '-'} | FB ${r.facebook ? r.facebook.permalink : '-'}`);
@@ -62,10 +61,15 @@ async function postNext(outDir, targets) {
   const batch = process.env.BATCH;
   if (!batch) throw new Error('BATCH is required');
   const stories = JSON.parse(fs.readFileSync(path.join(__dirname, 'batches', `${batch}.json`), 'utf8'));
-  const report = await renderAll(stories, outDir, ['feed']);
-  for (const x of report.rejected) note(`Rejected ${x.id}: ${x.errors.join('; ')}`, 'warning');
-  if (report.rejected.length) throw new Error('Some stories failed the brand rules; nothing was posted');
-  note(`Rendered ${report.rendered.length} posters`);
+  const pagesById = {};
+  let bad = 0;
+  for (const st of stories) {
+    const { files, errors } = await renderCarousel(st, outDir);
+    if (errors.length) { bad++; note(`Rejected ${st.id}: ${errors.join('; ')}`, 'warning'); }
+    pagesById[st.id] = files;
+  }
+  if (bad) throw new Error('Some stories failed the brand rules; nothing was posted');
+  note(`Rendered ${stories.length} posts, ${Object.values(pagesById).flat().length} pages`);
   if (job === 'preview-batch') return;
   if (job !== 'post-batch') throw new Error(`Unknown JOB ${job}`);
 
@@ -75,9 +79,8 @@ async function postNext(outDir, targets) {
   let failures = 0;
   for (let i = 0; i < list.length; i++) {
     const s = list[i];
-    const file = path.join(outDir, `${s.id}-${s.lang || 'en'}-feed.png`);
     try {
-      const r = await publishPoster(file, {
+      const r = await publishCarousel(pagesById[s.id], {
         facebookCaption: buildCaption(s, 'facebook'),
         instagramCaption: buildCaption(s, 'instagram'),
         targets,

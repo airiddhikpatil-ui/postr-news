@@ -52,9 +52,12 @@ const tagRow = (story, tagStyle = '') => {
   return `<div class="row"><span class="tag" style="${tagStyle}">${f.tag}</span>${right}</div>`;
 };
 
-const foot = (story, extraStyle = '') => {
+// Page counter for carousels: "1/4 →" on the cover tells people to swipe.
+const pager = (story) => (story._total ? `<span class="d" style="font-size:26px;letter-spacing:1px;white-space:nowrap">${story._page}/${story._total}${story._page === 1 ? ' →' : ''}</span>` : '');
+
+const foot = (story, extraStyle = '', tone) => {
   const f = T.formats[story.format];
-  return `<div class="foot" style="${extraStyle}"><span>${label('source', story.lang)} · ${esc(story.source)}</span>${wordmark(f.wordmark)}</div>`;
+  return `<div class="foot" style="${extraStyle}"><span>${label('source', story.lang)} · ${esc(story.source)}</span><span style="display:flex;align-items:center;gap:28px;flex-shrink:0">${pager(story)}${wordmark(tone || f.wordmark)}</span></div>`;
 };
 
 const body = {
@@ -140,4 +143,47 @@ function renderHtml(story, size = 'feed') {
 <body><div class="poster">${body[s.format](s, size)}</div></body></html>`;
 }
 
-module.exports = { renderHtml };
+// Detail pages of a carousel: same ground as the cover so the set reads as one story.
+// slide = { label, title, body?, points?: [..], kind?: 'share' }
+function renderSlideHtml(story, slide, page, total, size = 'feed') {
+  const lang = story.lang || 'en';
+  const s = { ...story, lang, _page: page, _total: total };
+  const f = T.formats[s.format];
+  const textColor = C[f.text];
+  const tone = f.text === 'ink' ? 'ink' : 'paper';
+  const deva = lang === 'hi' || lang === 'mr';
+  const panel = f.text === 'ink' ? C.ink : C.paper;
+  const onPanel = f.text === 'ink' ? C.paper : C.ink;
+  const points = (slide.points || []).map((pt, i) => `<div style="display:flex;gap:28px;align-items:flex-start;padding:30px 34px;border-radius:36px;background:${panel};color:${onPanel}">
+      <span class="d" style="font-size:44px;line-height:1;min-width:44px">${i + 1}</span>
+      <span style="font-size:38px;font-weight:700;line-height:1.3">${esc(pt)}</span></div>`).join('');
+  // Data pages: each value as a big number with a bar sized against the largest, so the set reads as a chart.
+  const barColor = f.text === 'ink' ? C.ink : C.lime;
+  const maxNum = Math.max(...(slide.stats || []).map((x) => x.num || 0), 1);
+  const stats = (slide.stats || []).map((x) => `<div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px">
+        <span style="font-size:32px;font-weight:800;letter-spacing:2px;text-transform:uppercase;font-family:${deva ? T.fonts.deva : T.fonts.text}">${esc(x.label)}</span>
+        <span class="d" style="font-size:64px;letter-spacing:-2px;white-space:nowrap">${esc(x.value)}</span></div>
+      <div style="margin-top:12px;height:22px;border-radius:11px;background:${f.text === 'ink' ? 'rgba(10,10,11,.12)' : 'rgba(244,241,234,.18)'}"><div style="height:22px;border-radius:11px;width:${Math.round(((x.num || 0) / maxNum) * 100)}%;background:${barColor};opacity:${x.hi ? 1 : 0.55}"></div></div></div>`).join('');
+  const share = slide.kind === 'share'
+    ? `<div style="margin-top:auto;padding:40px 44px;border-radius:44px;background:${panel};color:${onPanel}">
+        <div style="font-size:30px;font-weight:800;letter-spacing:4px;opacity:.75">${esc(slide.followLabel || 'FOLLOW FOR THE DAY IN POSTERS')}</div>
+        <div class="d" style="font-size:76px;letter-spacing:-3px;margin-top:10px">@postr.news</div></div>`
+    : '';
+  const numeral = `<div class="d" style="position:absolute;right:-30px;top:150px;font-size:560px;line-height:.8;letter-spacing:-30px;opacity:.07;pointer-events:none">${String(page).padStart(2, '0')}</div>`;
+  const inner = `${numeral}
+    <div class="row"><span class="tag" style="font-family:${deva ? T.fonts.deva : T.fonts.display}">${esc(slide.label)}</span><span class="meta">${esc(s.place || s.date || '')}</span></div>
+    <h1 class="head" style="position:relative;margin-top:56px;font-size:${slide.kind === 'share' ? 104 : 84}px;line-height:1.06;${deva ? '' : 'letter-spacing:-2px'}">${esc(slide.title)}</h1>
+    ${slide.body ? `<p style="margin-top:36px;font-size:${deva ? 42 : 40}px;font-weight:600;line-height:1.42;font-family:${deva ? T.fonts.deva : T.fonts.text}">${esc(slide.body)}</p>` : ''}
+    ${stats ? `<div style="margin-top:auto;display:flex;flex-direction:column;gap:34px">${stats}</div>` : ''}
+    ${slide.statsNote ? `<p style="margin-top:28px;font-size:32px;font-weight:700;opacity:.8">${esc(slide.statsNote)}</p>` : ''}
+    ${points ? `<div style="margin-top:${slide.body ? 40 : 'auto'}${slide.body ? 'px' : ''};display:flex;flex-direction:column;gap:18px">${points}</div>` : ''}
+    ${share || (stats || (points && !slide.body) ? '' : '<div style="margin-top:auto"></div>')}
+    ${foot(s, 'margin-top:40px', tone)}`;
+  return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8">
+<link rel="stylesheet" href="${T.fonts.googleCss}">
+<style>${css(size, s.format, lang)} .poster{color:${textColor}}</style></head>
+<body><div class="poster">${inner}</div></body></html>`;
+}
+
+module.exports = { renderHtml, renderSlideHtml };
