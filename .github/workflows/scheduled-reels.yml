@@ -29,6 +29,7 @@ jobs:
         working-directory: poster-engine
       - run: npx playwright install --with-deps chromium
         working-directory: poster-engine
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: node publisher/run.js
         env:
           NODE_PATH: ${{ github.workspace }}/poster-engine/node_modules
