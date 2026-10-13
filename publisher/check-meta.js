@@ -15,7 +15,7 @@ async function get(p, params = {}) {
   url.searchParams.set('access_token', token);
   const res = await fetch(url);
   const body = await res.json();
-  if (body.error) throw new Error(`${body.error.type || 'Error'}: ${body.error.message}`);
+  if (body.error) throw new Error(`${body.error.type || "Error"} (code ${body.error.code}, subcode ${body.error.error_subcode || "-"}): ${body.error.message}${body.error.error_user_msg ? " | " + body.error.error_user_msg : ""}`);
   return body;
 }
 
