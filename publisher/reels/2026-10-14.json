@@ -1,0 +1,79 @@
+[
+  {
+    "id": "reel-upi-fee",
+    "lang": "en",
+    "postAt": "13:00",
+    "sourceShort": "Source: NPCI FAQ",
+    "scenes": [
+      {
+        "text": "UPI is getting a fee tomorrow.",
+        "ground": "signal",
+        "seconds": 2.5
+      },
+      {
+        "text": "But YOU don't pay it.",
+        "ground": "ink",
+        "seconds": 2.5
+      },
+      {
+        "text": "Shops pay 0.4% on payments above ₹2,000.",
+        "sub": "Maximum ₹300 per payment.",
+        "ground": "lime",
+        "seconds": 3.5
+      },
+      {
+        "text": "Sending money to people: still free.",
+        "sub": "Shop payments up to ₹2,000: no fee.",
+        "ground": "blue",
+        "seconds": 3.5
+      },
+      {
+        "text": "Send this to your family group.",
+        "sub": "@postr.news · News, designed.",
+        "ground": "signal",
+        "seconds": 3
+      }
+    ],
+    "caption": "UPI is getting a fee from 15 October. Here's who actually pays (it's not you).\n\nA 0.4% merchant fee applies to specified UPI payments to shops above ₹2,000, capped at ₹300. Sending money to people stays free, and so do shop payments up to ₹2,000. NPCI says consumers can keep using UPI free.\n\nSource: NPCI FAQ, via SCC Online\n\nSend this to the friend who'll panic when they hear 'UPI fee'.\n\n#PostrNews #UPI #UPIFee #NPCI #MoneyNews",
+    "sourceUrl": "https://www.scconline.com/blog/post/2026/09/16/npci-released-upi-mdr-faqs-explained/"
+  },
+  {
+    "id": "reel-digital-arrest",
+    "lang": "en",
+    "postAt": "20:00",
+    "sourceShort": "Source: I4C advisory",
+    "scenes": [
+      {
+        "text": "Your parents will get this call.",
+        "ground": "myth",
+        "seconds": 2.5
+      },
+      {
+        "text": "\"This is CBI. You are under digital arrest.\"",
+        "stamp": "SCAM EXAMPLE",
+        "ground": "ink",
+        "seconds": 3.5
+      },
+      {
+        "text": "Real agencies never arrest anyone on a video call.",
+        "sub": "CBI, police, ED, customs, judges: never.",
+        "ground": "lime",
+        "seconds": 3.5
+      },
+      {
+        "text": "Hang up. Don't pay. Call 1930.",
+        "sub": "Or report at cybercrime.gov.in",
+        "ground": "signal",
+        "seconds": 3
+      },
+      {
+        "text": "Send this to them now.",
+        "sub": "@postr.news · News, designed.",
+        "ground": "myth",
+        "seconds": 2.5
+      }
+    ],
+    "caption": "Your parents will get this call. Make sure they know it's a scam.\n\nFraudsters pose as CBI, police, customs or ED officers on video calls, claim you're caught in a crime, keep you 'under digital arrest' on camera and demand money. The government's cyber crime centre (I4C) says real agencies never arrest anyone on a video call.\n\nHang up. Don't pay. Report on 1930 or cybercrime.gov.in.\n\nSource: I4C advisory, via PTI\n\nSend this to your parents now.\n\n#PostrNews #DigitalArrest #ScamAlert #CyberSafety",
+    "sourceUrl": "https://www.deccanherald.com/amp/story/india%2Famid-rise-in-digital-arrest-cases-indian-cyber-crime-coordination-centre-issues-advisory-for-citizens-3221509"
+  }
+]

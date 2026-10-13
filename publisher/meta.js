@@ -141,4 +141,43 @@ async function publishCarousel(files, { facebookCaption, instagramCaption, targe
   return result;
 }
 
-module.exports = { publishPoster, publishCarousel, uploadToPage, postToInstagram, instagramQuota, pageToken };
+// Reels: upload the MP4 to the Page as a published video, wait until Facebook has processed it,
+// then give Instagram the video's source URL to publish as a Reel.
+async function publishReel(file, { facebookCaption, instagramCaption, targets = ['facebook', 'instagram'], dryRun = false, pageId = accounts.facebookPageId, igId = accounts.instagramBusinessAccountId }) {
+  const pt = await pageToken(pageId);
+  const form = new FormData();
+  form.set('source', new Blob([fs.readFileSync(file)], { type: 'video/mp4' }), path.basename(file));
+  form.set('description', facebookCaption || '');
+  form.set('published', String(targets.includes('facebook') && !dryRun));
+  const url = new URL(`https://graph-video.facebook.com/${VERSION}/${pageId}/videos`);
+  url.searchParams.set('access_token', pt);
+  const res = await fetch(url, { method: 'POST', body: form });
+  const up = await res.json();
+  if (up.error) throw new Error(`Facebook video upload failed (code ${up.error.code}): ${up.error.error_user_msg || up.error.message}`);
+  let video = {};
+  for (let i = 0; i < 60; i++) {
+    video = await call('GET', up.id, { fields: 'status,source,permalink_url' }, pt);
+    if (video.status && video.status.video_status === 'error') throw new Error('Facebook could not process the video');
+    if (video.source && video.status && video.status.video_status === 'ready') break;
+    await sleep(5000);
+  }
+  if (!video.source) throw new Error('Facebook did not return a video URL in time');
+  const result = {};
+  if (targets.includes('facebook')) result.facebook = { videoId: up.id, permalink: video.permalink_url ? `https://www.facebook.com${video.permalink_url}` : null };
+  if (targets.includes('instagram')) {
+    const c = await call('POST', `${igId}/media`, { media_type: 'REELS', video_url: video.source, caption: instagramCaption, share_to_feed: 'true' });
+    for (let i = 0; i < 60; i++) {
+      const st = await call('GET', c.id, { fields: 'status_code' });
+      if (st.status_code === 'FINISHED') break;
+      if (st.status_code === 'ERROR' || st.status_code === 'EXPIRED') throw new Error(`Instagram could not process the Reel (${st.status_code})`);
+      await sleep(5000);
+    }
+    if (dryRun) return { dryRun: true, facebookVideo: up.id, instagramContainer: c.id, note: 'processed but not published' };
+    const pub = await publishWhenReady(igId, c.id);
+    const media = await call('GET', pub.id, { fields: 'permalink' });
+    result.instagram = { mediaId: pub.id, permalink: media.permalink || null };
+  }
+  return result;
+}
+
+module.exports = { publishReel, publishPoster, publishCarousel, uploadToPage, postToInstagram, instagramQuota, pageToken };

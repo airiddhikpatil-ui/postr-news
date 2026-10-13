@@ -8,7 +8,8 @@
 const fs = require('fs');
 const path = require('path');
 const { renderIntro, CAPTION } = require('./intro');
-const { publishPoster, publishCarousel } = require('./meta');
+const { publishPoster, publishCarousel, publishReel } = require('./meta');
+const { renderReel } = require('./reel');
 const { buildCaption } = require('./caption');
 const { renderAll, renderCarousel } = require('../poster-engine/src/render');
 
@@ -40,6 +41,28 @@ async function postNext(outDir, targets) {
   note(`${next.id}: IG ${r.instagram ? r.instagram.permalink : '-'} | FB ${r.facebook ? r.facebook.permalink : '-'}`);
 }
 
+// Scheduled Reels: post the next not-yet-posted Reel from today's publisher/reels/<date>.json.
+async function postNextReel(outDir, targets) {
+  const date = new Date(Date.now() + 5.5 * 3600 * 1000).toISOString().slice(0, 10);
+  const dir = path.join(__dirname, 'reels');
+  const file = path.join(dir, `${date}.json`);
+  if (!fs.existsSync(file)) return note(`No Reels for ${date}.`);
+  const postedFile = path.join(dir, `${date}.posted.json`);
+  const posted = fs.existsSync(postedFile) ? JSON.parse(fs.readFileSync(postedFile, 'utf8')) : [];
+  const reels = JSON.parse(fs.readFileSync(file, 'utf8'));
+  const only = process.env.ONLY;
+  const next = reels.find((r) => (only ? r.id === only : true) && !posted.some((p) => p.id === r.id));
+  if (!next) return note(`All Reels for ${date} are posted.`);
+  const { file: mp4 } = await renderReel(next, outDir);
+  const fbCaption = next.sourceUrl ? `${next.caption}\n\n${next.sourceUrl}` : next.caption;
+  const dryRun = process.env.DRY_RUN === 'true';
+  const r = await publishReel(mp4, { facebookCaption: fbCaption, instagramCaption: next.caption, targets, dryRun });
+  if (r.dryRun) return note(`DRY RUN ${next.id}: uploaded and processed, nothing published (${JSON.stringify(r)})`);
+  posted.push({ id: next.id, at: new Date().toISOString(), instagram: r.instagram && r.instagram.permalink, facebook: r.facebook && r.facebook.permalink });
+  fs.writeFileSync(postedFile, `${JSON.stringify(posted, null, 2)}\n`);
+  note(`${next.id}: IG ${r.instagram ? r.instagram.permalink : '-'} | FB ${r.facebook ? r.facebook.permalink : '-'}`);
+}
+
 (async () => {
   const job = process.env.JOB || 'preview-intro';
   const outDir = process.env.OUT_DIR || 'out';
@@ -57,6 +80,7 @@ async function postNext(outDir, targets) {
   }
 
   if (job === 'post-next') return postNext(outDir, targets);
+  if (job === 'post-reel') return postNextReel(outDir, targets);
 
   const batch = process.env.BATCH;
   if (!batch) throw new Error('BATCH is required');
