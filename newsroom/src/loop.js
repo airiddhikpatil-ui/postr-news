@@ -62,7 +62,7 @@ async function runOnce(opts = {}) {
 
   const { items, errors } = opts.items ? { items: opts.items, errors: [] } : await collect(sources);
   const fresh = cluster(items)
-    .map((c) => ({ ...c, score: score(c) }))
+    .map((c) => ({ ...c, score: score(c, o.now || Date.now()) }))
     .filter((c) => !state.seen[c.key] && c.score >= o.minScore)
     .sort((a, b) => b.score - a.score)
     .slice(0, o.maxPerRun);

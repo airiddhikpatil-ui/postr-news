@@ -64,7 +64,7 @@ test('full loop: money story reaches the approval queue, gossip is dropped, inve
       ? { format: 'impact', lang: 'en', headline: 'Repo rate cut 0.25%', calc: { type: 'emi', change: -0.25 }, source: 'RBI', facts: [{ text: 'cut', sourceQuote: 'cut the repo rate by 0.25 percentage points' }] }
       : { format: 'alert', lang: 'en', headline: 'MLA arrested', time: '9 pm', source: 'Police', facts: [{ text: 'x', sourceQuote: 'invented quote' }] };
   const redTeamFn = async () => ({ pass: true, problems: [] });
-  const r = await runOnce({ items, sourcesFile, stateFile: path.join(dir, 'state.json'), writeFn, redTeamFn, skipRender: true, minScore: 4 });
+  const r = await runOnce({ items, sourcesFile, stateFile: path.join(dir, 'state.json'), writeFn, redTeamFn, skipRender: true, minScore: 4, now: new Date('2026-10-12T06:00:00Z').getTime() });
   const rbi = r.results.find((x) => x.title.includes('RBI'));
   assert.strictEqual(rbi.status, 'needs-approval');
   assert.strictEqual(rbi.story.figure, '₹473');
