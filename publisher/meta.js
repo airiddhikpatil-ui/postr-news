@@ -165,11 +165,20 @@ async function publishReel(file, { facebookCaption, instagramCaption, targets = 
   const result = {};
   if (targets.includes('facebook')) result.facebook = { videoId: up.id, permalink: video.permalink_url ? `https://www.facebook.com${video.permalink_url}` : null };
   if (targets.includes('instagram')) {
-    const c = await call('POST', `${igId}/media`, { media_type: 'REELS', video_url: video.source, caption: instagramCaption, share_to_feed: 'true' });
+    // Direct (resumable) upload: Instagram receives the file itself, no public URL needed.
+    const c = await call('POST', `${igId}/media`, { media_type: 'REELS', upload_type: 'resumable', caption: instagramCaption, share_to_feed: 'true' });
+    const bytes = fs.readFileSync(file);
+    const upRes = await fetch(c.uri || `https://rupload.facebook.com/ig-api-upload/${VERSION}/${c.id}`, {
+      method: 'POST',
+      headers: { Authorization: `OAuth ${token()}`, offset: '0', file_size: String(bytes.length) },
+      body: bytes,
+    });
+    const upJson = await upRes.json().catch(() => ({}));
+    if (!upRes.ok || upJson.success === false) throw new Error(`Instagram upload failed: ${JSON.stringify(upJson).slice(0, 300)}`);
     for (let i = 0; i < 60; i++) {
-      const st = await call('GET', c.id, { fields: 'status_code' });
+      const st = await call('GET', c.id, { fields: 'status_code,status' });
       if (st.status_code === 'FINISHED') break;
-      if (st.status_code === 'ERROR' || st.status_code === 'EXPIRED') throw new Error(`Instagram could not process the Reel (${st.status_code})`);
+      if (st.status_code === 'ERROR' || st.status_code === 'EXPIRED') throw new Error(`Instagram could not process the Reel (${st.status_code}): ${st.status || ''}`);
       await sleep(5000);
     }
     if (dryRun) return { dryRun: true, facebookVideo: up.id, instagramContainer: c.id, note: 'processed but not published' };
