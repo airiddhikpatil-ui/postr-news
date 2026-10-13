@@ -42,7 +42,7 @@ ${scene.sub ? `<p class="sub">${esc(scene.sub)}</p>` : ''}
 
 async function renderReel(reel, outDir) {
   fs.mkdirSync(outDir, { recursive: true });
-  const work = fs.mkdtempSync(path.join(outDir, `${reel.id}-`));
+  const work = path.resolve(fs.mkdtempSync(path.join(outDir, `${reel.id}-`)));
   const browser = await chromium.launch();
   const frames = [];
   try {
