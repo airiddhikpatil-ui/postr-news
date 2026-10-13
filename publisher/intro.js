@@ -21,7 +21,7 @@ body{background:${C.ink};color:${C.paper};font-family:${T.fonts.text};-webkit-fo
 h1{font-family:${T.fonts.display};font-weight:900;font-size:150px;line-height:.95;letter-spacing:-5px;margin-top:140px}
 h1 span{color:${C.lime}}
 .sub{font-size:44px;font-weight:700;line-height:1.3;margin-top:56px;max-width:860px;color:${C.mutedOnInk}}
-.chips{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px}.chips:first-of-type{margin-top:auto}.lang .chip{background:transparent;border:3px solid #3A3A3F}
+.chips{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px}.bottom{margin-top:auto}.lang .chip{background:transparent;border:3px solid #3A3A3F}
 .chip{font-size:30px;font-weight:800;padding:14px 26px;border-radius:999px;background:#1C1C1F}
 .deva{font-family:${T.fonts.deva}}
 .foot{display:flex;justify-content:space-between;font-size:28px;font-weight:800;margin-top:40px;color:${C.mutedOnInk}}
@@ -29,8 +29,8 @@ h1 span{color:${C.lime}}
 <div class="top"><img class="wm" src="data:image/svg+xml;base64,${wm}" alt="postr."><span class="tag">HELLO</span></div>
 <h1>News,<br>designed<span>.</span></h1>
 <p class="sub">Every story as one poster: what changed, what it means for you, and where it came from.</p>
-<div class="chips"><span class="chip">Mumbai</span><span class="chip">Pune</span><span class="chip">Delhi NCR</span><span class="chip">Bengaluru</span></div>
-<div class="chips lang"><span class="chip">English</span><span class="chip deva">हिंदी</span></div>
+<div class="bottom"><div class="chips"><span class="chip">Mumbai</span><span class="chip">Pune</span><span class="chip">Delhi NCR</span><span class="chip">Bengaluru</span></div>
+<div class="chips lang"><span class="chip">English</span><span class="chip deva">हिंदी</span></div></div>
 <div class="foot"><span>Every poster names its source</span><span>@postr.news</span></div>
 </div></body></html>`;
 
