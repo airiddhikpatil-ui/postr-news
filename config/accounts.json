@@ -6,12 +6,13 @@
     "publisherBusinessId": "1738583963916968",
     "systemUserId": "61595079432672",
     "facebookPageId": "1464389836748801",
-    "instagramBusinessAccountId": null,
+    "instagramBusinessAccountId": "17841451396816274",
     "instagramHandle": "postr.news",
     "instagramPortfolioAssetId": "1415509101640306",
     "_instagramNote": "instagramBusinessAccountId (the Graph API ID) is filled in after the Meta developer app is set up; it differs from the portfolio asset ID.",
     "appId": "2529201610910341",
-    "_pageNote": "Page created 13 Oct 2026 inside business 1073858382114949 and shared with 1738583963916968. The older 1424098180779619 and 61594958177910 are not the Page ID; 1464389836748801 is shown as the Page ID in settings."
+    "_pageNote": "Page created 13 Oct 2026 inside business 1073858382114949 and shared with 1738583963916968. The older 1424098180779619 and 61594958177910 are not the Page ID; 1464389836748801 is shown as the Page ID in settings.",
+    "_metaStatus": "Check Meta connection passed 13 Oct 2026: system user postr-publisher can see the Page and @postr.news with all posting permissions."
   },
   "launch": {
     "cities": [
