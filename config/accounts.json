@@ -2,6 +2,9 @@
   "_note": "Public account identifiers only. Never put tokens, keys or passwords in this file; those go in GitHub Secrets.",
   "meta": {
     "businessPortfolioId": "1073858382114949",
+    "_portfolioNote": "Page and Instagram live in 1073858382114949 (Instagram login). The app and the system user live in 1738583963916968 (Facebook login), which gets partner access to the Page and Instagram.",
+    "publisherBusinessId": "1738583963916968",
+    "systemUserId": "61595079432672",
     "facebookPageId": "1424098180779619",
     "instagramBusinessAccountId": null,
     "instagramHandle": "postr.news",
