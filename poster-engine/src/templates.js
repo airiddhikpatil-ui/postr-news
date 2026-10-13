@@ -94,15 +94,15 @@ const body = {
         ${tagRow(s)}
         <h1 class="head" style="margin-top:54px;font-size:96px;line-height:1.02">${esc(s.headline)}</h1>
       </div>
-      <div style="margin-top:auto;display:grid;grid-template-columns:1fr 1fr">
+      <div style="margin-top:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)">
         <div style="padding:54px ${T.canvas.margin}px;border-top:9px solid ${C.ink};border-right:9px solid ${C.ink}">
           <div style="font-size:30px;font-weight:800;letter-spacing:4px">${esc(s.then.label)}</div>
-          <div class="d" style="font-size:72px;margin-top:24px;letter-spacing:-3px">${esc(s.then.value)}</div>
+          <div class="d fit" style="font-size:72px;margin-top:24px;letter-spacing:-3px;white-space:nowrap;overflow:hidden">${esc(s.then.value)}</div>
           <div style="font-size:36px;font-weight:600;margin-top:12px">${esc(s.then.note || '')}</div>
         </div>
         <div style="padding:54px ${T.canvas.margin}px;border-top:9px solid ${C.ink};background:${C.ink};color:${C.paper}">
           <div style="font-size:30px;font-weight:800;letter-spacing:4px;color:${C.signal}">${esc(s.now.label)}</div>
-          <div class="d" style="font-size:72px;margin-top:24px;letter-spacing:-3px">${esc(s.now.value)}</div>
+          <div class="d fit" style="font-size:72px;margin-top:24px;letter-spacing:-3px;white-space:nowrap;overflow:hidden">${esc(s.now.value)}</div>
           <div style="font-size:36px;font-weight:600;margin-top:12px">${esc(s.now.note || '')}</div>
         </div>
       </div>

@@ -28,7 +28,7 @@ async function renderAll(stories, outDir, sizes = ['feed', 'story']) {
         // Shrink oversized display numbers until they fit the 936px text column.
         await page.evaluate(() => document.querySelectorAll('.fit').forEach((el) => {
           let px = parseFloat(getComputedStyle(el).fontSize);
-          while (el.scrollWidth > el.clientWidth && px > 120) { px -= 8; el.style.fontSize = `${px}px`; el.style.letterSpacing = `${-px / 16}px`; }
+          while (el.scrollWidth > el.clientWidth && px > 36) { px -= 8; el.style.fontSize = `${px}px`; el.style.letterSpacing = `${-px / 16}px`; }
         }));
         const file = path.join(outDir, `${story.id}-${story.lang || 'en'}-${size}.png`);
         await page.screenshot({ path: file });

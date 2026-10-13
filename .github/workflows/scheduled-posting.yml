@@ -1,0 +1,34 @@
+name: Scheduled posting
+# Every hour from 8 am to 5 pm India time (02:30–11:30 UTC), post the next approved story of the day.
+on:
+  schedule:
+    - cron: '30 2-11 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: publish
+jobs:
+  post-next:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+        working-directory: poster-engine
+      - run: npx playwright install --with-deps chromium
+        working-directory: poster-engine
+      - run: node publisher/run.js
+        env:
+          NODE_PATH: ${{ github.workspace }}/poster-engine/node_modules
+          JOB: post-next
+          OUT_DIR: out
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+      - name: Record what was posted
+        if: always()
+        run: |
+          git config user.name "postr-bot"
+          git config user.email "postr-bot@users.noreply.github.com"
+          git add publisher/batches/*.posted.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Posted log $(date -u +%FT%TZ)" && git pull --rebase -q && git push)

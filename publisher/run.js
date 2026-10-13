@@ -19,6 +19,28 @@ const note = (msg, level = 'notice') => {
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Scheduled mode: post the next approved, not-yet-posted story from today's batch (India date).
+// A batch is only posted after publisher/batches/<date>.approved exists, which is created on the owner's OK.
+async function postNext(outDir, targets) {
+  const date = new Date(Date.now() + 5.5 * 3600 * 1000).toISOString().slice(0, 10);
+  const dir = path.join(__dirname, 'batches');
+  const batchFile = path.join(dir, `${date}.json`);
+  if (!fs.existsSync(batchFile)) return note(`No batch for ${date}; nothing to post.`);
+  if (!fs.existsSync(path.join(dir, `${date}.approved`))) return note(`Batch ${date} is not approved yet; nothing posted.`);
+  const postedFile = path.join(dir, `${date}.posted.json`);
+  const posted = fs.existsSync(postedFile) ? JSON.parse(fs.readFileSync(postedFile, 'utf8')) : [];
+  const stories = JSON.parse(fs.readFileSync(batchFile, 'utf8'));
+  const next = stories.find((s) => !posted.some((p) => p.id === s.id));
+  if (!next) return note(`Batch ${date} is fully posted.`);
+  const report = await renderAll([next], outDir, ['feed']);
+  if (report.rejected.length) throw new Error(`${next.id} failed the brand rules: ${report.rejected[0].errors.join('; ')}`);
+  const file = report.rendered[0];
+  const r = await publishPoster(file, { facebookCaption: buildCaption(next, 'facebook'), instagramCaption: buildCaption(next, 'instagram'), targets });
+  posted.push({ id: next.id, at: new Date().toISOString(), instagram: r.instagram && r.instagram.permalink, facebook: r.facebook && r.facebook.permalink });
+  fs.writeFileSync(postedFile, `${JSON.stringify(posted, null, 2)}\n`);
+  note(`${next.id}: IG ${r.instagram ? r.instagram.permalink : '-'} | FB ${r.facebook ? r.facebook.permalink : '-'}`);
+}
+
 (async () => {
   const job = process.env.JOB || 'preview-intro';
   const outDir = process.env.OUT_DIR || 'out';
@@ -34,6 +56,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     }
     return;
   }
+
+  if (job === 'post-next') return postNext(outDir, targets);
 
   const batch = process.env.BATCH;
   if (!batch) throw new Error('BATCH is required');

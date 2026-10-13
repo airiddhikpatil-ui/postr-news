@@ -1,0 +1,212 @@
+[
+  {
+    "id": "upi-jumped-deposit-scam",
+    "format": "alert",
+    "lang": "en",
+    "place": "All UPI users",
+    "headline": "It's a trap",
+    "time": "Active now",
+    "note": "Unexpected money in your account? Never enter your UPI PIN to receive.",
+    "source": "SBI, via Outlook Money, 12 Oct 2026",
+    "captionHeadline": "Random money just landed in your account? Don't send it back. It's a scam.",
+    "summary": "SBI is warning about the 'jumped deposit' scam. Fraudsters send you a small amount, call saying it was a mistake, then push a UPI request for a much bigger amount. Enter your PIN without checking, and the money is gone. You never need your UPI PIN to receive money.",
+    "forYou": "Got a surprise credit and a panicky call? Hang up, block the number, tell your bank. Report fraud at 1930 or cybercrime.gov.in.",
+    "cta": "Send this to your family WhatsApp group. It takes 2 seconds and could save someone's savings.",
+    "sourceUrl": "https://www.outlookmoney.com/news/jumped-deposit-scam-sbi-cautions-upi-users-about-fraud-risks",
+    "tags": [
+      "UPIScam",
+      "ScamAlert",
+      "SBI"
+    ]
+  },
+  {
+    "id": "rbi-hike-emi",
+    "format": "impact",
+    "lang": "en",
+    "date": "7 Oct",
+    "headline": "RBI hikes repo rate to 5.5%",
+    "figure": "₹477",
+    "unit": "more/mo",
+    "assumptions": "EMI on ₹30L, 20 yrs, if your bank moves 8.5% → 8.75%",
+    "source": "RBI MPC decision, 7 Oct 2026",
+    "captionHeadline": "Your home loan EMI could go UP. RBI just raised rates, and says cuts are 'off the table'.",
+    "summary": "On 7 October the RBI raised the repo rate by 0.25%, from 5.25% to 5.5%, and switched its stance to 'calibrated tightening', citing high oil prices, a weak monsoon and food-inflation risk.",
+    "forYou": "If your bank passes it on, a ₹30 lakh, 20-year home loan costs about ₹477 more every month.",
+    "assumptionsCaption": "Our calculation: EMI at 8.5% vs 8.75%.",
+    "cta": "Have a home loan? Tag someone who should check their EMI this month.",
+    "sourceUrl": "https://www.business-standard.com/finance/news/rbi-mpc-october-2026-repo-rate-hike-inflation-growth-gdp-sanjay-malhotra-126100700222_1.html",
+    "tags": [
+      "RBI",
+      "EMI",
+      "HomeLoan"
+    ]
+  },
+  {
+    "id": "petrol-mumbai-vs-delhi",
+    "format": "number",
+    "lang": "en",
+    "date": "11 Oct",
+    "place": "Mumbai",
+    "value": "₹9",
+    "caption": "more per litre for petrol in Mumbai than Delhi: ₹111.21 vs ₹102.12.",
+    "note": "The gap is mostly state taxes. Rates as of 11 Oct.",
+    "source": "The Hans India fuel rates, 11 Oct 2026",
+    "captionHeadline": "Same petrol. ₹9 a litre more in Mumbai than in Delhi.",
+    "summary": "On 11 October petrol cost ₹111.21 a litre in Mumbai, ₹110.82 in Bengaluru, ₹107.76 in Chennai and ₹102.12 in Delhi. Hyderabad was highest at ₹115.69. The difference comes mostly from state taxes (VAT).",
+    "forYou": "Fill a 40-litre tank in Mumbai and you pay about ₹364 more than in Delhi.",
+    "cta": "Which city in your circle pays the most? Drop it in the comments.",
+    "sourceUrl": "https://www.thehansindia.com/business/petrol-and-diesel-prices-today-in-hyderabad-delhi-chennai-and-mumbai-on-11-october-2026-1131263",
+    "tags": [
+      "Petrol",
+      "Mumbai",
+      "Delhi"
+    ]
+  },
+  {
+    "id": "fake-saturday-bank-holiday",
+    "format": "myth",
+    "lang": "en",
+    "date": "Fact check",
+    "claim": "Govt notification: every Saturday is now a public holiday for all public sector banks. Forward to all.",
+    "verdict": "FAKE",
+    "evidence": "PIB Fact Check: the Finance Ministry issued no such notification.",
+    "source": "PIB Fact Check, via The Statesman",
+    "captionHeadline": "No, banks are NOT shut every Saturday. That 'gazette' is fake.",
+    "summary": "A document claiming the Finance Ministry declared every Saturday a holiday for public sector banks is circulating on WhatsApp. PIB Fact Check says it is fake: no such notification was issued.",
+    "cta": "Got this forward? Reply with this poster.",
+    "sourceUrl": "https://www.thestatesman.com/india/viral-gazette-declaring-saturday-holiday-for-psu-banks-is-fake-1503645460.html",
+    "tags": [
+      "FactCheck",
+      "FakeNews",
+      "Banks"
+    ]
+  },
+  {
+    "id": "gold-one-year",
+    "format": "tracker",
+    "lang": "en",
+    "date": "13 Oct",
+    "headline": "Gold in just one year",
+    "then": {
+      "label": "OCT 2025",
+      "value": "₹1,24,750",
+      "note": "24K, per 10 g"
+    },
+    "now": {
+      "label": "OCT 2026",
+      "value": "₹1,49,770",
+      "note": "up about 20%"
+    },
+    "source": "bullions.co.in, via StartupTalky",
+    "captionHeadline": "10 grams of gold cost ₹25,020 more than it did a year ago.",
+    "summary": "24K gold was ₹1,49,770 per 10 g on 13 October 2026, against ₹1,24,750 on 13 October 2025: up about 20%. Your jeweller's price will be higher after making charges and GST.",
+    "cta": "Buying for Dhanteras? Save this before you go shopping.",
+    "sourceUrl": "https://startuptalky.com/news/gold-silver-prices-india-today-13-october-2026/",
+    "tags": [
+      "Gold",
+      "Dhanteras"
+    ]
+  },
+  {
+    "id": "mumbai-water-cut",
+    "format": "alert",
+    "lang": "en",
+    "place": "Mumbai",
+    "headline": "Water cut continues",
+    "time": "Until further notice",
+    "note": "10% citywide, 20% for businesses. Store water and fix leaks.",
+    "source": "BMC, via Free Press Journal, 12 Oct 2026",
+    "captionHeadline": "Mumbai, your water cut isn't ending yet.",
+    "summary": "BMC is continuing the 10% water cut after a weak monsoon. Industrial and commercial establishments and sports clubs stay on a 20% cut. The city gets about 4,100 MLD against a need of about 4,664 MLD, and BMC is planning drinking water up to 31 August 2027.",
+    "cta": "Share this with your building WhatsApp group.",
+    "sourceUrl": "https://www.freepressjournal.in/mumbai/mumbai-continues-to-face-10-per-cent-water-cut-amid-rainfall-deficit-bmc-urges-conservation",
+    "tags": [
+      "Mumbai",
+      "WaterCut",
+      "BMC"
+    ]
+  },
+  {
+    "id": "silver-one-year",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "value": "44",
+    "unit": "%",
+    "share": 44,
+    "caption": "jump in silver in one year: ₹1,54,880 to ₹2,23,100 a kilo.",
+    "note": "Gold rose about 20% in the same year.",
+    "source": "bullions.co.in, via StartupTalky",
+    "captionHeadline": "Silver beat gold. Up 44% in a single year.",
+    "summary": "Silver 999 was ₹2,23,100 a kilo on 13 October 2026, against ₹1,54,880 a year earlier. Gold rose about 20% over the same period.",
+    "cta": "Did anyone in your family buy silver last year? Tag them.",
+    "sourceUrl": "https://startuptalky.com/news/gold-silver-prices-india-today-13-october-2026/",
+    "tags": [
+      "Silver",
+      "Gold"
+    ]
+  },
+  {
+    "id": "wi-250-chase",
+    "format": "number",
+    "lang": "en",
+    "date": "IND v WI",
+    "value": "250",
+    "caption": "runs chased down by West Indies against India in Ranchi. Shai Hope: 102* off 45 balls.",
+    "note": "India hit back in Indore and lead the series 2-1.",
+    "source": "ICC; UNI, 11 Oct 2026",
+    "captionHeadline": "India scored 249. West Indies still won.",
+    "summary": "In the 2nd T20I in Ranchi on 9 October, West Indies chased 250 with 9 balls to spare, their highest successful T20I chase and the second-highest in men's T20Is. India hit back in Indore on 11 October, winning by 14 runs to lead the five-match series 2-1.",
+    "cta": "Who wins the series? Comment your prediction.",
+    "sourceUrl": "https://www.icc-cricket.com/news/hope-rutherford-power-west-indies-to-record-chase",
+    "tags": [
+      "INDvWI",
+      "Cricket",
+      "TeamIndia"
+    ]
+  },
+  {
+    "id": "upi-jumped-deposit-scam-hi",
+    "format": "alert",
+    "lang": "hi",
+    "place": "सभी UPI यूज़र",
+    "headline": "ये जाल है",
+    "time": "अभी सक्रिय",
+    "note": "पैसे लेने के लिए कभी UPI PIN न डालें। शिकायत: 1930",
+    "source": "SBI, Outlook Money के ज़रिए",
+    "captionHeadline": "खाते में अचानक पैसे आए? वापस मत भेजिए। ये स्कैम है।",
+    "summary": "SBI ने 'जंप्ड डिपॉज़िट' स्कैम पर चेतावनी दी है। ठग पहले छोटी रकम भेजते हैं, फिर कॉल करके कहते हैं कि गलती से भेज दी, और फिर बड़ी रकम की UPI रिक्वेस्ट भेजते हैं। बिना देखे PIN डाला तो पैसे गए। पैसे लेने के लिए कभी PIN की ज़रूरत नहीं होती।",
+    "forYou": "अनजान क्रेडिट और घबराहट वाला कॉल आए तो फ़ोन काटें, नंबर ब्लॉक करें, बैंक को बताएं। शिकायत: 1930 या cybercrime.gov.in",
+    "forYouLabel": "आपके लिए",
+    "sourceLabel": "स्रोत",
+    "cta": "इसे अपने परिवार के WhatsApp ग्रुप में भेजें।",
+    "sourceUrl": "https://www.outlookmoney.com/news/jumped-deposit-scam-sbi-cautions-upi-users-about-fraud-risks",
+    "tags": [
+      "UPIScam",
+      "SBI"
+    ]
+  },
+  {
+    "id": "rbi-hike-emi-hi",
+    "format": "impact",
+    "lang": "hi",
+    "date": "7 अक्टूबर",
+    "headline": "RBI ने रेपो रेट 5.5% किया",
+    "figure": "₹477",
+    "unit": "ज़्यादा/माह",
+    "assumptions": "₹30 लाख, 20 साल का होम लोन, अगर बैंक 8.5% से 8.75% करे",
+    "source": "RBI MPC फ़ैसला, 7 अक्टूबर 2026",
+    "captionHeadline": "आपकी होम लोन EMI बढ़ सकती है। RBI ने ब्याज दर बढ़ाई।",
+    "summary": "7 अक्टूबर को RBI ने रेपो रेट 0.25% बढ़ाकर 5.25% से 5.5% कर दिया। गवर्नर ने कहा कि निकट भविष्य में दरों में कटौती की उम्मीद नहीं है।",
+    "forYou": "अगर बैंक ये बढ़ोतरी आगे बढ़ाता है, तो ₹30 लाख के 20 साल के होम लोन की EMI हर महीने लगभग ₹477 बढ़ेगी।",
+    "forYouLabel": "आपके लिए",
+    "sourceLabel": "स्रोत",
+    "assumptionsCaption": "हमारा हिसाब: 8.5% बनाम 8.75% पर EMI।",
+    "cta": "होम लोन है? जिसे EMI चेक करनी चाहिए, उसे टैग करें।",
+    "sourceUrl": "https://www.business-standard.com/finance/news/rbi-mpc-october-2026-repo-rate-hike-inflation-growth-gdp-sanjay-malhotra-126100700222_1.html",
+    "tags": [
+      "RBI",
+      "EMI"
+    ]
+  }
+]
