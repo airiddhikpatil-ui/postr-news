@@ -998,5 +998,397 @@
         "body": "Comment your player of the match and tag your cricket group. We'll check who got it right."
       }
     ]
+  },
+  {
+    "id": "upi-fee-sc-no-stay",
+    "format": "alert",
+    "lang": "en",
+    "place": "UPI shop payments",
+    "headline": "Starts tomorrow",
+    "time": "From 15 Oct",
+    "note": "Supreme Court refused to pause it. Paying friends stays free.",
+    "source": "Supreme Court, 28 Sep, via AIR; NPCI FAQ",
+    "captionHeadline": "The Supreme Court refused to stop the UPI fee. It starts tomorrow.",
+    "summary": "On 28 September the Supreme Court declined to stay the 0.4% merchant fee on specified UPI payments to shops above ₹2,000, and gave the Centre four weeks to respond. The fee starts on 15 October. NPCI says it is paid by merchants, not customers.",
+    "forYou": "Sending money to people stays free. Some shops may push you to pay in smaller amounts or ask for cash on big bills. You are not charged by UPI.",
+    "cta": "Send this to every shopkeeper you know. Tomorrow they will get asked about it.",
+    "sourceUrl": "https://newsonair.gov.in/supreme-court-refuses-to-stay-mdr-on-specified-upi-transactions-above-%e2%82%b92000/",
+    "tags": [
+      "UPI",
+      "UPIFee",
+      "SupremeCourt"
+    ],
+    "slides": [
+      {
+        "label": "WHAT HAPPENED",
+        "title": "The court said no to a pause",
+        "points": [
+          "A plea challenged the fee on UPI shop payments above ₹2,000",
+          "On 28 Sep the Supreme Court refused an interim stay",
+          "The Centre was given four weeks to file its reply",
+          "So the 15 October start date stands"
+        ]
+      },
+      {
+        "label": "WHO PAYS",
+        "title": "Shops pay, not you",
+        "stats": [
+          {
+            "label": "Fee on shop payments above ₹2,000",
+            "value": "0.4%",
+            "hi": true
+          },
+          {
+            "label": "Maximum fee per payment",
+            "value": "₹300"
+          },
+          {
+            "label": "Fee on sending money to people",
+            "value": "₹0"
+          }
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Beat the WhatsApp panic",
+        "body": "Tomorrow someone will forward \"UPI is no longer free\". Send them this first."
+      }
+    ]
+  },
+  {
+    "id": "lpg-aadhaar",
+    "format": "alert",
+    "lang": "en",
+    "place": "LPG households",
+    "headline": "Aadhaar check needed",
+    "time": "Since 1 Oct",
+    "note": "No biometric check, no subsidised cylinder booking.",
+    "source": "All India Radio News, 19 Sep 2026",
+    "captionHeadline": "No Aadhaar fingerprint check? You can't book a subsidised gas cylinder.",
+    "summary": "From 1 October, biometric Aadhaar authentication is mandatory to book domestic LPG refills at the subsidised price. 27.43 crore consumers have already done it and need to do nothing more. The government says it is to stop diversion of home cylinders and remove fake or duplicate connections.",
+    "forYou": "Not sure if you did it? Ask your delivery person, visit your distributor, or check your gas company's app.",
+    "cta": "Send this to your parents. They book the cylinder, and they'll thank you.",
+    "sourceUrl": "https://newsonair.gov.in/biometric-aadhaar-authentication-mandatory-for-subsidised-lpg-refills-from-october-1/",
+    "tags": [
+      "LPG",
+      "Aadhaar",
+      "GasCylinder"
+    ],
+    "slides": [
+      {
+        "label": "THE RULE",
+        "title": "Fingerprint first, subsidy after",
+        "points": [
+          "Applies to domestic LPG refills at the subsidised price",
+          "Biometric Aadhaar authentication is now mandatory",
+          "Already authenticated once? Nothing more to do"
+        ]
+      },
+      {
+        "label": "HOW TO DO IT",
+        "title": "Three ways, all free",
+        "points": [
+          "When the cylinder is delivered, with the delivery person",
+          "At your gas distributor's showroom",
+          "On your oil company's mobile app"
+        ]
+      },
+      {
+        "label": "BY THE NUMBERS",
+        "title": "Most homes are already done",
+        "stats": [
+          {
+            "label": "Consumers already authenticated",
+            "value": "27.43 cr",
+            "hi": true
+          }
+        ],
+        "statsNote": "Source: All India Radio News"
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Your parents need this",
+        "body": "Forward it to the family group before their next booking."
+      }
+    ]
+  },
+  {
+    "id": "whatsapp-not-paid",
+    "format": "myth",
+    "lang": "en",
+    "date": "Fact check",
+    "claim": "WhatsApp is now charging money for messages from October.",
+    "verdict": "MISSING CONTEXT",
+    "evidence": "Only businesses on the WhatsApp Business Platform pay. Your chats stay free.",
+    "source": "Meta pricing change, via Sunday Guardian, 1 Oct 2026",
+    "captionHeadline": "Is WhatsApp charging for messages now? Only if you're a big business.",
+    "summary": "Meta's new India pricing applies to the WhatsApp Business Platform, which companies use to send bulk messages like order and delivery updates. Each business number gets 1,000 free customer-service replies a month, then ₹0.115 per message plus GST. Ordinary WhatsApp and the WhatsApp Business app are not affected.",
+    "forYou": "Your personal chats and family groups cost nothing extra. If you run a big brand that sends bulk updates, check your bill.",
+    "cta": "Someone in your family group will forward the wrong version. Send them this.",
+    "sourceUrl": "https://sundayguardianlive.com/trending/what-changes-from-october-1-2026-check-major-new-rules-on-lpg-subsidy-whatsapp-business-pricing-sbi-atm-charges-upi-payments-tds-rules-immigration-visa-fee-hike-and-more-295963/",
+    "tags": [
+      "WhatsApp",
+      "FactCheck",
+      "Meta"
+    ],
+    "slides": [
+      {
+        "label": "WHO PAYS",
+        "title": "Big business accounts, not you",
+        "points": [
+          "Companies using the WhatsApp Business Platform",
+          "Typically bulk order, delivery and support messages",
+          "Not the normal WhatsApp app",
+          "Not small shops using the WhatsApp Business app"
+        ]
+      },
+      {
+        "label": "THE NUMBERS",
+        "title": "What businesses are charged",
+        "stats": [
+          {
+            "label": "Free support replies a month, per number",
+            "value": "1,000",
+            "hi": true
+          },
+          {
+            "label": "After that, per message (+GST)",
+            "value": "₹0.115"
+          }
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Stop the forward",
+        "body": "Send this to the group where \"WhatsApp is now paid\" is doing the rounds."
+      }
+    ]
+  },
+  {
+    "id": "sbi-atm-limit",
+    "format": "number",
+    "lang": "en",
+    "date": "Since 1 Oct",
+    "value": "5",
+    "caption": "free other-bank ATM uses a month for SBI salary accounts. It used to be 10.",
+    "note": "After that: ₹23 + GST per cash withdrawal.",
+    "source": "Outlook Money; Sunday Guardian, Oct 2026",
+    "captionHeadline": "SBI salary account? Your free ATM visits just got cut in half.",
+    "summary": "From 1 October, SBI Salary Package account holders get 5 free transactions a month at other banks' ATMs, down from 10. Balance checks count too. After the limit, each cash withdrawal costs ₹23 plus GST, and each non-cash transaction ₹11 plus GST. SBI's own ATMs are unchanged.",
+    "forYou": "Use SBI ATMs where you can, and stop checking your balance at other banks' ATMs. Use the app instead.",
+    "cta": "Tag a colleague who gets their salary in SBI.",
+    "sourceUrl": "https://www.outlookmoney.com/news/new-money-rules-from-october-2026-key-changes-to-know",
+    "tags": [
+      "SBI",
+      "ATM",
+      "Banking"
+    ],
+    "slides": [
+      {
+        "label": "WHAT CHANGED",
+        "title": "Free other-bank ATM uses cut from 10 to 5",
+        "stats": [
+          {
+            "label": "Before 1 Oct",
+            "value": "10",
+            "num": 10
+          },
+          {
+            "label": "Now",
+            "value": "5",
+            "num": 5,
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "THE CHARGES",
+        "title": "What you pay after the limit",
+        "stats": [
+          {
+            "label": "Each cash withdrawal",
+            "value": "₹23 + GST",
+            "hi": true
+          },
+          {
+            "label": "Each balance check or other",
+            "value": "₹11 + GST"
+          }
+        ]
+      },
+      {
+        "label": "SAVE MONEY",
+        "title": "Easy ways to avoid the fee",
+        "points": [
+          "Withdraw from SBI ATMs, which are unchanged",
+          "Check your balance on the app, not at an ATM",
+          "Take out cash in fewer, bigger withdrawals"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lpg-aadhaar-hi",
+    "format": "alert",
+    "lang": "hi",
+    "place": "LPG घर",
+    "headline": "आधार जांच ज़रूरी",
+    "time": "1 अक्टूबर से",
+    "note": "बायोमेट्रिक जांच नहीं, तो सब्सिडी वाला सिलेंडर बुक नहीं।",
+    "source": "ऑल इंडिया रेडियो न्यूज़, 19 सितंबर 2026",
+    "sourceLabel": "स्रोत",
+    "forYouLabel": "आपके लिए",
+    "captionHeadline": "आधार फिंगरप्रिंट जांच नहीं हुई? तो सब्सिडी वाला गैस सिलेंडर बुक नहीं होगा।",
+    "summary": "1 अक्टूबर से सब्सिडी वाले घरेलू LPG सिलेंडर की बुकिंग के लिए बायोमेट्रिक आधार जांच ज़रूरी है। 27.43 करोड़ ग्राहक यह कर चुके हैं, उन्हें दोबारा कुछ नहीं करना। सरकार के अनुसार इसका मकसद घरेलू सिलेंडर का गलत इस्तेमाल और फ़र्ज़ी कनेक्शन रोकना है।",
+    "forYou": "पता नहीं कि हुआ या नहीं? डिलीवरी वाले से पूछें, डिस्ट्रीब्यूटर के पास जाएं या गैस कंपनी का ऐप देखें।",
+    "cta": "ये पोस्ट अपने माता-पिता को भेजें।",
+    "sourceUrl": "https://newsonair.gov.in/biometric-aadhaar-authentication-mandatory-for-subsidised-lpg-refills-from-october-1/",
+    "tags": [
+      "LPG",
+      "Aadhaar"
+    ],
+    "slides": [
+      {
+        "label": "नियम",
+        "title": "पहले फिंगरप्रिंट, फिर सब्सिडी",
+        "points": [
+          "सब्सिडी वाले घरेलू LPG सिलेंडर पर लागू",
+          "बायोमेट्रिक आधार जांच अब ज़रूरी",
+          "एक बार हो चुकी है? तो कुछ नहीं करना"
+        ]
+      },
+      {
+        "label": "कैसे करें",
+        "title": "तीन आसान तरीके, सब मुफ़्त",
+        "points": [
+          "सिलेंडर डिलीवरी के समय",
+          "गैस डिस्ट्रीब्यूटर के शोरूम पर",
+          "गैस कंपनी के मोबाइल ऐप पर"
+        ]
+      },
+      {
+        "label": "शेयर करें",
+        "kind": "share",
+        "title": "माता-पिता को ज़रूर भेजें",
+        "body": "अगली बुकिंग से पहले फ़ैमिली ग्रुप में भेज दें।"
+      }
+    ]
+  },
+  {
+    "id": "sbi-atm-limit-hi",
+    "format": "number",
+    "lang": "hi",
+    "date": "1 अक्टूबर से",
+    "value": "5",
+    "caption": "SBI सैलरी खाते: दूसरे बैंक के ATM पर महीने में बस इतनी बार मुफ़्त। पहले 10 था।",
+    "note": "उसके बाद: हर निकासी पर ₹23 + GST।",
+    "source": "Outlook Money; Sunday Guardian, अक्टूबर 2026",
+    "sourceLabel": "स्रोत",
+    "forYouLabel": "आपके लिए",
+    "captionHeadline": "SBI में सैलरी आती है? दूसरे बैंक के ATM की मुफ़्त सुविधा आधी हो गई।",
+    "summary": "1 अक्टूबर से SBI सैलरी पैकेज खाताधारकों को दूसरे बैंक के ATM पर महीने में 5 मुफ़्त ट्रांज़ैक्शन मिलेंगे, पहले 10 थे। बैलेंस चेक भी गिना जाता है। उसके बाद हर नकद निकासी पर ₹23 + GST लगेगा। SBI के अपने ATM पर कोई बदलाव नहीं।",
+    "forYou": "जहां हो सके SBI ATM इस्तेमाल करें और बैलेंस ऐप पर देखें।",
+    "cta": "उस दोस्त को टैग करें जिसकी सैलरी SBI में आती है।",
+    "sourceUrl": "https://www.outlookmoney.com/news/new-money-rules-from-october-2026-key-changes-to-know",
+    "tags": [
+      "SBI",
+      "ATM"
+    ],
+    "slides": [
+      {
+        "label": "क्या बदला",
+        "title": "मुफ़्त ATM ट्रांज़ैक्शन 10 से घटकर 5",
+        "stats": [
+          {
+            "label": "1 अक्टूबर से पहले",
+            "value": "10",
+            "num": 10
+          },
+          {
+            "label": "अब",
+            "value": "5",
+            "num": 5,
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "चार्ज",
+        "title": "लिमिट के बाद कितना कटेगा",
+        "stats": [
+          {
+            "label": "हर नकद निकासी",
+            "value": "₹23 + GST",
+            "hi": true
+          },
+          {
+            "label": "बैलेंस चेक या अन्य",
+            "value": "₹11 + GST"
+          }
+        ]
+      },
+      {
+        "label": "शेयर करें",
+        "kind": "share",
+        "title": "ऑफ़िस ग्रुप में भेजें",
+        "body": "जिनकी सैलरी SBI में आती है, उन्हें ये जानना चाहिए।"
+      }
+    ]
+  },
+  {
+    "id": "whatsapp-not-paid-hi",
+    "format": "myth",
+    "lang": "hi",
+    "date": "फ़ैक्ट चेक",
+    "claim": "अक्टूबर से WhatsApp पर मैसेज भेजने के पैसे लगेंगे।",
+    "verdict": "MISSING CONTEXT",
+    "evidence": "सिर्फ़ WhatsApp Business Platform वाली कंपनियां भरेंगी। आपकी चैट मुफ़्त है।",
+    "source": "Meta प्राइसिंग बदलाव, Sunday Guardian के ज़रिए, 1 अक्टूबर 2026",
+    "sourceLabel": "स्रोत",
+    "forYouLabel": "आपके लिए",
+    "captionHeadline": "क्या WhatsApp अब पैसे लेगा? सिर्फ़ बड़ी कंपनियों से।",
+    "summary": "Meta की नई कीमतें WhatsApp Business Platform पर लागू हैं, जिससे कंपनियां ऑर्डर और डिलीवरी जैसे बल्क मैसेज भेजती हैं। हर बिज़नेस नंबर को महीने में 1,000 मुफ़्त जवाब, फिर ₹0.115 प्रति मैसेज + GST। आम WhatsApp और WhatsApp Business ऐप पर असर नहीं।",
+    "forYou": "आपकी पर्सनल चैट और फ़ैमिली ग्रुप पूरी तरह मुफ़्त हैं।",
+    "cta": "जिस ग्रुप में ये अफ़वाह चल रही है, वहां ये भेजें।",
+    "sourceUrl": "https://sundayguardianlive.com/trending/what-changes-from-october-1-2026-check-major-new-rules-on-lpg-subsidy-whatsapp-business-pricing-sbi-atm-charges-upi-payments-tds-rules-immigration-visa-fee-hike-and-more-295963/",
+    "tags": [
+      "WhatsApp",
+      "FactCheck"
+    ],
+    "slides": [
+      {
+        "label": "कौन भरेगा",
+        "title": "बड़ी कंपनियां, आप नहीं",
+        "points": [
+          "WhatsApp Business Platform इस्तेमाल करने वाली कंपनियां",
+          "आम WhatsApp ऐप पर कोई चार्ज नहीं",
+          "छोटी दुकानों के WhatsApp Business ऐप पर भी नहीं"
+        ]
+      },
+      {
+        "label": "आंकड़े",
+        "title": "कंपनियों पर कितना चार्ज",
+        "stats": [
+          {
+            "label": "हर नंबर पर महीने में मुफ़्त जवाब",
+            "value": "1,000",
+            "hi": true
+          },
+          {
+            "label": "उसके बाद प्रति मैसेज (+GST)",
+            "value": "₹0.115"
+          }
+        ]
+      },
+      {
+        "label": "शेयर करें",
+        "kind": "share",
+        "title": "अफ़वाह रोकें",
+        "body": "\"WhatsApp अब पेड है\" वाले मैसेज के जवाब में ये भेजें।"
+      }
+    ]
   }
 ]

@@ -2,7 +2,7 @@
   {
     "id": "reel-upi-fee",
     "lang": "en",
-    "postAt": "13:00",
+    "postAt": "13:30",
     "sourceShort": "Source: NPCI FAQ",
     "scenes": [
       {
@@ -38,9 +38,52 @@
     "sourceUrl": "https://www.scconline.com/blog/post/2026/09/16/npci-released-upi-mdr-faqs-explained/"
   },
   {
+    "id": "reel-lpg-aadhaar",
+    "lang": "en",
+    "postAt": "18:30",
+    "sourceShort": "Source: All India Radio News",
+    "scenes": [
+      {
+        "text": "Your gas cylinder booking can get blocked.",
+        "ground": "signal",
+        "seconds": 2.5
+      },
+      {
+        "text": "One check decides it.",
+        "ground": "ink",
+        "seconds": 2
+      },
+      {
+        "text": "Biometric Aadhaar check is now compulsory.",
+        "sub": "For subsidised LPG refills, since 1 October.",
+        "ground": "lime",
+        "seconds": 3.5
+      },
+      {
+        "text": "27.43 crore homes have already done it.",
+        "sub": "Done once? You need nothing more.",
+        "ground": "blue",
+        "seconds": 3
+      },
+      {
+        "text": "Not sure? Ask the delivery person, the distributor, or your gas app.",
+        "ground": "paper",
+        "seconds": 3.5
+      },
+      {
+        "text": "Send this to your parents.",
+        "sub": "@postr.news · News, designed.",
+        "ground": "signal",
+        "seconds": 3
+      }
+    ],
+    "caption": "Your subsidised gas cylinder booking needs one thing now: a fingerprint.\n\nFrom 1 October, biometric Aadhaar authentication is mandatory for subsidised domestic LPG refills. 27.43 crore consumers have already done it. You can do it at delivery, at your distributor, or on your oil company's app.\n\nSource: All India Radio News, 19 Sep 2026\n\nSend this to whoever books the cylinder at home.\n\n#PostrNews #LPG #Aadhaar #GasCylinder",
+    "sourceUrl": "https://newsonair.gov.in/biometric-aadhaar-authentication-mandatory-for-subsidised-lpg-refills-from-october-1/"
+  },
+  {
     "id": "reel-digital-arrest",
     "lang": "en",
-    "postAt": "20:00",
+    "postAt": "20:30",
     "sourceShort": "Source: I4C advisory",
     "scenes": [
       {
@@ -75,5 +118,44 @@
     ],
     "caption": "Your parents will get this call. Make sure they know it's a scam.\n\nFraudsters pose as CBI, police, customs or ED officers on video calls, claim you're caught in a crime, keep you 'under digital arrest' on camera and demand money. The government's cyber crime centre (I4C) says real agencies never arrest anyone on a video call.\n\nHang up. Don't pay. Report on 1930 or cybercrime.gov.in.\n\nSource: I4C advisory, via PTI\n\nSend this to your parents now.\n\n#PostrNews #DigitalArrest #ScamAlert #CyberSafety",
     "sourceUrl": "https://www.deccanherald.com/amp/story/india%2Famid-rise-in-digital-arrest-cases-indian-cyber-crime-coordination-centre-issues-advisory-for-citizens-3221509"
+  },
+  {
+    "id": "reel-whatsapp-not-paid",
+    "lang": "en",
+    "postAt": "22:30",
+    "sourceShort": "Source: Meta pricing, via Sunday Guardian",
+    "scenes": [
+      {
+        "text": "\"WhatsApp is charging for messages now.\"",
+        "stamp": "FORWARD",
+        "ground": "myth",
+        "seconds": 3
+      },
+      {
+        "text": "Missing context.",
+        "ground": "signal",
+        "seconds": 2
+      },
+      {
+        "text": "Only big businesses pay.",
+        "sub": "Companies on the WhatsApp Business Platform.",
+        "ground": "lime",
+        "seconds": 3,
+        "size": 118
+      },
+      {
+        "text": "Your chats and family groups: still free.",
+        "ground": "blue",
+        "seconds": 3
+      },
+      {
+        "text": "Send this to the group spreading it.",
+        "sub": "@postr.news · News, designed.",
+        "ground": "signal",
+        "seconds": 3
+      }
+    ],
+    "caption": "Is WhatsApp charging you for messages? No.\n\nMeta's new India pricing applies to the WhatsApp Business Platform, which companies use for bulk order and delivery messages: 1,000 free support replies a month per number, then ₹0.115 per message plus GST. The normal WhatsApp app and the WhatsApp Business app aren't affected.\n\nSource: Meta pricing change, via Sunday Guardian, 1 Oct 2026\n\nSend this to the family group where the forward is going around.\n\n#PostrNews #WhatsApp #FactCheck",
+    "sourceUrl": "https://sundayguardianlive.com/trending/what-changes-from-october-1-2026-check-major-new-rules-on-lpg-subsidy-whatsapp-business-pricing-sbi-atm-charges-upi-payments-tds-rules-immigration-visa-fee-hike-and-more-295963/"
   }
 ]

@@ -1,9 +1,12 @@
 name: Scheduled Reels
-# 1 pm and 8 pm India time (07:30 and 14:30 UTC): post the next Reel of the day.
+# 1:30, 6:30, 8:30 and 10:30 pm India time (08:00, 13:00, 15:00, 17:00 UTC): post the next Reel of the day.
+# Half past the hour, so Reels never collide with the hourly carousel.
 on:
   schedule:
-    - cron: '30 7 * * *'
-    - cron: '30 14 * * *'
+    - cron: '0 8 * * *'
+    - cron: '0 13 * * *'
+    - cron: '0 15 * * *'
+    - cron: '0 17 * * *'
   workflow_dispatch:
     inputs:
       only:
