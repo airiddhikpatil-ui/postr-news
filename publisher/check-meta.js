@@ -26,7 +26,18 @@ async function get(p, params = {}) {
   }
   let ok = true;
   const step = async (name, fn) => {
-    try { console.log(`PASS: ${name}: ${await fn()}`); } catch (e) { ok = false; console.log(`FAIL: ${name}: ${e.message}`); }
+    const gh = process.env.GITHUB_ACTIONS === 'true';
+    const clean = (m) => String(m).replace(/[\r\n]+/g, ' ');
+    try {
+      const msg = `PASS: ${name}: ${await fn()}`;
+      console.log(msg);
+      if (gh) console.log(`::notice title=Meta check::${clean(msg)}`);
+    } catch (e) {
+      ok = false;
+      const msg = `FAIL: ${name}: ${e.message}`;
+      console.log(msg);
+      if (gh) console.log(`::warning title=Meta check::${clean(msg)}`);
+    }
   };
   await step('Token works', async () => { const me = await get('me', { fields: 'id,name' }); return `acting as "${me.name}"`; });
   await step('Can see the Facebook Page', async () => { const p = await get(pageId, { fields: 'name' }); return `"${p.name}" (${pageId})`; });
