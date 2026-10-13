@@ -80,9 +80,10 @@ const body = {
 
   number: (s) => `
     ${tagRow(s)}
-    <div class="d" style="margin-top:auto;font-size:384px;line-height:.85;letter-spacing:-24px">${esc(s.value)}<span style="color:${C.lime}">${esc(s.unit || '')}</span></div>
+    <div class="d fit" style="margin-top:auto;font-size:384px;line-height:.85;letter-spacing:-24px;white-space:nowrap;overflow:hidden">${esc(s.value)}<span style="color:${C.lime}">${esc(s.unit || '')}</span></div>
     ${s.share !== undefined ? `<div style="margin-top:36px;display:flex;gap:12px;height:36px"><div style="flex:${s.share};background:${C.lime};border-radius:12px"></div><div style="flex:${100 - s.share};background:rgba(244,241,234,.25);border-radius:12px"></div></div>` : ''}
     <p class="head" style="margin-top:42px;font-size:54px;line-height:1.15;font-weight:700;${s.lang === 'en' ? 'letter-spacing:-1px' : ''}">${esc(s.caption)}</p>
+    ${s.note ? `<p style="margin-top:20px;font-size:34px;font-weight:700;line-height:1.3;opacity:.8">${esc(s.note)}</p>` : ''}
     ${foot(s, 'margin-top:42px')}`,
 
   tracker: (s, size) => {

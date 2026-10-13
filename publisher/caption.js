@@ -24,7 +24,7 @@ function buildCaption(story, platform = 'instagram') {
   if (story.summary) lines.push('', clean(story.summary));
   if (story.forYou) lines.push('', `What it means for you: ${clean(story.forYou)}`);
   if (story.assumptions) lines.push(`(${clean(story.assumptions)})`);
-  const src = `Source: ${clean(story.source)}${story.date ? ` · ${clean(story.date)}` : ''}`;
+  const src = `Source: ${clean(story.source)}`;
   lines.push('', platform === 'facebook' && story.sourceUrl ? `${src}\n${story.sourceUrl}` : src);
   if (story.corrected) lines.push(`Corrected ${clean(story.corrected)}: ${clean(story.correctionNote)}`);
   if (story.sponsored) lines.push('', `Paid partnership with ${clean(story.sponsor)}`);

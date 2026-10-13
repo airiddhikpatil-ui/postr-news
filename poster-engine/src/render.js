@@ -25,6 +25,11 @@ async function renderAll(stories, outDir, sizes = ['feed', 'story']) {
         await page.setContent(renderHtml(story, size), { waitUntil: 'load', timeout: 15000 }).catch(() => {});
         // Wait for brand fonts if the server can reach them; fall back after 5s.
         await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 5000))]));
+        // Shrink oversized display numbers until they fit the 936px text column.
+        await page.evaluate(() => document.querySelectorAll('.fit').forEach((el) => {
+          let px = parseFloat(getComputedStyle(el).fontSize);
+          while (el.scrollWidth > el.clientWidth && px > 120) { px -= 8; el.style.fontSize = `${px}px`; el.style.letterSpacing = `${-px / 16}px`; }
+        }));
         const file = path.join(outDir, `${story.id}-${story.lang || 'en'}-${size}.png`);
         await page.screenshot({ path: file });
         await page.close();
