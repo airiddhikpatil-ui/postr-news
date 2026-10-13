@@ -6,7 +6,8 @@
     "instagramBusinessAccountId": null,
     "instagramHandle": "postr.news",
     "instagramPortfolioAssetId": "1415509101640306",
-    "_instagramNote": "instagramBusinessAccountId (the Graph API ID) is filled in after the Meta developer app is set up; it differs from the portfolio asset ID."
+    "_instagramNote": "instagramBusinessAccountId (the Graph API ID) is filled in after the Meta developer app is set up; it differs from the portfolio asset ID.",
+    "appId": "2529201610910341"
   },
   "launch": {
     "cities": [
