@@ -30,6 +30,18 @@ async function call(method, p, params = {}, accessToken = token(), body) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Instagram sometimes says "media is not ready" (code 9007) just after processing finishes; wait and retry.
+async function publishWhenReady(igId, creationId) {
+  for (let i = 0; i < 8; i++) {
+    try {
+      return await call('POST', `${igId}/media_publish`, { creation_id: creationId });
+    } catch (e) {
+      if (!/code 9007/.test(e.message) || i === 7) throw e;
+      await sleep(5000);
+    }
+  }
+}
+
 async function pageToken(pageId = accounts.facebookPageId) {
   const p = await call('GET', pageId, { fields: 'access_token' });
   if (!p.access_token) throw new Error('Could not get a Page token; check the system user has the Page assigned');
@@ -67,7 +79,7 @@ async function postToInstagram(imageUrl, caption, igId = accounts.instagramBusin
     if (s.status_code === 'ERROR' || s.status_code === 'EXPIRED') throw new Error(`Instagram could not process the image (${s.status_code})`);
     await sleep(3000);
   }
-  const pub = await call('POST', `${igId}/media_publish`, { creation_id: container.id });
+  const pub = await publishWhenReady(igId, container.id);
   const media = await call('GET', pub.id, { fields: 'permalink' });
   return { mediaId: pub.id, permalink: media.permalink || null };
 }
@@ -115,7 +127,7 @@ async function publishCarousel(files, { facebookCaption, instagramCaption, targe
     }
     const parent = await call('POST', `${igId}/media`, { media_type: 'CAROUSEL', children: children.join(','), caption: instagramCaption });
     await waitReady(parent.id);
-    const pub = await call('POST', `${igId}/media_publish`, { creation_id: parent.id });
+    const pub = await publishWhenReady(igId, parent.id);
     const media = await call('GET', pub.id, { fields: 'permalink' });
     result.instagram = { mediaId: pub.id, permalink: media.permalink || null };
   }
