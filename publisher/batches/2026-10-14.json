@@ -501,5 +501,502 @@
         "body": "ज़्यादातर लोगों को तब पता चलता है जब EMI बदल जाती है। उन्हें अभी बता दीजिए।"
       }
     ]
+  },
+  {
+    "id": "upi-mdr-oct15",
+    "format": "alert",
+    "lang": "en",
+    "place": "All UPI users",
+    "headline": "UPI fee tomorrow",
+    "time": "From 15 Oct",
+    "note": "You don't pay it. Shops pay 0.4% on payments above ₹2,000.",
+    "source": "NPCI FAQ, via SCC Online",
+    "captionHeadline": "UPI is getting a fee from 15 October. Here's who actually pays (it's not you).",
+    "summary": "From 15 October, a 0.4% merchant fee (MDR) applies to specified UPI payments to shops above ₹2,000, capped at ₹300. Fuel, railways, telecom and insurance pay a flat ₹5. Person-to-person transfers stay free, and so do shop payments up to ₹2,000.",
+    "forYou": "NPCI says consumers can keep using UPI free. If a shop tries to add the fee to your bill, ask why.",
+    "cta": "Send this to the friend who'll panic when they hear 'UPI fee'.",
+    "sourceUrl": "https://www.scconline.com/blog/post/2026/09/16/npci-released-upi-mdr-faqs-explained/",
+    "tags": [
+      "UPI",
+      "UPIFee",
+      "NPCI"
+    ],
+    "slides": [
+      {
+        "label": "WHO PAYS WHAT",
+        "title": "The shop pays, above ₹2,000",
+        "points": [
+          "Most shop payments above ₹2,000: 0.4% fee",
+          "Fuel, railways, telecom, insurance: ₹5 flat",
+          "Maximum fee: ₹300 per payment (from ₹75,000 up)",
+          "Paid by the merchant, not by you"
+        ]
+      },
+      {
+        "label": "STILL FREE",
+        "title": "What doesn't change",
+        "points": [
+          "Sending money to a person: free, any amount",
+          "Paying a shop ₹2,000 or less: no fee",
+          "Small shops getting up to ₹1 lakh a month on QR: no fee",
+          "You, the customer: NPCI says UPI stays free"
+        ]
+      },
+      {
+        "label": "IF A SHOP CHARGES YOU",
+        "title": "Ask before you pay extra",
+        "body": "The fee is the merchant's cost, like a card fee. NPCI's FAQ says consumers can continue using UPI free of cost. If a shop adds it to your bill, ask them to show why."
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Send this before the WhatsApp panic starts",
+        "body": "Tomorrow everyone will hear 'UPI fee'. Be the one with the real facts."
+      }
+    ]
+  },
+  {
+    "id": "delhi-storm-oct14",
+    "format": "alert",
+    "lang": "en",
+    "place": "Delhi NCR",
+    "headline": "Storm alert",
+    "time": "Today and tomorrow",
+    "note": "Gusts up to 60 km/h, lightning and isolated hail.",
+    "source": "IMD, via India.com, 13 Oct 2026",
+    "captionHeadline": "Delhi-NCR, carry an umbrella: storms, 60 km/h gusts and possible hail today and tomorrow.",
+    "summary": "IMD expects thunderstorms, lightning and gusty winds of 40–50 km/h, gusting to 60 km/h, over Delhi-NCR, with isolated hail on 14 and 15 October. Haryana, Chandigarh, Punjab and western UP (Noida, Ghaziabad, Meerut) may also see storms and rain.",
+    "cta": "Share with your office and family groups in NCR.",
+    "sourceUrl": "https://www.india.com/news/india/weather-tomorrow-october-14-imd-warns-of-heavy-rain-in-karnataka-kerala-andhra-pradesh-hailstorm-alert-for-delhi-punjab-check-forecast-here-8535760/",
+    "tags": [
+      "DelhiWeather",
+      "IMD",
+      "DelhiNCR"
+    ],
+    "slides": [
+      {
+        "label": "WHAT TO EXPECT",
+        "title": "Wind, lightning, maybe hail",
+        "points": [
+          "Winds of 40–50 km/h, gusts up to 60 km/h",
+          "Thunderstorms and lightning",
+          "Isolated hail on 14 and 15 October",
+          "Rain also likely in Noida, Ghaziabad and Meerut"
+        ]
+      },
+      {
+        "label": "STAY SAFE",
+        "title": "During the storm",
+        "points": [
+          "Stay indoors when there's lightning",
+          "Keep away from trees, poles and hoardings",
+          "Park away from trees and loose structures",
+          "Secure balcony pots and loose items"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Share with your NCR groups",
+        "body": "A quick heads-up now saves a soaked commute or a broken windshield later."
+      }
+    ]
+  },
+  {
+    "id": "digital-arrest-scam",
+    "format": "myth",
+    "lang": "en",
+    "date": "Scam of the day",
+    "claim": "Video call: 'This is CBI. You are under digital arrest. Stay on camera and pay to clear your name.'",
+    "verdict": "FAKE",
+    "evidence": "I4C: CBI, police, ED, customs and judges do NOT arrest on video calls.",
+    "source": "I4C advisory, via PTI",
+    "captionHeadline": "No police officer will ever arrest you on a video call. 'Digital arrest' is a scam.",
+    "summary": "Fraudsters pose as CBI, police, customs or ED officers on SMS and video calls, claim you or a relative is caught in drugs or money laundering, keep you 'confined' on camera, and demand money to 'bail' you out. The government's cyber crime centre (I4C) says real agencies never arrest anyone on a video call.",
+    "forYou": "Hang up. Don't pay. Report it on 1930 or cybercrime.gov.in.",
+    "cta": "Send this to your parents. Scammers target people who trust a uniform.",
+    "sourceUrl": "https://www.deccanherald.com/amp/story/india%2Famid-rise-in-digital-arrest-cases-indian-cyber-crime-coordination-centre-issues-advisory-for-citizens-3221509",
+    "tags": [
+      "DigitalArrest",
+      "ScamAlert",
+      "CyberSafety"
+    ],
+    "slides": [
+      {
+        "label": "HOW IT WORKS",
+        "title": "Fear, then a 'fine'",
+        "points": [
+          "A call or video call from a fake 'officer'",
+          "'Your parcel had drugs' or 'Your account funded crime'",
+          "You're told to stay on camera and talk to no one",
+          "Then: pay now to 'clear your name'"
+        ]
+      },
+      {
+        "label": "WHAT TO DO",
+        "title": "Don't panic. Hang up.",
+        "points": [
+          "Real agencies never arrest anyone on a video call",
+          "Never transfer money to 'settle' a case",
+          "Call the local police station yourself to check",
+          "Report: 1930 or cybercrime.gov.in"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Send this to your parents today",
+        "body": "Scammers target people who respect authority. One forward can stop a call from becoming a loss."
+      }
+    ]
+  },
+  {
+    "id": "upi-mdr-oct15-hi",
+    "format": "alert",
+    "lang": "hi",
+    "place": "सभी UPI यूज़र",
+    "headline": "कल से UPI फ़ीस",
+    "time": "15 अक्टूबर से",
+    "note": "ये फ़ीस आप नहीं, दुकानदार देंगे: ₹2,000 से ऊपर पर 0.4%",
+    "source": "NPCI FAQ, SCC Online के ज़रिए",
+    "sourceLabel": "स्रोत",
+    "forYouLabel": "आपके लिए",
+    "captionHeadline": "15 अक्टूबर से UPI पर फ़ीस। लेकिन ये आपको नहीं देनी।",
+    "summary": "15 अक्टूबर से दुकानों को ₹2,000 से ज़्यादा के कुछ UPI पेमेंट पर 0.4% मर्चेंट फ़ीस (MDR) देनी होगी, अधिकतम ₹300। पेट्रोल पंप, रेलवे, टेलीकॉम और इंश्योरेंस पर ₹5 फ़्लैट। किसी व्यक्ति को पैसे भेजना और ₹2,000 तक का दुकान पेमेंट मुफ़्त रहेगा।",
+    "forYou": "NPCI के मुताबिक़ ग्राहकों के लिए UPI मुफ़्त रहेगा। अगर दुकान बिल में फ़ीस जोड़े, तो सवाल पूछें।",
+    "cta": "ये पोस्ट परिवार के WhatsApp ग्रुप में भेजें, घबराहट से पहले।",
+    "sourceUrl": "https://www.scconline.com/blog/post/2026/09/16/npci-released-upi-mdr-faqs-explained/",
+    "tags": [
+      "UPI",
+      "NPCI"
+    ],
+    "slides": [
+      {
+        "label": "कौन क्या देगा",
+        "title": "₹2,000 से ऊपर, दुकानदार देगा",
+        "points": [
+          "₹2,000 से ऊपर ज़्यादातर दुकान पेमेंट: 0.4% फ़ीस",
+          "पेट्रोल, रेलवे, टेलीकॉम, इंश्योरेंस: ₹5 फ़्लैट",
+          "एक पेमेंट पर अधिकतम ₹300",
+          "फ़ीस दुकानदार देगा, आप नहीं"
+        ]
+      },
+      {
+        "label": "जो मुफ़्त रहेगा",
+        "title": "क्या नहीं बदलेगा",
+        "points": [
+          "किसी व्यक्ति को पैसे भेजना: मुफ़्त",
+          "₹2,000 तक दुकान पेमेंट: कोई फ़ीस नहीं",
+          "QR पर महीने में ₹1 लाख तक पाने वाली छोटी दुकानें: कोई फ़ीस नहीं",
+          "ग्राहक: NPCI के मुताबिक़ UPI मुफ़्त"
+        ]
+      },
+      {
+        "label": "शेयर करें",
+        "kind": "share",
+        "followLabel": "रोज़ की ख़बरें, पोस्टर में",
+        "title": "घबराहट से पहले सही जानकारी भेजें",
+        "body": "कल हर कोई 'UPI फ़ीस' सुनेगा। आप सही बात बताने वाले बनिए।"
+      }
+    ]
+  },
+  {
+    "id": "sensex-it-rally",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "value": "5.2",
+    "unit": "%",
+    "share": 5,
+    "caption": "jump in IT stocks (Nifty IT) on Tuesday, as the Sensex rose over 1,100 points.",
+    "note": "Brent crude still near $104 a barrel.",
+    "source": "Kotak Neo market report, 13 Oct 2026",
+    "captionHeadline": "IT stocks jumped 5.2% in a day. The Sensex added 1,100+ points.",
+    "summary": "On 13 October the Sensex closed at 73,003.78 (up 1.54%) and the Nifty 50 at 22,721.95 (up 1.60%). The Nifty IT index rose 5.22%, led by HCL Tech, TCS and Tech Mahindra. Kotak Mahindra Bank and Maruti were among the losers.",
+    "cta": "Tag the friend who checks their portfolio every 10 minutes.",
+    "sourceUrl": "https://www.kotakneo.com/news/market-news/sensex-nifty-50-recover-as-bulls-return-dalal-street/",
+    "tags": [
+      "Sensex",
+      "Nifty",
+      "StockMarket"
+    ],
+    "slides": [
+      {
+        "label": "THE DAY IN NUMBERS",
+        "title": "One-day change, 13 October",
+        "stats": [
+          {
+            "label": "Nifty IT",
+            "value": "+5.22%",
+            "num": 5.22,
+            "hi": true
+          },
+          {
+            "label": "Nifty 50",
+            "value": "+1.60%",
+            "num": 1.6
+          },
+          {
+            "label": "Sensex",
+            "value": "+1.54%",
+            "num": 1.54
+          },
+          {
+            "label": "Nifty Midcap 100",
+            "value": "+1.06%",
+            "num": 1.06
+          }
+        ],
+        "statsNote": "Sensex closed at 73,003.78; Nifty 50 at 22,721.95."
+      },
+      {
+        "label": "WHO MOVED",
+        "title": "IT led the rally",
+        "points": [
+          "Top gainers: HCL Tech, TCS, Shriram Finance, Tech Mahindra",
+          "Top losers: Kotak Mahindra Bank, Eternal, Maruti Suzuki, Max Healthcare",
+          "Brent crude stayed near $104 a barrel"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "One green day isn't a trend",
+        "body": "Markets move on oil, rates and global cues. Tag the friend who needs to hear that before buying on a rally."
+      }
+    ]
+  },
+  {
+    "id": "pune-no-digging",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "place": "Pune",
+    "value": "5",
+    "unit": "yrs",
+    "caption": "of no new digging on Pune's upgraded cycling-race roads, says PMC.",
+    "note": "All utility trenching must finish by 31 Oct 2026.",
+    "source": "PMC, via PuneNow, 13 Oct 2026",
+    "captionHeadline": "Pune, a road that stays fixed? PMC bans digging on race roads for 5 years.",
+    "summary": "PMC has told utility companies to finish all trenching on the cycling circuit by 31 October 2026, ahead of the Pune Grand Tour international cycling race in January 2027. After that, no new trenching permissions for five years. Firms that damage the upgraded roads face penal and even criminal action.",
+    "cta": "Tag a Punekar who has given up on smooth roads.",
+    "sourceUrl": "https://www.punenow.com/no-road-digging-in-pune-for-5-years-as-pmc-prepares-for-international-cycling-event/",
+    "tags": [
+      "Pune",
+      "PMC",
+      "PuneRoads"
+    ],
+    "slides": [
+      {
+        "label": "WHAT PMC DECIDED",
+        "title": "Dig now, or not for 5 years",
+        "points": [
+          "All utility trenching on the circuit must end by 31 Oct 2026",
+          "No extensions, no new permissions after that",
+          "No new trenching for 5 years after the race",
+          "Damage can bring penal and even criminal action"
+        ]
+      },
+      {
+        "label": "WHY",
+        "title": "An international cycling race",
+        "body": "The roads are being upgraded for the Pune Grand Tour International Cycling Competition in January 2027. PMC wants them to stay intact after the work is done."
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Smooth roads in Pune. For real?",
+        "body": "Tag a Punekar and tell us which road you want fixed next."
+      }
+    ]
+  },
+  {
+    "id": "delhi-storm-oct14-hi",
+    "format": "alert",
+    "lang": "hi",
+    "place": "दिल्ली-NCR",
+    "headline": "आंधी का अलर्ट",
+    "time": "आज और कल",
+    "note": "60 किमी/घंटा तक की हवा, बिजली और कहीं-कहीं ओले",
+    "source": "IMD, India.com के ज़रिए",
+    "sourceLabel": "स्रोत",
+    "forYouLabel": "आपके लिए",
+    "captionHeadline": "दिल्ली-NCR: आज और कल आंधी, बिजली और ओले की चेतावनी।",
+    "summary": "IMD के अनुसार दिल्ली-NCR में गरज के साथ बारिश, बिजली और 40–50 किमी/घंटा की हवा चल सकती है, जो 60 किमी/घंटा तक पहुंच सकती है। 14 और 15 अक्टूबर को कहीं-कहीं ओले गिर सकते हैं।",
+    "cta": "ये पोस्ट अपने दफ़्तर और परिवार के ग्रुप में भेजें।",
+    "sourceUrl": "https://www.india.com/news/india/weather-tomorrow-october-14-imd-warns-of-heavy-rain-in-karnataka-kerala-andhra-pradesh-hailstorm-alert-for-delhi-punjab-check-forecast-here-8535760/",
+    "tags": [
+      "DelhiWeather",
+      "IMD"
+    ],
+    "slides": [
+      {
+        "label": "क्या होगा",
+        "title": "हवा, बिजली और ओले",
+        "points": [
+          "40–50 किमी/घंटा की हवा, 60 तक के झोंके",
+          "गरज और बिजली",
+          "14 और 15 अक्टूबर को कहीं-कहीं ओले",
+          "नोएडा, ग़ाज़ियाबाद, मेरठ में भी बारिश"
+        ]
+      },
+      {
+        "label": "सावधानी",
+        "title": "आंधी के दौरान",
+        "points": [
+          "बिजली चमके तो घर के अंदर रहें",
+          "पेड़, खंभों और होर्डिंग से दूर रहें",
+          "गाड़ी पेड़ों से दूर पार्क करें"
+        ]
+      },
+      {
+        "label": "शेयर करें",
+        "kind": "share",
+        "followLabel": "रोज़ की ख़बरें, पोस्टर में",
+        "title": "NCR के ग्रुप में भेजें",
+        "body": "अभी की एक चेतावनी बाद की परेशानी से बचा सकती है।"
+      }
+    ]
+  },
+  {
+    "id": "brent-104",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "value": "$104",
+    "caption": "for a barrel of Brent crude. Expensive oil is behind costly petrol and the RBI's rate hike.",
+    "note": "RBI cited high oil prices when it raised rates on 7 Oct.",
+    "source": "Kotak Neo, 13 Oct; RBI MPC, 7 Oct 2026",
+    "captionHeadline": "Oil is above $100 a barrel. Here's how that reaches your wallet.",
+    "summary": "Brent crude futures were around $104.42 a barrel on 13 October. On 7 October, the RBI named elevated oil prices among the reasons it raised the repo rate to 5.5%.",
+    "cta": "Save this. It explains half the price rises you'll see this month.",
+    "sourceUrl": "https://www.kotakneo.com/news/market-news/sensex-nifty-50-recover-as-bulls-return-dalal-street/",
+    "tags": [
+      "CrudeOil",
+      "Petrol",
+      "RBI"
+    ],
+    "slides": [
+      {
+        "label": "THE CHAIN",
+        "title": "From an oil barrel to your EMI",
+        "points": [
+          "India imports most of its crude oil",
+          "Costlier oil keeps fuel prices high",
+          "High fuel costs push up prices of goods",
+          "The RBI raised rates on 7 Oct, citing oil among the reasons"
+        ]
+      },
+      {
+        "label": "WHERE YOU FEEL IT",
+        "title": "Already this month",
+        "points": [
+          "Petrol on 11 Oct: ₹111.21 a litre in Mumbai, ₹102.12 in Delhi",
+          "EMI: about ₹477 more a month on a ₹30 lakh home loan, if passed on"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Save this explainer",
+        "body": "Next time someone asks why everything costs more, send them this."
+      }
+    ]
+  },
+  {
+    "id": "digital-arrest-scam-hi",
+    "format": "myth",
+    "lang": "hi",
+    "date": "आज का स्कैम",
+    "claim": "वीडियो कॉल: 'मैं CBI से हूं। आप डिजिटल अरेस्ट में हैं। कैमरा बंद मत करना, पैसे भरकर नाम साफ़ करो।'",
+    "verdict": "FAKE",
+    "evidence": "I4C: CBI, पुलिस, ED, कस्टम या जज वीडियो कॉल पर गिरफ़्तार नहीं करते।",
+    "source": "I4C सलाह, PTI के ज़रिए",
+    "sourceLabel": "स्रोत",
+    "forYouLabel": "आपके लिए",
+    "captionHeadline": "कोई पुलिस वीडियो कॉल पर गिरफ़्तार नहीं करती। 'डिजिटल अरेस्ट' एक स्कैम है।",
+    "summary": "ठग CBI, पुलिस, कस्टम या ED अफ़सर बनकर कॉल या वीडियो कॉल करते हैं, कहते हैं कि आप या कोई रिश्तेदार ड्रग्स या मनी लॉन्ड्रिंग में फंसा है, कैमरे पर 'क़ैद' रखते हैं और 'बेल' के नाम पर पैसे मांगते हैं। सरकार के साइबर क्राइम सेंटर (I4C) के अनुसार असली एजेंसियां वीडियो कॉल पर गिरफ़्तारी नहीं करतीं।",
+    "forYou": "फ़ोन काटें, पैसे न भेजें। शिकायत: 1930 या cybercrime.gov.in",
+    "cta": "ये पोस्ट अपने माता-पिता को ज़रूर भेजें।",
+    "sourceUrl": "https://www.deccanherald.com/amp/story/india%2Famid-rise-in-digital-arrest-cases-indian-cyber-crime-coordination-centre-issues-advisory-for-citizens-3221509",
+    "tags": [
+      "DigitalArrest",
+      "ScamAlert"
+    ],
+    "slides": [
+      {
+        "label": "कैसे होता है",
+        "title": "पहले डर, फिर 'जुर्माना'",
+        "points": [
+          "नकली 'अफ़सर' का कॉल या वीडियो कॉल",
+          "'आपके पार्सल में ड्रग्स मिले हैं'",
+          "कैमरे पर रहने और किसी से बात न करने को कहा जाता है",
+          "फिर: 'नाम साफ़ करने' के लिए पैसे भेजो"
+        ]
+      },
+      {
+        "label": "क्या करें",
+        "title": "घबराएं नहीं, फ़ोन काटें",
+        "points": [
+          "असली एजेंसियां वीडियो कॉल पर गिरफ़्तार नहीं करतीं",
+          "'केस निपटाने' के लिए कभी पैसे न भेजें",
+          "ख़ुद नज़दीकी थाने में फ़ोन करके पूछें",
+          "शिकायत: 1930 या cybercrime.gov.in"
+        ]
+      },
+      {
+        "label": "शेयर करें",
+        "kind": "share",
+        "followLabel": "रोज़ की ख़बरें, पोस्टर में",
+        "title": "आज ही माता-पिता को भेजें",
+        "body": "ठग उन्हीं को निशाना बनाते हैं जो वर्दी पर भरोसा करते हैं। एक फ़ॉरवर्ड नुकसान रोक सकता है।"
+      }
+    ]
+  },
+  {
+    "id": "ind-wi-4th-t20i",
+    "format": "number",
+    "lang": "en",
+    "date": "Tonight, 7 pm",
+    "place": "Hyderabad",
+    "value": "2-1",
+    "caption": "India lead the series. Win tonight in Hyderabad and it's theirs with a match to spare.",
+    "note": "Toss 6:30 pm. Star Sports and JioHotstar.",
+    "source": "CricketAddictor; UNI, 11 Oct 2026",
+    "captionHeadline": "Tonight, 7 pm, Hyderabad: one win and the series is India's.",
+    "summary": "India lead the five-match T20I series 2-1 after winning by 14 runs in Indore. The 4th T20I is at Rajiv Gandhi International Stadium, Hyderabad: toss 6:30 pm, start 7 pm, live on Star Sports and JioHotstar.",
+    "cta": "Who's your player of the match tonight? Comment before the toss.",
+    "sourceUrl": "https://cricketaddictor.com/cricket-news/ind-vs-wi-playing-11-today-live-streaming-pitch-weather-india-vs-west-indies-4th-t20i-2026-464873/",
+    "tags": [
+      "INDvWI",
+      "TeamIndia",
+      "Cricket"
+    ],
+    "slides": [
+      {
+        "label": "THE SERIES SO FAR",
+        "title": "Three matches, one wild chase",
+        "points": [
+          "Match 1: India won by 8 wickets",
+          "Match 2, Ranchi: India made 249, and West Indies still chased it",
+          "Match 3, Indore: India won by 14 runs"
+        ]
+      },
+      {
+        "label": "TONIGHT",
+        "title": "Where and when",
+        "points": [
+          "Rajiv Gandhi International Stadium, Hyderabad",
+          "Toss 6:30 pm, first ball 7 pm",
+          "Live on Star Sports and JioHotstar"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Call it before the toss",
+        "body": "Comment your player of the match and tag your cricket group. We'll check who got it right."
+      }
+    ]
   }
 ]
