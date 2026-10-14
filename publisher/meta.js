@@ -110,7 +110,7 @@ async function waitReady(containerId) {
 
 // A carousel (2-10 pages): one Facebook post with all pages, and one Instagram carousel.
 // Pages are uploaded to the Page unpublished first; their image URLs feed Instagram.
-async function publishCarousel(files, { facebookCaption, instagramCaption, targets = ['facebook', 'instagram'], pageId = accounts.facebookPageId, igId = accounts.instagramBusinessAccountId }) {
+async function publishCarousel(files, { facebookCaption, instagramCaption, targets = ['facebook', 'instagram'], collaborators = [], pageId = accounts.facebookPageId, igId = accounts.instagramBusinessAccountId }) {
   if (files.length < 2) return publishPoster(files[0], { facebookCaption, instagramCaption, targets });
   const pt = await pageToken(pageId);
   const uploads = [];
@@ -125,7 +125,19 @@ async function publishCarousel(files, { facebookCaption, instagramCaption, targe
       await waitReady(c.id);
       children.push(c.id);
     }
-    const parent = await call('POST', `${igId}/media`, { media_type: 'CAROUSEL', children: children.join(','), caption: instagramCaption });
+    const base = { media_type: 'CAROUSEL', children: children.join(','), caption: instagramCaption };
+    let parent;
+    result.collaborators = [];
+    if (collaborators.length) {
+      // Collab invites go out when the post is published. If Instagram rejects a username, post without them.
+      try {
+        parent = await call('POST', `${igId}/media`, { ...base, collaborators: JSON.stringify(collaborators) });
+        result.collaborators = collaborators;
+      } catch (e) {
+        result.collabError = e.message;
+      }
+    }
+    if (!parent) parent = await call('POST', `${igId}/media`, base);
     await waitReady(parent.id);
     const pub = await publishWhenReady(igId, parent.id);
     const media = await call('GET', pub.id, { fields: 'permalink' });
@@ -189,4 +201,18 @@ async function publishReel(file, { facebookCaption, instagramCaption, targets = 
   return result;
 }
 
-module.exports = { publishReel, publishPoster, publishCarousel, uploadToPage, postToInstagram, instagramQuota, pageToken };
+// Look up public business/creator accounts by username (Meta's business discovery). Returns null if not found.
+async function lookupAccount(username, igId = accounts.instagramBusinessAccountId) {
+  try {
+    const r = await call('GET', igId, { fields: `business_discovery.username(${username}){username,name,followers_count,media_count,biography}` });
+    return r.business_discovery || null;
+  } catch (e) {
+    return { error: e.message };
+  }
+}
+
+async function collabStatus(mediaId) {
+  return call('GET', `${mediaId}/collaborators`, { fields: 'id,username,invite_status' });
+}
+
+module.exports = { lookupAccount, collabStatus, publishReel, publishPoster, publishCarousel, uploadToPage, postToInstagram, instagramQuota, pageToken };

@@ -33,4 +33,5 @@ jobs:
           git config user.name "postr-bot"
           git config user.email "postr-bot@users.noreply.github.com"
           git add publisher/batches/*.posted.json 2>/dev/null || true
+          git add publisher/collabs/log.json 2>/dev/null || true
           git diff --cached --quiet || (git commit -m "Posted log $(date -u +%FT%TZ)" && git pull --rebase -q && git push)

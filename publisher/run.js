@@ -8,9 +8,10 @@
 const fs = require('fs');
 const path = require('path');
 const { renderIntro, CAPTION } = require('./intro');
-const { publishPoster, publishCarousel, publishReel } = require('./meta');
+const { publishPoster, publishCarousel, publishReel, lookupAccount } = require('./meta');
 const { renderReel } = require('./reel');
 const { buildCaption } = require('./caption');
+const { pickCollaborators, logInvites } = require('./collab');
 const { renderAll, renderCarousel, renderLabCarousel } = require('../poster-engine/src/render');
 
 const gh = process.env.GITHUB_ACTIONS === 'true';
@@ -44,7 +45,10 @@ async function postNext(outDir, targets) {
   }
   const { files, errors, style } = r0;
   if (errors.length) throw new Error(`${next.id} failed the brand rules: ${errors.join('; ')}`);
-  const r = await publishCarousel(files, { facebookCaption: buildCaption(next, 'facebook'), instagramCaption: buildCaption(next, 'instagram'), targets });
+  const collaborators = targets.includes('instagram') ? pickCollaborators(next) : [];
+  const r = await publishCarousel(files, { facebookCaption: buildCaption(next, 'facebook'), instagramCaption: buildCaption(next, 'instagram'), targets, collaborators });
+  if (r.collabError) note(`${next.id}: collab invite to ${collaborators.join(', ')} failed (${r.collabError}); posted without collaborators`, 'warning');
+  if (r.collaborators && r.collaborators.length) { logInvites(next, r.collaborators, r.instagram && r.instagram.permalink); note(`${next.id}: collab invites sent to ${r.collaborators.join(', ')}`); }
   posted.push({ id: next.id, style, at: new Date().toISOString(), instagram: r.instagram && r.instagram.permalink, facebook: r.facebook && r.facebook.permalink });
   fs.writeFileSync(postedFile, `${JSON.stringify(posted, null, 2)}\n`);
   note(`${next.id} [${style}]: IG ${r.instagram ? r.instagram.permalink : '-'} | FB ${r.facebook ? r.facebook.permalink : '-'}`);
@@ -85,6 +89,28 @@ async function postNextReel(outDir, targets) {
       if (r.facebook) note(`Facebook posted: ${r.facebook.permalink || r.facebook.postId}`);
       if (r.instagram) note(`Instagram posted: ${r.instagram.permalink || r.instagram.mediaId}`);
     }
+    return;
+  }
+
+  if (job === 'collab-targets') {
+    // Verify candidate pages through Meta's API and write config/collab-targets.json (keeps existing approvals).
+    const root = path.join(__dirname, '..', 'config');
+    const cands = JSON.parse(fs.readFileSync(path.join(root, 'collab-candidates.json'), 'utf8')).candidates;
+    const outFile = path.join(root, 'collab-targets.json');
+    const prev = fs.existsSync(outFile) ? JSON.parse(fs.readFileSync(outFile, 'utf8')).targets : [];
+    const found = [];
+    let missing = 0;
+    for (const c of cands) {
+      const a = await lookupAccount(c.username);
+      if (!a || a.error || !a.username) { missing++; continue; }
+      const old = prev.find((p) => p.username === a.username);
+      found.push({ username: a.username, name: a.name || '', followers: a.followers_count, posts: a.media_count, topics: c.topics, cities: c.cities, approved: old ? old.approved : false, bio: (a.biography || '').slice(0, 120) });
+      await sleep(400);
+    }
+    found.sort((x, y) => (y.followers || 0) - (x.followers || 0));
+    fs.writeFileSync(outFile, `${JSON.stringify({ _note: 'Verified via Meta business discovery. Set approved: true on pages Postr may invite as collaborators.', checkedAt: new Date().toISOString(), targets: found }, null, 2)}\n`);
+    note(`Collab targets: ${found.length} verified, ${missing} not found or not public business/creator accounts`);
+    for (const f of found) note(`@${f.username} · ${f.followers} followers · ${f.topics.join('/')}${f.cities ? ` · ${f.cities[0]}` : ''}`);
     return;
   }
 
