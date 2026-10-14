@@ -93,4 +93,32 @@ async function renderCarousel(story, outDir) {
   return { files, errors };
 }
 
-module.exports = { renderAll, renderCarousel };
+// Postr Lab carousel: art-directed style per story (see lab.js). Returns { files, errors, style }.
+async function renderLabCarousel(story, outDir, { prevStyle } = {}) {
+  const { labPages, pickStyle } = require('./lab');
+  const errors = validate(story);
+  if (errors.length) return { files: [], errors, style: null };
+  fs.mkdirSync(outDir, { recursive: true });
+  const style = pickStyle(story, prevStyle);
+  const pages = labPages(story, style);
+  const browser = await chromium.launch();
+  const files = [];
+  try {
+    for (let i = 0; i < pages.length; i++) {
+      const page = await browser.newPage({ viewport: { width: T.canvas.width, height: T.canvas.feedHeight } });
+      await page.setContent(pages[i], { waitUntil: 'load', timeout: 20000 }).catch(() => {});
+      await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 8000))]));
+      const bad = await page.evaluate(() => (window.__fit ? window.__fit() : 0));
+      if (bad) errors.push(`page ${i + 1} (${style}): text still too long after shrinking; shorten it`);
+      const file = path.join(outDir, `${story.id}-${story.lang || 'en'}-p${i + 1}.png`);
+      await page.screenshot({ path: file });
+      await page.close();
+      files.push(file);
+    }
+  } finally {
+    await browser.close();
+  }
+  return { files, errors, style };
+}
+
+module.exports = { renderAll, renderCarousel, renderLabCarousel };

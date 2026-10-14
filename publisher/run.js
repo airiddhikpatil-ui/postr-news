@@ -11,7 +11,7 @@ const { renderIntro, CAPTION } = require('./intro');
 const { publishPoster, publishCarousel, publishReel } = require('./meta');
 const { renderReel } = require('./reel');
 const { buildCaption } = require('./caption');
-const { renderAll, renderCarousel } = require('../poster-engine/src/render');
+const { renderAll, renderCarousel, renderLabCarousel } = require('../poster-engine/src/render');
 
 const gh = process.env.GITHUB_ACTIONS === 'true';
 const note = (msg, level = 'notice') => {
@@ -34,12 +34,20 @@ async function postNext(outDir, targets) {
   const stories = JSON.parse(fs.readFileSync(batchFile, 'utf8')).filter((s) => langs.includes(s.lang || 'en'));
   const next = stories.find((s) => !posted.some((p) => p.id === s.id));
   if (!next) return note(`Batch ${date} is fully posted.`);
-  const { files, errors } = await renderCarousel(next, outDir);
+  // Postr Lab designs by default; DESIGN=classic or story.design='classic' uses the original templates.
+  const classic = process.env.DESIGN === 'classic' || next.design === 'classic';
+  const prevStyle = posted.length ? posted[posted.length - 1].style : undefined;
+  let r0 = classic ? { ...(await renderCarousel(next, outDir)), style: 'classic' } : await renderLabCarousel(next, outDir, { prevStyle });
+  if (r0.errors.length && !classic) {
+    note(`${next.id}: Lab design failed (${r0.errors.join('; ')}); using classic`, 'warning');
+    r0 = { ...(await renderCarousel(next, outDir)), style: 'classic' };
+  }
+  const { files, errors, style } = r0;
   if (errors.length) throw new Error(`${next.id} failed the brand rules: ${errors.join('; ')}`);
   const r = await publishCarousel(files, { facebookCaption: buildCaption(next, 'facebook'), instagramCaption: buildCaption(next, 'instagram'), targets });
-  posted.push({ id: next.id, at: new Date().toISOString(), instagram: r.instagram && r.instagram.permalink, facebook: r.facebook && r.facebook.permalink });
+  posted.push({ id: next.id, style, at: new Date().toISOString(), instagram: r.instagram && r.instagram.permalink, facebook: r.facebook && r.facebook.permalink });
   fs.writeFileSync(postedFile, `${JSON.stringify(posted, null, 2)}\n`);
-  note(`${next.id}: IG ${r.instagram ? r.instagram.permalink : '-'} | FB ${r.facebook ? r.facebook.permalink : '-'}`);
+  note(`${next.id} [${style}]: IG ${r.instagram ? r.instagram.permalink : '-'} | FB ${r.facebook ? r.facebook.permalink : '-'}`);
 }
 
 // Scheduled Reels: post the next not-yet-posted Reel from today's publisher/reels/<date>.json.

@@ -1,0 +1,329 @@
+// Postr Lab: art-directed house styles for carousels. Each style has its own cover and matching inside pages.
+// The style is picked per story (story.style overrides), and never repeats the previous post's style.
+// Facts come only from the story; styles change the look, never the content.
+const fs = require('fs');
+const path = require('path');
+
+const FONTS = 'https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&family=Unbounded:wght@700;900&family=Manrope:wght@500;600;700;800&display=block';
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const wm = (tone) => `data:image/svg+xml;base64,${fs.readFileSync(path.join(__dirname, '..', 'assets', `postr-wordmark-${tone}.svg`)).toString('base64')}`;
+const NOISE = `<svg class="noise" width="1080" height="1350"><filter id="nz"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0"/></filter><rect width="100%" height="100%" filter="url(#nz)"/></svg>`;
+
+// Fit script: shrink any [data-fit] box until its text fits both ways.
+const FIT = `<script>window.__fit=()=>{
+const tall=(el)=>{const r=document.createRange();r.selectNodeContents(el);const tops=[];[...r.getClientRects()].forEach(x=>{if(x.width>1&&!tops.some(t=>Math.abs(t-x.top)<4))tops.push(x.top)});const cs=getComputedStyle(el);const lh=parseFloat(cs.lineHeight)||parseFloat(cs.fontSize)*1.2;return tops.length*lh;};
+const wide=(el)=>{const r=document.createRange();r.selectNodeContents(el);const a=r.getBoundingClientRect(),b=el.getBoundingClientRect();const t=parseFloat(getComputedStyle(el).fontSize)*0.06;return a.right>b.right+t||a.left<b.left-t;};
+const over=(el)=>el.scrollWidth>el.clientWidth+1||wide(el)||tall(el)>el.clientHeight+2;
+let bad=0;document.querySelectorAll('[data-fit]').forEach(el=>{let px=parseFloat(getComputedStyle(el).fontSize);const min=+(el.dataset.min||22);let g=0;while(over(el)&&px>min&&g++<400){px-=2;el.style.fontSize=px+'px';}if(over(el))bad++;});return bad;}</script>`;
+
+// What the cover shows, derived from the story's format.
+function coverData(s) {
+  const d = { big: '', sub: '', hook: s.coverHook || s.captionHeadline || s.headline || '', meta: s.place || s.date || '', source: s.source, old: null };
+  switch (s.format) {
+    case 'number': d.big = s.value + (s.unit || ''); d.sub = s.caption; break;
+    case 'impact': d.big = s.figure; d.sub = `${s.headline}${s.unit ? ` · ${s.unit}` : ''}`; break;
+    case 'tracker': d.big = s.now.value; d.old = s.then.value; d.sub = `${s.then.label}: ${s.then.value} → ${s.now.label}: ${s.now.value}`; break;
+    case 'alert': d.big = s.headline; d.sub = s.note || ''; d.meta = `${s.place || ''}${s.time ? ` · ${s.time}` : ''}`; break;
+    case 'myth': d.big = s.verdict; d.sub = s.evidence; d.claim = s.claim; break;
+    default: d.big = s.headline; d.sub = s.note || '';
+  }
+  d.facts = factsOf(s);
+  d.stats = d.facts.filter(([, v]) => v);
+  return d;
+}
+
+// Up to 4 short fact rows for receipts, tickers and indexes.
+function factsOf(s) {
+  for (const sl of s.slides || []) if (sl.stats && sl.stats.length) return sl.stats.slice(0, 4).map((x) => [x.label, x.value]);
+  for (const sl of s.slides || []) if (sl.points && sl.points.length) return sl.points.slice(0, 3).map((p) => [p, '']);
+  return [];
+}
+
+const pageShell = (cls, css, body) => `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="${FONTS}"><style>
+*{margin:0;box-sizing:border-box}html,body{width:1080px;height:1350px}body{overflow:hidden;position:relative;-webkit-font-smoothing:antialiased;font-family:Manrope,sans-serif}
+.noise{position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;opacity:.32}
+.pg{position:absolute;inset:0;overflow:hidden}
+${css}</style></head><body class="${cls}"><div class="pg">${body}</div>${FIT}</body></html>`;
+
+// Shared inner-page markup; each style themes it with CSS.
+function inner(story, sl, i, total, o) {
+  let content = '';
+  if (sl.kind === 'share') {
+    content = `<div class="sharebox"><div class="sh-k">FOLLOW FOR NEWS THAT HITS DIFFERENT</div><div class="sh-h">@postr.news</div><div class="sh-acts"><span>SAVE</span><span>SEND</span><span>FOLLOW</span></div></div>`;
+  } else if (sl.stats) {
+    const max = Math.max(...sl.stats.map((x) => (typeof x.num === 'number' ? x.num : 0)));
+    content = `<div class="stats">${sl.stats.map((x) => `<div class="st${x.hi ? ' hi' : ''}"><div class="st-l">${esc(x.label)}</div><div class="st-v">${esc(x.value)}</div>${max > 0 && typeof x.num === 'number' ? `<div class="st-b"><i style="width:${Math.max(4, (x.num / max) * 100)}%"></i></div>` : ''}</div>`).join('')}</div>${sl.statsNote ? `<div class="snote">${esc(sl.statsNote)}</div>` : ''}`;
+  } else if (sl.points) {
+    content = `<div class="pts">${sl.points.map((p, k) => `<div class="pt"><span class="pn">${String(k + 1).padStart(2, '0')}</span><span class="px">${esc(p)}</span></div>`).join('')}</div>`;
+  }
+  const body = sl.body ? `<div class="bd">${esc(sl.body)}</div>` : '';
+  return `${o.deco || ''}
+<div class="hdr"><span class="lbl">${esc(sl.label)}</span><span class="mt">${esc(o.meta || '')}</span><span class="pgn">${String(i).padStart(2, '0')}/${String(total).padStart(2, '0')}</span></div>
+<h2 data-fit data-min="40">${esc(sl.title)}</h2>${body}<div class="cnt">${content}</div>
+<div class="ft"><span>SOURCE · ${esc(story.source)}</span><span class="sw">${i < total ? 'SWIPE →' : 'SHARE ↗'}</span><img src="${wm(o.tone)}"></div>`;
+}
+
+// Base inner layout used by every style (positions); style CSS adds the look.
+const INNER_BASE = `.hdr{position:absolute;top:56px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;font:700 22px 'Space Mono';letter-spacing:3px;text-transform:uppercase}
+h2{position:absolute;top:140px;left:64px;right:64px;height:300px;display:flex;flex-direction:column;justify-content:flex-end}
+.bd{position:absolute;top:470px;left:64px;right:64px;font-size:34px;line-height:1.4;font-weight:600}
+.cnt{position:absolute;left:64px;right:64px;bottom:150px;top:480px;display:flex;flex-direction:column;justify-content:flex-end}
+.bd+.cnt{top:700px}
+.pts{display:flex;flex-direction:column;gap:18px}.pt{display:flex;gap:22px;align-items:center;padding:22px 26px;font-size:30px;font-weight:700;line-height:1.3}
+.pn{font:400 44px Anton;min-width:62px}
+.stats{display:flex;flex-direction:column;gap:30px}.st{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px 20px}
+.st-l{font:700 22px 'Space Mono';text-transform:uppercase;letter-spacing:1px;line-height:1.3}.st-v{font:400 76px/1 Anton;text-align:right;white-space:nowrap}
+.st-b{grid-column:1/3;height:14px}.st-b i{display:block;height:100%}
+.snote{margin-top:18px;font:700 20px 'Space Mono'}
+.sharebox{padding:48px;display:flex;flex-direction:column;gap:20px}.sh-k{font:700 24px 'Space Mono';letter-spacing:3px}.sh-h{font:400 118px/1 Anton}
+.sh-acts{display:flex;gap:16px}.sh-acts span{font:700 24px 'Space Mono';padding:12px 22px;border:3px solid currentColor}
+.ft{position:absolute;left:64px;right:64px;bottom:44px;display:flex;justify-content:space-between;align-items:center;gap:24px;font:700 17px 'Space Mono';text-transform:uppercase}
+.ft span:first-child{max-width:560px;line-height:1.35}.ft img{width:150px}.sw{white-space:nowrap}`;
+
+// ---------- STYLES ----------
+const STYLES = {
+  // 1. Front page of a special edition: breaking alerts and big events.
+  extra: {
+    tone: 'ink',
+    cover: (s, d) => pageShell('extra', `body{background:#F1ECE0;color:#111}
+.mast{position:absolute;top:44px;left:56px;right:56px;border-top:6px solid #111;border-bottom:2px solid #111;padding:10px 0 6px;display:flex;justify-content:space-between;align-items:center}
+.mast .nm{font:400 128px/1 Anton;letter-spacing:2px}.mast .ex{font:400 52px/1 Anton;color:#fff;background:#E2231A;padding:10px 18px;transform:rotate(-3deg)}
+.dl{position:absolute;top:212px;left:56px;right:56px;border-bottom:6px double #111;padding:8px 0;display:flex;justify-content:space-between;font:700 20px 'Space Mono';letter-spacing:2px;text-transform:uppercase}
+.big{position:absolute;top:276px;left:50px;right:50px;height:420px;font:400 250px/0.92 Anton;text-transform:uppercase;letter-spacing:-2px;display:flex;align-items:center}
+.hook{position:absolute;top:720px;left:56px;right:56px;height:230px;font:italic 400 76px/1.02 'Instrument Serif';border-top:2px solid #111;padding-top:18px}
+.cols{position:absolute;top:980px;left:56px;right:56px;height:230px;display:grid;grid-template-columns:1.4fr 1fr;gap:36px;border-top:2px solid #111;padding-top:20px}
+.lead{font:600 27px/1.42 Manrope}.lead:first-letter{font:400 92px/0.8 Anton;float:left;margin:6px 10px 0 0;color:#E2231A}
+.side{font:700 21px/1.6 'Space Mono';border-left:2px solid #111;padding-left:24px;overflow:hidden}.side b{color:#E2231A}
+.ft2{position:absolute;left:56px;right:56px;bottom:36px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono'}.ft2 img{width:150px}`,
+    `${NOISE}<div class="mast"><span class="nm">POSTR</span><span class="ex">EXTRA</span></div>
+<div class="dl"><span>${esc(d.meta)}</span><span>LATE EDITION</span><span>NEWS, DESIGNED</span></div>
+<div class="big" data-fit data-min="80">${esc(d.big)}</div>
+<div class="hook" data-fit data-min="40">${esc(d.hook)}</div>
+<div class="cols"><div class="lead" data-fit data-min="15">${esc(s.summary || d.sub)}</div><div class="side">${d.facts.slice(0, 4).map(([l, v]) => `${esc(l)}${v ? ` <b>${esc(v)}</b>` : ''}`).join('<br>')}</div></div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span>SWIPE →</span><img src="${wm('ink')}"></div>`),
+    css: `body{background:#F1ECE0;color:#111}.hdr{border-bottom:6px double #111;padding-bottom:12px}.lbl{color:#E2231A}
+h2{font:400 104px/0.95 Anton;text-transform:uppercase}.bd{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-size:46px;line-height:1.15}
+.pt{border-top:2px solid #111;padding-left:0;font-family:Manrope}.pn{color:#E2231A}
+.st{border-bottom:2px dotted #111;padding-bottom:12px}.st.hi .st-v{color:#E2231A}.st-b{background:rgba(17,17,17,.1)}.st-b i{background:#111}.st.hi .st-b i{background:#E2231A}
+.sharebox{border:6px double #111}.sh-h{color:#E2231A}`,
+    deco: NOISE,
+  },
+  // 2. Evidence-board collage: scams, overcharging, money traps.
+  exposed: {
+    tone: 'ink',
+    cover: (s, d) => pageShell('exposed', `body{background:#ECE6D8;color:#111}
+.band{position:absolute;top:0;left:0;right:0;height:120px;background:#111;color:#ECE6D8;display:flex;align-items:center;justify-content:space-between;padding:0 56px;font:700 28px 'Space Mono';letter-spacing:6px;clip-path:polygon(0 0,100% 0,100% 82%,96% 100%,90% 86%,83% 100%,74% 84%,66% 100%,57% 85%,48% 100%,40% 86%,31% 100%,22% 84%,14% 100%,6% 86%,0 100%)}
+.band b{background:#FF2E1F;color:#111;padding:4px 14px}
+.old{position:absolute;top:170px;left:56px;font:400 200px/1 Anton;letter-spacing:-3px}
+.strike{position:absolute;top:220px;left:30px}
+.big{position:absolute;top:${d.old ? 390 : 200}px;left:40px;width:1000px;height:${d.old ? 330 : 500}px;font:400 ${d.old ? 290 : d.big.length <= 3 ? 640 : 330}px/0.9 Anton;color:#FF2E1F;transform:rotate(-4deg);letter-spacing:-5px;text-shadow:8px 8px 0 #111;display:flex;align-items:center;text-transform:uppercase}
+.tag{position:absolute;top:${d.old ? 360 : 180}px;right:50px;font:700 28px 'Space Mono';transform:rotate(7deg);border:4px solid #111;padding:10px 18px;background:#FFE14D}
+.hook{position:absolute;left:56px;top:790px;width:500px;height:370px;font:italic 400 78px/1 'Instrument Serif'}
+.receipt{position:absolute;left:600px;top:800px;width:420px;background:#fff;padding:30px 28px 44px;font:400 21px/1.6 'Space Mono';transform:rotate(3deg);box-shadow:0 18px 40px rgba(0,0,0,.25);clip-path:polygon(0 0,100% 0,100% 94%,95% 100%,90% 94%,85% 100%,80% 94%,75% 100%,70% 94%,65% 100%,60% 94%,55% 100%,50% 94%,45% 100%,40% 94%,35% 100%,30% 94%,25% 100%,20% 94%,15% 100%,10% 94%,5% 100%,0 94%)}
+.receipt .h{font-weight:700;border-bottom:3px dashed #111;padding-bottom:8px;margin-bottom:8px;letter-spacing:3px}.r{display:flex;justify-content:space-between;gap:12px}.r b{white-space:nowrap}.r:last-child{color:#FF2E1F;font-weight:700}
+.tape{position:absolute;left:740px;top:772px;width:180px;height:56px;background:rgba(255,225,77,.75);transform:rotate(-8deg)}
+.ft2{position:absolute;left:56px;right:56px;bottom:40px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono'}.ft2 img{width:150px}.ft2 .sw{background:#111;color:#ECE6D8;padding:8px 16px}`,
+    `${NOISE}<div class="band"><span>POSTR <b>EXPOSED</b></span><span>${esc(d.meta).toUpperCase()}</span></div>
+${d.old ? `<div class="old">${esc(d.old)}</div><svg class="strike" width="900" height="140"><path d="M10 90 C 220 40, 460 120, 860 50" stroke="#FF2E1F" stroke-width="24" fill="none" stroke-linecap="round"/></svg>` : ''}
+<div class="big" data-fit data-min="90">${esc(d.big)}</div><div class="tag">${s.format === 'alert' ? 'WARNING' : 'THE RECEIPT'}</div>
+<div class="hook" data-fit data-min="38">${esc(d.hook)}</div>
+${d.facts.length ? `<div class="tape"></div><div class="receipt"><div class="h">FILE · POSTR</div>${d.facts.map(([l, v]) => `<div class="r"><span>${esc(l)}</span><b>${esc(v)}</b></div>`).join('')}</div>` : ''}
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span class="sw">SWIPE →</span><img src="${wm('ink')}"></div>`),
+    css: `body{background:#ECE6D8;color:#111}.lbl{background:#111;color:#ECE6D8;padding:6px 14px}
+h2{font:400 108px/0.95 Anton;text-transform:uppercase}
+.pt{background:#111;color:#ECE6D8;font-family:'Space Mono';font-size:26px}.pt:nth-child(odd){transform:rotate(-1deg)}.pt:nth-child(even){transform:rotate(1deg)}.pn{color:#FF2E1F}
+.stats{background:#fff;padding:36px;box-shadow:0 14px 30px rgba(0,0,0,.2);transform:rotate(-1deg)}.st{border-bottom:3px dashed #111;padding-bottom:14px}.st.hi .st-v{color:#FF2E1F}.st-b{display:none}
+.sharebox{background:#FFE14D;border:5px solid #111;transform:rotate(-2deg)}.bd{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-size:48px;line-height:1.1}`,
+    deco: NOISE,
+  },
+  // 3. Live terminal feed: markets, rupee, numbers that move.
+  feed: {
+    tone: 'paper',
+    cover: (s, d) => pageShell('feed', `body{background:#07080A;color:#D7FF3A;font-family:'Space Mono'}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(215,255,58,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(215,255,58,.07) 1px,transparent 1px);background-size:54px 54px}
+.scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.35) 0 2px,transparent 2px 5px);pointer-events:none}
+.top{position:absolute;top:50px;left:56px;right:56px;display:flex;justify-content:space-between;font-size:22px;letter-spacing:3px;text-transform:uppercase}
+.dot{display:inline-block;width:18px;height:18px;border-radius:50%;background:#FF2E1F;box-shadow:0 0 20px #FF2E1F;margin-right:12px;vertical-align:-2px}
+.sub{position:absolute;top:150px;left:56px;right:56px;height:90px;font-size:28px;letter-spacing:2px;color:#F4F1EA;text-transform:uppercase;line-height:1.35}
+.big{position:absolute;top:240px;left:46px;right:70px;height:420px;font:400 400px/1 Anton;letter-spacing:-8px;white-space:nowrap;display:flex;align-items:center;text-shadow:-10px 0 0 rgba(255,46,31,.85),10px 0 0 rgba(0,200,255,.6);text-transform:uppercase}
+.gl{position:absolute;top:470px;left:0;right:0;height:22px;background:#07080A}.gl2{position:absolute;top:580px;left:120px;width:560px;height:12px;background:#D7FF3A;opacity:.85}
+.hook{position:absolute;top:700px;left:56px;right:56px;height:290px;font:400 92px/1.02 'Archivo Black';color:#F4F1EA;letter-spacing:-2px}
+.rows{position:absolute;top:1010px;left:56px;right:56px;font-size:24px;color:#F4F1EA}.rows div{display:flex;justify-content:space-between;border-bottom:1px solid rgba(215,255,58,.35);padding:8px 0}.rows b{color:#D7FF3A}
+.tick{position:absolute;bottom:96px;left:0;right:0;background:#D7FF3A;color:#07080A;font-weight:700;font-size:24px;white-space:nowrap;padding:12px 0;letter-spacing:2px;overflow:hidden}
+.ft2{position:absolute;left:56px;right:56px;bottom:28px;display:flex;justify-content:space-between;align-items:center;font-size:17px;color:#F4F1EA}.ft2 img{width:150px}`,
+    `<div class="grid"></div><div class="top"><span><span class="dot"></span>LIVE FEED</span><span>${esc(d.meta)}</span><span>POSTR/DATA</span></div>
+<div class="sub" data-fit data-min="18">${esc(d.sub)}</div>
+<div class="big" data-fit data-min="90">${esc(d.big)}</div><div class="gl"></div><div class="gl2"></div>
+<div class="hook" data-fit data-min="40">${esc(d.hook)}</div>
+<div class="rows">${d.facts.slice(0, 3).map(([l, v]) => `<div><span>${esc(l)}</span><b>${esc(v)}</b></div>`).join('')}</div>
+<div class="tick">&nbsp;${(s.tags || []).map((t) => `#${esc(t).toUpperCase()}`).join(' ▲ ')} ▲ POSTR.NEWS ▲ ${(s.tags || []).map((t) => `#${esc(t).toUpperCase()}`).join(' ▲ ')}</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)} · SWIPE →</span><img src="${wm('paper')}"></div><div class="scan"></div>`),
+    css: `body{background:#07080A;color:#F4F1EA;background-image:linear-gradient(rgba(215,255,58,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(215,255,58,.06) 1px,transparent 1px);background-size:54px 54px}
+.hdr{color:#D7FF3A}.lbl:before{content:'● ';color:#FF2E1F}
+h2{font:400 96px/1 'Archivo Black';letter-spacing:-2px}.bd{font-family:'Space Mono';font-size:30px;color:#D7FF3A}
+.pt{border:2px solid #D7FF3A;font-family:'Space Mono';font-size:26px;color:#F4F1EA}.pn{color:#D7FF3A}.pn:before{content:'>';margin-right:6px}
+.st-l{color:#F4F1EA}.st-v{color:#D7FF3A;text-shadow:-4px 0 0 rgba(255,46,31,.7),4px 0 0 rgba(0,200,255,.5)}.st-b{border:2px solid #D7FF3A}.st-b i{background:repeating-linear-gradient(90deg,#D7FF3A 0 12px,transparent 12px 18px)}
+.sharebox{border:3px solid #D7FF3A}.sh-h{color:#D7FF3A}.ft{color:#F4F1EA}`,
+    deco: `<div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.3) 0 2px,transparent 2px 5px);pointer-events:none;z-index:9"></div>`,
+  },
+  // 4. Swiss gallery poster: one giant number, editorial calm.
+  swiss: {
+    tone: 'ink',
+    cover: (s, d) => pageShell('swiss', `body{background:#F2EEE3;color:#111}
+.vl{position:absolute;top:0;bottom:0;width:1px;background:rgba(17,17,17,.18)}.hl{position:absolute;left:0;right:0;height:1px;background:rgba(17,17,17,.18)}
+.reg{position:absolute;width:44px;height:44px;border:2px solid #111;border-radius:50%}.reg:before,.reg:after{content:'';position:absolute;background:#111}.reg:before{left:50%;top:-12px;bottom:-12px;width:2px;margin-left:-1px}.reg:after{top:50%;left:-12px;right:-12px;height:2px;margin-top:-1px}
+.kick{position:absolute;left:96px;top:44px;z-index:2;background:#F2EEE3;padding:4px 10px;font:700 22px 'Space Mono';letter-spacing:6px;text-transform:uppercase}
+.big{position:absolute;left:-20px;right:-60px;top:110px;height:700px;font:400 760px/0.82 Anton;color:#FF3B1F;letter-spacing:-20px;white-space:nowrap;display:flex;align-items:center;text-transform:uppercase}
+.hook{position:absolute;left:60px;right:60px;top:850px;height:270px;font:italic 400 110px/0.95 'Instrument Serif'}
+.sub{position:absolute;left:60px;top:1140px;width:600px;height:110px;font-size:27px;font-weight:600;line-height:1.35}
+.idx{position:absolute;left:700px;top:1140px;right:60px;font:700 20px/1.6 'Space Mono';text-transform:uppercase}.idx b{color:#FF3B1F}
+.ft2{position:absolute;left:60px;right:60px;bottom:36px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono'}.ft2 img{width:150px}`,
+    `<div class="vl" style="left:60px"></div><div class="vl" style="left:540px"></div><div class="vl" style="left:1020px"></div><div class="hl" style="top:830px"></div><div class="hl" style="top:1125px"></div>
+<div class="reg" style="left:30px;top:30px"></div><div class="reg" style="right:30px;top:30px"></div><div class="reg" style="right:30px;bottom:110px"></div>
+<div class="kick">POSTR LAB · ${esc(d.meta)}</div>
+<div class="big" data-fit data-min="120">${esc(d.big)}</div>
+<div class="hook" data-fit data-min="44">${esc(d.hook)}</div>
+<div class="sub" data-fit data-min="18">${esc(d.sub)}</div>
+<div class="idx">${d.stats.slice(0, 3).map(([l, v]) => `${esc(l).slice(0, 28)} <b>${esc(v)}</b>`).join('<br>')}</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span>SWIPE →</span><img src="${wm('ink')}"></div>`),
+    css: `body{background:#F2EEE3;color:#111;background-image:linear-gradient(90deg,transparent 539px,rgba(17,17,17,.15) 539px,rgba(17,17,17,.15) 540px,transparent 540px)}
+.lbl{color:#FF3B1F}h2{font:italic 400 120px/0.95 'Instrument Serif'}.bd{font-size:34px}
+.pt{border-top:3px solid #111;background:#F2EEE3}.pn{color:#FF3B1F;font-size:56px}
+.st-v{font-size:96px}.st.hi .st-v{color:#FF3B1F}.st-b{background:rgba(17,17,17,.08)}.st-b i{background:#111}.st.hi .st-b i{background:#FF3B1F}
+.sharebox{border-top:8px solid #FF3B1F;padding-left:0}.sh-h{font-size:130px}`,
+  },
+  // 5. Case file on manila paper: world events, conflict, investigations.
+  dossier: {
+    tone: 'ink',
+    cover: (s, d) => pageShell('dossier', `body{background:#2B2A26;color:#1A1A1A}
+.folder{position:absolute;left:40px;right:40px;top:90px;bottom:40px;background:#D8C69B;border-radius:6px 6px 0 0;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.tab{position:absolute;left:40px;top:44px;width:330px;height:70px;background:#D8C69B;border-radius:14px 14px 0 0;font:700 24px 'Space Mono';letter-spacing:4px;padding:18px 26px}
+.paper{position:absolute;left:84px;right:70px;top:150px;bottom:90px;background:#F5F0E4;transform:rotate(-1.2deg);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.fields{position:absolute;left:120px;right:110px;top:190px;font:700 22px/1.8 'Space Mono';text-transform:uppercase;border-bottom:3px solid #1A1A1A;padding-bottom:12px;transform:rotate(-1.2deg)}
+.big{position:absolute;left:120px;right:110px;top:330px;height:360px;font:400 ${d.big.length <= 4 ? 320 : 150}px/0.95 'Archivo Black';letter-spacing:-4px;text-transform:uppercase;transform:rotate(-1.2deg);display:flex;align-items:center}
+.stamp{position:absolute;right:90px;top:640px;font:400 70px/1 Anton;color:#C8102E;border:8px solid #C8102E;padding:10px 26px;transform:rotate(-12deg);opacity:.85;letter-spacing:4px}
+.hook{position:absolute;left:120px;right:110px;top:770px;height:220px;font:italic 400 64px/1.05 'Instrument Serif';transform:rotate(-1.2deg)}
+.red{position:absolute;left:120px;top:1020px;transform:rotate(-1.2deg);font:400 22px/2 'Space Mono';width:840px}.red span{background:#1A1A1A;color:#1A1A1A}
+.clip{position:absolute;left:560px;top:120px;width:60px;height:150px;border:8px solid #9A9A9A;border-radius:30px}
+.ft2{position:absolute;left:120px;right:110px;bottom:120px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono';transform:rotate(-1.2deg)}.ft2 img{width:140px}`,
+    `<div class="tab">CASE FILE</div><div class="folder"></div><div class="paper"></div><div class="clip"></div>
+<div class="fields">LOCATION: ${esc(s.place || d.meta)}<br>STATUS: DEVELOPING · POSTR DESK</div>
+<div class="big" data-fit data-min="56">${esc(d.big)}</div><div class="stamp">${s.format === 'alert' ? 'ALERT' : 'FILED'}</div>
+<div class="hook" data-fit data-min="34">${esc(d.hook)}</div>
+<div class="red">${d.facts.slice(0, 2).map(([l, v]) => `${esc(l)} ${esc(v)}`).join(' · ')}</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span>SWIPE →</span><img src="${wm('ink')}"></div>`),
+    css: `body{background:#F5F0E4;color:#1A1A1A;font-family:'Space Mono'}.hdr{border-bottom:3px solid #1A1A1A;padding-bottom:12px}.lbl{color:#C8102E}
+h2{font:400 92px/1 'Archivo Black';letter-spacing:-3px;text-transform:uppercase}.bd{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-size:48px;line-height:1.1}
+.pt{border:3px solid #1A1A1A;font-family:'Space Mono';font-size:25px;background:#fff}.pn{color:#C8102E}.pn:before{content:'#'}
+.st{border-bottom:3px solid #1A1A1A;padding-bottom:12px}.st-v{font-family:'Archivo Black';font-size:64px}.st.hi .st-v{color:#C8102E}.st-b{background:#E6DCC4}.st-b i{background:#1A1A1A}.st.hi .st-b i{background:#C8102E}
+.sharebox{border:6px solid #C8102E;color:#C8102E;transform:rotate(-3deg)}`,
+    deco: `<div style="position:absolute;right:60px;top:520px;font:400 46px Anton;color:rgba(200,16,46,.18);border:6px solid rgba(200,16,46,.18);padding:6px 18px;transform:rotate(-14deg)">POSTR DESK</div>`,
+  },
+  // 6. The forwarded message, stamped: fact checks.
+  forward: {
+    tone: 'paper',
+    cover: (s, d) => pageShell('forward', `body{background:#111214;color:#F4F1EA}
+.top{position:absolute;top:56px;left:56px;right:56px;display:flex;justify-content:space-between;font:700 22px 'Space Mono';letter-spacing:4px;color:#9FA3A8}
+.bub{position:absolute;left:56px;width:820px;top:150px;height:520px;background:#1F2C26;border-radius:6px 40px 40px 40px;padding:40px 44px}
+.fw{font:italic 600 26px Manrope;color:#9FB7A8;margin-bottom:16px}
+.claim{height:400px;font:600 64px/1.15 Manrope;color:#E8F3EC}
+.time{position:absolute;left:760px;top:630px;font:600 22px Manrope;color:#9FB7A8}
+.stamp{position:absolute;left:30px;right:30px;top:520px;height:300px;display:flex;align-items:center;justify-content:center;transform:rotate(-9deg)}
+.stamp div{font:400 190px/0.9 Anton;color:#FF2E1F;border:14px solid #FF2E1F;padding:10px 40px;text-transform:uppercase;letter-spacing:4px;background:rgba(17,18,20,.6);text-align:center;width:960px;height:280px;display:flex;align-items:center;justify-content:center}
+.ev{position:absolute;left:56px;right:56px;top:880px;height:150px;background:#D7FF3A;color:#111;font:700 40px/1.2 Manrope;padding:26px 30px}
+.hook{position:absolute;left:56px;right:56px;top:1060px;height:150px;font:italic 400 58px/1.05 'Instrument Serif'}
+.ft2{position:absolute;left:56px;right:56px;bottom:36px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono';color:#9FA3A8}.ft2 img{width:150px}`,
+    `<div class="top"><span>FORWARD RECEIVED</span><span>POSTR FACT CHECK</span></div>
+<div class="bub"><div class="fw">↪ Forwarded</div><div class="claim" data-fit data-min="30">${esc(d.claim || d.hook)}</div></div><div class="time">9:41 PM ✓✓</div>
+<div class="stamp"><div data-fit data-min="70">${esc(d.big)}</div></div>
+<div class="ev" data-fit data-min="22">${esc(d.sub)}</div>
+<div class="hook" data-fit data-min="30">${esc(d.hook)}</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span>SWIPE →</span><img src="${wm('paper')}"></div>`),
+    css: `body{background:#111214;color:#F4F1EA}.hdr{color:#9FA3A8}.lbl{color:#FF2E1F}
+h2{font:400 100px/1 Anton;text-transform:uppercase}.bd{font-size:34px;color:#D7FF3A}
+.pt{background:#1F2C26;border-radius:4px 30px 30px 30px;color:#E8F3EC;font-size:30px}.pt:nth-child(even){background:#2A2D33;border-radius:30px 4px 30px 30px;margin-left:80px}.pn{color:#D7FF3A}
+.st{background:#1F2C26;border-radius:4px 30px 30px 30px;padding:22px 28px}.st-l{color:#9FB7A8}.st.hi .st-v{color:#D7FF3A}.st-b{display:none}
+.sharebox{background:#D7FF3A;color:#111;border-radius:6px 40px 40px 40px}`,
+  },
+  // 7. Risograph pop: health, society, explainers.
+  riso: {
+    tone: 'ink',
+    cover: (s, d) => pageShell('riso', `body{background:#F5EFE3;color:#1B1B3A}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,72,176,.35) 3px,transparent 3.5px);background-size:22px 22px;mask-image:linear-gradient(160deg,#000 0%,transparent 55%)}
+.blob{position:absolute;right:-160px;top:-120px;width:760px;height:760px;border-radius:50%;background:#FF48B0;mix-blend-mode:multiply;opacity:.9}
+.blob2{position:absolute;left:-200px;top:520px;width:620px;height:620px;border-radius:50%;background:#0078BF;mix-blend-mode:multiply;opacity:.55}
+.kick{position:absolute;top:56px;left:56px;font:700 24px 'Space Mono';letter-spacing:5px;color:#1B1B3A;text-transform:uppercase}
+.bigw{position:absolute;left:40px;right:40px;top:150px;height:520px}
+.big{position:absolute;inset:0;font:400 420px/0.9 Anton;letter-spacing:-8px;white-space:nowrap;display:flex;align-items:center;text-transform:uppercase}
+.b1{color:#0078BF;mix-blend-mode:multiply}.b2{color:#FF48B0;mix-blend-mode:multiply;transform:translate(14px,10px)}
+.hook{position:absolute;left:56px;right:56px;top:720px;height:300px;font:400 84px/1.02 'Archivo Black';color:#1B1B3A;letter-spacing:-2px}
+.sub{position:absolute;left:56px;right:300px;top:1050px;height:150px;font:700 30px/1.35 Manrope}
+.sticker{position:absolute;right:60px;top:1040px;width:200px;height:200px;border-radius:50%;background:#FFE14D;display:flex;align-items:center;justify-content:center;text-align:center;font:400 40px/1 Anton;transform:rotate(12deg);color:#1B1B3A}
+.ft2{position:absolute;left:56px;right:56px;bottom:36px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono'}.ft2 img{width:150px}`,
+    `<div class="dots"></div><div class="blob"></div><div class="blob2"></div><div class="kick">POSTR LAB · ${esc(d.meta)}</div>
+<div class="bigw"><div class="big b1" data-fit data-min="100">${esc(d.big)}</div><div class="big b2" data-fit data-min="100">${esc(d.big)}</div></div>
+<div class="hook" data-fit data-min="38">${esc(d.hook)}</div><div class="sub" data-fit data-min="18">${esc(d.sub)}</div>
+<div class="sticker">SWIPE<br>TO<br>KNOW</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><img src="${wm('ink')}"></div>`),
+    css: `body{background:#F5EFE3;color:#1B1B3A;background-image:radial-gradient(rgba(255,72,176,.22) 3px,transparent 3.5px);background-size:22px 22px}
+.lbl{background:#FF48B0;color:#fff;padding:6px 14px}h2{font:400 108px/0.95 Anton;text-transform:uppercase;color:#0078BF;text-shadow:6px 5px 0 rgba(255,72,176,.8)}
+.bd{font-size:36px}.pt{background:#0078BF;color:#fff;border-radius:16px}.pt:nth-child(even){background:#FF48B0}.pn{color:#FFE14D}
+.st-v{color:#0078BF;text-shadow:5px 4px 0 rgba(255,72,176,.7)}.st-b{background:rgba(0,120,191,.15);border-radius:8px}.st-b i{background:#0078BF;border-radius:8px}.st.hi .st-b i{background:#FF48B0}
+.sharebox{background:#FFE14D;border-radius:30px}.sh-h{color:#0078BF}`,
+  },
+  // 8. Stadium scoreboard: sport.
+  scoreboard: {
+    tone: 'paper',
+    cover: (s, d) => pageShell('score', `body{background:#0B0B0D;color:#FFB000}
+.led{position:absolute;inset:0;background-image:radial-gradient(rgba(255,176,0,.08) 2px,transparent 2.5px);background-size:12px 12px}
+.board{position:absolute;left:44px;right:44px;top:120px;height:640px;border:6px solid #2A2A2E;background:#111114;box-shadow:inset 0 0 60px rgba(0,0,0,.8)}
+.top{position:absolute;top:50px;left:56px;right:56px;display:flex;justify-content:space-between;font:700 24px 'Space Mono';letter-spacing:5px;color:#F4F1EA}
+.big{position:absolute;left:70px;right:70px;top:170px;height:520px;font:700 330px/1 'Space Mono';color:#FFB000;text-shadow:0 0 24px rgba(255,176,0,.65);display:flex;align-items:center;justify-content:center;white-space:nowrap;letter-spacing:-10px;text-transform:uppercase}
+.hook{position:absolute;left:56px;right:56px;top:800px;height:260px;font:400 92px/1 Anton;color:#F4F1EA;text-transform:uppercase}
+.cells{position:absolute;left:56px;right:56px;top:1080px;display:flex;gap:14px}.cells div{flex:1;border:3px solid #FFB000;padding:12px;font:700 20px/1.3 'Space Mono';color:#F4F1EA;text-transform:uppercase}.cells b{display:block;color:#FFB000;font-size:30px}
+.ft2{position:absolute;left:56px;right:56px;bottom:36px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono';color:#F4F1EA}.ft2 img{width:150px}`,
+    `<div class="led"></div><div class="top"><span>● LIVE · POSTR SPORT</span><span>${esc(d.meta)}</span></div><div class="board"></div>
+<div class="big" data-fit data-min="80">${esc(d.big)}</div>
+<div class="hook" data-fit data-min="40">${esc(d.hook)}</div>
+<div class="cells">${d.facts.slice(0, 3).map(([l, v]) => `<div>${esc(l)}<b>${esc(v)}</b></div>`).join('')}</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)} · SWIPE →</span><img src="${wm('paper')}"></div>`),
+    css: `body{background:#0B0B0D;color:#F4F1EA;background-image:radial-gradient(rgba(255,176,0,.07) 2px,transparent 2.5px);background-size:12px 12px}
+.hdr{color:#FFB000}h2{font:400 104px/1 Anton;text-transform:uppercase}.bd{font-size:34px}
+.pt{border:3px solid #FFB000;font-family:'Space Mono';font-size:26px}.pn{color:#FFB000;text-shadow:0 0 14px rgba(255,176,0,.6)}
+.st{border:3px solid #2A2A2E;background:#111114;padding:20px 24px}.st-v{font-family:'Space Mono';font-weight:700;font-size:64px;color:#FFB000;text-shadow:0 0 18px rgba(255,176,0,.6)}.st-b{display:none}
+.sharebox{border:4px solid #FFB000}.sh-h{color:#FFB000}`,
+  },
+};
+
+const ORDER = ['extra', 'exposed', 'feed', 'swiss', 'dossier', 'forward', 'riso', 'scoreboard'];
+const RULES = [
+  ['forward', (s) => s.format === 'myth'],
+  ['scoreboard', (s) => /cricket|t20|odi|ipl|football|hockey|olymp|sport|chase/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
+  ['exposed', (s) => /scam|fraud|markup|medicine|overcharg|atm|fee|lpg|aadhaar|digital-arrest/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
+  ['feed', (s) => /sensex|nifty|stock|market|rupee|dollar|kospi|sip|crude|brent|gold|silver|petrol|inflation|rbi|emi|imf|gdp/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
+  ['dossier', (s) => /hormuz|war|attack|black ?sea|missile|world|ship|navy|border/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
+  ['riso', (s) => /health|mental|ageing|family|education|women|wellness/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
+  ['swiss', (s) => s.format === 'number' || /climate|wildlife|himalaya|planet/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
+  ['extra', (s) => s.format === 'alert'],
+];
+
+// Pick a style; avoid repeating the previous post's style.
+function pickStyle(story, prev) {
+  if (story.style && STYLES[story.style]) return story.style;
+  const hits = RULES.filter(([, f]) => f(story)).map(([n]) => n);
+  const fallback = ORDER[[...story.id].reduce((a, c) => a + c.charCodeAt(0), 0) % ORDER.length];
+  const choices = [...new Set([...hits, fallback, ...ORDER])];
+  return choices.find((c) => c !== prev) || choices[0];
+}
+
+function labPages(story, style) {
+  const st = STYLES[style];
+  const d = coverData(story);
+  const slides = story.slides || [];
+  const total = slides.length + 1;
+  const pages = [st.cover(story, d)];
+  slides.forEach((sl, k) => pages.push(pageShell(style, `${INNER_BASE}${st.css}`, inner(story, sl, k + 2, total, { tone: st.tone, deco: st.deco, meta: d.meta }))));
+  return pages;
+}
+
+module.exports = { labPages, pickStyle, STYLES: ORDER };
