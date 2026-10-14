@@ -180,7 +180,8 @@
         "title": "Your parents need this",
         "body": "Forward it to the family group before their next booking."
       }
-    ]
+    ],
+    "style": "extra"
   },
   {
     "id": "whatsapp-not-paid",
@@ -296,7 +297,8 @@
           "Take out cash in fewer, bigger withdrawals"
         ]
       }
-    ]
+    ],
+    "style": "swiss"
   },
   {
     "id": "imf-india-7",
