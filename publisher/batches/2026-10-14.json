@@ -671,164 +671,6 @@
     ]
   },
   {
-    "id": "digital-arrest-scam",
-    "format": "myth",
-    "lang": "en",
-    "date": "Scam of the day",
-    "claim": "Video call: 'This is CBI. You are under digital arrest. Stay on camera and pay to clear your name.'",
-    "verdict": "FAKE",
-    "evidence": "I4C: CBI, police, ED, customs and judges do NOT arrest on video calls.",
-    "source": "I4C advisory, via PTI",
-    "captionHeadline": "No police officer will ever arrest you on a video call. 'Digital arrest' is a scam.",
-    "summary": "Fraudsters pose as CBI, police, customs or ED officers on SMS and video calls, claim you or a relative is caught in drugs or money laundering, keep you 'confined' on camera, and demand money to 'bail' you out. The government's cyber crime centre (I4C) says real agencies never arrest anyone on a video call.",
-    "forYou": "Hang up. Don't pay. Report it on 1930 or cybercrime.gov.in.",
-    "cta": "Send this to your parents. Scammers target people who trust a uniform.",
-    "sourceUrl": "https://www.deccanherald.com/amp/story/india%2Famid-rise-in-digital-arrest-cases-indian-cyber-crime-coordination-centre-issues-advisory-for-citizens-3221509",
-    "tags": [
-      "DigitalArrest",
-      "ScamAlert",
-      "CyberSafety"
-    ],
-    "slides": [
-      {
-        "label": "HOW IT WORKS",
-        "title": "Fear, then a 'fine'",
-        "points": [
-          "A call or video call from a fake 'officer'",
-          "'Your parcel had drugs' or 'Your account funded crime'",
-          "You're told to stay on camera and talk to no one",
-          "Then: pay now to 'clear your name'"
-        ]
-      },
-      {
-        "label": "WHAT TO DO",
-        "title": "Don't panic. Hang up.",
-        "points": [
-          "Real agencies never arrest anyone on a video call",
-          "Never transfer money to 'settle' a case",
-          "Call the local police station yourself to check",
-          "Report: 1930 or cybercrime.gov.in"
-        ]
-      },
-      {
-        "label": "SHARE THIS",
-        "kind": "share",
-        "title": "Send this to your parents today",
-        "body": "Scammers target people who respect authority. One forward can stop a call from becoming a loss."
-      }
-    ]
-  },
-  {
-    "id": "sensex-it-rally",
-    "format": "number",
-    "lang": "en",
-    "date": "13 Oct",
-    "value": "5.2",
-    "unit": "%",
-    "share": 5,
-    "caption": "jump in IT stocks (Nifty IT) on Tuesday, as the Sensex rose over 1,100 points.",
-    "note": "Brent crude still near $104 a barrel.",
-    "source": "Kotak Neo market report, 13 Oct 2026",
-    "captionHeadline": "IT stocks jumped 5.2% in a day. The Sensex added 1,100+ points.",
-    "summary": "On 13 October the Sensex closed at 73,003.78 (up 1.54%) and the Nifty 50 at 22,721.95 (up 1.60%). The Nifty IT index rose 5.22%, led by HCL Tech, TCS and Tech Mahindra. Kotak Mahindra Bank and Maruti were among the losers.",
-    "cta": "Tag the friend who checks their portfolio every 10 minutes.",
-    "sourceUrl": "https://www.kotakneo.com/news/market-news/sensex-nifty-50-recover-as-bulls-return-dalal-street/",
-    "tags": [
-      "Sensex",
-      "Nifty",
-      "StockMarket"
-    ],
-    "slides": [
-      {
-        "label": "THE DAY IN NUMBERS",
-        "title": "One-day change, 13 October",
-        "stats": [
-          {
-            "label": "Nifty IT",
-            "value": "+5.22%",
-            "num": 5.22,
-            "hi": true
-          },
-          {
-            "label": "Nifty 50",
-            "value": "+1.60%",
-            "num": 1.6
-          },
-          {
-            "label": "Sensex",
-            "value": "+1.54%",
-            "num": 1.54
-          },
-          {
-            "label": "Nifty Midcap 100",
-            "value": "+1.06%",
-            "num": 1.06
-          }
-        ],
-        "statsNote": "Sensex closed at 73,003.78; Nifty 50 at 22,721.95."
-      },
-      {
-        "label": "WHO MOVED",
-        "title": "IT led the rally",
-        "points": [
-          "Top gainers: HCL Tech, TCS, Shriram Finance, Tech Mahindra",
-          "Top losers: Kotak Mahindra Bank, Eternal, Maruti Suzuki, Max Healthcare",
-          "Brent crude stayed near $104 a barrel"
-        ]
-      },
-      {
-        "label": "SHARE THIS",
-        "kind": "share",
-        "title": "One green day isn't a trend",
-        "body": "Markets move on oil, rates and global cues. Tag the friend who needs to hear that before buying on a rally."
-      }
-    ]
-  },
-  {
-    "id": "pune-no-digging",
-    "format": "number",
-    "lang": "en",
-    "date": "13 Oct",
-    "place": "Pune",
-    "value": "5",
-    "unit": "yrs",
-    "caption": "of no new digging on Pune's upgraded cycling-race roads, says PMC.",
-    "note": "All utility trenching must finish by 31 Oct 2026.",
-    "source": "PMC, via PuneNow, 13 Oct 2026",
-    "captionHeadline": "Pune, a road that stays fixed? PMC bans digging on race roads for 5 years.",
-    "summary": "PMC has told utility companies to finish all trenching on the cycling circuit by 31 October 2026, ahead of the Pune Grand Tour international cycling race in January 2027. After that, no new trenching permissions for five years. Firms that damage the upgraded roads face penal and even criminal action.",
-    "cta": "Tag a Punekar who has given up on smooth roads.",
-    "sourceUrl": "https://www.punenow.com/no-road-digging-in-pune-for-5-years-as-pmc-prepares-for-international-cycling-event/",
-    "tags": [
-      "Pune",
-      "PMC",
-      "PuneRoads"
-    ],
-    "slides": [
-      {
-        "label": "WHAT PMC DECIDED",
-        "title": "Dig now, or not for 5 years",
-        "points": [
-          "All utility trenching on the circuit must end by 31 Oct 2026",
-          "No extensions, no new permissions after that",
-          "No new trenching for 5 years after the race",
-          "Damage can bring penal and even criminal action"
-        ]
-      },
-      {
-        "label": "WHY",
-        "title": "An international cycling race",
-        "body": "The roads are being upgraded for the Pune Grand Tour International Cycling Competition in January 2027. PMC wants them to stay intact after the work is done."
-      },
-      {
-        "label": "SHARE THIS",
-        "kind": "share",
-        "title": "Smooth roads in Pune. For real?",
-        "body": "Tag a Punekar and tell us which road you want fixed next."
-      }
-    ]
-  },
-  {
     "id": "delhi-storm-oct14-hi",
     "format": "alert",
     "lang": "hi",
@@ -873,51 +715,6 @@
         "followLabel": "रोज़ की ख़बरें, पोस्टर में",
         "title": "NCR के ग्रुप में भेजें",
         "body": "अभी की एक चेतावनी बाद की परेशानी से बचा सकती है।"
-      }
-    ]
-  },
-  {
-    "id": "brent-104",
-    "format": "number",
-    "lang": "en",
-    "date": "13 Oct",
-    "value": "$104",
-    "caption": "for a barrel of Brent crude. Expensive oil is behind costly petrol and the RBI's rate hike.",
-    "note": "RBI cited high oil prices when it raised rates on 7 Oct.",
-    "source": "Kotak Neo, 13 Oct; RBI MPC, 7 Oct 2026",
-    "captionHeadline": "Oil is above $100 a barrel. Here's how that reaches your wallet.",
-    "summary": "Brent crude futures were around $104.42 a barrel on 13 October. On 7 October, the RBI named elevated oil prices among the reasons it raised the repo rate to 5.5%.",
-    "cta": "Save this. It explains half the price rises you'll see this month.",
-    "sourceUrl": "https://www.kotakneo.com/news/market-news/sensex-nifty-50-recover-as-bulls-return-dalal-street/",
-    "tags": [
-      "CrudeOil",
-      "Petrol",
-      "RBI"
-    ],
-    "slides": [
-      {
-        "label": "THE CHAIN",
-        "title": "From an oil barrel to your EMI",
-        "points": [
-          "India imports most of its crude oil",
-          "Costlier oil keeps fuel prices high",
-          "High fuel costs push up prices of goods",
-          "The RBI raised rates on 7 Oct, citing oil among the reasons"
-        ]
-      },
-      {
-        "label": "WHERE YOU FEEL IT",
-        "title": "Already this month",
-        "points": [
-          "Petrol on 11 Oct: ₹111.21 a litre in Mumbai, ₹102.12 in Delhi",
-          "EMI: about ₹477 more a month on a ₹30 lakh home loan, if passed on"
-        ]
-      },
-      {
-        "label": "SHARE THIS",
-        "kind": "share",
-        "title": "Save this explainer",
-        "body": "Next time someone asks why everything costs more, send them this."
       }
     ]
   },
@@ -968,226 +765,6 @@
         "followLabel": "रोज़ की ख़बरें, पोस्टर में",
         "title": "आज ही माता-पिता को भेजें",
         "body": "ठग उन्हीं को निशाना बनाते हैं जो वर्दी पर भरोसा करते हैं। एक फ़ॉरवर्ड नुकसान रोक सकता है।"
-      }
-    ]
-  },
-  {
-    "id": "ind-wi-4th-t20i",
-    "format": "number",
-    "lang": "en",
-    "date": "Tonight, 7 pm",
-    "place": "Hyderabad",
-    "value": "2-1",
-    "caption": "India lead the series. Win tonight in Hyderabad and it's theirs with a match to spare.",
-    "note": "Toss 6:30 pm. Star Sports and JioHotstar.",
-    "source": "CricketAddictor; UNI, 11 Oct 2026",
-    "captionHeadline": "Tonight, 7 pm, Hyderabad: one win and the series is India's.",
-    "summary": "India lead the five-match T20I series 2-1 after winning by 14 runs in Indore. The 4th T20I is at Rajiv Gandhi International Stadium, Hyderabad: toss 6:30 pm, start 7 pm, live on Star Sports and JioHotstar.",
-    "cta": "Who's your player of the match tonight? Comment before the toss.",
-    "sourceUrl": "https://cricketaddictor.com/cricket-news/ind-vs-wi-playing-11-today-live-streaming-pitch-weather-india-vs-west-indies-4th-t20i-2026-464873/",
-    "tags": [
-      "INDvWI",
-      "TeamIndia",
-      "Cricket"
-    ],
-    "slides": [
-      {
-        "label": "THE SERIES SO FAR",
-        "title": "Three matches, one wild chase",
-        "points": [
-          "Match 1: India won by 8 wickets",
-          "Match 2, Ranchi: India made 249, and West Indies still chased it",
-          "Match 3, Indore: India won by 14 runs"
-        ]
-      },
-      {
-        "label": "TONIGHT",
-        "title": "Where and when",
-        "points": [
-          "Rajiv Gandhi International Stadium, Hyderabad",
-          "Toss 6:30 pm, first ball 7 pm",
-          "Live on Star Sports and JioHotstar"
-        ]
-      },
-      {
-        "label": "SHARE THIS",
-        "kind": "share",
-        "title": "Call it before the toss",
-        "body": "Comment your player of the match and tag your cricket group. We'll check who got it right."
-      }
-    ]
-  },
-  {
-    "id": "lpg-aadhaar",
-    "format": "alert",
-    "lang": "en",
-    "place": "LPG households",
-    "headline": "Aadhaar check needed",
-    "time": "Since 1 Oct",
-    "note": "No biometric check, no subsidised cylinder booking.",
-    "source": "All India Radio News, 19 Sep 2026",
-    "captionHeadline": "No Aadhaar fingerprint check? You can't book a subsidised gas cylinder.",
-    "summary": "From 1 October, biometric Aadhaar authentication is mandatory to book domestic LPG refills at the subsidised price. 27.43 crore consumers have already done it and need to do nothing more. The government says it is to stop diversion of home cylinders and remove fake or duplicate connections.",
-    "forYou": "Not sure if you did it? Ask your delivery person, visit your distributor, or check your gas company's app.",
-    "cta": "Send this to your parents. They book the cylinder, and they'll thank you.",
-    "sourceUrl": "https://newsonair.gov.in/biometric-aadhaar-authentication-mandatory-for-subsidised-lpg-refills-from-october-1/",
-    "tags": [
-      "LPG",
-      "Aadhaar",
-      "GasCylinder"
-    ],
-    "slides": [
-      {
-        "label": "THE RULE",
-        "title": "Fingerprint first, subsidy after",
-        "points": [
-          "Applies to domestic LPG refills at the subsidised price",
-          "Biometric Aadhaar authentication is now mandatory",
-          "Already authenticated once? Nothing more to do"
-        ]
-      },
-      {
-        "label": "HOW TO DO IT",
-        "title": "Three ways, all free",
-        "points": [
-          "When the cylinder is delivered, with the delivery person",
-          "At your gas distributor's showroom",
-          "On your oil company's mobile app"
-        ]
-      },
-      {
-        "label": "BY THE NUMBERS",
-        "title": "Most homes are already done",
-        "stats": [
-          {
-            "label": "Consumers already authenticated",
-            "value": "27.43 cr",
-            "hi": true
-          }
-        ],
-        "statsNote": "Source: All India Radio News"
-      },
-      {
-        "label": "SHARE THIS",
-        "kind": "share",
-        "title": "Your parents need this",
-        "body": "Forward it to the family group before their next booking."
-      }
-    ]
-  },
-  {
-    "id": "whatsapp-not-paid",
-    "format": "myth",
-    "lang": "en",
-    "date": "Fact check",
-    "claim": "WhatsApp is now charging money for messages from October.",
-    "verdict": "MISSING CONTEXT",
-    "evidence": "Only businesses on the WhatsApp Business Platform pay. Your chats stay free.",
-    "source": "Meta pricing change, via Sunday Guardian, 1 Oct 2026",
-    "captionHeadline": "Is WhatsApp charging for messages now? Only if you're a big business.",
-    "summary": "Meta's new India pricing applies to the WhatsApp Business Platform, which companies use to send bulk messages like order and delivery updates. Each business number gets 1,000 free customer-service replies a month, then ₹0.115 per message plus GST. Ordinary WhatsApp and the WhatsApp Business app are not affected.",
-    "forYou": "Your personal chats and family groups cost nothing extra. If you run a big brand that sends bulk updates, check your bill.",
-    "cta": "Someone in your family group will forward the wrong version. Send them this.",
-    "sourceUrl": "https://sundayguardianlive.com/trending/what-changes-from-october-1-2026-check-major-new-rules-on-lpg-subsidy-whatsapp-business-pricing-sbi-atm-charges-upi-payments-tds-rules-immigration-visa-fee-hike-and-more-295963/",
-    "tags": [
-      "WhatsApp",
-      "FactCheck",
-      "Meta"
-    ],
-    "slides": [
-      {
-        "label": "WHO PAYS",
-        "title": "Big business accounts, not you",
-        "points": [
-          "Companies using the WhatsApp Business Platform",
-          "Typically bulk order, delivery and support messages",
-          "Not the normal WhatsApp app",
-          "Not small shops using the WhatsApp Business app"
-        ]
-      },
-      {
-        "label": "THE NUMBERS",
-        "title": "What businesses are charged",
-        "stats": [
-          {
-            "label": "Free support replies a month, per number",
-            "value": "1,000",
-            "hi": true
-          },
-          {
-            "label": "After that, per message (+GST)",
-            "value": "₹0.115"
-          }
-        ]
-      },
-      {
-        "label": "SHARE THIS",
-        "kind": "share",
-        "title": "Stop the forward",
-        "body": "Send this to the group where \"WhatsApp is now paid\" is doing the rounds."
-      }
-    ]
-  },
-  {
-    "id": "sbi-atm-limit",
-    "format": "number",
-    "lang": "en",
-    "date": "Since 1 Oct",
-    "value": "5",
-    "caption": "free other-bank ATM uses a month for SBI salary accounts. It used to be 10.",
-    "note": "After that: ₹23 + GST per cash withdrawal.",
-    "source": "Outlook Money; Sunday Guardian, Oct 2026",
-    "captionHeadline": "SBI salary account? Your free ATM visits just got cut in half.",
-    "summary": "From 1 October, SBI Salary Package account holders get 5 free transactions a month at other banks' ATMs, down from 10. Balance checks count too. After the limit, each cash withdrawal costs ₹23 plus GST, and each non-cash transaction ₹11 plus GST. SBI's own ATMs are unchanged.",
-    "forYou": "Use SBI ATMs where you can, and stop checking your balance at other banks' ATMs. Use the app instead.",
-    "cta": "Tag a colleague who gets their salary in SBI.",
-    "sourceUrl": "https://www.outlookmoney.com/news/new-money-rules-from-october-2026-key-changes-to-know",
-    "tags": [
-      "SBI",
-      "ATM",
-      "Banking"
-    ],
-    "slides": [
-      {
-        "label": "WHAT CHANGED",
-        "title": "Free other-bank ATM uses cut from 10 to 5",
-        "stats": [
-          {
-            "label": "Before 1 Oct",
-            "value": "10",
-            "num": 10
-          },
-          {
-            "label": "Now",
-            "value": "5",
-            "num": 5,
-            "hi": true
-          }
-        ]
-      },
-      {
-        "label": "THE CHARGES",
-        "title": "What you pay after the limit",
-        "stats": [
-          {
-            "label": "Each cash withdrawal",
-            "value": "₹23 + GST",
-            "hi": true
-          },
-          {
-            "label": "Each balance check or other",
-            "value": "₹11 + GST"
-          }
-        ]
-      },
-      {
-        "label": "SAVE MONEY",
-        "title": "Easy ways to avoid the fee",
-        "points": [
-          "Withdraw from SBI ATMs, which are unchanged",
-          "Check your balance on the app, not at an ATM",
-          "Take out cash in fewer, bigger withdrawals"
-        ]
       }
     ]
   },
@@ -1349,6 +926,1231 @@
         "kind": "share",
         "title": "अफ़वाह रोकें",
         "body": "\"WhatsApp अब पेड है\" वाले मैसेज के जवाब में ये भेजें।"
+      }
+    ]
+  },
+  {
+    "id": "digital-arrest-scam",
+    "format": "myth",
+    "lang": "en",
+    "date": "Scam of the day",
+    "claim": "Video call: 'This is CBI. You are under digital arrest. Stay on camera and pay to clear your name.'",
+    "verdict": "FAKE",
+    "evidence": "I4C: CBI, police, ED, customs and judges do NOT arrest on video calls.",
+    "source": "I4C advisory, via PTI",
+    "captionHeadline": "No police officer will ever arrest you on a video call. 'Digital arrest' is a scam.",
+    "summary": "Fraudsters pose as CBI, police, customs or ED officers on SMS and video calls, claim you or a relative is caught in drugs or money laundering, keep you 'confined' on camera, and demand money to 'bail' you out. The government's cyber crime centre (I4C) says real agencies never arrest anyone on a video call.",
+    "forYou": "Hang up. Don't pay. Report it on 1930 or cybercrime.gov.in.",
+    "cta": "Send this to your parents. Scammers target people who trust a uniform.",
+    "sourceUrl": "https://www.deccanherald.com/amp/story/india%2Famid-rise-in-digital-arrest-cases-indian-cyber-crime-coordination-centre-issues-advisory-for-citizens-3221509",
+    "tags": [
+      "DigitalArrest",
+      "ScamAlert",
+      "CyberSafety"
+    ],
+    "slides": [
+      {
+        "label": "HOW IT WORKS",
+        "title": "Fear, then a 'fine'",
+        "points": [
+          "A call or video call from a fake 'officer'",
+          "'Your parcel had drugs' or 'Your account funded crime'",
+          "You're told to stay on camera and talk to no one",
+          "Then: pay now to 'clear your name'"
+        ]
+      },
+      {
+        "label": "WHAT TO DO",
+        "title": "Don't panic. Hang up.",
+        "points": [
+          "Real agencies never arrest anyone on a video call",
+          "Never transfer money to 'settle' a case",
+          "Call the local police station yourself to check",
+          "Report: 1930 or cybercrime.gov.in"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Send this to your parents today",
+        "body": "Scammers target people who respect authority. One forward can stop a call from becoming a loss."
+      }
+    ]
+  },
+  {
+    "id": "pope-leo-cancer",
+    "format": "alert",
+    "lang": "en",
+    "place": "Vatican",
+    "headline": "Pope has cancer",
+    "time": "Confirmed 13 Oct",
+    "note": "Part of his right lung was removed. Surgery called successful.",
+    "source": "Vatican statement, via CBS News, 13 Oct 2026",
+    "captionHeadline": "The Vatican confirms Pope Leo XIV has lung cancer.",
+    "summary": "After surgery at Rome's Gemelli Hospital on 13 October, the Vatican said tests confirmed pulmonary adenocarcinoma, a type of lung cancer, \"as suspected from pre-operative tests\". Doctors removed the lower lobe of his right lung. The Vatican called the operation successful, with no complications. The 71-year-old pope regained consciousness normally.",
+    "forYou": "The Vatican has not said what stage the cancer is, or what treatment comes next.",
+    "cta": "Follow @postr.news for updates as the Vatican shares them.",
+    "sourceUrl": "https://www.cbsnews.com/news/pope-leo-diagnosed-lung-cancer-surgery/",
+    "tags": [
+      "PopeLeo",
+      "Vatican",
+      "WorldNews"
+    ],
+    "slides": [
+      {
+        "label": "WHAT HAPPENED",
+        "title": "From a nodule to a diagnosis",
+        "points": [
+          "Doctors found a nodule on his right lung",
+          "He chose surgery on their advice",
+          "Tests during surgery confirmed lung adenocarcinoma",
+          "The lower lobe of his right lung was removed"
+        ]
+      },
+      {
+        "label": "THE SURGERY",
+        "title": "What the Vatican said",
+        "stats": [
+          {
+            "label": "Procedure time",
+            "value": "90 min"
+          },
+          {
+            "label": "Pope's age",
+            "value": "71"
+          },
+          {
+            "label": "Complications",
+            "value": "None",
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "NOT YET KNOWN",
+        "title": "What hasn't been shared",
+        "points": [
+          "The stage of the cancer",
+          "Whether it has spread",
+          "What treatment comes next"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hormuz-indian-sailors",
+    "format": "alert",
+    "lang": "en",
+    "place": "Strait of Hormuz",
+    "headline": "Indian sailors missing",
+    "time": "Since 11 Oct",
+    "note": "Two tankers with 22 Indian crew were attacked. Two still missing.",
+    "source": "MEA, via Business Standard, 12 Oct 2026",
+    "captionHeadline": "Two ships with 22 Indian sailors were attacked at sea. Two Indians are still missing.",
+    "summary": "On 11 October, two tankers were hit in the Strait of Hormuz: the MT Petro Dolphin, reportedly struck by a drone, and the MT Valthera, hit by an unknown projectile that started a fire. Each had 11 Indian sailors. Two from the Petro Dolphin are missing; all 11 on the Valthera are safe. India condemned the attacks.",
+    "forYou": "The Indian Embassy in Muscat is coordinating the search with Oman. Families can contact the shipping companies and the embassy.",
+    "cta": "Share so their families' story isn't forgotten.",
+    "sourceUrl": "https://www.business-standard.com/amp/world-news/two-merchant-vessels-with-22-indian-sailors-attacked-in-strait-of-hormuz-126101200376_1.html",
+    "tags": [
+      "Hormuz",
+      "IndianSailors",
+      "MEA"
+    ],
+    "slides": [
+      {
+        "label": "THE ATTACKS",
+        "title": "Two tankers hit on the same day",
+        "points": [
+          "MT Petro Dolphin: reportedly struck by a drone",
+          "MT Valthera: hit by a projectile, fire on board",
+          "11 Indian sailors on each ship"
+        ]
+      },
+      {
+        "label": "THE CREW",
+        "title": "Where the 22 Indians are",
+        "stats": [
+          {
+            "label": "Missing (Petro Dolphin)",
+            "value": "2",
+            "num": 2,
+            "hi": true
+          },
+          {
+            "label": "Safe (Petro Dolphin)",
+            "value": "9",
+            "num": 9
+          },
+          {
+            "label": "Safe (Valthera)",
+            "value": "11",
+            "num": 11
+          }
+        ]
+      },
+      {
+        "label": "INDIA'S RESPONSE",
+        "title": "\"Attacks on seafarers must cease\"",
+        "points": [
+          "External Affairs Ministry condemned the attacks",
+          "Embassy in Muscat working with Omani authorities on rescue",
+          "India called for immediate de-escalation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sensex-it-rally",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "value": "5.2",
+    "unit": "%",
+    "share": 5,
+    "caption": "jump in IT stocks (Nifty IT) on Tuesday, as the Sensex rose over 1,100 points.",
+    "note": "Brent crude still near $104 a barrel.",
+    "source": "Kotak Neo market report, 13 Oct 2026",
+    "captionHeadline": "IT stocks jumped 5.2% in a day. The Sensex added 1,100+ points.",
+    "summary": "On 13 October the Sensex closed at 73,003.78 (up 1.54%) and the Nifty 50 at 22,721.95 (up 1.60%). The Nifty IT index rose 5.22%, led by HCL Tech, TCS and Tech Mahindra. Kotak Mahindra Bank and Maruti were among the losers.",
+    "cta": "Tag the friend who checks their portfolio every 10 minutes.",
+    "sourceUrl": "https://www.kotakneo.com/news/market-news/sensex-nifty-50-recover-as-bulls-return-dalal-street/",
+    "tags": [
+      "Sensex",
+      "Nifty",
+      "StockMarket"
+    ],
+    "slides": [
+      {
+        "label": "THE DAY IN NUMBERS",
+        "title": "One-day change, 13 October",
+        "stats": [
+          {
+            "label": "Nifty IT",
+            "value": "+5.22%",
+            "num": 5.22,
+            "hi": true
+          },
+          {
+            "label": "Nifty 50",
+            "value": "+1.60%",
+            "num": 1.6
+          },
+          {
+            "label": "Sensex",
+            "value": "+1.54%",
+            "num": 1.54
+          },
+          {
+            "label": "Nifty Midcap 100",
+            "value": "+1.06%",
+            "num": 1.06
+          }
+        ],
+        "statsNote": "Sensex closed at 73,003.78; Nifty 50 at 22,721.95."
+      },
+      {
+        "label": "WHO MOVED",
+        "title": "IT led the rally",
+        "points": [
+          "Top gainers: HCL Tech, TCS, Shriram Finance, Tech Mahindra",
+          "Top losers: Kotak Mahindra Bank, Eternal, Maruti Suzuki, Max Healthcare",
+          "Brent crude stayed near $104 a barrel"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "One green day isn't a trend",
+        "body": "Markets move on oil, rates and global cues. Tag the friend who needs to hear that before buying on a rally."
+      }
+    ]
+  },
+  {
+    "id": "rupee-95",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "value": "₹95",
+    "caption": "for one US dollar. The rupee closed at 95.28 on 13 October.",
+    "note": "That was after a 50 paise gain on the day.",
+    "source": "All India Radio News, 13 Oct 2026",
+    "captionHeadline": "One US dollar now costs more than ₹95.",
+    "summary": "The rupee closed at 95.28 against the US dollar on 13 October, even after gaining 50 paise that day. In early trade it was quoted at 95.16. A weaker rupee makes imports like crude oil, electronics and foreign education costlier.",
+    "forYou": "Studying, travelling or shopping abroad, or buying imported phones and gadgets? Budget for higher prices.",
+    "cta": "Tag the friend planning a foreign trip.",
+    "sourceUrl": "https://newsonair.gov.in/rupee-appreciates-by-50-paise-against-us-dollar/",
+    "tags": [
+      "Rupee",
+      "Dollar",
+      "MoneyNews"
+    ],
+    "slides": [
+      {
+        "label": "WHERE IT HITS",
+        "title": "Who feels a ₹95 dollar",
+        "points": [
+          "Students paying fees abroad",
+          "Anyone travelling overseas",
+          "Imported phones, laptops and gadgets",
+          "Fuel, since India imports most of its crude oil"
+        ]
+      },
+      {
+        "label": "ON 13 OCT",
+        "title": "The day in numbers",
+        "stats": [
+          {
+            "label": "Closing rate",
+            "value": "₹95.28",
+            "hi": true
+          },
+          {
+            "label": "Gain on the day",
+            "value": "50 paise"
+          }
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Send this to your travel group",
+        "body": "Planning a trip abroad? Every dollar now costs over ₹95."
+      }
+    ]
+  },
+  {
+    "id": "icc-potm",
+    "format": "number",
+    "lang": "en",
+    "date": "ICC awards",
+    "value": "2",
+    "caption": "Indians swept ICC Player of the Month for September: Shubman Gill and Shefali Verma.",
+    "note": "Men's and women's awards, both to India.",
+    "source": "All India Radio News, 13 Oct 2026",
+    "captionHeadline": "India swept both ICC Player of the Month awards.",
+    "summary": "Shubman Gill and Shefali Verma were named ICC Men's and Women's Player of the Month for September 2026. India plays West Indies in the 4th T20I in Hyderabad tonight, leading the series 2-1.",
+    "forYou": "Tonight: India v West Indies, 4th T20I, Hyderabad, 7 pm IST.",
+    "cta": "Tag a Gill or Shefali fan.",
+    "sourceUrl": "https://newsonair.gov.in/shefali-verma-shubman-gill-named-icc-womens-and-mens-player-of-month-for-september-2026/",
+    "tags": [
+      "Cricket",
+      "ShubmanGill",
+      "ShefaliVerma"
+    ],
+    "slides": [
+      {
+        "label": "THE WINNERS",
+        "title": "September's best, both Indian",
+        "points": [
+          "Men: Shubman Gill",
+          "Women: Shefali Verma"
+        ]
+      },
+      {
+        "label": "TONIGHT",
+        "title": "India v West Indies, 4th T20I",
+        "stats": [
+          {
+            "label": "Venue",
+            "value": "Hyderabad"
+          },
+          {
+            "label": "Start",
+            "value": "7 pm IST"
+          },
+          {
+            "label": "Series",
+            "value": "India 2-1",
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Cricket group, assemble",
+        "body": "Send this before the toss tonight."
+      }
+    ]
+  },
+  {
+    "id": "cancer-drug-margin",
+    "format": "number",
+    "lang": "en",
+    "date": "12 Oct",
+    "value": "30%",
+    "caption": "is the new cap on trade margins for cancer drugs, after a Supreme Court push.",
+    "note": "The court asked: why only cancer drugs?",
+    "source": "Bar & Bench, 12 Oct; The Hindu, 13 Oct 2026",
+    "captionHeadline": "A ₹5,000 heart stent sold for over ₹25,000. Now the Supreme Court is asking questions.",
+    "summary": "The Centre told the Supreme Court it has capped trade margins on anti-cancer drugs at 30% of MRP. The court asked why the cap covers only cancer drugs. The Hindu reported mark-ups of up to 1,000% on some cancer drugs, and a made-in-India cardiac stent costing about ₹5,000 sold for over ₹25,000.",
+    "forYou": "Cancer medicines should get cheaper. If the court widens it, everyday medicines could follow. Always compare MRP and ask for generics.",
+    "cta": "Know someone buying cancer medicines? Send them this.",
+    "sourceUrl": "https://www.barandbench.com/news/centre-caps-trade-margin-for-cancer-drugs-at-30-after-supreme-court-rap",
+    "tags": [
+      "Medicines",
+      "SupremeCourt",
+      "Health"
+    ],
+    "slides": [
+      {
+        "label": "THE MARK-UP",
+        "title": "What patients were paying",
+        "stats": [
+          {
+            "label": "Cardiac stent: cost",
+            "value": "₹5,000",
+            "num": 5000
+          },
+          {
+            "label": "Cardiac stent: sold at",
+            "value": "₹25,000+",
+            "num": 25000,
+            "hi": true
+          }
+        ],
+        "statsNote": "Example reported by The Hindu"
+      },
+      {
+        "label": "THE NEW RULE",
+        "title": "Cancer drugs: margin capped at 30%",
+        "points": [
+          "Trade margin limited to 30% of MRP",
+          "Some cancer drug mark-ups reportedly reached 1,000%",
+          "Applies to anti-cancer drugs only, for now"
+        ]
+      },
+      {
+        "label": "WHAT'S NEXT",
+        "title": "\"Why only cancer drugs?\"",
+        "body": "The Supreme Court questioned why the cap should not cover all medicines. Everyday drugs could be next."
+      }
+    ]
+  },
+  {
+    "id": "pune-no-digging",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "place": "Pune",
+    "value": "5",
+    "unit": "yrs",
+    "caption": "of no new digging on Pune's upgraded cycling-race roads, says PMC.",
+    "note": "All utility trenching must finish by 31 Oct 2026.",
+    "source": "PMC, via PuneNow, 13 Oct 2026",
+    "captionHeadline": "Pune, a road that stays fixed? PMC bans digging on race roads for 5 years.",
+    "summary": "PMC has told utility companies to finish all trenching on the cycling circuit by 31 October 2026, ahead of the Pune Grand Tour international cycling race in January 2027. After that, no new trenching permissions for five years. Firms that damage the upgraded roads face penal and even criminal action.",
+    "cta": "Tag a Punekar who has given up on smooth roads.",
+    "sourceUrl": "https://www.punenow.com/no-road-digging-in-pune-for-5-years-as-pmc-prepares-for-international-cycling-event/",
+    "tags": [
+      "Pune",
+      "PMC",
+      "PuneRoads"
+    ],
+    "slides": [
+      {
+        "label": "WHAT PMC DECIDED",
+        "title": "Dig now, or not for 5 years",
+        "points": [
+          "All utility trenching on the circuit must end by 31 Oct 2026",
+          "No extensions, no new permissions after that",
+          "No new trenching for 5 years after the race",
+          "Damage can bring penal and even criminal action"
+        ]
+      },
+      {
+        "label": "WHY",
+        "title": "An international cycling race",
+        "body": "The roads are being upgraded for the Pune Grand Tour International Cycling Competition in January 2027. PMC wants them to stay intact after the work is done."
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Smooth roads in Pune. For real?",
+        "body": "Tag a Punekar and tell us which road you want fixed next."
+      }
+    ]
+  },
+  {
+    "id": "mental-health-gap",
+    "format": "number",
+    "lang": "en",
+    "date": "Mental health",
+    "value": "83%",
+    "caption": "of Indians with a mental health condition get no treatment.",
+    "note": "India has under 0.75 psychiatrists per lakh people.",
+    "source": "National Mental Health Survey, via Insights IAS, 13 Oct 2026",
+    "captionHeadline": "83% of Indians with a mental health condition get no treatment at all.",
+    "summary": "India's National Mental Health Survey puts the treatment gap at 83%, rising to 85.2% for major depression. India has fewer than 0.75 psychiatrists per 1 lakh people; the WHO benchmark is at least 3. The free government helpline Tele-MANAS (14416) has taken about 47.75 lakh calls in four years.",
+    "forYou": "Free, 24x7 support in many languages: call Tele-MANAS on 14416.",
+    "cta": "Share this. Someone you know may need the number.",
+    "sourceUrl": "https://www.insightsonindia.com/2026/10/13/upsc-current-affairs-13-october-2026/",
+    "tags": [
+      "MentalHealth",
+      "TeleMANAS",
+      "Health"
+    ],
+    "slides": [
+      {
+        "label": "THE GAP",
+        "title": "Most people never get help",
+        "stats": [
+          {
+            "label": "Overall treatment gap",
+            "value": "83%",
+            "num": 83
+          },
+          {
+            "label": "Major depression",
+            "value": "85.2%",
+            "num": 85.2,
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "THE SHORTAGE",
+        "title": "Psychiatrists per 1 lakh people",
+        "stats": [
+          {
+            "label": "India",
+            "value": "<0.75",
+            "num": 0.75,
+            "hi": true
+          },
+          {
+            "label": "WHO benchmark",
+            "value": "3",
+            "num": 3
+          }
+        ]
+      },
+      {
+        "label": "SAVE THIS NUMBER",
+        "title": "Free help, any time: 14416",
+        "points": [
+          "Tele-MANAS: free, 24x7 government helpline",
+          "Taken about 47.75 lakh calls in four years",
+          "73% of callers were aged 18 to 45"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Someone needs this today",
+        "body": "Save 14416 and share it. You never know who is struggling."
+      }
+    ]
+  },
+  {
+    "id": "imf-india-7",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "value": "7%",
+    "caption": "is how fast the IMF now expects India's economy to grow in 2026.",
+    "note": "China: 4.5%. World: 3.1%.",
+    "source": "IMF World Economic Outlook, via Business Today, 13 Oct 2026",
+    "captionHeadline": "The IMF just raised India's growth forecast. The world is slowing; India isn't.",
+    "summary": "The IMF's October World Economic Outlook projects India's growth at 7% in 2026 and 7% in 2027, an upgrade from its earlier forecast. It expects world growth of 3.1% in 2026 and China at 4.5%. The IMF cited \"resilient domestic demand and robust services activity\".",
+    "forYou": "Strong growth usually means more hiring. But prices and EMIs are rising too, so watch both.",
+    "cta": "Share with the friend who says the economy is doomed.",
+    "sourceUrl": "https://www.businesstoday.in/latest/economy/story/imf-raises-indias-growth-forecast-to-7-for-2026-upgrades-outlook-by-60-bps-561120-2026-10-13",
+    "tags": [
+      "IMF",
+      "Economy",
+      "GDP"
+    ],
+    "slides": [
+      {
+        "label": "THE RACE",
+        "title": "2026 growth forecasts",
+        "stats": [
+          {
+            "label": "India",
+            "value": "7%",
+            "num": 7,
+            "hi": true
+          },
+          {
+            "label": "China",
+            "value": "4.5%",
+            "num": 4.5
+          },
+          {
+            "label": "World",
+            "value": "3.1%",
+            "num": 3.1
+          }
+        ]
+      },
+      {
+        "label": "WHY",
+        "title": "What the IMF credits",
+        "points": [
+          "Resilient domestic demand",
+          "Robust services activity",
+          "Stronger-than-expected momentum"
+        ]
+      },
+      {
+        "label": "THE CATCH",
+        "title": "Growth up, but so are prices",
+        "points": [
+          "RBI raised rates on 7 October",
+          "Oil is above $100 a barrel",
+          "The rupee is above ₹95 to the dollar"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brent-104",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "value": "$104",
+    "caption": "for a barrel of Brent crude. Expensive oil is behind costly petrol and the RBI's rate hike.",
+    "note": "RBI cited high oil prices when it raised rates on 7 Oct.",
+    "source": "Kotak Neo, 13 Oct; RBI MPC, 7 Oct 2026",
+    "captionHeadline": "Oil is above $100 a barrel. Here's how that reaches your wallet.",
+    "summary": "Brent crude futures were around $104.42 a barrel on 13 October. On 7 October, the RBI named elevated oil prices among the reasons it raised the repo rate to 5.5%.",
+    "cta": "Save this. It explains half the price rises you'll see this month.",
+    "sourceUrl": "https://www.kotakneo.com/news/market-news/sensex-nifty-50-recover-as-bulls-return-dalal-street/",
+    "tags": [
+      "CrudeOil",
+      "Petrol",
+      "RBI"
+    ],
+    "slides": [
+      {
+        "label": "THE CHAIN",
+        "title": "From an oil barrel to your EMI",
+        "points": [
+          "India imports most of its crude oil",
+          "Costlier oil keeps fuel prices high",
+          "High fuel costs push up prices of goods",
+          "The RBI raised rates on 7 Oct, citing oil among the reasons"
+        ]
+      },
+      {
+        "label": "WHERE YOU FEEL IT",
+        "title": "Already this month",
+        "points": [
+          "Petrol on 11 Oct: ₹111.21 a litre in Mumbai, ₹102.12 in Delhi",
+          "EMI: about ₹477 more a month on a ₹30 lakh home loan, if passed on"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Save this explainer",
+        "body": "Next time someone asks why everything costs more, send them this."
+      }
+    ]
+  },
+  {
+    "id": "black-sea-ship-sunk",
+    "format": "alert",
+    "lang": "en",
+    "place": "Black Sea",
+    "headline": "Ship sunk",
+    "time": "13 Oct",
+    "note": "Drone attacks hit two ships off Bulgaria. At least 11 missing.",
+    "source": "Euronews, 13 Oct 2026",
+    "captionHeadline": "Drones hit two ships off Bulgaria. One sank. At least 11 people are missing.",
+    "summary": "Drone attacks struck two ships in the Black Sea off the coast of Bulgaria on 13 October. One ship sank and at least 11 people are missing, Euronews reported. The same day, Russian strikes hit Kyiv and a university in Rivne.",
+    "forYou": "Attacks on shipping keep oil and freight costs high, which feeds into fuel and import prices in India.",
+    "cta": "Follow @postr.news for world news that affects your wallet.",
+    "sourceUrl": "https://www.euronews.com/2026/10/13",
+    "tags": [
+      "BlackSea",
+      "WorldNews",
+      "Shipping"
+    ],
+    "slides": [
+      {
+        "label": "WHAT HAPPENED",
+        "title": "Two ships, one sunk",
+        "points": [
+          "Drone attacks off the Bulgarian coast",
+          "One vessel sank",
+          "At least 11 people missing"
+        ]
+      },
+      {
+        "label": "SAME DAY",
+        "title": "A violent day at sea",
+        "points": [
+          "Ballistic missiles hit Kyiv and a university in Rivne",
+          "Two Indian-crewed tankers hit in Hormuz two days earlier"
+        ]
+      },
+      {
+        "label": "WHY IT MATTERS",
+        "title": "Attacks at sea reach your wallet",
+        "body": "Shipping attacks push up oil and freight costs. India imports most of its crude, so fuel and goods prices feel it."
+      }
+    ]
+  },
+  {
+    "id": "cpi-two-year-high",
+    "format": "number",
+    "lang": "en",
+    "date": "September",
+    "value": "5.5%",
+    "caption": "retail inflation in September, the highest in two years.",
+    "note": "Up from about 4.8% in August. Food and fuel drove it.",
+    "source": "The Hindu, via LegacyIAS, 13 Oct 2026",
+    "captionHeadline": "Prices are rising at their fastest pace in two years.",
+    "summary": "Retail inflation rose to 5.5% in September from about 4.8% in August, the highest since October 2024, driven by food and fuel. It is still below the RBI's 6% upper limit. On 7 October the RBI raised its repo rate to 5.5%.",
+    "forYou": "Your monthly budget is shrinking. Groceries and fuel are the biggest culprits.",
+    "cta": "Tag the person who runs your household budget.",
+    "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
+    "tags": [
+      "Inflation",
+      "Prices",
+      "MoneyNews"
+    ],
+    "slides": [
+      {
+        "label": "THE JUMP",
+        "title": "Inflation in one month",
+        "stats": [
+          {
+            "label": "August",
+            "value": "4.8%",
+            "num": 4.8
+          },
+          {
+            "label": "September",
+            "value": "5.5%",
+            "num": 5.5,
+            "hi": true
+          },
+          {
+            "label": "RBI upper limit",
+            "value": "6%",
+            "num": 6
+          }
+        ]
+      },
+      {
+        "label": "WHAT'S DRIVING IT",
+        "title": "Food and fuel",
+        "points": [
+          "Food prices rising",
+          "Petrol above ₹100 in most metros",
+          "Oil above $100 a barrel"
+        ]
+      },
+      {
+        "label": "WHAT IT MEANS",
+        "title": "The squeeze from both sides",
+        "points": [
+          "Your money buys less each month",
+          "Loans got costlier after the RBI's 7 Oct hike"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ind-wi-4th-t20i",
+    "format": "number",
+    "lang": "en",
+    "date": "Tonight, 7 pm",
+    "place": "Hyderabad",
+    "value": "2-1",
+    "caption": "India lead the series. Win tonight in Hyderabad and it's theirs with a match to spare.",
+    "note": "Toss 6:30 pm. Star Sports and JioHotstar.",
+    "source": "CricketAddictor; UNI, 11 Oct 2026",
+    "captionHeadline": "Tonight, 7 pm, Hyderabad: one win and the series is India's.",
+    "summary": "India lead the five-match T20I series 2-1 after winning by 14 runs in Indore. The 4th T20I is at Rajiv Gandhi International Stadium, Hyderabad: toss 6:30 pm, start 7 pm, live on Star Sports and JioHotstar.",
+    "cta": "Who's your player of the match tonight? Comment before the toss.",
+    "sourceUrl": "https://cricketaddictor.com/cricket-news/ind-vs-wi-playing-11-today-live-streaming-pitch-weather-india-vs-west-indies-4th-t20i-2026-464873/",
+    "tags": [
+      "INDvWI",
+      "TeamIndia",
+      "Cricket"
+    ],
+    "slides": [
+      {
+        "label": "THE SERIES SO FAR",
+        "title": "Three matches, one wild chase",
+        "points": [
+          "Match 1: India won by 8 wickets",
+          "Match 2, Ranchi: India made 249, and West Indies still chased it",
+          "Match 3, Indore: India won by 14 runs"
+        ]
+      },
+      {
+        "label": "TONIGHT",
+        "title": "Where and when",
+        "points": [
+          "Rajiv Gandhi International Stadium, Hyderabad",
+          "Toss 6:30 pm, first ball 7 pm",
+          "Live on Star Sports and JioHotstar"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Call it before the toss",
+        "body": "Comment your player of the match and tag your cricket group. We'll check who got it right."
+      }
+    ]
+  },
+  {
+    "id": "sip-record",
+    "format": "tracker",
+    "lang": "en",
+    "date": "September",
+    "headline": "SIP inflows hit another record",
+    "then": {
+      "label": "August",
+      "value": "₹32,297 cr"
+    },
+    "now": {
+      "label": "September",
+      "value": "₹32,490 cr"
+    },
+    "source": "The Hindu, via LegacyIAS; Angel One, Oct 2026",
+    "captionHeadline": "Indians put ₹32,490 crore into SIPs in one month. Another record.",
+    "summary": "Monthly SIP contributions hit a record ₹32,490 crore in September, up from ₹32,297 crore in August. It was the 67th month in a row of inflows into equity funds. SIP assets now total ₹17.86 lakh crore.",
+    "forYou": "Markets can fall, but regular investors keep buying. Check your own SIP is still running.",
+    "cta": "Tag the friend who keeps saying \"I'll start a SIP next month\".",
+    "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
+    "tags": [
+      "SIP",
+      "MutualFunds",
+      "Investing"
+    ],
+    "slides": [
+      {
+        "label": "THE NUMBERS",
+        "title": "India's monthly investing habit",
+        "stats": [
+          {
+            "label": "September SIP inflow",
+            "value": "₹32,490 cr",
+            "hi": true
+          },
+          {
+            "label": "Total SIP assets",
+            "value": "₹17.86 lakh cr"
+          },
+          {
+            "label": "Months of equity inflows in a row",
+            "value": "67"
+          }
+        ]
+      },
+      {
+        "label": "WHY IT MATTERS",
+        "title": "Retail money is steadying the market",
+        "points": [
+          "Foreign investors sold ₹1,708 cr of shares on 12 Oct",
+          "Domestic institutions bought ₹3,045 cr the same day"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Start-next-month friends",
+        "body": "Send this to the one who has been \"about to start a SIP\" for a year."
+      }
+    ]
+  },
+  {
+    "id": "kospi-crash",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "value": "6.5%",
+    "caption": "is how far South Korea's Kospi fell in early trade, after a chip-stock sell-off.",
+    "note": "Japan's Nikkei fell 2.2% too.",
+    "source": "India TV News, 13 Oct 2026",
+    "captionHeadline": "South Korea's stock market crashed 6.5% in one morning.",
+    "summary": "Asian markets fell on 13 October after a chip-stock sell-off on Wall Street. South Korea's Kospi dropped 6.46% in early trade and Japan's Nikkei 225 fell 2.20%. India held up: the Sensex later closed 1,109 points higher.",
+    "forYou": "Chip stocks are swinging hard. If you hold tech or semiconductor funds, expect volatility.",
+    "cta": "Share with your trading group.",
+    "sourceUrl": "https://www.indiatvnews.com/business/markets/13-october-2026-stock-market-updates-sensex-nifty-flat-amid-weak-global-cues-it-shares-in-action-2026-10-13-1056790",
+    "tags": [
+      "StockMarket",
+      "Kospi",
+      "Sensex"
+    ],
+    "slides": [
+      {
+        "label": "ASIA ON 13 OCT",
+        "title": "Early-trade moves",
+        "stats": [
+          {
+            "label": "Kospi (South Korea)",
+            "value": "-6.46%",
+            "num": 6.46,
+            "hi": true
+          },
+          {
+            "label": "Nikkei (Japan)",
+            "value": "-2.20%",
+            "num": 2.2
+          },
+          {
+            "label": "Hang Seng (Hong Kong)",
+            "value": "-0.51%",
+            "num": 0.51
+          }
+        ]
+      },
+      {
+        "label": "MEANWHILE IN INDIA",
+        "title": "Sensex closed 1,109 points up",
+        "points": [
+          "Sensex ended at 73,033.78, up 1.54%",
+          "Nifty IT was the top sector"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lpg-aadhaar",
+    "format": "alert",
+    "lang": "en",
+    "place": "LPG households",
+    "headline": "Aadhaar check needed",
+    "time": "Since 1 Oct",
+    "note": "No biometric check, no subsidised cylinder booking.",
+    "source": "All India Radio News, 19 Sep 2026",
+    "captionHeadline": "No Aadhaar fingerprint check? You can't book a subsidised gas cylinder.",
+    "summary": "From 1 October, biometric Aadhaar authentication is mandatory to book domestic LPG refills at the subsidised price. 27.43 crore consumers have already done it and need to do nothing more. The government says it is to stop diversion of home cylinders and remove fake or duplicate connections.",
+    "forYou": "Not sure if you did it? Ask your delivery person, visit your distributor, or check your gas company's app.",
+    "cta": "Send this to your parents. They book the cylinder, and they'll thank you.",
+    "sourceUrl": "https://newsonair.gov.in/biometric-aadhaar-authentication-mandatory-for-subsidised-lpg-refills-from-october-1/",
+    "tags": [
+      "LPG",
+      "Aadhaar",
+      "GasCylinder"
+    ],
+    "slides": [
+      {
+        "label": "THE RULE",
+        "title": "Fingerprint first, subsidy after",
+        "points": [
+          "Applies to domestic LPG refills at the subsidised price",
+          "Biometric Aadhaar authentication is now mandatory",
+          "Already authenticated once? Nothing more to do"
+        ]
+      },
+      {
+        "label": "HOW TO DO IT",
+        "title": "Three ways, all free",
+        "points": [
+          "When the cylinder is delivered, with the delivery person",
+          "At your gas distributor's showroom",
+          "On your oil company's mobile app"
+        ]
+      },
+      {
+        "label": "BY THE NUMBERS",
+        "title": "Most homes are already done",
+        "stats": [
+          {
+            "label": "Consumers already authenticated",
+            "value": "27.43 cr",
+            "hi": true
+          }
+        ],
+        "statsNote": "Source: All India Radio News"
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Your parents need this",
+        "body": "Forward it to the family group before their next booking."
+      }
+    ]
+  },
+  {
+    "id": "living-planet-73",
+    "format": "number",
+    "lang": "en",
+    "date": "Living Planet",
+    "value": "73%",
+    "caption": "average fall in monitored wildlife populations since 1970.",
+    "note": "Latin America: 95%. Africa: 80%.",
+    "source": "Living Planet Index, via The Hindu, 13 Oct 2026",
+    "captionHeadline": "Wildlife populations have crashed by an average of 73% in one lifetime.",
+    "summary": "The Living Planet Index shows monitored wildlife populations have fallen by an average of 73% since 1970. Latin America and the Caribbean show a 95% average decline, Africa 80% and Europe 23%. About half of the 35,803 populations tracked are declining.",
+    "forYou": "The species we grew up seeing are disappearing within a single human lifetime.",
+    "cta": "Share this. Most people have no idea.",
+    "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
+    "tags": [
+      "Wildlife",
+      "Climate",
+      "Environment"
+    ],
+    "slides": [
+      {
+        "label": "BY REGION",
+        "title": "Average decline since 1970",
+        "stats": [
+          {
+            "label": "Latin America and Caribbean",
+            "value": "95%",
+            "num": 95,
+            "hi": true
+          },
+          {
+            "label": "Africa",
+            "value": "80%",
+            "num": 80
+          },
+          {
+            "label": "Europe",
+            "value": "23%",
+            "num": 23
+          }
+        ]
+      },
+      {
+        "label": "THE NUANCE",
+        "title": "Not every population is falling",
+        "points": [
+          "35,803 wildlife populations tracked",
+          "About half are declining",
+          "The 73% is an average of the change"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "himalaya-warming",
+    "format": "number",
+    "lang": "en",
+    "date": "Himalayas",
+    "value": "2x",
+    "caption": "Himalayan peaks are warming nearly twice as fast as the global average.",
+    "note": "Ice loss in the region has doubled since 2000.",
+    "source": "ICIMOD, via The Hindu, 13 Oct 2026",
+    "captionHeadline": "The Himalayas are heating up twice as fast as the rest of the world.",
+    "summary": "High mountains are warming by about 0.3°C per decade, nearly twice the global average. ICIMOD reports ice loss in the Hindu Kush Himalaya has doubled since 2000. In Nepal, a 600-metre ice-and-rock collapse sent a debris flood 170 km down the Bhote Koshi river.",
+    "forYou": "Himalayan glaciers feed the Ganga, Brahmaputra and Indus. Faster melting means more floods now and less water later.",
+    "cta": "Share with everyone planning a mountain trip.",
+    "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
+    "tags": [
+      "Himalayas",
+      "Climate",
+      "Glaciers"
+    ],
+    "slides": [
+      {
+        "label": "THE NUMBERS",
+        "title": "How fast the mountains are changing",
+        "stats": [
+          {
+            "label": "Warming per decade",
+            "value": "0.3°C",
+            "hi": true
+          },
+          {
+            "label": "Ice loss rate vs 2000",
+            "value": "2x"
+          },
+          {
+            "label": "Nepal debris flood distance",
+            "value": "170 km"
+          }
+        ]
+      },
+      {
+        "label": "WHY INDIA CARES",
+        "title": "Our rivers start here",
+        "points": [
+          "Glaciers feed the Ganga, Brahmaputra and Indus",
+          "Faster melt raises flood risk now",
+          "And water shortage risk later"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "whatsapp-not-paid",
+    "format": "myth",
+    "lang": "en",
+    "date": "Fact check",
+    "claim": "WhatsApp is now charging money for messages from October.",
+    "verdict": "MISSING CONTEXT",
+    "evidence": "Only businesses on the WhatsApp Business Platform pay. Your chats stay free.",
+    "source": "Meta pricing change, via Sunday Guardian, 1 Oct 2026",
+    "captionHeadline": "Is WhatsApp charging for messages now? Only if you're a big business.",
+    "summary": "Meta's new India pricing applies to the WhatsApp Business Platform, which companies use to send bulk messages like order and delivery updates. Each business number gets 1,000 free customer-service replies a month, then ₹0.115 per message plus GST. Ordinary WhatsApp and the WhatsApp Business app are not affected.",
+    "forYou": "Your personal chats and family groups cost nothing extra. If you run a big brand that sends bulk updates, check your bill.",
+    "cta": "Someone in your family group will forward the wrong version. Send them this.",
+    "sourceUrl": "https://sundayguardianlive.com/trending/what-changes-from-october-1-2026-check-major-new-rules-on-lpg-subsidy-whatsapp-business-pricing-sbi-atm-charges-upi-payments-tds-rules-immigration-visa-fee-hike-and-more-295963/",
+    "tags": [
+      "WhatsApp",
+      "FactCheck",
+      "Meta"
+    ],
+    "slides": [
+      {
+        "label": "WHO PAYS",
+        "title": "Big business accounts, not you",
+        "points": [
+          "Companies using the WhatsApp Business Platform",
+          "Typically bulk order, delivery and support messages",
+          "Not the normal WhatsApp app",
+          "Not small shops using the WhatsApp Business app"
+        ]
+      },
+      {
+        "label": "THE NUMBERS",
+        "title": "What businesses are charged",
+        "stats": [
+          {
+            "label": "Free support replies a month, per number",
+            "value": "1,000",
+            "hi": true
+          },
+          {
+            "label": "After that, per message (+GST)",
+            "value": "₹0.115"
+          }
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Stop the forward",
+        "body": "Send this to the group where \"WhatsApp is now paid\" is doing the rounds."
+      }
+    ]
+  },
+  {
+    "id": "ageing-india",
+    "format": "number",
+    "lang": "en",
+    "date": "By 2050",
+    "value": "347M",
+    "caption": "Indians will be over 60 by 2050, up from 149 million in 2022.",
+    "note": "About 14.6 crore people already give unpaid, untrained care.",
+    "source": "NITI Aayog estimates, via The Hindu, 13 Oct 2026",
+    "captionHeadline": "By 2050, one in five Indians could be over 60. Who will care for them?",
+    "summary": "India's population aged 60 and above is projected to rise from 149 million in 2022 to 347 million by 2050. NITI Aayog estimates about 146 million people already provide untrained, unpaid care. Women spend 299 minutes a day on unpaid domestic and care work, against 97 minutes for men.",
+    "forYou": "Planning for your parents' care, and your own old age, starts now.",
+    "cta": "Send this to your siblings. It is a conversation worth having.",
+    "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
+    "tags": [
+      "Ageing",
+      "Family",
+      "India"
+    ],
+    "slides": [
+      {
+        "label": "THE SHIFT",
+        "title": "Indians aged 60+",
+        "stats": [
+          {
+            "label": "2022",
+            "value": "149M",
+            "num": 149
+          },
+          {
+            "label": "2050 (projected)",
+            "value": "347M",
+            "num": 347,
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "WHO CARES",
+        "title": "Unpaid care, minutes a day",
+        "stats": [
+          {
+            "label": "Women",
+            "value": "299 min",
+            "num": 299,
+            "hi": true
+          },
+          {
+            "label": "Men",
+            "value": "97 min",
+            "num": 97
+          }
+        ]
+      },
+      {
+        "label": "THE PLAN",
+        "title": "Training is just starting",
+        "points": [
+          "Budget plans to train 1.5 lakh caregivers",
+          "About 14.6 crore people give unpaid, untrained care today"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sbi-atm-limit",
+    "format": "number",
+    "lang": "en",
+    "date": "Since 1 Oct",
+    "value": "5",
+    "caption": "free other-bank ATM uses a month for SBI salary accounts. It used to be 10.",
+    "note": "After that: ₹23 + GST per cash withdrawal.",
+    "source": "Outlook Money; Sunday Guardian, Oct 2026",
+    "captionHeadline": "SBI salary account? Your free ATM visits just got cut in half.",
+    "summary": "From 1 October, SBI Salary Package account holders get 5 free transactions a month at other banks' ATMs, down from 10. Balance checks count too. After the limit, each cash withdrawal costs ₹23 plus GST, and each non-cash transaction ₹11 plus GST. SBI's own ATMs are unchanged.",
+    "forYou": "Use SBI ATMs where you can, and stop checking your balance at other banks' ATMs. Use the app instead.",
+    "cta": "Tag a colleague who gets their salary in SBI.",
+    "sourceUrl": "https://www.outlookmoney.com/news/new-money-rules-from-october-2026-key-changes-to-know",
+    "tags": [
+      "SBI",
+      "ATM",
+      "Banking"
+    ],
+    "slides": [
+      {
+        "label": "WHAT CHANGED",
+        "title": "Free other-bank ATM uses cut from 10 to 5",
+        "stats": [
+          {
+            "label": "Before 1 Oct",
+            "value": "10",
+            "num": 10
+          },
+          {
+            "label": "Now",
+            "value": "5",
+            "num": 5,
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "THE CHARGES",
+        "title": "What you pay after the limit",
+        "stats": [
+          {
+            "label": "Each cash withdrawal",
+            "value": "₹23 + GST",
+            "hi": true
+          },
+          {
+            "label": "Each balance check or other",
+            "value": "₹11 + GST"
+          }
+        ]
+      },
+      {
+        "label": "SAVE MONEY",
+        "title": "Easy ways to avoid the fee",
+        "points": [
+          "Withdraw from SBI ATMs, which are unchanged",
+          "Check your balance on the app, not at an ATM",
+          "Take out cash in fewer, bigger withdrawals"
+        ]
       }
     ]
   }
