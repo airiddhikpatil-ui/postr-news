@@ -295,10 +295,201 @@ h2{font:400 100px/1 Anton;text-transform:uppercase}.bd{font-size:34px;color:#D7F
 .st{border:3px solid #2A2A2E;background:#111114;padding:20px 24px}.st-v{font-family:'Space Mono';font-weight:700;font-size:64px;color:#FFB000;text-shadow:0 0 18px rgba(255,176,0,.6)}.st-b{display:none}
 .sharebox{border:4px solid #FFB000}.sh-h{color:#FFB000}`,
   },
+  // 9. Bank passbook: money that belongs to people (deposits, savings, refunds).
+  passbook: {
+    tone: 'ink',
+    cover: (s, d) => pageShell('passbook', `body{background:#1F3A5F;color:#13233A}
+.book{position:absolute;left:44px;right:44px;top:44px;bottom:44px;background:#E9F0E6;border-radius:10px;box-shadow:0 24px 60px rgba(0,0,0,.45);overflow:hidden}
+.book:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 47px,rgba(31,58,95,.18) 47px 48px)}
+.bank{position:absolute;left:44px;right:44px;top:44px;height:118px;background:#13233A;color:#E9F0E6;display:flex;justify-content:space-between;align-items:center;padding:0 40px;font:700 26px 'Space Mono';letter-spacing:4px;border-radius:10px 10px 0 0}
+.bank b{font:400 44px Anton;letter-spacing:2px}
+.cols{position:absolute;left:84px;right:84px;top:196px;display:grid;grid-template-columns:1fr 260px;font:700 20px 'Space Mono';letter-spacing:2px;color:#1F3A5F;border-bottom:3px solid #13233A;padding-bottom:10px}
+.rows{position:absolute;left:84px;right:84px;top:250px;font:400 24px/48px 'Space Mono'}
+.rows div{display:grid;grid-template-columns:1fr 260px}.rows b{text-align:right}
+.bal{position:absolute;left:84px;right:84px;top:480px;height:260px;border:5px double #13233A;padding:18px 28px;background:rgba(255,255,255,.55)}
+.bal span{font:700 22px 'Space Mono';letter-spacing:4px}
+.big{height:190px;font:700 150px/1.2 'Space Mono';letter-spacing:-6px;white-space:nowrap;color:#13233A}
+.stamp{position:absolute;right:70px;top:430px;font:400 76px/1 Anton;color:#C8102E;border:9px solid #C8102E;border-radius:14px;padding:6px 26px;transform:rotate(-14deg);opacity:.88;letter-spacing:6px;mix-blend-mode:multiply}
+.hook{position:absolute;left:84px;right:84px;top:790px;height:300px;font:italic 400 78px/1.02 'Instrument Serif'}
+.ft2{position:absolute;left:84px;right:84px;bottom:80px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono'}.ft2 img{width:140px}`,
+    `<div class="book"></div><div class="bank"><b>POSTR BANK</b><span>SAVINGS · PASSBOOK</span></div>
+<div class="cols"><span>PARTICULARS</span><span style="text-align:right">BALANCE</span></div>
+<div class="rows">${d.stats.slice(1, 4).map(([l, v]) => `<div><span>${esc(l).slice(0, 34)}</span><b>${esc(v)}</b></div>`).join('')}</div>
+<div class="bal"><span>BALANCE NOBODY CLAIMED</span><div class="big" data-fit data-min="60">${esc(d.big)}</div></div><div class="stamp">UNCLAIMED</div>
+<div class="hook" data-fit data-min="38">${esc(d.hook)}</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span>SWIPE →</span><img src="${wm('ink')}"></div>`),
+    css: `body{background:#E9F0E6;color:#13233A;background-image:repeating-linear-gradient(0deg,transparent 0 47px,rgba(31,58,95,.16) 47px 48px)}
+.hdr{background:#13233A;color:#E9F0E6;margin:-56px -64px 0;padding:22px 64px}.hdr{position:absolute;top:56px}
+h2{font:700 76px/1.05 'Space Mono';letter-spacing:-3px}.bd{font-family:'Space Mono';font-size:30px}
+.pt{border-bottom:2px solid #13233A;font-family:'Space Mono';font-size:25px;background:transparent;padding-left:0}.pn{color:#C8102E}
+.st{border-bottom:2px solid #13233A;padding-bottom:12px}.st-v{font-family:'Space Mono';font-weight:700;font-size:60px}.st.hi .st-v{color:#C8102E}.st-b{display:none}
+.sharebox{border:5px double #13233A;background:rgba(255,255,255,.5)}`,
+  },
+  // 10. Pharmacy: medicines, health products, drug safety.
+  pharmacy: {
+    tone: 'ink',
+    cover: (s, d) => pageShell('pharmacy', `body{background:#F4F7F5;color:#0F2E25}
+.top{position:absolute;top:56px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;font:700 22px 'Space Mono';letter-spacing:3px}
+.cross{width:64px;height:64px;position:relative}.cross:before,.cross:after{content:'';position:absolute;background:#0E9F6E;border-radius:6px}.cross:before{left:22px;top:0;width:20px;height:64px}.cross:after{top:22px;left:0;height:20px;width:64px}
+.pack{position:absolute;left:64px;right:64px;top:160px;height:430px;border-radius:36px;background:linear-gradient(135deg,#E3E8EA,#C9D1D6);box-shadow:inset 0 0 0 3px rgba(15,46,37,.15),0 20px 40px rgba(0,0,0,.12);display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(2,1fr);gap:22px;padding:40px}
+.pill{border-radius:60px;background:linear-gradient(160deg,#fff,#DDE3E7);box-shadow:inset 0 -6px 12px rgba(0,0,0,.12),0 6px 10px rgba(0,0,0,.08);position:relative}
+.pill.bad{background:linear-gradient(160deg,#FFD9D4,#F26B5B)}.pill.bad:after{content:'✕';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:400 70px Anton;color:#7A0E06}
+.big{position:absolute;left:64px;right:64px;top:620px;height:180px;font:400 170px/1 Anton;color:#D7261E;white-space:nowrap;display:flex;align-items:center;text-transform:uppercase}
+.rx{position:absolute;left:64px;right:64px;top:820px;height:300px;border-top:4px solid #0F2E25;padding-top:20px;display:flex;gap:26px}
+.rx b{font:italic 400 120px/0.9 'Instrument Serif';color:#0E9F6E}
+.hook{flex:1;height:270px;font:700 52px/1.15 Manrope}
+.ft2{position:absolute;left:64px;right:64px;bottom:44px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono'}.ft2 img{width:150px}`,
+    `<div class="top"><span class="cross"></span><span>POSTR PHARMACY CHECK</span><span>${esc(d.meta)}</span></div>
+<div class="pack">${Array.from({ length: 10 }, (_, k) => `<div class="pill${[1, 4, 7].includes(k) ? ' bad' : ''}"></div>`).join('')}</div>
+<div class="big" data-fit data-min="80">${esc(d.big)}</div>
+<div class="rx"><b>Rx</b><div class="hook" data-fit data-min="28">${esc(d.hook)}</div></div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span>SWIPE →</span><img src="${wm('ink')}"></div>`),
+    css: `body{background:#F4F7F5;color:#0F2E25}.hdr{color:#0E9F6E}.lbl{background:#0E9F6E;color:#fff;padding:6px 14px;border-radius:30px}
+h2{font:800 84px/1.02 Manrope;letter-spacing:-3px}.bd{font-size:34px}
+.pt{background:#fff;border-radius:60px;box-shadow:0 6px 16px rgba(0,0,0,.08);font-size:28px}.pn{color:#D7261E}
+.st{background:#fff;border-radius:24px;padding:22px 28px;box-shadow:0 6px 16px rgba(0,0,0,.08)}.st.hi .st-v{color:#D7261E}.st-b{display:none}
+.sharebox{background:#0E9F6E;color:#fff;border-radius:36px}`,
+    deco: `<div style="position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;background:rgba(14,159,110,.08)"></div>`,
+  },
+  // 11. Headcount: one-in-N facts shown as people.
+  headcount: {
+    tone: 'paper',
+    cover: (s, d) => {
+      const t = s.tally || { of: 4, hit: 3, hitLabel: '', restLabel: '' };
+      const person = (hit) => `<svg viewBox="0 0 100 200" class="pp"><circle cx="50" cy="34" r="28" fill="${hit ? '#FF3B1F' : '#3A3A40'}"/><path d="M12 200 V110 Q12 74 50 74 Q88 74 88 110 V200 Z" fill="${hit ? '#FF3B1F' : '#3A3A40'}"/></svg>`;
+      return pageShell('headcount', `body{background:#111113;color:#F4F1EA}
+.top{position:absolute;top:56px;left:64px;right:64px;display:flex;justify-content:space-between;font:700 22px 'Space Mono';letter-spacing:4px;color:#9A9AA2}
+.crowd{position:absolute;left:64px;right:64px;top:140px;height:440px;display:flex;justify-content:space-between;align-items:flex-end}
+.pp{width:${Math.floor(900 / t.of)}px;height:420px}
+.legend{position:absolute;left:64px;right:64px;top:600px;display:flex;gap:40px;font:700 22px 'Space Mono';letter-spacing:2px}.legend i{display:inline-block;width:22px;height:22px;margin-right:10px;vertical-align:-3px}
+.big{position:absolute;left:56px;right:56px;top:650px;height:230px;font:400 230px/1 Anton;color:#FF3B1F;white-space:nowrap;text-transform:uppercase}
+.hook{position:absolute;left:64px;right:64px;top:900px;height:250px;font:italic 400 76px/1.02 'Instrument Serif'}
+.ft2{position:absolute;left:64px;right:64px;bottom:44px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono';color:#9A9AA2}.ft2 img{width:150px}`,
+      `<div class="top"><span>POSTR HEADCOUNT</span><span>${esc(d.meta)}</span></div>
+<div class="crowd">${Array.from({ length: t.of }, (_, k) => person(k < t.hit)).join('')}</div>
+<div class="legend"><span><i style="background:#FF3B1F"></i>${esc(t.hitLabel)}</span><span><i style="background:#3A3A40"></i>${esc(t.restLabel)}</span></div>
+<div class="big" data-fit data-min="90">${esc(d.big)}</div>
+<div class="hook" data-fit data-min="34">${esc(d.hook)}</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span>SWIPE →</span><img src="${wm('paper')}"></div>`);
+    },
+    css: `body{background:#111113;color:#F4F1EA}.hdr{color:#9A9AA2}.lbl{color:#FF3B1F}
+h2{font:italic 400 110px/0.95 'Instrument Serif'}.bd{font-size:34px}
+.pt{border-left:8px solid #FF3B1F;background:#1C1C20;font-size:28px}.pn{color:#FF3B1F}
+.st-v{font-size:96px}.st.hi .st-v{color:#FF3B1F}.st-b{background:#26262B}.st-b i{background:#9A9AA2}.st.hi .st-b i{background:#FF3B1F}
+.sharebox{border:3px solid #FF3B1F}.sh-h{color:#FF3B1F}`,
+  },
+  // 12. Calendar: delays, waits, deadlines, anniversaries.
+  calendar: {
+    tone: 'ink',
+    cover: (s, d) => pageShell('calendar', `body{background:#E4DDD0;color:#1A1A1A}
+.cal{position:absolute;left:150px;right:150px;top:70px;height:640px;background:#FBF8F1;box-shadow:0 26px 50px rgba(0,0,0,.25);border-radius:14px;overflow:hidden;transform:rotate(-2deg)}
+.cal .hd{background:#D7261E;color:#fff;height:130px;display:flex;align-items:center;justify-content:center;font:400 64px Anton;letter-spacing:10px}
+.rings{position:absolute;left:150px;right:150px;top:50px;display:flex;justify-content:space-around;transform:rotate(-2deg);z-index:2}.rings i{width:26px;height:60px;border-radius:13px;background:linear-gradient(#777,#333)}
+.yr{font:400 300px/1 Anton;text-align:center;margin-top:30px;color:#1A1A1A}
+.cap{font:700 26px 'Space Mono';text-align:center;letter-spacing:6px;color:#D7261E}
+.torn{position:absolute;left:150px;right:150px;top:690px;height:40px;background:#FBF8F1;clip-path:polygon(0 0,100% 0,100% 40%,95% 100%,90% 30%,84% 90%,78% 20%,72% 100%,66% 35%,60% 95%,54% 25%,48% 100%,42% 30%,36% 90%,30% 20%,24% 100%,18% 35%,12% 90%,6% 25%,0 100%);transform:rotate(-2deg)}
+.big{position:absolute;left:64px;right:64px;top:770px;height:200px;font:400 210px/1 Anton;white-space:nowrap;color:#D7261E;text-transform:uppercase}
+.hook{position:absolute;left:64px;right:64px;top:990px;height:200px;font:italic 400 72px/1.02 'Instrument Serif'}
+.ft2{position:absolute;left:64px;right:64px;bottom:44px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono'}.ft2 img{width:150px}`,
+    `<div class="rings">${'<i></i>'.repeat(6)}</div><div class="cal"><div class="hd">${esc(s.calendarLabel || 'STILL PENDING')}</div><div class="yr">${esc(s.calendarYear || '')}</div><div class="cap">${esc(s.calendarCaption || '')}</div></div><div class="torn"></div>
+<div class="big" data-fit data-min="90">${esc(d.big)}</div>
+<div class="hook" data-fit data-min="34">${esc(d.hook)}</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span>SWIPE →</span><img src="${wm('ink')}"></div>`),
+    css: `body{background:#FBF8F1;color:#1A1A1A}.hdr{background:#D7261E;color:#fff;position:absolute;top:0;left:0;right:0;padding:28px 64px}
+h2{font:400 104px/0.95 Anton;text-transform:uppercase}.bd{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-size:46px;line-height:1.1}
+.pt{border:3px solid #1A1A1A;border-top:14px solid #D7261E;font-size:28px;background:#fff}.pn{color:#D7261E}
+.st{border-bottom:3px solid #1A1A1A;padding-bottom:12px}.st.hi .st-v{color:#D7261E}.st-b{background:#E4DDD0}.st-b i{background:#1A1A1A}.st.hi .st-b i{background:#D7261E}
+.sharebox{border-top:14px solid #D7261E;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.15)}`,
+  },
+  // 13. Highway: roads, travel, transport, safety.
+  highway: {
+    tone: 'paper',
+    cover: (s, d) => pageShell('highway', `body{background:#2B2D30;color:#fff}
+.lane{position:absolute;left:520px;top:0;bottom:0;width:40px;background:repeating-linear-gradient(180deg,#F2C200 0 90px,transparent 90px 170px);opacity:.9}
+.edge{position:absolute;top:0;bottom:0;width:14px;background:#EDEDED}
+.sign{position:absolute;left:70px;right:70px;top:110px;height:560px;background:#0B6E3B;border:10px solid #fff;border-radius:34px;box-shadow:0 0 0 6px #0B6E3B,0 30px 60px rgba(0,0,0,.5);padding:40px 50px;display:flex;flex-direction:column}
+.sign .k{font:700 30px 'Space Mono';letter-spacing:6px;opacity:.9}
+.big{flex:1;font:400 260px/1 'Archivo Black';letter-spacing:-8px;white-space:nowrap;display:flex;align-items:center;text-transform:uppercase}
+.sign .s{font:700 34px/1.25 Manrope;height:90px;overflow:hidden}
+.warn{position:absolute;left:70px;top:740px;width:220px;height:220px;transform:rotate(45deg);background:#F2C200;border:10px solid #111;border-radius:22px}
+.warn b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transform:rotate(-45deg);font:400 150px Anton;color:#111}
+.hook{position:absolute;left:340px;right:44px;top:720px;height:320px;padding:10px 20px;background:#2B2D30;font:700 64px/1.08 'Archivo Black';letter-spacing:-1px}
+.ft2{position:absolute;left:64px;right:64px;bottom:44px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono'}.ft2 img{width:150px}`,
+    `<div class="edge" style="left:20px"></div><div class="edge" style="right:20px"></div><div class="lane"></div>
+<div class="sign"><span class="k">${esc(s.signLabel || 'ROAD SAFETY')}</span><div class="big" data-fit data-min="80">${esc(d.big)}</div><div class="s">${esc(d.sub)}</div></div>
+<div class="warn"><b>!</b></div><div class="hook" data-fit data-min="34">${esc(d.hook)}</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span>SWIPE →</span><img src="${wm('paper')}"></div>`),
+    css: `body{background:#2B2D30;color:#fff;background-image:linear-gradient(90deg,transparent 524px,#F2C200 524px,#F2C200 556px,transparent 556px);background-size:100% 170px}
+.hdr{color:#F2C200}h2{font:400 92px/1 'Archivo Black';letter-spacing:-2px;background:#0B6E3B;border:6px solid #fff;border-radius:22px;padding:24px 30px;height:auto}
+.bd{font-size:34px;background:#2B2D30}
+.pt{background:#0B6E3B;border:4px solid #fff;border-radius:16px;font-size:28px}.pn{color:#F2C200}
+.st{background:#2B2D30;border-bottom:3px dashed #F2C200;padding-bottom:12px}.st.hi .st-v{color:#F2C200}.st-b{display:none}
+.sharebox{background:#F2C200;color:#111;border:8px solid #111;border-radius:22px}`,
+  },
+  // 14. Ballot paper: elections, voting, politics (non-partisan facts only).
+  ballot: {
+    tone: 'ink',
+    cover: (s, d) => pageShell('ballot', `body{background:#F7F5EE;color:#1B1B1B}
+.top{position:absolute;top:44px;left:56px;right:56px;border:4px solid #1B1B1B;padding:16px 24px;display:flex;justify-content:space-between;font:700 22px 'Space Mono';letter-spacing:3px}
+.grid{position:absolute;left:56px;right:56px;top:140px}
+.row{display:grid;grid-template-columns:90px 1fr 120px;height:92px;border:4px solid #1B1B1B;border-top:none}
+.row span{border-right:4px solid #1B1B1B;display:flex;align-items:center;justify-content:center;font:700 30px 'Space Mono'}
+.row div{padding:0 24px;display:flex;align-items:center;font:700 26px 'Space Mono';color:#555}
+.row i{display:flex;align-items:center;justify-content:center;border-left:4px solid #1B1B1B}
+.row i:after{content:'';width:46px;height:46px;border-radius:50%;border:4px solid #1B1B1B}
+.row.on i:after{background:#5B2A86;border-color:#5B2A86}
+.row:first-child{border-top:4px solid #1B1B1B}
+.big{position:absolute;left:56px;right:56px;top:560px;height:320px;font:400 330px/1 Anton;white-space:nowrap;color:#5B2A86;text-transform:uppercase}
+.hook{position:absolute;left:56px;right:56px;top:900px;height:260px;font:italic 400 76px/1.02 'Instrument Serif'}
+.ft2{position:absolute;left:56px;right:56px;bottom:44px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono'}.ft2 img{width:150px}`,
+    `<div class="top"><span>BALLOT · POSTR FACT</span><span>${esc(d.meta)}</span></div>
+<div class="grid">${(d.stats.length ? d.stats : [['', '']]).slice(0, 4).map(([l, v], k, a) => `<div class="row${k === a.length - 1 ? ' on' : ''}"><span>${k + 1}</span><div>${esc(l)}${v ? ` · ${esc(v)}` : ''}</div><i></i></div>`).join('')}</div>
+<div class="big" data-fit data-min="90">${esc(d.big)}</div>
+<div class="hook" data-fit data-min="34">${esc(d.hook)}</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span>SWIPE →</span><img src="${wm('ink')}"></div>`),
+    css: `body{background:#F7F5EE;color:#1B1B1B}.hdr{border:4px solid #1B1B1B;padding:12px 18px}.lbl{color:#5B2A86}
+h2{font:400 100px/0.98 Anton;text-transform:uppercase}.bd{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-size:46px;line-height:1.1}
+.pts{gap:0}.pt{border:4px solid #1B1B1B;border-top:none;font-family:'Space Mono';font-size:25px}.pt:first-child{border-top:4px solid #1B1B1B}.pn{color:#5B2A86}
+.st{border:4px solid #1B1B1B;padding:16px 22px}.st.hi .st-v{color:#5B2A86}.st-b{background:#E9E5DA}.st-b i{background:#1B1B1B}.st.hi .st-b i{background:#5B2A86}
+.sharebox{border:6px solid #5B2A86}.sh-h{color:#5B2A86}`,
+  },
+  // 15. Lab report: health data, surveys, test results.
+  labreport: {
+    tone: 'ink',
+    cover: (s, d) => pageShell('labreport', `body{background:#FFFFFF;color:#1B2430}
+.hd{position:absolute;left:0;right:0;top:0;height:150px;background:#E8F0F7;border-bottom:4px solid #1B2430;display:flex;justify-content:space-between;align-items:center;padding:0 64px}
+.hd b{font:800 40px Manrope;letter-spacing:-1px}.hd span{font:700 20px/1.5 'Space Mono';text-align:right}
+.meta{position:absolute;left:64px;right:64px;top:176px;display:grid;grid-template-columns:1fr 1fr;font:400 22px/1.7 'Space Mono';color:#4A5563}
+table{position:absolute;left:64px;top:300px;width:952px;border-collapse:collapse;font:400 23px 'Space Mono'}
+th{background:#1B2430;color:#fff;text-align:left;padding:12px 14px;font-weight:700;letter-spacing:1px}
+td{padding:14px;border-bottom:2px solid #D5DCE3}td.f{color:#D7261E;font-weight:700}td.v{font-weight:700}
+.big{position:absolute;left:56px;right:56px;top:640px;height:250px;font:400 260px/1 Anton;white-space:nowrap;color:#D7261E;text-transform:uppercase}
+.hook{position:absolute;left:64px;right:64px;top:910px;height:230px;font:800 58px/1.1 Manrope;letter-spacing:-1px}
+.sig{position:absolute;right:64px;bottom:110px;font:italic 400 40px 'Instrument Serif';border-top:2px solid #1B2430;padding-top:6px}
+.ft2{position:absolute;left:64px;right:64px;bottom:44px;display:flex;justify-content:space-between;align-items:center;font:700 17px 'Space Mono'}.ft2 img{width:150px}`,
+    `<div class="hd"><b>POSTR DIAGNOSTICS</b><span>TEST REPORT<br>${esc(d.meta)}</span></div>
+<div class="meta"><span>PATIENT: INDIA</span><span>SAMPLE: NATIONAL SURVEY</span></div>
+<table><tr><th>TEST</th><th>RESULT</th><th>FLAG</th></tr>${d.stats.slice(0, 3).map(([l, v]) => `<tr><td>${esc(l)}</td><td class="v">${esc(v)}</td><td class="f">${esc(s.labFlag || 'HIGH')}</td></tr>`).join('')}</table>
+<div class="big" data-fit data-min="90">${esc(d.big)}</div>
+<div class="hook" data-fit data-min="30">${esc(d.hook)}</div>
+<div class="sig">Postr Lab</div>
+<div class="ft2"><span>SOURCE · ${esc(s.source)}</span><span>SWIPE →</span><img src="${wm('ink')}"></div>`),
+    css: `body{background:#fff;color:#1B2430}.hdr{background:#E8F0F7;border-bottom:4px solid #1B2430;margin:0;position:absolute;top:0;left:0;right:0;padding:28px 64px}
+h2{font:800 84px/1.02 Manrope;letter-spacing:-3px}.bd{font-family:'Space Mono';font-size:28px}
+.pts{gap:0}.pt{border-bottom:2px solid #D5DCE3;font-family:'Space Mono';font-size:25px;padding-left:0}.pn{color:#D7261E}
+.st{border-bottom:2px solid #D5DCE3;padding-bottom:12px}.st-l{color:#4A5563}.st.hi .st-v{color:#D7261E}.st-b{background:#E8F0F7}.st-b i{background:#1B2430}.st.hi .st-b i{background:#D7261E}
+.sharebox{border:4px solid #1B2430;background:#E8F0F7}`,
+  },
 };
 
-const ORDER = ['extra', 'exposed', 'feed', 'swiss', 'dossier', 'forward', 'riso', 'scoreboard'];
+const ORDER = ['extra', 'exposed', 'feed', 'swiss', 'dossier', 'forward', 'riso', 'scoreboard', 'passbook', 'pharmacy', 'headcount', 'calendar', 'highway', 'ballot', 'labreport'];
 const RULES = [
+  ['passbook', (s) => /unclaimed|deposit|passbook|savings|refund|pf-|epf/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
+  ['pharmacy', (s) => /medicine|drug|cdsco|pharma|tablet/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
+  ['highway', (s) => /road|highway|traffic|accident|helmet/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
+  ['ballot', (s) => /election|mp|mla|vote|ballot|democracy/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
+  ['labreport', (s) => /anaemia|nfhs|survey|blood|diabetes/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
+  ['calendar', (s) => /pending|years|court|delay|backlog/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
   ['forward', (s) => s.format === 'myth'],
   ['scoreboard', (s) => /cricket|t20|odi|ipl|football|hockey|olymp|sport|chase/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
   ['exposed', (s) => /scam|fraud|markup|medicine|overcharg|atm|fee|lpg|aadhaar|digital-arrest/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],

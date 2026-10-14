@@ -1,7 +1,7 @@
 [
   {
     "id": "unclaimed-money",
-    "style": "exposed",
+    "style": "passbook",
     "format": "number",
     "lang": "en",
     "date": "Parliament, Aug 2026",
@@ -75,7 +75,7 @@
   },
   {
     "id": "failed-medicines",
-    "style": "dossier",
+    "style": "pharmacy",
     "format": "alert",
     "lang": "en",
     "place": "Your medicine box",
@@ -131,7 +131,7 @@
   },
   {
     "id": "undertrials-73",
-    "style": "swiss",
+    "style": "headcount",
     "format": "number",
     "lang": "en",
     "date": "Prison Statistics 2024",
@@ -201,11 +201,17 @@
           "Almost half of jail medical posts are vacant (46.4%)"
         ]
       }
-    ]
+    ],
+    "tally": {
+      "of": 4,
+      "hit": 3,
+      "hitLabel": "NOT CONVICTED · 73%",
+      "restLabel": "CONVICTED · 26.6%"
+    }
   },
   {
     "id": "court-cases-30yrs",
-    "style": "extra",
+    "style": "calendar",
     "format": "number",
     "lang": "en",
     "date": "Rajya Sabha, Jul 2026",
@@ -267,11 +273,14 @@
           "Check your case status on the eCourts app"
         ]
       }
-    ]
+    ],
+    "calendarYear": "1996",
+    "calendarLabel": "STILL PENDING",
+    "calendarCaption": "30+ YEARS · NO VERDICT"
   },
   {
     "id": "road-deaths-3min",
-    "style": "feed",
+    "style": "highway",
     "format": "number",
     "lang": "en",
     "date": "2024 data",
@@ -339,11 +348,12 @@
         "title": "Save one life",
         "body": "Send this to the person who says \"helmet is not needed for short rides\"."
       }
-    ]
+    ],
+    "signLabel": "INDIA · 2024"
   },
   {
     "id": "mps-criminal-cases",
-    "style": "dossier",
+    "style": "ballot",
     "format": "number",
     "lang": "en",
     "date": "2024 Lok Sabha",
@@ -422,7 +432,7 @@
   },
   {
     "id": "anaemia-children",
-    "style": "riso",
+    "style": "labreport",
     "format": "number",
     "lang": "en",
     "date": "NFHS-5",
@@ -483,7 +493,8 @@
           "Supplements only on a doctor's advice"
         ]
       }
-    ]
+    ],
+    "labFlag": "HIGH"
   },
   {
     "id": "cancer-drug-margin",
@@ -540,7 +551,8 @@
     ],
     "coverHook": "A ₹5,000 stent. A ₹25,000 bill. Where did the other ₹20,000 go?",
     "coverOld": "₹5,000",
-    "coverBig": "₹25,000"
+    "coverBig": "₹25,000",
+    "style": "exposed"
   },
   {
     "id": "mental-health-gap",
