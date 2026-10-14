@@ -105,7 +105,8 @@ async function renderLabCarousel(story, outDir, { prevStyle } = {}) {
   const files = [];
   try {
     for (let i = 0; i < pages.length; i++) {
-      const page = await browser.newPage({ viewport: { width: T.canvas.width, height: T.canvas.feedHeight } });
+      // 1440x1800: Instagram's largest portrait size. Laid out at 1080x1350, drawn at 4/3 pixel density so text stays vector-sharp.
+      const page = await browser.newPage({ viewport: { width: T.canvas.width, height: T.canvas.feedHeight }, deviceScaleFactor: Number(process.env.RENDER_SCALE || 4 / 3) });
       await page.setContent(pages[i], { waitUntil: 'load', timeout: 20000 }).catch(() => {});
       await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 8000))]));
       const bad = await page.evaluate(() => (window.__fit ? window.__fit() : 0));

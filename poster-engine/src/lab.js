@@ -27,6 +27,8 @@ function coverData(s) {
     case 'myth': d.big = s.verdict; d.sub = s.evidence; d.claim = s.claim; break;
     default: d.big = s.headline; d.sub = s.note || '';
   }
+  if (s.coverBig) d.big = s.coverBig;
+  if (s.coverOld) d.old = s.coverOld;
   d.facts = factsOf(s);
   d.stats = d.facts.filter(([, v]) => v);
   return d;

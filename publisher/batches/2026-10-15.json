@@ -8,10 +8,10 @@
     "caption": "is the new cap on trade margins for cancer drugs, after a Supreme Court push.",
     "note": "The court asked: why only cancer drugs?",
     "source": "Bar & Bench, 12 Oct; The Hindu, 13 Oct 2026",
-    "captionHeadline": "A ₹5,000 heart stent sold for over ₹25,000. Now the Supreme Court is asking questions.",
+    "captionHeadline": "Someone made ₹20,000 on a ₹5,000 heart stent. Now the Supreme Court is asking who.",
     "summary": "The Centre told the Supreme Court it has capped trade margins on anti-cancer drugs at 30% of MRP. The court asked why the cap covers only cancer drugs. The Hindu reported mark-ups of up to 1,000% on some cancer drugs, and a made-in-India cardiac stent costing about ₹5,000 sold for over ₹25,000.",
     "forYou": "Cancer medicines should get cheaper. If the court widens it, everyday medicines could follow. Always compare MRP and ask for generics.",
-    "cta": "Know someone buying cancer medicines? Send them this.",
+    "cta": "Send this to anyone with a parent on heart or cancer medicines. They're paying for this.",
     "sourceUrl": "https://www.barandbench.com/news/centre-caps-trade-margin-for-cancer-drugs-at-30-after-supreme-court-rap",
     "tags": [
       "Medicines",
@@ -51,7 +51,10 @@
         "title": "\"Why only cancer drugs?\"",
         "body": "The Supreme Court questioned why the cap should not cover all medicines. Everyday drugs could be next."
       }
-    ]
+    ],
+    "coverHook": "A ₹5,000 stent. A ₹25,000 bill. Where did the other ₹20,000 go?",
+    "coverOld": "₹5,000",
+    "coverBig": "₹25,000"
   },
   {
     "id": "mental-health-gap",
@@ -62,10 +65,10 @@
     "caption": "of Indians with a mental health condition get no treatment.",
     "note": "India has under 0.75 psychiatrists per lakh people.",
     "source": "National Mental Health Survey, via Insights IAS, 13 Oct 2026",
-    "captionHeadline": "83% of Indians with a mental health condition get no treatment at all.",
+    "captionHeadline": "8 in 10 Indians with a mental illness get no treatment. And India has 4x fewer psychiatrists than the WHO benchmark.",
     "summary": "India's National Mental Health Survey puts the treatment gap at 83%, rising to 85.2% for major depression. India has fewer than 0.75 psychiatrists per 1 lakh people; the WHO benchmark is at least 3. The free government helpline Tele-MANAS (14416) has taken about 47.75 lakh calls in four years.",
     "forYou": "Free, 24x7 support in many languages: call Tele-MANAS on 14416.",
-    "cta": "Share this. Someone you know may need the number.",
+    "cta": "Save 14416. Send it to one person you check on. That's it.",
     "sourceUrl": "https://www.insightsonindia.com/2026/10/13/upsc-current-affairs-13-october-2026/",
     "tags": [
       "MentalHealth",
@@ -122,7 +125,8 @@
         "title": "Someone needs this today",
         "body": "Save 14416 and share it. You never know who is struggling."
       }
-    ]
+    ],
+    "coverHook": "8 in 10 Indians with a mental illness get no treatment at all."
   },
   {
     "id": "lpg-aadhaar",
@@ -133,10 +137,10 @@
     "time": "Since 1 Oct",
     "note": "No biometric check, no subsidised cylinder booking.",
     "source": "All India Radio News, 19 Sep 2026",
-    "captionHeadline": "No Aadhaar fingerprint check? You can't book a subsidised gas cylinder.",
+    "captionHeadline": "One missing fingerprint can now block your subsidised gas cylinder. 27 crore consumers have already done the check. Has your home?",
     "summary": "From 1 October, biometric Aadhaar authentication is mandatory to book domestic LPG refills at the subsidised price. 27.43 crore consumers have already done it and need to do nothing more. The government says it is to stop diversion of home cylinders and remove fake or duplicate connections.",
     "forYou": "Not sure if you did it? Ask your delivery person, visit your distributor, or check your gas company's app.",
-    "cta": "Send this to your parents. They book the cylinder, and they'll thank you.",
+    "cta": "Send this to whoever books the cylinder at home. Today.",
     "sourceUrl": "https://newsonair.gov.in/biometric-aadhaar-authentication-mandatory-for-subsidised-lpg-refills-from-october-1/",
     "tags": [
       "LPG",
@@ -181,7 +185,8 @@
         "body": "Forward it to the family group before their next booking."
       }
     ],
-    "style": "extra"
+    "style": "extra",
+    "coverHook": "One missing fingerprint can block your gas cylinder booking."
   },
   {
     "id": "whatsapp-not-paid",
@@ -192,10 +197,10 @@
     "verdict": "MISSING CONTEXT",
     "evidence": "Only businesses on the WhatsApp Business Platform pay. Your chats stay free.",
     "source": "Meta pricing change, via Sunday Guardian, 1 Oct 2026",
-    "captionHeadline": "Is WhatsApp charging for messages now? Only if you're a big business.",
+    "captionHeadline": "Someone in your family group will forward \"WhatsApp is now paid\" this week. Here's the truth before they do.",
     "summary": "Meta's new India pricing applies to the WhatsApp Business Platform, which companies use to send bulk messages like order and delivery updates. Each business number gets 1,000 free customer-service replies a month, then ₹0.115 per message plus GST. Ordinary WhatsApp and the WhatsApp Business app are not affected.",
     "forYou": "Your personal chats and family groups cost nothing extra. If you run a big brand that sends bulk updates, check your bill.",
-    "cta": "Someone in your family group will forward the wrong version. Send them this.",
+    "cta": "Send this to the family group first. Be the one who knew.",
     "sourceUrl": "https://sundayguardianlive.com/trending/what-changes-from-october-1-2026-check-major-new-rules-on-lpg-subsidy-whatsapp-business-pricing-sbi-atm-charges-upi-payments-tds-rules-immigration-visa-fee-hike-and-more-295963/",
     "tags": [
       "WhatsApp",
@@ -234,7 +239,8 @@
         "title": "Stop the forward",
         "body": "Send this to the group where \"WhatsApp is now paid\" is doing the rounds."
       }
-    ]
+    ],
+    "coverHook": "Your family group will forward this half-truth this week."
   },
   {
     "id": "sbi-atm-limit",
@@ -245,10 +251,10 @@
     "caption": "free other-bank ATM uses a month for SBI salary accounts. It used to be 10.",
     "note": "After that: ₹23 + GST per cash withdrawal.",
     "source": "Outlook Money; Sunday Guardian, Oct 2026",
-    "captionHeadline": "SBI salary account? Your free ATM visits just got cut in half.",
+    "captionHeadline": "SBI just halved something millions of salaried people use every month. Swipe before your next ATM visit.",
     "summary": "From 1 October, SBI Salary Package account holders get 5 free transactions a month at other banks' ATMs, down from 10. Balance checks count too. After the limit, each cash withdrawal costs ₹23 plus GST, and each non-cash transaction ₹11 plus GST. SBI's own ATMs are unchanged.",
     "forYou": "Use SBI ATMs where you can, and stop checking your balance at other banks' ATMs. Use the app instead.",
-    "cta": "Tag a colleague who gets their salary in SBI.",
+    "cta": "Tag the colleague who gets paid in SBI. They'll thank you on the 1st.",
     "sourceUrl": "https://www.outlookmoney.com/news/new-money-rules-from-october-2026-key-changes-to-know",
     "tags": [
       "SBI",
@@ -298,7 +304,8 @@
         ]
       }
     ],
-    "style": "swiss"
+    "style": "swiss",
+    "coverHook": "SBI just halved something you use every month."
   },
   {
     "id": "imf-india-7",
@@ -309,10 +316,10 @@
     "caption": "is how fast the IMF now expects India's economy to grow in 2026.",
     "note": "China: 4.5%. World: 3.1%.",
     "source": "IMF World Economic Outlook, via Business Today, 13 Oct 2026",
-    "captionHeadline": "The IMF just raised India's growth forecast. The world is slowing; India isn't.",
+    "captionHeadline": "The IMF says India will grow over 1.5x faster than China in 2026. While the world slows to 3.1%.",
     "summary": "The IMF's October World Economic Outlook projects India's growth at 7% in 2026 and 7% in 2027, an upgrade from its earlier forecast. It expects world growth of 3.1% in 2026 and China at 4.5%. The IMF cited \"resilient domestic demand and robust services activity\".",
     "forYou": "Strong growth usually means more hiring. But prices and EMIs are rising too, so watch both.",
-    "cta": "Share with the friend who says the economy is doomed.",
+    "cta": "Send this to the friend who says India is going nowhere.",
     "sourceUrl": "https://www.businesstoday.in/latest/economy/story/imf-raises-indias-growth-forecast-to-7-for-2026-upgrades-outlook-by-60-bps-561120-2026-10-13",
     "tags": [
       "IMF",
@@ -360,7 +367,8 @@
           "The rupee is above ₹95 to the dollar"
         ]
       }
-    ]
+    ],
+    "coverHook": "The IMF says India will grow 1.5x faster than China."
   },
   {
     "id": "cpi-two-year-high",
@@ -371,10 +379,10 @@
     "caption": "retail inflation in September, the highest in two years.",
     "note": "Up from about 4.8% in August. Food and fuel drove it.",
     "source": "The Hindu, via LegacyIAS, 13 Oct 2026",
-    "captionHeadline": "Prices are rising at their fastest pace in two years.",
+    "captionHeadline": "Your money lost value faster in September than in any month in two years. Here's what's eating it.",
     "summary": "Retail inflation rose to 5.5% in September from about 4.8% in August, the highest since October 2024, driven by food and fuel. It is still below the RBI's 6% upper limit. On 7 October the RBI raised its repo rate to 5.5%.",
     "forYou": "Your monthly budget is shrinking. Groceries and fuel are the biggest culprits.",
-    "cta": "Tag the person who runs your household budget.",
+    "cta": "Send this to whoever runs the household budget. They've already felt it.",
     "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
     "tags": [
       "Inflation",
@@ -421,7 +429,8 @@
           "Loans got costlier after the RBI's 7 Oct hike"
         ]
       }
-    ]
+    ],
+    "coverHook": "Your money is losing value faster than at any point in 2 years."
   },
   {
     "id": "pune-no-digging",
@@ -434,9 +443,9 @@
     "caption": "of no new digging on Pune's upgraded cycling-race roads, says PMC.",
     "note": "All utility trenching must finish by 31 Oct 2026.",
     "source": "PMC, via PuneNow, 13 Oct 2026",
-    "captionHeadline": "Pune, a road that stays fixed? PMC bans digging on race roads for 5 years.",
+    "captionHeadline": "Pune just made a promise Indian cities rarely make: no digging on these roads for 5 years, with penal action if anyone does.",
     "summary": "PMC has told utility companies to finish all trenching on the cycling circuit by 31 October 2026, ahead of the Pune Grand Tour international cycling race in January 2027. After that, no new trenching permissions for five years. Firms that damage the upgraded roads face penal and even criminal action.",
-    "cta": "Tag a Punekar who has given up on smooth roads.",
+    "cta": "Tag a Punekar. Screenshot this for 2031.",
     "sourceUrl": "https://www.punenow.com/no-road-digging-in-pune-for-5-years-as-pmc-prepares-for-international-cycling-event/",
     "tags": [
       "Pune",
@@ -465,7 +474,8 @@
         "title": "Smooth roads in Pune. For real?",
         "body": "Tag a Punekar and tell us which road you want fixed next."
       }
-    ]
+    ],
+    "coverHook": "Pune just made a promise Indian cities rarely make."
   },
   {
     "id": "sip-record",
@@ -482,10 +492,10 @@
       "value": "₹32,490 cr"
     },
     "source": "The Hindu, via LegacyIAS; Angel One, Oct 2026",
-    "captionHeadline": "Indians put ₹32,490 crore into SIPs in one month. Another record.",
+    "captionHeadline": "Indians now put ₹32,490 crore into SIPs every month. That's ₹1,083 crore a day, quietly.",
     "summary": "Monthly SIP contributions hit a record ₹32,490 crore in September, up from ₹32,297 crore in August. It was the 67th month in a row of inflows into equity funds. SIP assets now total ₹17.86 lakh crore.",
     "forYou": "Markets can fall, but regular investors keep buying. Check your own SIP is still running.",
-    "cta": "Tag the friend who keeps saying \"I'll start a SIP next month\".",
+    "cta": "Send this to the friend still waiting for \"the right time\" to start.",
     "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
     "tags": [
       "SIP",
@@ -526,7 +536,9 @@
         "title": "Start-next-month friends",
         "body": "Send this to the one who has been \"about to start a SIP\" for a year."
       }
-    ]
+    ],
+    "coverHook": "Indians quietly invest ₹1,083 crore. Every single day.",
+    "coverBig": "₹1,083 CR"
   },
   {
     "id": "living-planet-73",
@@ -537,10 +549,10 @@
     "caption": "average fall in monitored wildlife populations since 1970.",
     "note": "Latin America: 95%. Africa: 80%.",
     "source": "Living Planet Index, via The Hindu, 13 Oct 2026",
-    "captionHeadline": "Wildlife populations have crashed by an average of 73% in one lifetime.",
+    "captionHeadline": "In a single human lifetime, the world's wildlife populations have shrunk 73% on average. In Latin America, 95%.",
     "summary": "The Living Planet Index shows monitored wildlife populations have fallen by an average of 73% since 1970. Latin America and the Caribbean show a 95% average decline, Africa 80% and Europe 23%. About half of the 35,803 populations tracked are declining.",
     "forYou": "The species we grew up seeing are disappearing within a single human lifetime.",
-    "cta": "Share this. Most people have no idea.",
+    "cta": "Send this to one person who still thinks it's exaggerated.",
     "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
     "tags": [
       "Wildlife",
@@ -579,7 +591,8 @@
           "The 73% is an average of the change"
         ]
       }
-    ]
+    ],
+    "coverHook": "In one lifetime, wildlife shrank by 73%."
   },
   {
     "id": "himalaya-warming",
@@ -590,10 +603,10 @@
     "caption": "Himalayan peaks are warming nearly twice as fast as the global average.",
     "note": "Ice loss in the region has doubled since 2000.",
     "source": "ICIMOD, via The Hindu, 13 Oct 2026",
-    "captionHeadline": "The Himalayas are heating up twice as fast as the rest of the world.",
+    "captionHeadline": "The Himalayas are heating twice as fast as the rest of the planet. The Ganga, Brahmaputra and Indus start there.",
     "summary": "High mountains are warming by about 0.3°C per decade, nearly twice the global average. ICIMOD reports ice loss in the Hindu Kush Himalaya has doubled since 2000. In Nepal, a 600-metre ice-and-rock collapse sent a debris flood 170 km down the Bhote Koshi river.",
     "forYou": "Himalayan glaciers feed the Ganga, Brahmaputra and Indus. Faster melting means more floods now and less water later.",
-    "cta": "Share with everyone planning a mountain trip.",
+    "cta": "Send this to everyone planning a mountain trip this winter.",
     "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
     "tags": [
       "Himalayas",
@@ -629,7 +642,8 @@
           "And water shortage risk later"
         ]
       }
-    ]
+    ],
+    "coverHook": "Your river water starts on mountains heating 2x faster."
   },
   {
     "id": "ageing-india",
@@ -640,10 +654,10 @@
     "caption": "Indians will be over 60 by 2050, up from 149 million in 2022.",
     "note": "About 14.6 crore people already give unpaid, untrained care.",
     "source": "NITI Aayog estimates, via The Hindu, 13 Oct 2026",
-    "captionHeadline": "By 2050, one in five Indians could be over 60. Who will care for them?",
+    "captionHeadline": "By 2050, India will have 347 million people over 60, more than double 2022. And 14.6 crore already care for someone, unpaid and untrained.",
     "summary": "India's population aged 60 and above is projected to rise from 149 million in 2022 to 347 million by 2050. NITI Aayog estimates about 146 million people already provide untrained, unpaid care. Women spend 299 minutes a day on unpaid domestic and care work, against 97 minutes for men.",
     "forYou": "Planning for your parents' care, and your own old age, starts now.",
-    "cta": "Send this to your siblings. It is a conversation worth having.",
+    "cta": "Send this to your siblings. This conversation is coming.",
     "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
     "tags": [
       "Ageing",
@@ -693,7 +707,8 @@
           "About 14.6 crore people give unpaid, untrained care today"
         ]
       }
-    ]
+    ],
+    "coverHook": "India's over-60s will more than double. Who's caring for them?"
   },
   {
     "id": "black-sea-ship-sunk",
@@ -707,7 +722,7 @@
     "captionHeadline": "Drones hit two ships off Bulgaria. One sank. At least 11 people are missing.",
     "summary": "Drone attacks struck two ships in the Black Sea off the coast of Bulgaria on 13 October. One ship sank and at least 11 people are missing, Euronews reported. The same day, Russian strikes hit Kyiv and a university in Rivne.",
     "forYou": "Attacks on shipping keep oil and freight costs high, which feeds into fuel and import prices in India.",
-    "cta": "Follow @postr.news for world news that affects your wallet.",
+    "cta": "Follow @postr.news for the world stories that hit your wallet.",
     "sourceUrl": "https://www.euronews.com/2026/10/13",
     "tags": [
       "BlackSea",
@@ -737,6 +752,7 @@
         "title": "Attacks at sea reach your wallet",
         "body": "Shipping attacks push up oil and freight costs. India imports most of its crude, so fuel and goods prices feel it."
       }
-    ]
+    ],
+    "coverHook": "Drones sank a ship. 11 people are missing."
   }
 ]
