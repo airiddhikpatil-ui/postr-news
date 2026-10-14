@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { renderIntro, CAPTION } = require('./intro');
-const { publishPoster, publishCarousel, publishReel, lookupAccount } = require('./meta');
+const { publishPoster, publishCarousel, publishReel, lookupAccount, recentMedia } = require('./meta');
 const { renderReel } = require('./reel');
 const { buildCaption } = require('./caption');
 const { pickCollaborators, logInvites } = require('./collab');
@@ -23,7 +23,12 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // Scheduled mode: post the next approved, not-yet-posted story from today's batch (India date).
 // A batch is only posted after publisher/batches/<date>.approved exists, which is created on the owner's OK.
+const COOLDOWN = path.join(__dirname, 'batches', 'cooldown.json');
 async function postNext(outDir, targets) {
+  if (fs.existsSync(COOLDOWN)) {
+    const until = JSON.parse(fs.readFileSync(COOLDOWN, 'utf8')).until;
+    if (Date.now() < Date.parse(until)) return note(`Cooling down after an Instagram restriction until ${until}; nothing posted.`);
+  }
   const date = new Date(Date.now() + 5.5 * 3600 * 1000).toISOString().slice(0, 10);
   const dir = path.join(__dirname, 'batches');
   const batchFile = path.join(dir, `${date}.json`);
@@ -35,6 +40,16 @@ async function postNext(outDir, targets) {
   const stories = JSON.parse(fs.readFileSync(batchFile, 'utf8')).filter((s) => langs.includes(s.lang || 'en'));
   const next = stories.find((s) => !posted.some((p) => p.id === s.id));
   if (!next) return note(`Batch ${date} is fully posted.`);
+  // Never post the same story twice: if Instagram already has a post with this hook, record it and move on.
+  if (targets.includes('instagram')) {
+    const hook = String(next.captionHeadline || next.headline || '').replace(/\s+/g, ' ').trim();
+    const dup = (await recentMedia()).find((m) => hook && String(m.caption || '').replace(/\s+/g, ' ').trim().startsWith(hook));
+    if (dup) {
+      posted.push({ id: next.id, at: dup.timestamp, instagram: dup.permalink, facebook: null, note: 'already on Instagram; not reposted' });
+      fs.writeFileSync(postedFile, `${JSON.stringify(posted, null, 2)}\n`);
+      return note(`${next.id}: already on Instagram (${dup.permalink}); skipped to avoid a duplicate`, 'warning');
+    }
+  }
   // Postr Lab designs by default; DESIGN=classic or story.design='classic' uses the original templates.
   const classic = process.env.DESIGN === 'classic' || next.design === 'classic';
   const prevStyle = posted.length ? posted[posted.length - 1].style : undefined;
@@ -120,9 +135,9 @@ async function postNextReel(outDir, targets) {
     const pf = path.join(__dirname, 'batches', `${date}.posted.json`);
     const before = fs.existsSync(pf) ? JSON.parse(fs.readFileSync(pf, 'utf8')) : [];
     const last = before.length ? Date.parse(before[before.length - 1].at) : 0;
-    const behind = Date.now() - last > 50 * 60000;
+    const behind = Date.now() - last > 150 * 60000;
     await postNext(outDir, targets);
-    if (behind && Number(process.env.CATCH_UP || 1) > 0) {
+    if (behind && Number(process.env.CATCH_UP || 0) > 0) {
       await sleep(8 * 60000);
       await postNext(outDir, targets);
     }
@@ -166,6 +181,12 @@ async function postNextReel(outDir, targets) {
   }
   if (failures) process.exit(1);
 })().catch((e) => {
+  // Instagram's "we restrict certain activity" (2207051): stop all posting for 24 hours.
+  if (/2207051|restrict certain activity/i.test(e.message)) {
+    const until = new Date(Date.now() + 24 * 3600 * 1000).toISOString();
+    fs.writeFileSync(COOLDOWN, `${JSON.stringify({ until, reason: e.message }, null, 2)}\n`);
+    note(`Instagram restricted activity; posting paused until ${until}`, 'warning');
+  }
   note(`FAILED: ${e.message}`, 'warning');
   process.exit(1);
 });

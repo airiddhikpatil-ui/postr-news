@@ -211,8 +211,14 @@ async function lookupAccount(username, igId = accounts.instagramBusinessAccountI
   }
 }
 
+// Latest Instagram posts (used to avoid posting the same story twice).
+async function recentMedia(limit = 15, igId = accounts.instagramBusinessAccountId) {
+  const r = await call('GET', `${igId}/media`, { fields: 'id,caption,permalink,timestamp', limit: String(limit) });
+  return r.data || [];
+}
+
 async function collabStatus(mediaId) {
   return call('GET', `${mediaId}/collaborators`, { fields: 'id,username,invite_status' });
 }
 
-module.exports = { lookupAccount, collabStatus, publishReel, publishPoster, publishCarousel, uploadToPage, postToInstagram, instagramQuota, pageToken };
+module.exports = { recentMedia, lookupAccount, collabStatus, publishReel, publishPoster, publishCarousel, uploadToPage, postToInstagram, instagramQuota, pageToken };
