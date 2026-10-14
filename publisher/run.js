@@ -30,7 +30,8 @@ async function postNext(outDir, targets) {
   if (!fs.existsSync(path.join(dir, `${date}.approved`))) return note(`Batch ${date} is not approved yet; nothing posted.`);
   const postedFile = path.join(dir, `${date}.posted.json`);
   const posted = fs.existsSync(postedFile) ? JSON.parse(fs.readFileSync(postedFile, 'utf8')) : [];
-  const stories = JSON.parse(fs.readFileSync(batchFile, 'utf8'));
+  const langs = (process.env.POST_LANGS || 'en').split(',').map((x) => x.trim());
+  const stories = JSON.parse(fs.readFileSync(batchFile, 'utf8')).filter((s) => langs.includes(s.lang || 'en'));
   const next = stories.find((s) => !posted.some((p) => p.id === s.id));
   if (!next) return note(`Batch ${date} is fully posted.`);
   const { files, errors } = await renderCarousel(next, outDir);

@@ -1,8 +1,9 @@
 name: Scheduled posting
-# Every hour from 7 am to 11 pm India time (01:30–17:30 UTC), post the next approved story of the day.
+# Every 30 minutes from 7 am to midnight India time (01:30–18:30 UTC), post the next approved English story of the day.
 on:
   schedule:
-    - cron: '30 1-17 * * *'
+    - cron: '30 1 * * *'
+    - cron: '0,30 2-18 * * *'
   workflow_dispatch:
 permissions:
   contents: write
