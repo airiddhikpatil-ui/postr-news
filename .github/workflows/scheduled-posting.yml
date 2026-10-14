@@ -1,9 +1,10 @@
 name: Scheduled posting
-# Every 30 minutes from 7 am to midnight India time (01:30–18:30 UTC), post the next approved English story of the day.
+# Every 30 minutes from about 7 am to midnight India time (off the busy :00/:30 minutes, which GitHub often skips).
+# If a slot was skipped, the run catches up by posting a second story 8 minutes later.
 on:
   schedule:
-    - cron: '30 1 * * *'
-    - cron: '0,30 2-18 * * *'
+    - cron: '37 1 * * *'
+    - cron: '7,37 2-18 * * *'
   workflow_dispatch:
 permissions:
   contents: write

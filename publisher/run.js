@@ -88,7 +88,20 @@ async function postNextReel(outDir, targets) {
     return;
   }
 
-  if (job === 'post-next') return postNext(outDir, targets);
+  if (job === 'post-next') {
+    // Catch up when GitHub skipped a slot: if the last post is over 50 minutes old, post a second story 8 minutes later.
+    const date = new Date(Date.now() + 5.5 * 3600 * 1000).toISOString().slice(0, 10);
+    const pf = path.join(__dirname, 'batches', `${date}.posted.json`);
+    const before = fs.existsSync(pf) ? JSON.parse(fs.readFileSync(pf, 'utf8')) : [];
+    const last = before.length ? Date.parse(before[before.length - 1].at) : 0;
+    const behind = Date.now() - last > 50 * 60000;
+    await postNext(outDir, targets);
+    if (behind && Number(process.env.CATCH_UP || 1) > 0) {
+      await sleep(8 * 60000);
+      await postNext(outDir, targets);
+    }
+    return;
+  }
   if (job === 'post-reel') return postNextReel(outDir, targets);
 
   const batch = process.env.BATCH;
