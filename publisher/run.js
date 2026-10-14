@@ -102,7 +102,7 @@ async function postNextReel(outDir, targets) {
     let missing = 0;
     for (const c of cands) {
       const a = await lookupAccount(c.username);
-      if (!a || a.error || !a.username) { missing++; continue; }
+      if (!a || a.error || !a.username) { missing++; if (missing <= 3) note(`@${c.username}: ${a && a.error ? a.error : 'not found'}`, 'warning'); continue; }
       const old = prev.find((p) => p.username === a.username);
       found.push({ username: a.username, name: a.name || '', followers: a.followers_count, posts: a.media_count, topics: c.topics, cities: c.cities, approved: old ? old.approved : false, bio: (a.biography || '').slice(0, 120) });
       await sleep(400);
