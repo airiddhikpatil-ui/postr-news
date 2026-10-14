@@ -1,5 +1,491 @@
 [
   {
+    "id": "unclaimed-money",
+    "style": "exposed",
+    "format": "number",
+    "lang": "en",
+    "date": "Parliament, Aug 2026",
+    "value": "₹87K",
+    "coverBig": "₹86,917 CR",
+    "caption": "crore of Indians' bank money is lying unclaimed with the RBI.",
+    "note": "Untouched for 10 years, it moves to an RBI fund. It is still yours.",
+    "source": "Finance Ministry reply in Rajya Sabha, Aug 2026",
+    "coverHook": "₹86,917 crore of Indians' money is lying unclaimed. Some may be your family's.",
+    "captionHeadline": "₹86,917 crore of Indians' money is sitting unclaimed. Some of it could belong to your family.",
+    "summary": "As of 30 June 2026, ₹86,917 crore of unclaimed bank deposits had been moved to the RBI's Depositor Education and Awareness Fund, the Finance Ministry told the Rajya Sabha. Savings and current accounts become unclaimed after 10 years without activity. Separately, LIC holds ₹7,318.5 crore in unclaimed funds and inactive EPF accounts hold ₹9,330.5 crore. The money stays payable to the owners or their heirs.",
+    "forYou": "Search for old accounts of parents and grandparents on the RBI's UDGAM portal, then claim through the bank with ID and documents.",
+    "cta": "Send this to your family group. Someone's grandparents' money might still be waiting.",
+    "sourceUrl": "https://knnindia.co.in/news/newsdetails/sectors/unclaimed-bank-deposits-with-rbi-fund-rise-to-rs-86917-crore-govt",
+    "tags": [
+      "UnclaimedMoney",
+      "RBI",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "THE MONEY",
+        "title": "Where Indians' forgotten money sits",
+        "stats": [
+          {
+            "label": "Unclaimed bank deposits (RBI fund)",
+            "value": "₹86,917 cr",
+            "num": 86917,
+            "hi": true
+          },
+          {
+            "label": "Inactive EPF accounts",
+            "value": "₹9,330 cr",
+            "num": 9330
+          },
+          {
+            "label": "Unclaimed with LIC",
+            "value": "₹7,318 cr",
+            "num": 7318
+          }
+        ],
+        "statsNote": "Bank figure as of 30 June 2026; LIC as of 31 March 2026"
+      },
+      {
+        "label": "HOW IT HAPPENS",
+        "title": "How money becomes \"unclaimed\"",
+        "points": [
+          "An account sits untouched for 10 years",
+          "A fixed deposit is not claimed 10 years after maturity",
+          "The holder dies and the family never knew",
+          "The bank moves it to the RBI fund, but it stays yours"
+        ]
+      },
+      {
+        "label": "WHAT TO DO",
+        "title": "Check your family's name today",
+        "points": [
+          "Search the RBI's UDGAM portal by name",
+          "Check parents' and grandparents' old banks",
+          "Claim at the bank with ID and documents",
+          "Add nominees to every account you hold"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "This could pay for a wedding",
+        "body": "Send it to the family group. Somebody's forgotten account is out there."
+      }
+    ]
+  },
+  {
+    "id": "failed-medicines",
+    "style": "dossier",
+    "format": "alert",
+    "lang": "en",
+    "place": "Your medicine box",
+    "headline": "Drug tests failed",
+    "time": "August 2026",
+    "coverBig": "220 FAILED",
+    "note": "Paracetamol, BP pills and antibiotics among them.",
+    "source": "CDSCO monthly drug alert, via The South First, 26 Sep 2026",
+    "coverHook": "Paracetamol, BP pills, antibiotics: 220 samples failed India's own drug tests.",
+    "captionHeadline": "220 medicine samples failed India's own quality tests last month. Paracetamol and BP pills are on the list.",
+    "summary": "In its August 2026 alert, India's drug regulator CDSCO listed 220 samples as \"not of standard quality\". They include batches of paracetamol, the BP drug telmisartan, antibiotics like amoxicillin and azithromycin, and injections. One batch labelled Telma AM was flagged as \"purported to be spurious\": the company named on the label says it never made it. Failures apply to specific batches, not whole brands.",
+    "forYou": "Don't stop prescribed medicine. Buy from licensed chemists, keep the bill, check the batch number against CDSCO's monthly list, and report anything odd to your doctor.",
+    "cta": "Send this to whoever buys medicines for your parents.",
+    "sourceUrl": "https://thesouthfirst.com/health/fake-drugs-in-the-market-cdsco-flags-blood-pressure-drug-telma-am-spurious-220-medicine-batches-fail-tests/",
+    "tags": [
+      "Medicines",
+      "CDSCO",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "THE LIST",
+        "title": "Common medicines with failed batches",
+        "points": [
+          "Paracetamol: several batches failed the dissolution test",
+          "Telmisartan (BP): batches failed dissolution and assay tests",
+          "Antibiotics: amoxicillin, azithromycin, cefixime, metronidazole",
+          "Injections: meropenem, amikacin, dexamethasone"
+        ]
+      },
+      {
+        "label": "FAKE, NOT JUST WEAK",
+        "title": "One batch may be a fake",
+        "body": "CDSCO flagged one Telma AM batch (18230791) as purportedly spurious. The company on the label told the regulator it never made it. The investigation is on."
+      },
+      {
+        "label": "WHAT TO DO",
+        "title": "Protect your family without panic",
+        "points": [
+          "Never stop a prescribed medicine on your own",
+          "Buy only from licensed chemists and keep the bill",
+          "Match batch numbers with CDSCO's monthly alert",
+          "Report side effects or odd packaging to your doctor"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Your parents need this",
+        "body": "Send it to whoever buys the family's medicines."
+      }
+    ]
+  },
+  {
+    "id": "undertrials-73",
+    "style": "swiss",
+    "format": "number",
+    "lang": "en",
+    "date": "Prison Statistics 2024",
+    "value": "73%",
+    "coverBig": "3 IN 4",
+    "caption": "of people in Indian jails have not been convicted of any crime.",
+    "note": "Delhi and Bihar: over 87%.",
+    "source": "NCRB Prison Statistics India 2024, via Drishti IAS",
+    "coverHook": "3 in 4 people in Indian jails haven't been convicted of anything.",
+    "captionHeadline": "3 out of 4 people locked in Indian jails have not been convicted of any crime. They are waiting for trial.",
+    "summary": "According to Prison Statistics India 2024, about 73% of the more than 5.11 lakh inmates in Indian jails are undertrials, people still awaiting trial. Only 26.6% are convicts. Jails are at 112.7% of capacity; Delhi's are at 194.6%, and over 87% of prisoners in Delhi and Bihar are undertrials. 9,028 undertrials have been inside for more than 5 years.",
+    "forYou": "Under Indian law, anyone is innocent until proven guilty. Most of these people have not been proven guilty of anything yet.",
+    "cta": "Send this to the friend who says \"if they're in jail, they must have done something\".",
+    "sourceUrl": "https://www.drishtiias.com/daily-updates/daily-news-analysis/prison-statistics-india-report-2024/print_manually",
+    "tags": [
+      "Justice",
+      "Prisons",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "WHO IS INSIDE",
+        "title": "Indian jails, by status",
+        "stats": [
+          {
+            "label": "Undertrials (not convicted)",
+            "value": "73%",
+            "num": 73,
+            "hi": true
+          },
+          {
+            "label": "Convicts",
+            "value": "26.6%",
+            "num": 26.6
+          }
+        ],
+        "statsNote": "5.11 lakh+ inmates, 2024"
+      },
+      {
+        "label": "THE CROWDING",
+        "title": "Jails over capacity",
+        "stats": [
+          {
+            "label": "Delhi",
+            "value": "194.6%",
+            "num": 194.6,
+            "hi": true
+          },
+          {
+            "label": "Meghalaya",
+            "value": "163.5%",
+            "num": 163.5
+          },
+          {
+            "label": "India average",
+            "value": "112.7%",
+            "num": 112.7
+          }
+        ]
+      },
+      {
+        "label": "THE WAIT",
+        "title": "Waiting years for a trial",
+        "points": [
+          "9,028 undertrials held for more than 5 years",
+          "In Delhi and Bihar, over 87% of inmates are undertrials",
+          "Almost half of jail medical posts are vacant (46.4%)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "court-cases-30yrs",
+    "style": "extra",
+    "format": "number",
+    "lang": "en",
+    "date": "Rajya Sabha, Jul 2026",
+    "value": "30+",
+    "coverBig": "81,275",
+    "caption": "cases in India's district courts are more than 30 years old.",
+    "note": "26 Supreme Court cases are also 30+ years old.",
+    "source": "Centre's reply in Rajya Sabha, via Bar & Bench, 28 Jul 2026",
+    "coverHook": "81,275 Indian court cases are older than 30 years.",
+    "captionHeadline": "81,275 court cases in India have been pending for more than 30 years. Some started before the people now fighting them were born.",
+    "summary": "The Centre told the Rajya Sabha that 81,275 cases in district and subordinate courts are more than 30 years old. In the Supreme Court, 26 cases have been pending for over 30 years and 558 for over 20 years. As of 31 December 2025, 4.76 crore cases were pending in district courts and 63.66 lakh in High Courts.",
+    "forYou": "If you go to court today, delays of years are normal. Mediation and Lok Adalats can settle many disputes far faster.",
+    "cta": "Send this to anyone stuck in a court case. They are not alone.",
+    "sourceUrl": "https://www.barandbench.com/news/26-cases-pending-in-supreme-court-for-30-years-558-cases-for-20-years-centre-in-rajya-sabha",
+    "tags": [
+      "Courts",
+      "Justice",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "THE BACKLOG",
+        "title": "Cases waiting in Indian courts",
+        "stats": [
+          {
+            "label": "District and lower courts",
+            "value": "4.76 cr",
+            "num": 476,
+            "hi": true
+          },
+          {
+            "label": "High Courts",
+            "value": "63.7 lakh",
+            "num": 63.7
+          },
+          {
+            "label": "Supreme Court",
+            "value": "92,101",
+            "num": 0.92
+          }
+        ],
+        "statsNote": "As of 31 Dec 2025, Lok Sabha reply"
+      },
+      {
+        "label": "THE OLDEST",
+        "title": "Older than a generation",
+        "points": [
+          "81,275 district court cases are 30+ years old",
+          "26 Supreme Court cases are 30+ years old",
+          "558 Supreme Court cases are 20+ years old"
+        ]
+      },
+      {
+        "label": "WHAT YOU CAN DO",
+        "title": "Faster ways to settle",
+        "points": [
+          "Lok Adalats settle many cases in a day, free",
+          "Mediation centres attached to courts",
+          "Check your case status on the eCourts app"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "road-deaths-3min",
+    "style": "feed",
+    "format": "number",
+    "lang": "en",
+    "date": "2024 data",
+    "value": "20",
+    "coverBig": "3 MIN",
+    "caption": "Indians died on the roads every hour in 2024.",
+    "note": "That's one death about every 3 minutes.",
+    "source": "Road Transport Ministry report, via ETV Bharat/PTI",
+    "coverHook": "Someone dies on an Indian road every 3 minutes.",
+    "captionHeadline": "In the time it takes to read this post, someone in India will die on a road. One every 3 minutes, all year.",
+    "summary": "India recorded 4,87,707 road accidents and 1,77,175 deaths in 2024, the Road Transport Ministry reported: about 56 accidents and 20 deaths every hour. Two-wheeler riders were 46.2% of those killed and pedestrians 20.6%. National highways carry a small share of roads but saw 36.6% of deaths.",
+    "forYou": "Helmet on every ride, even for \"just 5 minutes\". Most deaths are two-wheeler riders.",
+    "cta": "Send this to the friend who rides without a helmet.",
+    "sourceUrl": "https://www.etvbharat.com/en/bharat/road-accidents-in-india-in-2024-enn26061107541",
+    "tags": [
+      "RoadSafety",
+      "India",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "2024 IN NUMBERS",
+        "title": "A year on Indian roads",
+        "stats": [
+          {
+            "label": "Deaths",
+            "value": "1,77,175",
+            "hi": true
+          },
+          {
+            "label": "Accidents",
+            "value": "4,87,707"
+          },
+          {
+            "label": "Injured",
+            "value": "4,71,441"
+          }
+        ]
+      },
+      {
+        "label": "WHO DIES",
+        "title": "Share of road deaths",
+        "stats": [
+          {
+            "label": "Two-wheeler riders",
+            "value": "46.2%",
+            "num": 46.2,
+            "hi": true
+          },
+          {
+            "label": "Pedestrians",
+            "value": "20.6%",
+            "num": 20.6
+          },
+          {
+            "label": "Car and taxi occupants",
+            "value": "12.4%",
+            "num": 12.4
+          }
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Save one life",
+        "body": "Send this to the person who says \"helmet is not needed for short rides\"."
+      }
+    ]
+  },
+  {
+    "id": "mps-criminal-cases",
+    "style": "dossier",
+    "format": "number",
+    "lang": "en",
+    "date": "2024 Lok Sabha",
+    "value": "46%",
+    "coverBig": "3.5x",
+    "caption": "of MPs elected in 2024 declared criminal cases against themselves.",
+    "note": "Declared cases, not convictions. All parties.",
+    "source": "ADR analysis of candidate affidavits, via Governance Now",
+    "coverHook": "In 2024, candidates with criminal cases were 3.5x likelier to win.",
+    "captionHeadline": "In the 2024 Lok Sabha election, candidates with criminal cases were 3.5x more likely to win than clean ones. Across all parties.",
+    "summary": "ADR's analysis of candidates' own sworn affidavits found that 251 of 543 MPs elected in 2024 (46%) declared criminal cases, and 170 (31%) declared serious ones. Candidates with declared cases had a 15.3% chance of winning, against 4.4% for those with clean records. The share has risen every election since 2009 (30%). These are pending cases the candidates declared, not convictions.",
+    "forYou": "Every candidate's affidavit is public. Check yours on the ECI website or myneta.info before you vote.",
+    "cta": "Send this to the friend who says their vote doesn't matter.",
+    "sourceUrl": "https://www.governancenow.com/news/regular-story/elections-2024-nearly-half-the-winners-have-declared-criminal-cases",
+    "tags": [
+      "Elections",
+      "Democracy",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "THE TREND",
+        "title": "MPs who declared criminal cases",
+        "stats": [
+          {
+            "label": "2009",
+            "value": "30%",
+            "num": 30
+          },
+          {
+            "label": "2014",
+            "value": "34%",
+            "num": 34
+          },
+          {
+            "label": "2019",
+            "value": "43%",
+            "num": 43
+          },
+          {
+            "label": "2024",
+            "value": "46%",
+            "num": 46,
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "THE ODDS",
+        "title": "Chance of winning in 2024",
+        "stats": [
+          {
+            "label": "With declared criminal cases",
+            "value": "15.3%",
+            "num": 15.3,
+            "hi": true
+          },
+          {
+            "label": "With a clean record",
+            "value": "4.4%",
+            "num": 4.4
+          }
+        ]
+      },
+      {
+        "label": "READ CAREFULLY",
+        "title": "What this does and doesn't mean",
+        "points": [
+          "These are cases the candidates declared themselves",
+          "A case is not a conviction",
+          "Covers MPs from all parties",
+          "Every affidavit is public on the ECI website"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "anaemia-children",
+    "style": "riso",
+    "format": "number",
+    "lang": "en",
+    "date": "NFHS-5",
+    "value": "67%",
+    "coverBig": "2 IN 3",
+    "caption": "of Indian children under 5 are anaemic. It got worse, not better.",
+    "note": "57% of women too, up from 53%.",
+    "source": "National Family Health Survey 5 (2019-21), via Down To Earth",
+    "coverHook": "2 in 3 Indian children under 5 are anaemic. And it's getting worse.",
+    "captionHeadline": "2 in 3 Indian children under 5 are anaemic, according to the government's own health survey. And the number went up.",
+    "summary": "The National Family Health Survey 5 (2019-21) found 67.1% of children aged 6 to 59 months anaemic, up from 58.6% in the previous survey (2015-16). Among women aged 15 to 49, anaemia rose from 53.1% to 57%. Anaemia leaves children tired, slows learning and growth, and raises risks in pregnancy.",
+    "forYou": "A simple haemoglobin blood test is cheap. Iron-rich food (greens, pulses, jaggery, eggs) and doctor-advised supplements help.",
+    "cta": "Send this to every new parent you know.",
+    "sourceUrl": "https://www.downtoearth.org.in/news/health/anaemia-in-women-and-children-on-the-rise-assam-fares-worst-nfhs-5-80357",
+    "tags": [
+      "Health",
+      "Children",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "GOING THE WRONG WAY",
+        "title": "Anaemia, then and now",
+        "stats": [
+          {
+            "label": "Children 6-59 months, 2015-16",
+            "value": "58.6%",
+            "num": 58.6
+          },
+          {
+            "label": "Children 6-59 months, 2019-21",
+            "value": "67.1%",
+            "num": 67.1,
+            "hi": true
+          },
+          {
+            "label": "Women 15-49, 2019-21",
+            "value": "57%",
+            "num": 57
+          }
+        ]
+      },
+      {
+        "label": "WHY IT MATTERS",
+        "title": "What anaemia does",
+        "points": [
+          "Constant tiredness and weakness",
+          "Slower learning and growth in children",
+          "Higher risks during pregnancy"
+        ]
+      },
+      {
+        "label": "WHAT TO DO",
+        "title": "Simple steps for families",
+        "points": [
+          "Get a haemoglobin test; it costs little",
+          "Iron-rich food: greens, pulses, jaggery, eggs",
+          "Supplements only on a doctor's advice"
+        ]
+      }
+    ]
+  },
+  {
     "id": "cancer-drug-margin",
     "format": "number",
     "lang": "en",
