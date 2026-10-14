@@ -603,6 +603,74 @@
     ]
   },
   {
+    "id": "upi-fee-deferred",
+    "format": "alert",
+    "lang": "en",
+    "place": "All UPI users",
+    "headline": "UPI fee delayed",
+    "time": "Till after Diwali",
+    "note": "NPCI says it will start immediately post Diwali. Date to be notified.",
+    "source": "NPCI statement, 13 Oct 2026, via The Tribune",
+    "captionHeadline": "UPDATE: The UPI fee is NOT starting tomorrow. NPCI has pushed it to after Diwali.",
+    "summary": "In a statement on 13 October, NPCI deferred the 0.4% merchant fee on select UPI shop payments above ₹2,000, which was due on 15 October. It says the fee will be implemented immediately after Diwali, on a date to be notified separately. The fee has been delayed, not scrapped. Correction: our 7 am post said the fee starts on 15 October; that is no longer true.",
+    "forYou": "Nothing changes tomorrow. Paying shops and sending money to people work exactly as before. Watch for the new date after Diwali.",
+    "cta": "Saw a \"UPI fee from tomorrow\" forward? Reply with this.",
+    "corrected": "14 Oct",
+    "correctionNote": "our earlier post said the fee starts 15 Oct; NPCI has deferred it.",
+    "sourceUrl": "https://www.tribuneindia.com/news/india/festive-breather-as-npci-defers-upi-levy-rollout-till-diwali/",
+    "tags": [
+      "UPI",
+      "UPIFee",
+      "NPCI"
+    ],
+    "slides": [
+      {
+        "label": "WHAT CHANGED",
+        "title": "NPCI hit pause two days before launch",
+        "points": [
+          "The fee was due on 15 October",
+          "NPCI deferred it on 13 October",
+          "New start: immediately after Diwali, date to be notified",
+          "Delayed, not cancelled"
+        ]
+      },
+      {
+        "label": "WHY",
+        "title": "The festive-season push",
+        "points": [
+          "Merchant groups and fintech firms asked for more time",
+          "They feared the cost would hit festive sales",
+          "Traders body CAIT welcomed the delay"
+        ]
+      },
+      {
+        "label": "WHEN IT COMES",
+        "title": "Who will pay, after Diwali",
+        "stats": [
+          {
+            "label": "Fee on select shop payments above ₹2,000",
+            "value": "0.4%",
+            "hi": true
+          },
+          {
+            "label": "Maximum per payment",
+            "value": "₹300"
+          },
+          {
+            "label": "Sending money to people",
+            "value": "Free"
+          }
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Kill the wrong forward",
+        "body": "Thousands will panic about a UPI fee tomorrow. Send them the update."
+      }
+    ]
+  },
+  {
     "id": "digital-arrest-scam",
     "format": "myth",
     "lang": "en",
@@ -647,56 +715,6 @@
         "kind": "share",
         "title": "Send this to your parents today",
         "body": "Scammers target people who respect authority. One forward can stop a call from becoming a loss."
-      }
-    ]
-  },
-  {
-    "id": "upi-mdr-oct15-hi",
-    "format": "alert",
-    "lang": "hi",
-    "place": "सभी UPI यूज़र",
-    "headline": "कल से UPI फ़ीस",
-    "time": "15 अक्टूबर से",
-    "note": "ये फ़ीस आप नहीं, दुकानदार देंगे: ₹2,000 से ऊपर पर 0.4%",
-    "source": "NPCI FAQ, SCC Online के ज़रिए",
-    "sourceLabel": "स्रोत",
-    "forYouLabel": "आपके लिए",
-    "captionHeadline": "15 अक्टूबर से UPI पर फ़ीस। लेकिन ये आपको नहीं देनी।",
-    "summary": "15 अक्टूबर से दुकानों को ₹2,000 से ज़्यादा के कुछ UPI पेमेंट पर 0.4% मर्चेंट फ़ीस (MDR) देनी होगी, अधिकतम ₹300। पेट्रोल पंप, रेलवे, टेलीकॉम और इंश्योरेंस पर ₹5 फ़्लैट। किसी व्यक्ति को पैसे भेजना और ₹2,000 तक का दुकान पेमेंट मुफ़्त रहेगा।",
-    "forYou": "NPCI के मुताबिक़ ग्राहकों के लिए UPI मुफ़्त रहेगा। अगर दुकान बिल में फ़ीस जोड़े, तो सवाल पूछें।",
-    "cta": "ये पोस्ट परिवार के WhatsApp ग्रुप में भेजें, घबराहट से पहले।",
-    "sourceUrl": "https://www.scconline.com/blog/post/2026/09/16/npci-released-upi-mdr-faqs-explained/",
-    "tags": [
-      "UPI",
-      "NPCI"
-    ],
-    "slides": [
-      {
-        "label": "कौन क्या देगा",
-        "title": "₹2,000 से ऊपर, दुकानदार देगा",
-        "points": [
-          "₹2,000 से ऊपर ज़्यादातर दुकान पेमेंट: 0.4% फ़ीस",
-          "पेट्रोल, रेलवे, टेलीकॉम, इंश्योरेंस: ₹5 फ़्लैट",
-          "एक पेमेंट पर अधिकतम ₹300",
-          "फ़ीस दुकानदार देगा, आप नहीं"
-        ]
-      },
-      {
-        "label": "जो मुफ़्त रहेगा",
-        "title": "क्या नहीं बदलेगा",
-        "points": [
-          "किसी व्यक्ति को पैसे भेजना: मुफ़्त",
-          "₹2,000 तक दुकान पेमेंट: कोई फ़ीस नहीं",
-          "QR पर महीने में ₹1 लाख तक पाने वाली छोटी दुकानें: कोई फ़ीस नहीं",
-          "ग्राहक: NPCI के मुताबिक़ UPI मुफ़्त"
-        ]
-      },
-      {
-        "label": "शेयर करें",
-        "kind": "share",
-        "followLabel": "रोज़ की ख़बरें, पोस्टर में",
-        "title": "घबराहट से पहले सही जानकारी भेजें",
-        "body": "कल हर कोई 'UPI फ़ीस' सुनेगा। आप सही बात बताने वाले बनिए।"
       }
     ]
   },
@@ -996,63 +1014,6 @@
         "kind": "share",
         "title": "Call it before the toss",
         "body": "Comment your player of the match and tag your cricket group. We'll check who got it right."
-      }
-    ]
-  },
-  {
-    "id": "upi-fee-sc-no-stay",
-    "format": "alert",
-    "lang": "en",
-    "place": "UPI shop payments",
-    "headline": "Starts tomorrow",
-    "time": "From 15 Oct",
-    "note": "Supreme Court refused to pause it. Paying friends stays free.",
-    "source": "Supreme Court, 28 Sep, via AIR; NPCI FAQ",
-    "captionHeadline": "The Supreme Court refused to stop the UPI fee. It starts tomorrow.",
-    "summary": "On 28 September the Supreme Court declined to stay the 0.4% merchant fee on specified UPI payments to shops above ₹2,000, and gave the Centre four weeks to respond. The fee starts on 15 October. NPCI says it is paid by merchants, not customers.",
-    "forYou": "Sending money to people stays free. Some shops may push you to pay in smaller amounts or ask for cash on big bills. You are not charged by UPI.",
-    "cta": "Send this to every shopkeeper you know. Tomorrow they will get asked about it.",
-    "sourceUrl": "https://newsonair.gov.in/supreme-court-refuses-to-stay-mdr-on-specified-upi-transactions-above-%e2%82%b92000/",
-    "tags": [
-      "UPI",
-      "UPIFee",
-      "SupremeCourt"
-    ],
-    "slides": [
-      {
-        "label": "WHAT HAPPENED",
-        "title": "The court said no to a pause",
-        "points": [
-          "A plea challenged the fee on UPI shop payments above ₹2,000",
-          "On 28 Sep the Supreme Court refused an interim stay",
-          "The Centre was given four weeks to file its reply",
-          "So the 15 October start date stands"
-        ]
-      },
-      {
-        "label": "WHO PAYS",
-        "title": "Shops pay, not you",
-        "stats": [
-          {
-            "label": "Fee on shop payments above ₹2,000",
-            "value": "0.4%",
-            "hi": true
-          },
-          {
-            "label": "Maximum fee per payment",
-            "value": "₹300"
-          },
-          {
-            "label": "Fee on sending money to people",
-            "value": "₹0"
-          }
-        ]
-      },
-      {
-        "label": "SHARE THIS",
-        "kind": "share",
-        "title": "Beat the WhatsApp panic",
-        "body": "Tomorrow someone will forward \"UPI is no longer free\". Send them this first."
       }
     ]
   },
