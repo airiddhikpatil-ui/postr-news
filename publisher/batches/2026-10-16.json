@@ -1,0 +1,1256 @@
+[
+  {
+    "id": "unclaimed-money",
+    "style": "passbook",
+    "format": "number",
+    "lang": "en",
+    "date": "Parliament, Aug 2026",
+    "value": "₹87K",
+    "coverBig": "₹86,917 CR",
+    "caption": "crore of Indians' bank money is lying unclaimed with the RBI.",
+    "note": "Untouched for 10 years, it moves to an RBI fund. It is still yours.",
+    "source": "Finance Ministry reply in Rajya Sabha, Aug 2026",
+    "coverHook": "₹86,917 crore of Indians' money is lying unclaimed. Some may be your family's.",
+    "captionHeadline": "₹86,917 crore of Indians' money is sitting unclaimed. Some of it could belong to your family.",
+    "summary": "As of 30 June 2026, ₹86,917 crore of unclaimed bank deposits had been moved to the RBI's Depositor Education and Awareness Fund, the Finance Ministry told the Rajya Sabha. Savings and current accounts become unclaimed after 10 years without activity. Separately, LIC holds ₹7,318.5 crore in unclaimed funds and inactive EPF accounts hold ₹9,330.5 crore. The money stays payable to the owners or their heirs.",
+    "forYou": "Search for old accounts of parents and grandparents on the RBI's UDGAM portal, then claim through the bank with ID and documents.",
+    "cta": "Send this to your family group. Someone's grandparents' money might still be waiting.",
+    "sourceUrl": "https://knnindia.co.in/news/newsdetails/sectors/unclaimed-bank-deposits-with-rbi-fund-rise-to-rs-86917-crore-govt",
+    "tags": [
+      "UnclaimedMoney",
+      "RBI",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "THE MONEY",
+        "title": "Where Indians' forgotten money sits",
+        "stats": [
+          {
+            "label": "Unclaimed bank deposits (RBI fund)",
+            "value": "₹86,917 cr",
+            "num": 86917,
+            "hi": true
+          },
+          {
+            "label": "Inactive EPF accounts",
+            "value": "₹9,330 cr",
+            "num": 9330
+          },
+          {
+            "label": "Unclaimed with LIC",
+            "value": "₹7,318 cr",
+            "num": 7318
+          }
+        ],
+        "statsNote": "Bank figure as of 30 June 2026; LIC as of 31 March 2026"
+      },
+      {
+        "label": "HOW IT HAPPENS",
+        "title": "How money becomes \"unclaimed\"",
+        "points": [
+          "An account sits untouched for 10 years",
+          "A fixed deposit is not claimed 10 years after maturity",
+          "The holder dies and the family never knew",
+          "The bank moves it to the RBI fund, but it stays yours"
+        ]
+      },
+      {
+        "label": "WHAT TO DO",
+        "title": "Check your family's name today",
+        "points": [
+          "Search the RBI's UDGAM portal by name",
+          "Check parents' and grandparents' old banks",
+          "Claim at the bank with ID and documents",
+          "Add nominees to every account you hold"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "This could pay for a wedding",
+        "body": "Send it to the family group. Somebody's forgotten account is out there."
+      }
+    ]
+  },
+  {
+    "id": "failed-medicines",
+    "style": "pharmacy",
+    "format": "alert",
+    "lang": "en",
+    "place": "Your medicine box",
+    "headline": "Drug tests failed",
+    "time": "August 2026",
+    "coverBig": "220 FAILED",
+    "note": "Paracetamol, BP pills and antibiotics among them.",
+    "source": "CDSCO monthly drug alert, via The South First, 26 Sep 2026",
+    "coverHook": "Paracetamol, BP pills, antibiotics: 220 samples failed India's own drug tests.",
+    "captionHeadline": "220 medicine samples failed India's own quality tests last month. Paracetamol and BP pills are on the list.",
+    "summary": "In its August 2026 alert, India's drug regulator CDSCO listed 220 samples as \"not of standard quality\". They include batches of paracetamol, the BP drug telmisartan, antibiotics like amoxicillin and azithromycin, and injections. One batch labelled Telma AM was flagged as \"purported to be spurious\": the company named on the label says it never made it. Failures apply to specific batches, not whole brands.",
+    "forYou": "Don't stop prescribed medicine. Buy from licensed chemists, keep the bill, check the batch number against CDSCO's monthly list, and report anything odd to your doctor.",
+    "cta": "Send this to whoever buys medicines for your parents.",
+    "sourceUrl": "https://thesouthfirst.com/health/fake-drugs-in-the-market-cdsco-flags-blood-pressure-drug-telma-am-spurious-220-medicine-batches-fail-tests/",
+    "tags": [
+      "Medicines",
+      "CDSCO",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "THE LIST",
+        "title": "Common medicines with failed batches",
+        "points": [
+          "Paracetamol: several batches failed the dissolution test",
+          "Telmisartan (BP): batches failed dissolution and assay tests",
+          "Antibiotics: amoxicillin, azithromycin, cefixime, metronidazole",
+          "Injections: meropenem, amikacin, dexamethasone"
+        ]
+      },
+      {
+        "label": "FAKE, NOT JUST WEAK",
+        "title": "One batch may be a fake",
+        "body": "CDSCO flagged one Telma AM batch (18230791) as purportedly spurious. The company on the label told the regulator it never made it. The investigation is on."
+      },
+      {
+        "label": "WHAT TO DO",
+        "title": "Protect your family without panic",
+        "points": [
+          "Never stop a prescribed medicine on your own",
+          "Buy only from licensed chemists and keep the bill",
+          "Match batch numbers with CDSCO's monthly alert",
+          "Report side effects or odd packaging to your doctor"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Your parents need this",
+        "body": "Send it to whoever buys the family's medicines."
+      }
+    ]
+  },
+  {
+    "id": "undertrials-73",
+    "style": "headcount",
+    "format": "number",
+    "lang": "en",
+    "date": "Prison Statistics 2024",
+    "value": "73%",
+    "coverBig": "3 IN 4",
+    "caption": "of people in Indian jails have not been convicted of any crime.",
+    "note": "Delhi and Bihar: over 87%.",
+    "source": "NCRB Prison Statistics India 2024, via Drishti IAS",
+    "coverHook": "3 in 4 people in Indian jails haven't been convicted of anything.",
+    "captionHeadline": "3 out of 4 people locked in Indian jails have not been convicted of any crime. They are waiting for trial.",
+    "summary": "According to Prison Statistics India 2024, about 73% of the more than 5.11 lakh inmates in Indian jails are undertrials, people still awaiting trial. Only 26.6% are convicts. Jails are at 112.7% of capacity; Delhi's are at 194.6%, and over 87% of prisoners in Delhi and Bihar are undertrials. 9,028 undertrials have been inside for more than 5 years.",
+    "forYou": "Under Indian law, anyone is innocent until proven guilty. Most of these people have not been proven guilty of anything yet.",
+    "cta": "Send this to the friend who says \"if they're in jail, they must have done something\".",
+    "sourceUrl": "https://www.drishtiias.com/daily-updates/daily-news-analysis/prison-statistics-india-report-2024/print_manually",
+    "tags": [
+      "Justice",
+      "Prisons",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "WHO IS INSIDE",
+        "title": "Indian jails, by status",
+        "stats": [
+          {
+            "label": "Undertrials (not convicted)",
+            "value": "73%",
+            "num": 73,
+            "hi": true
+          },
+          {
+            "label": "Convicts",
+            "value": "26.6%",
+            "num": 26.6
+          }
+        ],
+        "statsNote": "5.11 lakh+ inmates, 2024"
+      },
+      {
+        "label": "THE CROWDING",
+        "title": "Jails over capacity",
+        "stats": [
+          {
+            "label": "Delhi",
+            "value": "194.6%",
+            "num": 194.6,
+            "hi": true
+          },
+          {
+            "label": "Meghalaya",
+            "value": "163.5%",
+            "num": 163.5
+          },
+          {
+            "label": "India average",
+            "value": "112.7%",
+            "num": 112.7
+          }
+        ]
+      },
+      {
+        "label": "THE WAIT",
+        "title": "Waiting years for a trial",
+        "points": [
+          "9,028 undertrials held for more than 5 years",
+          "In Delhi and Bihar, over 87% of inmates are undertrials",
+          "Almost half of jail medical posts are vacant (46.4%)"
+        ]
+      }
+    ],
+    "tally": {
+      "of": 4,
+      "hit": 3,
+      "hitLabel": "NOT CONVICTED · 73%",
+      "restLabel": "CONVICTED · 26.6%"
+    }
+  },
+  {
+    "id": "court-cases-30yrs",
+    "style": "calendar",
+    "format": "number",
+    "lang": "en",
+    "date": "Rajya Sabha, Jul 2026",
+    "value": "30+",
+    "coverBig": "81,275",
+    "caption": "cases in India's district courts are more than 30 years old.",
+    "note": "26 Supreme Court cases are also 30+ years old.",
+    "source": "Centre's reply in Rajya Sabha, via Bar & Bench, 28 Jul 2026",
+    "coverHook": "81,275 Indian court cases are older than 30 years.",
+    "captionHeadline": "81,275 court cases in India have been pending for more than 30 years. Some started before the people now fighting them were born.",
+    "summary": "The Centre told the Rajya Sabha that 81,275 cases in district and subordinate courts are more than 30 years old. In the Supreme Court, 26 cases have been pending for over 30 years and 558 for over 20 years. As of 31 December 2025, 4.76 crore cases were pending in district courts and 63.66 lakh in High Courts.",
+    "forYou": "If you go to court today, delays of years are normal. Mediation and Lok Adalats can settle many disputes far faster.",
+    "cta": "Send this to anyone stuck in a court case. They are not alone.",
+    "sourceUrl": "https://www.barandbench.com/news/26-cases-pending-in-supreme-court-for-30-years-558-cases-for-20-years-centre-in-rajya-sabha",
+    "tags": [
+      "Courts",
+      "Justice",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "THE BACKLOG",
+        "title": "Cases waiting in Indian courts",
+        "stats": [
+          {
+            "label": "District and lower courts",
+            "value": "4.76 cr",
+            "num": 476,
+            "hi": true
+          },
+          {
+            "label": "High Courts",
+            "value": "63.7 lakh",
+            "num": 63.7
+          },
+          {
+            "label": "Supreme Court",
+            "value": "92,101",
+            "num": 0.92
+          }
+        ],
+        "statsNote": "As of 31 Dec 2025, Lok Sabha reply"
+      },
+      {
+        "label": "THE OLDEST",
+        "title": "Older than a generation",
+        "points": [
+          "81,275 district court cases are 30+ years old",
+          "26 Supreme Court cases are 30+ years old",
+          "558 Supreme Court cases are 20+ years old"
+        ]
+      },
+      {
+        "label": "WHAT YOU CAN DO",
+        "title": "Faster ways to settle",
+        "points": [
+          "Lok Adalats settle many cases in a day, free",
+          "Mediation centres attached to courts",
+          "Check your case status on the eCourts app"
+        ]
+      }
+    ],
+    "calendarYear": "1996",
+    "calendarLabel": "STILL PENDING",
+    "calendarCaption": "30+ YEARS · NO VERDICT"
+  },
+  {
+    "id": "road-deaths-3min",
+    "style": "highway",
+    "format": "number",
+    "lang": "en",
+    "date": "2024 data",
+    "value": "20",
+    "coverBig": "3 MIN",
+    "caption": "Indians died on the roads every hour in 2024.",
+    "note": "That's one death about every 3 minutes.",
+    "source": "Road Transport Ministry report, via ETV Bharat/PTI",
+    "coverHook": "Someone dies on an Indian road every 3 minutes.",
+    "captionHeadline": "In the time it takes to read this post, someone in India will die on a road. One every 3 minutes, all year.",
+    "summary": "India recorded 4,87,707 road accidents and 1,77,175 deaths in 2024, the Road Transport Ministry reported: about 56 accidents and 20 deaths every hour. Two-wheeler riders were 46.2% of those killed and pedestrians 20.6%. National highways carry a small share of roads but saw 36.6% of deaths.",
+    "forYou": "Helmet on every ride, even for \"just 5 minutes\". Most deaths are two-wheeler riders.",
+    "cta": "Send this to the friend who rides without a helmet.",
+    "sourceUrl": "https://www.etvbharat.com/en/bharat/road-accidents-in-india-in-2024-enn26061107541",
+    "tags": [
+      "RoadSafety",
+      "India",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "2024 IN NUMBERS",
+        "title": "A year on Indian roads",
+        "stats": [
+          {
+            "label": "Deaths",
+            "value": "1,77,175",
+            "hi": true
+          },
+          {
+            "label": "Accidents",
+            "value": "4,87,707"
+          },
+          {
+            "label": "Injured",
+            "value": "4,71,441"
+          }
+        ]
+      },
+      {
+        "label": "WHO DIES",
+        "title": "Share of road deaths",
+        "stats": [
+          {
+            "label": "Two-wheeler riders",
+            "value": "46.2%",
+            "num": 46.2,
+            "hi": true
+          },
+          {
+            "label": "Pedestrians",
+            "value": "20.6%",
+            "num": 20.6
+          },
+          {
+            "label": "Car and taxi occupants",
+            "value": "12.4%",
+            "num": 12.4
+          }
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Save one life",
+        "body": "Send this to the person who says \"helmet is not needed for short rides\"."
+      }
+    ],
+    "signLabel": "INDIA · 2024"
+  },
+  {
+    "id": "mps-criminal-cases",
+    "style": "ballot",
+    "format": "number",
+    "lang": "en",
+    "date": "2024 Lok Sabha",
+    "value": "46%",
+    "coverBig": "3.5x",
+    "caption": "of MPs elected in 2024 declared criminal cases against themselves.",
+    "note": "Declared cases, not convictions. All parties.",
+    "source": "ADR analysis of candidate affidavits, via Governance Now",
+    "coverHook": "In 2024, candidates with criminal cases were 3.5x likelier to win.",
+    "captionHeadline": "In the 2024 Lok Sabha election, candidates with criminal cases were 3.5x more likely to win than clean ones. Across all parties.",
+    "summary": "ADR's analysis of candidates' own sworn affidavits found that 251 of 543 MPs elected in 2024 (46%) declared criminal cases, and 170 (31%) declared serious ones. Candidates with declared cases had a 15.3% chance of winning, against 4.4% for those with clean records. The share has risen every election since 2009 (30%). These are pending cases the candidates declared, not convictions.",
+    "forYou": "Every candidate's affidavit is public. Check yours on the ECI website or myneta.info before you vote.",
+    "cta": "Send this to the friend who says their vote doesn't matter.",
+    "sourceUrl": "https://www.governancenow.com/news/regular-story/elections-2024-nearly-half-the-winners-have-declared-criminal-cases",
+    "tags": [
+      "Elections",
+      "Democracy",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "THE TREND",
+        "title": "MPs who declared criminal cases",
+        "stats": [
+          {
+            "label": "2009",
+            "value": "30%",
+            "num": 30
+          },
+          {
+            "label": "2014",
+            "value": "34%",
+            "num": 34
+          },
+          {
+            "label": "2019",
+            "value": "43%",
+            "num": 43
+          },
+          {
+            "label": "2024",
+            "value": "46%",
+            "num": 46,
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "THE ODDS",
+        "title": "Chance of winning in 2024",
+        "stats": [
+          {
+            "label": "With declared criminal cases",
+            "value": "15.3%",
+            "num": 15.3,
+            "hi": true
+          },
+          {
+            "label": "With a clean record",
+            "value": "4.4%",
+            "num": 4.4
+          }
+        ]
+      },
+      {
+        "label": "READ CAREFULLY",
+        "title": "What this does and doesn't mean",
+        "points": [
+          "These are cases the candidates declared themselves",
+          "A case is not a conviction",
+          "Covers MPs from all parties",
+          "Every affidavit is public on the ECI website"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "anaemia-children",
+    "style": "labreport",
+    "format": "number",
+    "lang": "en",
+    "date": "NFHS-5",
+    "value": "67%",
+    "coverBig": "2 IN 3",
+    "caption": "of Indian children under 5 are anaemic. It got worse, not better.",
+    "note": "57% of women too, up from 53%.",
+    "source": "National Family Health Survey 5 (2019-21), via Down To Earth",
+    "coverHook": "2 in 3 Indian children under 5 are anaemic. And it's getting worse.",
+    "captionHeadline": "2 in 3 Indian children under 5 are anaemic, according to the government's own health survey. And the number went up.",
+    "summary": "The National Family Health Survey 5 (2019-21) found 67.1% of children aged 6 to 59 months anaemic, up from 58.6% in the previous survey (2015-16). Among women aged 15 to 49, anaemia rose from 53.1% to 57%. Anaemia leaves children tired, slows learning and growth, and raises risks in pregnancy.",
+    "forYou": "A simple haemoglobin blood test is cheap. Iron-rich food (greens, pulses, jaggery, eggs) and doctor-advised supplements help.",
+    "cta": "Send this to every new parent you know.",
+    "sourceUrl": "https://www.downtoearth.org.in/news/health/anaemia-in-women-and-children-on-the-rise-assam-fares-worst-nfhs-5-80357",
+    "tags": [
+      "Health",
+      "Children",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "GOING THE WRONG WAY",
+        "title": "Anaemia, then and now",
+        "stats": [
+          {
+            "label": "Children 6-59 months, 2015-16",
+            "value": "58.6%",
+            "num": 58.6
+          },
+          {
+            "label": "Children 6-59 months, 2019-21",
+            "value": "67.1%",
+            "num": 67.1,
+            "hi": true
+          },
+          {
+            "label": "Women 15-49, 2019-21",
+            "value": "57%",
+            "num": 57
+          }
+        ]
+      },
+      {
+        "label": "WHY IT MATTERS",
+        "title": "What anaemia does",
+        "points": [
+          "Constant tiredness and weakness",
+          "Slower learning and growth in children",
+          "Higher risks during pregnancy"
+        ]
+      },
+      {
+        "label": "WHAT TO DO",
+        "title": "Simple steps for families",
+        "points": [
+          "Get a haemoglobin test; it costs little",
+          "Iron-rich food: greens, pulses, jaggery, eggs",
+          "Supplements only on a doctor's advice"
+        ]
+      }
+    ],
+    "labFlag": "HIGH"
+  },
+  {
+    "id": "cancer-drug-margin",
+    "format": "number",
+    "lang": "en",
+    "date": "12 Oct",
+    "value": "30%",
+    "caption": "is the new cap on trade margins for cancer drugs, after a Supreme Court push.",
+    "note": "The court asked: why only cancer drugs?",
+    "source": "Bar & Bench, 12 Oct; The Hindu, 13 Oct 2026",
+    "captionHeadline": "Someone made ₹20,000 on a ₹5,000 heart stent. Now the Supreme Court is asking who.",
+    "summary": "The Centre told the Supreme Court it has capped trade margins on anti-cancer drugs at 30% of MRP. The court asked why the cap covers only cancer drugs. The Hindu reported mark-ups of up to 1,000% on some cancer drugs, and a made-in-India cardiac stent costing about ₹5,000 sold for over ₹25,000.",
+    "forYou": "Cancer medicines should get cheaper. If the court widens it, everyday medicines could follow. Always compare MRP and ask for generics.",
+    "cta": "Send this to anyone with a parent on heart or cancer medicines. They're paying for this.",
+    "sourceUrl": "https://www.barandbench.com/news/centre-caps-trade-margin-for-cancer-drugs-at-30-after-supreme-court-rap",
+    "tags": [
+      "Medicines",
+      "SupremeCourt",
+      "Health"
+    ],
+    "slides": [
+      {
+        "label": "THE MARK-UP",
+        "title": "What patients were paying",
+        "stats": [
+          {
+            "label": "Cardiac stent: cost",
+            "value": "₹5,000",
+            "num": 5000
+          },
+          {
+            "label": "Cardiac stent: sold at",
+            "value": "₹25,000+",
+            "num": 25000,
+            "hi": true
+          }
+        ],
+        "statsNote": "Example reported by The Hindu"
+      },
+      {
+        "label": "THE NEW RULE",
+        "title": "Cancer drugs: margin capped at 30%",
+        "points": [
+          "Trade margin limited to 30% of MRP",
+          "Some cancer drug mark-ups reportedly reached 1,000%",
+          "Applies to anti-cancer drugs only, for now"
+        ]
+      },
+      {
+        "label": "WHAT'S NEXT",
+        "title": "\"Why only cancer drugs?\"",
+        "body": "The Supreme Court questioned why the cap should not cover all medicines. Everyday drugs could be next."
+      }
+    ],
+    "coverHook": "A ₹5,000 stent. A ₹25,000 bill. Where did the other ₹20,000 go?",
+    "coverOld": "₹5,000",
+    "coverBig": "₹25,000",
+    "style": "exposed"
+  },
+  {
+    "id": "mental-health-gap",
+    "format": "number",
+    "lang": "en",
+    "date": "Mental health",
+    "value": "83%",
+    "caption": "of Indians with a mental health condition get no treatment.",
+    "note": "India has under 0.75 psychiatrists per lakh people.",
+    "source": "National Mental Health Survey, via Insights IAS, 13 Oct 2026",
+    "captionHeadline": "8 in 10 Indians with a mental illness get no treatment. And India has 4x fewer psychiatrists than the WHO benchmark.",
+    "summary": "India's National Mental Health Survey puts the treatment gap at 83%, rising to 85.2% for major depression. India has fewer than 0.75 psychiatrists per 1 lakh people; the WHO benchmark is at least 3. The free government helpline Tele-MANAS (14416) has taken about 47.75 lakh calls in four years.",
+    "forYou": "Free, 24x7 support in many languages: call Tele-MANAS on 14416.",
+    "cta": "Save 14416. Send it to one person you check on. That's it.",
+    "sourceUrl": "https://www.insightsonindia.com/2026/10/13/upsc-current-affairs-13-october-2026/",
+    "tags": [
+      "MentalHealth",
+      "TeleMANAS",
+      "Health"
+    ],
+    "slides": [
+      {
+        "label": "THE GAP",
+        "title": "Most people never get help",
+        "stats": [
+          {
+            "label": "Overall treatment gap",
+            "value": "83%",
+            "num": 83
+          },
+          {
+            "label": "Major depression",
+            "value": "85.2%",
+            "num": 85.2,
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "THE SHORTAGE",
+        "title": "Psychiatrists per 1 lakh people",
+        "stats": [
+          {
+            "label": "India",
+            "value": "<0.75",
+            "num": 0.75,
+            "hi": true
+          },
+          {
+            "label": "WHO benchmark",
+            "value": "3",
+            "num": 3
+          }
+        ]
+      },
+      {
+        "label": "SAVE THIS NUMBER",
+        "title": "Free help, any time: 14416",
+        "points": [
+          "Tele-MANAS: free, 24x7 government helpline",
+          "Taken about 47.75 lakh calls in four years",
+          "73% of callers were aged 18 to 45"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Someone needs this today",
+        "body": "Save 14416 and share it. You never know who is struggling."
+      }
+    ],
+    "coverHook": "8 in 10 Indians with a mental illness get no treatment at all."
+  },
+  {
+    "id": "lpg-aadhaar",
+    "format": "alert",
+    "lang": "en",
+    "place": "LPG households",
+    "headline": "Aadhaar check needed",
+    "time": "Since 1 Oct",
+    "note": "No biometric check, no subsidised cylinder booking.",
+    "source": "All India Radio News, 19 Sep 2026",
+    "captionHeadline": "One missing fingerprint can now block your subsidised gas cylinder. 27 crore consumers have already done the check. Has your home?",
+    "summary": "From 1 October, biometric Aadhaar authentication is mandatory to book domestic LPG refills at the subsidised price. 27.43 crore consumers have already done it and need to do nothing more. The government says it is to stop diversion of home cylinders and remove fake or duplicate connections.",
+    "forYou": "Not sure if you did it? Ask your delivery person, visit your distributor, or check your gas company's app.",
+    "cta": "Send this to whoever books the cylinder at home. Today.",
+    "sourceUrl": "https://newsonair.gov.in/biometric-aadhaar-authentication-mandatory-for-subsidised-lpg-refills-from-october-1/",
+    "tags": [
+      "LPG",
+      "Aadhaar",
+      "GasCylinder"
+    ],
+    "slides": [
+      {
+        "label": "THE RULE",
+        "title": "Fingerprint first, subsidy after",
+        "points": [
+          "Applies to domestic LPG refills at the subsidised price",
+          "Biometric Aadhaar authentication is now mandatory",
+          "Already authenticated once? Nothing more to do"
+        ]
+      },
+      {
+        "label": "HOW TO DO IT",
+        "title": "Three ways, all free",
+        "points": [
+          "When the cylinder is delivered, with the delivery person",
+          "At your gas distributor's showroom",
+          "On your oil company's mobile app"
+        ]
+      },
+      {
+        "label": "BY THE NUMBERS",
+        "title": "Most homes are already done",
+        "stats": [
+          {
+            "label": "Consumers already authenticated",
+            "value": "27.43 cr",
+            "hi": true
+          }
+        ],
+        "statsNote": "Source: All India Radio News"
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Your parents need this",
+        "body": "Forward it to the family group before their next booking."
+      }
+    ],
+    "style": "extra",
+    "coverHook": "One missing fingerprint can block your gas cylinder booking."
+  },
+  {
+    "id": "whatsapp-not-paid",
+    "format": "myth",
+    "lang": "en",
+    "date": "Fact check",
+    "claim": "WhatsApp is now charging money for messages from October.",
+    "verdict": "MISSING CONTEXT",
+    "evidence": "Only businesses on the WhatsApp Business Platform pay. Your chats stay free.",
+    "source": "Meta pricing change, via Sunday Guardian, 1 Oct 2026",
+    "captionHeadline": "Someone in your family group will forward \"WhatsApp is now paid\" this week. Here's the truth before they do.",
+    "summary": "Meta's new India pricing applies to the WhatsApp Business Platform, which companies use to send bulk messages like order and delivery updates. Each business number gets 1,000 free customer-service replies a month, then ₹0.115 per message plus GST. Ordinary WhatsApp and the WhatsApp Business app are not affected.",
+    "forYou": "Your personal chats and family groups cost nothing extra. If you run a big brand that sends bulk updates, check your bill.",
+    "cta": "Send this to the family group first. Be the one who knew.",
+    "sourceUrl": "https://sundayguardianlive.com/trending/what-changes-from-october-1-2026-check-major-new-rules-on-lpg-subsidy-whatsapp-business-pricing-sbi-atm-charges-upi-payments-tds-rules-immigration-visa-fee-hike-and-more-295963/",
+    "tags": [
+      "WhatsApp",
+      "FactCheck",
+      "Meta"
+    ],
+    "slides": [
+      {
+        "label": "WHO PAYS",
+        "title": "Big business accounts, not you",
+        "points": [
+          "Companies using the WhatsApp Business Platform",
+          "Typically bulk order, delivery and support messages",
+          "Not the normal WhatsApp app",
+          "Not small shops using the WhatsApp Business app"
+        ]
+      },
+      {
+        "label": "THE NUMBERS",
+        "title": "What businesses are charged",
+        "stats": [
+          {
+            "label": "Free support replies a month, per number",
+            "value": "1,000",
+            "hi": true
+          },
+          {
+            "label": "After that, per message (+GST)",
+            "value": "₹0.115"
+          }
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Stop the forward",
+        "body": "Send this to the group where \"WhatsApp is now paid\" is doing the rounds."
+      }
+    ],
+    "coverHook": "Your family group will forward this half-truth this week."
+  },
+  {
+    "id": "sbi-atm-limit",
+    "format": "number",
+    "lang": "en",
+    "date": "Since 1 Oct",
+    "value": "5",
+    "caption": "free other-bank ATM uses a month for SBI salary accounts. It used to be 10.",
+    "note": "After that: ₹23 + GST per cash withdrawal.",
+    "source": "Outlook Money; Sunday Guardian, Oct 2026",
+    "captionHeadline": "SBI just halved something millions of salaried people use every month. Swipe before your next ATM visit.",
+    "summary": "From 1 October, SBI Salary Package account holders get 5 free transactions a month at other banks' ATMs, down from 10. Balance checks count too. After the limit, each cash withdrawal costs ₹23 plus GST, and each non-cash transaction ₹11 plus GST. SBI's own ATMs are unchanged.",
+    "forYou": "Use SBI ATMs where you can, and stop checking your balance at other banks' ATMs. Use the app instead.",
+    "cta": "Tag the colleague who gets paid in SBI. They'll thank you on the 1st.",
+    "sourceUrl": "https://www.outlookmoney.com/news/new-money-rules-from-october-2026-key-changes-to-know",
+    "tags": [
+      "SBI",
+      "ATM",
+      "Banking"
+    ],
+    "slides": [
+      {
+        "label": "WHAT CHANGED",
+        "title": "Free other-bank ATM uses cut from 10 to 5",
+        "stats": [
+          {
+            "label": "Before 1 Oct",
+            "value": "10",
+            "num": 10
+          },
+          {
+            "label": "Now",
+            "value": "5",
+            "num": 5,
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "THE CHARGES",
+        "title": "What you pay after the limit",
+        "stats": [
+          {
+            "label": "Each cash withdrawal",
+            "value": "₹23 + GST",
+            "hi": true
+          },
+          {
+            "label": "Each balance check or other",
+            "value": "₹11 + GST"
+          }
+        ]
+      },
+      {
+        "label": "SAVE MONEY",
+        "title": "Easy ways to avoid the fee",
+        "points": [
+          "Withdraw from SBI ATMs, which are unchanged",
+          "Check your balance on the app, not at an ATM",
+          "Take out cash in fewer, bigger withdrawals"
+        ]
+      }
+    ],
+    "style": "swiss",
+    "coverHook": "SBI just halved something you use every month."
+  },
+  {
+    "id": "imf-india-7",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "value": "7%",
+    "caption": "is how fast the IMF now expects India's economy to grow in 2026.",
+    "note": "China: 4.5%. World: 3.1%.",
+    "source": "IMF World Economic Outlook, via Business Today, 13 Oct 2026",
+    "captionHeadline": "The IMF says India will grow over 1.5x faster than China in 2026. While the world slows to 3.1%.",
+    "summary": "The IMF's October World Economic Outlook projects India's growth at 7% in 2026 and 7% in 2027, an upgrade from its earlier forecast. It expects world growth of 3.1% in 2026 and China at 4.5%. The IMF cited \"resilient domestic demand and robust services activity\".",
+    "forYou": "Strong growth usually means more hiring. But prices and EMIs are rising too, so watch both.",
+    "cta": "Send this to the friend who says India is going nowhere.",
+    "sourceUrl": "https://www.businesstoday.in/latest/economy/story/imf-raises-indias-growth-forecast-to-7-for-2026-upgrades-outlook-by-60-bps-561120-2026-10-13",
+    "tags": [
+      "IMF",
+      "Economy",
+      "GDP"
+    ],
+    "slides": [
+      {
+        "label": "THE RACE",
+        "title": "2026 growth forecasts",
+        "stats": [
+          {
+            "label": "India",
+            "value": "7%",
+            "num": 7,
+            "hi": true
+          },
+          {
+            "label": "China",
+            "value": "4.5%",
+            "num": 4.5
+          },
+          {
+            "label": "World",
+            "value": "3.1%",
+            "num": 3.1
+          }
+        ]
+      },
+      {
+        "label": "WHY",
+        "title": "What the IMF credits",
+        "points": [
+          "Resilient domestic demand",
+          "Robust services activity",
+          "Stronger-than-expected momentum"
+        ]
+      },
+      {
+        "label": "THE CATCH",
+        "title": "Growth up, but so are prices",
+        "points": [
+          "RBI raised rates on 7 October",
+          "Oil is above $100 a barrel",
+          "The rupee is above ₹95 to the dollar"
+        ]
+      }
+    ],
+    "coverHook": "The IMF says India will grow 1.5x faster than China."
+  },
+  {
+    "id": "cpi-two-year-high",
+    "format": "number",
+    "lang": "en",
+    "date": "September",
+    "value": "5.5%",
+    "caption": "retail inflation in September, the highest in two years.",
+    "note": "Up from about 4.8% in August. Food and fuel drove it.",
+    "source": "The Hindu, via LegacyIAS, 13 Oct 2026",
+    "captionHeadline": "Your money lost value faster in September than in any month in two years. Here's what's eating it.",
+    "summary": "Retail inflation rose to 5.5% in September from about 4.8% in August, the highest since October 2024, driven by food and fuel. It is still below the RBI's 6% upper limit. On 7 October the RBI raised its repo rate to 5.5%.",
+    "forYou": "Your monthly budget is shrinking. Groceries and fuel are the biggest culprits.",
+    "cta": "Send this to whoever runs the household budget. They've already felt it.",
+    "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
+    "tags": [
+      "Inflation",
+      "Prices",
+      "MoneyNews"
+    ],
+    "slides": [
+      {
+        "label": "THE JUMP",
+        "title": "Inflation in one month",
+        "stats": [
+          {
+            "label": "August",
+            "value": "4.8%",
+            "num": 4.8
+          },
+          {
+            "label": "September",
+            "value": "5.5%",
+            "num": 5.5,
+            "hi": true
+          },
+          {
+            "label": "RBI upper limit",
+            "value": "6%",
+            "num": 6
+          }
+        ]
+      },
+      {
+        "label": "WHAT'S DRIVING IT",
+        "title": "Food and fuel",
+        "points": [
+          "Food prices rising",
+          "Petrol above ₹100 in most metros",
+          "Oil above $100 a barrel"
+        ]
+      },
+      {
+        "label": "WHAT IT MEANS",
+        "title": "The squeeze from both sides",
+        "points": [
+          "Your money buys less each month",
+          "Loans got costlier after the RBI's 7 Oct hike"
+        ]
+      }
+    ],
+    "coverHook": "Your money is losing value faster than at any point in 2 years."
+  },
+  {
+    "id": "pune-no-digging",
+    "format": "number",
+    "lang": "en",
+    "date": "13 Oct",
+    "place": "Pune",
+    "value": "5",
+    "unit": "yrs",
+    "caption": "of no new digging on Pune's upgraded cycling-race roads, says PMC.",
+    "note": "All utility trenching must finish by 31 Oct 2026.",
+    "source": "PMC, via PuneNow, 13 Oct 2026",
+    "captionHeadline": "Pune just made a promise Indian cities rarely make: no digging on these roads for 5 years, with penal action if anyone does.",
+    "summary": "PMC has told utility companies to finish all trenching on the cycling circuit by 31 October 2026, ahead of the Pune Grand Tour international cycling race in January 2027. After that, no new trenching permissions for five years. Firms that damage the upgraded roads face penal and even criminal action.",
+    "cta": "Tag a Punekar. Screenshot this for 2031.",
+    "sourceUrl": "https://www.punenow.com/no-road-digging-in-pune-for-5-years-as-pmc-prepares-for-international-cycling-event/",
+    "tags": [
+      "Pune",
+      "PMC",
+      "PuneRoads"
+    ],
+    "slides": [
+      {
+        "label": "WHAT PMC DECIDED",
+        "title": "Dig now, or not for 5 years",
+        "points": [
+          "All utility trenching on the circuit must end by 31 Oct 2026",
+          "No extensions, no new permissions after that",
+          "No new trenching for 5 years after the race",
+          "Damage can bring penal and even criminal action"
+        ]
+      },
+      {
+        "label": "WHY",
+        "title": "An international cycling race",
+        "body": "The roads are being upgraded for the Pune Grand Tour International Cycling Competition in January 2027. PMC wants them to stay intact after the work is done."
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Smooth roads in Pune. For real?",
+        "body": "Tag a Punekar and tell us which road you want fixed next."
+      }
+    ],
+    "coverHook": "Pune just made a promise Indian cities rarely make."
+  },
+  {
+    "id": "sip-record",
+    "format": "tracker",
+    "lang": "en",
+    "date": "September",
+    "headline": "SIP inflows hit another record",
+    "then": {
+      "label": "August",
+      "value": "₹32,297 cr"
+    },
+    "now": {
+      "label": "September",
+      "value": "₹32,490 cr"
+    },
+    "source": "The Hindu, via LegacyIAS; Angel One, Oct 2026",
+    "captionHeadline": "Indians now put ₹32,490 crore into SIPs every month. That's ₹1,083 crore a day, quietly.",
+    "summary": "Monthly SIP contributions hit a record ₹32,490 crore in September, up from ₹32,297 crore in August. It was the 67th month in a row of inflows into equity funds. SIP assets now total ₹17.86 lakh crore.",
+    "forYou": "Markets can fall, but regular investors keep buying. Check your own SIP is still running.",
+    "cta": "Send this to the friend still waiting for \"the right time\" to start.",
+    "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
+    "tags": [
+      "SIP",
+      "MutualFunds",
+      "Investing"
+    ],
+    "slides": [
+      {
+        "label": "THE NUMBERS",
+        "title": "India's monthly investing habit",
+        "stats": [
+          {
+            "label": "September SIP inflow",
+            "value": "₹32,490 cr",
+            "hi": true
+          },
+          {
+            "label": "Total SIP assets",
+            "value": "₹17.86 lakh cr"
+          },
+          {
+            "label": "Months of equity inflows in a row",
+            "value": "67"
+          }
+        ]
+      },
+      {
+        "label": "WHY IT MATTERS",
+        "title": "Retail money is steadying the market",
+        "points": [
+          "Foreign investors sold ₹1,708 cr of shares on 12 Oct",
+          "Domestic institutions bought ₹3,045 cr the same day"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Start-next-month friends",
+        "body": "Send this to the one who has been \"about to start a SIP\" for a year."
+      }
+    ],
+    "coverHook": "Indians quietly invest ₹1,083 crore. Every single day.",
+    "coverBig": "₹1,083 CR"
+  },
+  {
+    "id": "living-planet-73",
+    "format": "number",
+    "lang": "en",
+    "date": "Living Planet",
+    "value": "73%",
+    "caption": "average fall in monitored wildlife populations since 1970.",
+    "note": "Latin America: 95%. Africa: 80%.",
+    "source": "Living Planet Index, via The Hindu, 13 Oct 2026",
+    "captionHeadline": "In a single human lifetime, the world's wildlife populations have shrunk 73% on average. In Latin America, 95%.",
+    "summary": "The Living Planet Index shows monitored wildlife populations have fallen by an average of 73% since 1970. Latin America and the Caribbean show a 95% average decline, Africa 80% and Europe 23%. About half of the 35,803 populations tracked are declining.",
+    "forYou": "The species we grew up seeing are disappearing within a single human lifetime.",
+    "cta": "Send this to one person who still thinks it's exaggerated.",
+    "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
+    "tags": [
+      "Wildlife",
+      "Climate",
+      "Environment"
+    ],
+    "slides": [
+      {
+        "label": "BY REGION",
+        "title": "Average decline since 1970",
+        "stats": [
+          {
+            "label": "Latin America and Caribbean",
+            "value": "95%",
+            "num": 95,
+            "hi": true
+          },
+          {
+            "label": "Africa",
+            "value": "80%",
+            "num": 80
+          },
+          {
+            "label": "Europe",
+            "value": "23%",
+            "num": 23
+          }
+        ]
+      },
+      {
+        "label": "THE NUANCE",
+        "title": "Not every population is falling",
+        "points": [
+          "35,803 wildlife populations tracked",
+          "About half are declining",
+          "The 73% is an average of the change"
+        ]
+      }
+    ],
+    "coverHook": "In one lifetime, wildlife shrank by 73%."
+  },
+  {
+    "id": "himalaya-warming",
+    "format": "number",
+    "lang": "en",
+    "date": "Himalayas",
+    "value": "2x",
+    "caption": "Himalayan peaks are warming nearly twice as fast as the global average.",
+    "note": "Ice loss in the region has doubled since 2000.",
+    "source": "ICIMOD, via The Hindu, 13 Oct 2026",
+    "captionHeadline": "The Himalayas are heating twice as fast as the rest of the planet. The Ganga, Brahmaputra and Indus start there.",
+    "summary": "High mountains are warming by about 0.3°C per decade, nearly twice the global average. ICIMOD reports ice loss in the Hindu Kush Himalaya has doubled since 2000. In Nepal, a 600-metre ice-and-rock collapse sent a debris flood 170 km down the Bhote Koshi river.",
+    "forYou": "Himalayan glaciers feed the Ganga, Brahmaputra and Indus. Faster melting means more floods now and less water later.",
+    "cta": "Send this to everyone planning a mountain trip this winter.",
+    "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
+    "tags": [
+      "Himalayas",
+      "Climate",
+      "Glaciers"
+    ],
+    "slides": [
+      {
+        "label": "THE NUMBERS",
+        "title": "How fast the mountains are changing",
+        "stats": [
+          {
+            "label": "Warming per decade",
+            "value": "0.3°C",
+            "hi": true
+          },
+          {
+            "label": "Ice loss rate vs 2000",
+            "value": "2x"
+          },
+          {
+            "label": "Nepal debris flood distance",
+            "value": "170 km"
+          }
+        ]
+      },
+      {
+        "label": "WHY INDIA CARES",
+        "title": "Our rivers start here",
+        "points": [
+          "Glaciers feed the Ganga, Brahmaputra and Indus",
+          "Faster melt raises flood risk now",
+          "And water shortage risk later"
+        ]
+      }
+    ],
+    "coverHook": "Your river water starts on mountains heating 2x faster."
+  },
+  {
+    "id": "ageing-india",
+    "format": "number",
+    "lang": "en",
+    "date": "By 2050",
+    "value": "347M",
+    "caption": "Indians will be over 60 by 2050, up from 149 million in 2022.",
+    "note": "About 14.6 crore people already give unpaid, untrained care.",
+    "source": "NITI Aayog estimates, via The Hindu, 13 Oct 2026",
+    "captionHeadline": "By 2050, India will have 347 million people over 60, more than double 2022. And 14.6 crore already care for someone, unpaid and untrained.",
+    "summary": "India's population aged 60 and above is projected to rise from 149 million in 2022 to 347 million by 2050. NITI Aayog estimates about 146 million people already provide untrained, unpaid care. Women spend 299 minutes a day on unpaid domestic and care work, against 97 minutes for men.",
+    "forYou": "Planning for your parents' care, and your own old age, starts now.",
+    "cta": "Send this to your siblings. This conversation is coming.",
+    "sourceUrl": "https://www.legacyias.com/the-hindu-upsc-news-analysis-for-13-october-2026/",
+    "tags": [
+      "Ageing",
+      "Family",
+      "India"
+    ],
+    "slides": [
+      {
+        "label": "THE SHIFT",
+        "title": "Indians aged 60+",
+        "stats": [
+          {
+            "label": "2022",
+            "value": "149M",
+            "num": 149
+          },
+          {
+            "label": "2050 (projected)",
+            "value": "347M",
+            "num": 347,
+            "hi": true
+          }
+        ]
+      },
+      {
+        "label": "WHO CARES",
+        "title": "Unpaid care, minutes a day",
+        "stats": [
+          {
+            "label": "Women",
+            "value": "299 min",
+            "num": 299,
+            "hi": true
+          },
+          {
+            "label": "Men",
+            "value": "97 min",
+            "num": 97
+          }
+        ]
+      },
+      {
+        "label": "THE PLAN",
+        "title": "Training is just starting",
+        "points": [
+          "Budget plans to train 1.5 lakh caregivers",
+          "About 14.6 crore people give unpaid, untrained care today"
+        ]
+      }
+    ],
+    "coverHook": "India's over-60s will more than double. Who's caring for them?"
+  },
+  {
+    "id": "black-sea-ship-sunk",
+    "format": "alert",
+    "lang": "en",
+    "place": "Black Sea",
+    "headline": "Ship sunk",
+    "time": "13 Oct",
+    "note": "Drone attacks hit two ships off Bulgaria. At least 11 missing.",
+    "source": "Euronews, 13 Oct 2026",
+    "captionHeadline": "Drones hit two ships off Bulgaria. One sank. At least 11 people are missing.",
+    "summary": "Drone attacks struck two ships in the Black Sea off the coast of Bulgaria on 13 October. One ship sank and at least 11 people are missing, Euronews reported. The same day, Russian strikes hit Kyiv and a university in Rivne.",
+    "forYou": "Attacks on shipping keep oil and freight costs high, which feeds into fuel and import prices in India.",
+    "cta": "Follow @postr.news for the world stories that hit your wallet.",
+    "sourceUrl": "https://www.euronews.com/2026/10/13",
+    "tags": [
+      "BlackSea",
+      "WorldNews",
+      "Shipping"
+    ],
+    "slides": [
+      {
+        "label": "WHAT HAPPENED",
+        "title": "Two ships, one sunk",
+        "points": [
+          "Drone attacks off the Bulgarian coast",
+          "One vessel sank",
+          "At least 11 people missing"
+        ]
+      },
+      {
+        "label": "SAME DAY",
+        "title": "A violent day at sea",
+        "points": [
+          "Ballistic missiles hit Kyiv and a university in Rivne",
+          "Two Indian-crewed tankers hit in Hormuz two days earlier"
+        ]
+      },
+      {
+        "label": "WHY IT MATTERS",
+        "title": "Attacks at sea reach your wallet",
+        "body": "Shipping attacks push up oil and freight costs. India imports most of its crude, so fuel and goods prices feel it."
+      }
+    ],
+    "coverHook": "Drones sank a ship. 11 people are missing."
+  }
+]

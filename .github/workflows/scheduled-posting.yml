@@ -1,11 +1,10 @@
 name: Scheduled posting
-# Every 90 minutes from about 8 am to 11 pm India time (about 11 posts a day) while the account is new.
+# Every 3 hours, about 7:37 am to 10:37 pm India time (6 slots a day) while Instagram's restriction settles.
 # Off the busy :00/:30 minutes, which GitHub often skips.
 # Catch-up double posting is off (CATCH_UP=0) while the account is new.
 on:
   schedule:
-    - cron: '37 2,5,8,11,14,17 * * *'
-    - cron: '7 4,7,10,13,16 * * *'
+    - cron: '7 2,5,8,11,14,17 * * *'
   workflow_dispatch:
 permissions:
   contents: write
