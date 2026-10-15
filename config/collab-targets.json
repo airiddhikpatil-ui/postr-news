@@ -1,5 +1,355 @@
 {
   "_note": "Verified via Meta business discovery. Set approved: true on pages Postr may invite as collaborators.",
-  "checkedAt": "2026-10-14T06:34:31.296Z",
-  "targets": []
+  "checkedAt": "2026-10-15T13:01:49.916Z",
+  "targets": [
+    {
+      "username": "ghantaa",
+      "name": "ghantaa",
+      "followers": 8253007,
+      "posts": 8626,
+      "topics": [
+        "world"
+      ],
+      "approved": false,
+      "bio": "Turning scrolls into smiles, facts & chaos | Daily dose of memes & real talk"
+    },
+    {
+      "username": "thelallantop",
+      "name": "The Lallantop",
+      "followers": 4560755,
+      "posts": 66680,
+      "topics": [
+        "world",
+        "money",
+        "city"
+      ],
+      "approved": false,
+      "bio": "हिंदी वेबसाइट, जिसके तेवर और जुबान, सब कुछ होगा 'भदेस इन योर फेस'. \nFor ad Sales: sales@lallantop.com"
+    },
+    {
+      "username": "crictracker",
+      "name": "CricTracker",
+      "followers": 3555661,
+      "posts": 153016,
+      "topics": [
+        "cricket"
+      ],
+      "approved": false,
+      "bio": "Giving CRICKET fans an even closer look at the game.\nFor advertisement queries, mail us at contact@crictracker.com"
+    },
+    {
+      "username": "financewithsharan",
+      "name": "Sharan Hegde",
+      "followers": 2933207,
+      "posts": 1234,
+      "topics": [
+        "money"
+      ],
+      "approved": false,
+      "bio": "Founder & CEO @onepercentclub\nSEBI RIA: INA000018896\n-\n1% Club App (500k+ installs) ⬇️"
+    },
+    {
+      "username": "officialhumansofbombay",
+      "name": "Humans of Bombay",
+      "followers": 2720960,
+      "posts": 7273,
+      "topics": [
+        "city"
+      ],
+      "cities": [
+        "Mumbai"
+      ],
+      "approved": false,
+      "bio": "Cataloging the beat of humanity... one story at a time!\n🤝 Collabs: teambusiness@humansofbombay.in\n@humansofbombayorigin"
+    },
+    {
+      "username": "scoopwhoop",
+      "name": "ScoopWhoop",
+      "followers": 2385066,
+      "posts": 24306,
+      "topics": [
+        "world",
+        "city"
+      ],
+      "approved": false,
+      "bio": "Backbenchers with backbone\nBusiness enquiries & collabs : poonamshah@wldd.in"
+    },
+    {
+      "username": "groww_official",
+      "name": "Groww.in",
+      "followers": 1594377,
+      "posts": 4572,
+      "topics": [
+        "money",
+        "markets"
+      ],
+      "approved": false,
+      "bio": "The choice of over 1 crore Indians\n⠀\nSEBI Reg Name: Groww Invest Tech Pvt Ltd | SEBI Reg No: INZ000301838 | RA No: INH20"
+    },
+    {
+      "username": "labourlawadvisor",
+      "name": "Labour Law Advisor",
+      "followers": 1308076,
+      "posts": 3539,
+      "topics": [
+        "money",
+        "scam"
+      ],
+      "approved": false,
+      "bio": "Making India Jagruk 🇮🇳"
+    },
+    {
+      "username": "ca_rachanaranade",
+      "name": "CA Rachana Phadke Ranade",
+      "followers": 1228200,
+      "posts": 1088,
+      "topics": [
+        "money"
+      ],
+      "approved": false,
+      "bio": "Stock Market & Finance Educator \n🎯 9.5M+ Strong Community \n📧 For Collabs: brands@rachanaranade.com\n⬇️ Learn Before You"
+    },
+    {
+      "username": "pranjalkamra",
+      "name": "Pranjal Kamra",
+      "followers": 910057,
+      "posts": 727,
+      "topics": [
+        "money"
+      ],
+      "approved": false,
+      "bio": "Finology is the #FinancialFreedom Company.\n👉10 minute Financial Planner\n👉Easy Stock Screener\n👉30 Stocks For long Term"
+    },
+    {
+      "username": "thestockmarketindia",
+      "name": "The Stock Market India",
+      "followers": 751887,
+      "posts": 6571,
+      "topics": [
+        "markets"
+      ],
+      "approved": false,
+      "bio": "📲 News,Infographics,Quotes,Memes,Facts.\n💲 It Takes 0$ To Follow Us.\n👨🏻‍💻 Owner - @sankalp_padekar"
+    },
+    {
+      "username": "sportskeeda",
+      "name": "Sportskeeda",
+      "followers": 629757,
+      "posts": 77292,
+      "topics": [
+        "cricket",
+        "sport"
+      ],
+      "approved": false,
+      "bio": "For the hardcore sports fan.\n@sportskeedacricket \n@sportskeeda_football \n@sportskeeda_tennis \n@sportskeedapitstop"
+    },
+    {
+      "username": "hyderabaddiaries",
+      "name": "Hyderabad Diaries",
+      "followers": 527438,
+      "posts": 839,
+      "topics": [
+        "city"
+      ],
+      "cities": [
+        "Hyderabad"
+      ],
+      "approved": false,
+      "bio": "Bringing you Hyderabadi Goodness!\n2.5 Million+ Subscribers on YouTube\nEmail: teamhd@kalakaaar.com"
+    },
+    {
+      "username": "zerodhaonline",
+      "name": "Zerodha",
+      "followers": 327933,
+      "posts": 1179,
+      "topics": [
+        "money",
+        "markets"
+      ],
+      "approved": false,
+      "bio": "Welcome to your friendly neighbourhood brokerage. \nZerodha Broking Limited | SEBI Registration No.: INZ000031633"
+    },
+    {
+      "username": "hyderabad_times",
+      "name": "Hyderabad Times",
+      "followers": 143171,
+      "posts": 30240,
+      "topics": [
+        "city"
+      ],
+      "cities": [
+        "Hyderabad"
+      ],
+      "approved": false,
+      "bio": "The official handle of Hyderabad Times \nYour one stop destination for all things trending in the city!\n|Fashion| |Movies"
+    },
+    {
+      "username": "delhigram",
+      "name": "Delhigram",
+      "followers": 99865,
+      "posts": 302,
+      "topics": [
+        "city"
+      ],
+      "cities": [
+        "Delhi NCR",
+        "Delhi"
+      ],
+      "approved": false,
+      "bio": "For enquiries mail at \nDelhigram@gmail.com"
+    },
+    {
+      "username": "mpowerminds",
+      "name": "Mpower",
+      "followers": 78792,
+      "posts": 2258,
+      "topics": [
+        "health"
+      ],
+      "approved": false,
+      "bio": "An Aditya Birla Education Trust initiative\n24x7 Mental Health Helpline ⬇️\n☎️1800 120 8200 50"
+    },
+    {
+      "username": "bangaloremirror",
+      "name": "Bangalore Mirror",
+      "followers": 45619,
+      "posts": 5625,
+      "topics": [
+        "city"
+      ],
+      "cities": [
+        "Bengaluru"
+      ],
+      "approved": false,
+      "bio": "We tell stories that matter to you.\nTag your best photos and stories with #BangaloreMirror"
+    },
+    {
+      "username": "punekars_",
+      "name": "PUNEKARS",
+      "followers": 28613,
+      "posts": 3272,
+      "topics": [
+        "city"
+      ],
+      "cities": [
+        "Pune"
+      ],
+      "approved": false,
+      "bio": "Aamhi Punekars | Official Page \n• Pune News • Local Stories • City Life\n• Daily Pune Updates | Reels & Trends\n📩 Ads | P"
+    },
+    {
+      "username": "jaipurbeats",
+      "name": "Dino Banjara",
+      "followers": 7623,
+      "posts": 94,
+      "topics": [
+        "city"
+      ],
+      "cities": [
+        "Jaipur"
+      ],
+      "approved": false,
+      "bio": "Managed & Founder by @dinobanjara \nIndia's Got Talent-2 (Semi Finalist)\n Musical Folk Sufi Fusion Band\nDino Banjara's Fu"
+    },
+    {
+      "username": "earthfocus",
+      "name": "Earth Focus",
+      "followers": 4497,
+      "posts": 14,
+      "topics": [
+        "planet"
+      ],
+      "approved": false,
+      "bio": "Your window into Earth—wildlife, nature, travel & untold stories."
+    },
+    {
+      "username": "techwiser.in",
+      "name": "Techwiser",
+      "followers": 2866,
+      "posts": 50,
+      "topics": [
+        "scam",
+        "tech"
+      ],
+      "approved": false,
+      "bio": "Designer Tech & Branding.🎨💻"
+    },
+    {
+      "username": "whatsupdelhi",
+      "name": "Whatsupdelhi - Explore Delhi's food & places for you",
+      "followers": 2537,
+      "posts": 1029,
+      "topics": [
+        "city"
+      ],
+      "cities": [
+        "Delhi NCR",
+        "Delhi"
+      ],
+      "approved": false,
+      "bio": "📍Delhi, India \n📩 DM: Collab | Invites| PR\n🔍 We manage community of finest Bloggers & Influencers of Delhi.\nUse #whats"
+    },
+    {
+      "username": "madraseye",
+      "name": "Karthik Krishnaswamy",
+      "followers": 1365,
+      "posts": 1532,
+      "topics": [
+        "city"
+      ],
+      "cities": [
+        "Chennai"
+      ],
+      "approved": false,
+      "bio": "Every shade of sodium vapour, and the occasional stab of daylight. Bangalore and elsewhere. Also found at @theotherkarth"
+    },
+    {
+      "username": "stockmarket.india",
+      "name": "stockmarket.india",
+      "followers": 1360,
+      "posts": 174,
+      "topics": [
+        "markets"
+      ],
+      "approved": false,
+      "bio": "📉 Stock market analysis  📈\n 📊Live market support📊\nIndian's no : 1 trading platform\nOpen free demat account :-"
+    },
+    {
+      "username": "finshotsdaily",
+      "name": "FinShotsDaily",
+      "followers": 10,
+      "posts": 3,
+      "topics": [
+        "money",
+        "business"
+      ],
+      "approved": false,
+      "bio": "Come here for daily shots of Finance!"
+    },
+    {
+      "username": "bengaluru_now",
+      "name": "Bengaluru Now",
+      "followers": 5,
+      "posts": 1,
+      "topics": [
+        "city"
+      ],
+      "cities": [
+        "Bengaluru"
+      ],
+      "approved": false,
+      "bio": "Your one stop destination for Bengaluru News"
+    },
+    {
+      "username": "thefinancebull",
+      "name": "Finance Bull",
+      "followers": 5,
+      "posts": 2,
+      "topics": [
+        "money"
+      ],
+      "approved": false,
+      "bio": "Helping you train your financial muscle."
+    }
+  ]
 }
