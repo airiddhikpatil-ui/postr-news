@@ -61,7 +61,20 @@ async function postNext(outDir, targets) {
   const { files, errors, style } = r0;
   if (errors.length) throw new Error(`${next.id} failed the brand rules: ${errors.join('; ')}`);
   const collaborators = targets.includes('instagram') ? pickCollaborators(next) : [];
-  const r = await publishCarousel(files, { facebookCaption: buildCaption(next, 'facebook'), instagramCaption: buildCaption(next, 'instagram'), targets, collaborators });
+  let r;
+  try {
+    r = await publishCarousel(files, { facebookCaption: buildCaption(next, 'facebook'), instagramCaption: buildCaption(next, 'instagram'), targets, collaborators });
+  } catch (e) {
+    // Instagram sometimes returns "we restrict certain activity" (2207051) even though the post went live.
+    // Check before treating it as a block; only a post that truly failed triggers the cooldown.
+    if (!/2207051|restrict certain activity/i.test(e.message)) throw e;
+    await sleep(20000);
+    const hook = String(next.captionHeadline || next.headline || '').replace(/\s+/g, ' ').trim();
+    const live = (await recentMedia()).find((m) => String(m.caption || '').replace(/\s+/g, ' ').trim().startsWith(hook));
+    if (!live) throw e;
+    note(`${next.id}: Instagram returned a restriction warning but the post is live (${live.permalink})`, 'warning');
+    r = { instagram: { permalink: live.permalink }, facebook: null, collaborators: [] };
+  }
   if (r.collabError) note(`${next.id}: collab invite to ${collaborators.join(', ')} failed (${r.collabError}); posted without collaborators`, 'warning');
   if (r.collaborators && r.collaborators.length) { logInvites(next, r.collaborators, r.instagram && r.instagram.permalink); note(`${next.id}: collab invites sent to ${r.collaborators.join(', ')}`); }
   posted.push({ id: next.id, style, at: new Date().toISOString(), instagram: r.instagram && r.instagram.permalink, facebook: r.facebook && r.facebook.permalink });
