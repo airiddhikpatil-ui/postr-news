@@ -88,7 +88,7 @@
     "captionHeadline": "220 medicine samples failed India's own quality tests last month. Paracetamol and BP pills are on the list.",
     "summary": "In its August 2026 alert, India's drug regulator CDSCO listed 220 samples as \"not of standard quality\". They include batches of paracetamol, the BP drug telmisartan, antibiotics like amoxicillin and azithromycin, and injections. One batch labelled Telma AM was flagged as \"purported to be spurious\": the company named on the label says it never made it. Failures apply to specific batches, not whole brands.",
     "forYou": "Don't stop prescribed medicine. Buy from licensed chemists, keep the bill, check the batch number against CDSCO's monthly list, and report anything odd to your doctor.",
-    "cta": "Send this to whoever buys medicines for your parents.",
+    "cta": "Jo ghar ki dawai laata hai, usse zaroor bhejo.",
     "sourceUrl": "https://thesouthfirst.com/health/fake-drugs-in-the-market-cdsco-flags-blood-pressure-drug-telma-am-spurious-220-medicine-batches-fail-tests/",
     "tags": [
       "Medicines",
@@ -127,7 +127,8 @@
         "title": "Your parents need this",
         "body": "Send it to whoever buys the family's medicines."
       }
-    ]
+    ],
+    "captionLang": "hinglish"
   },
   {
     "id": "undertrials-73",
@@ -224,7 +225,7 @@
     "captionHeadline": "81,275 court cases in India have been pending for more than 30 years. Some started before the people now fighting them were born.",
     "summary": "The Centre told the Rajya Sabha that 81,275 cases in district and subordinate courts are more than 30 years old. In the Supreme Court, 26 cases have been pending for over 30 years and 558 for over 20 years. As of 31 December 2025, 4.76 crore cases were pending in district courts and 63.66 lakh in High Courts.",
     "forYou": "If you go to court today, delays of years are normal. Mediation and Lok Adalats can settle many disputes far faster.",
-    "cta": "Send this to anyone stuck in a court case. They are not alone.",
+    "cta": "Jo court case mein phasa hai, usse bhejo. Woh akela nahi hai.",
     "sourceUrl": "https://www.barandbench.com/news/26-cases-pending-in-supreme-court-for-30-years-558-cases-for-20-years-centre-in-rajya-sabha",
     "tags": [
       "Courts",
@@ -276,7 +277,8 @@
     ],
     "calendarYear": "1996",
     "calendarLabel": "STILL PENDING",
-    "calendarCaption": "30+ YEARS · NO VERDICT"
+    "calendarCaption": "30+ YEARS · NO VERDICT",
+    "captionLang": "hinglish"
   },
   {
     "id": "road-deaths-3min",
@@ -366,7 +368,7 @@
     "captionHeadline": "In the 2024 Lok Sabha election, candidates with criminal cases were 3.5x more likely to win than clean ones. Across all parties.",
     "summary": "ADR's analysis of candidates' own sworn affidavits found that 251 of 543 MPs elected in 2024 (46%) declared criminal cases, and 170 (31%) declared serious ones. Candidates with declared cases had a 15.3% chance of winning, against 4.4% for those with clean records. The share has risen every election since 2009 (30%). These are pending cases the candidates declared, not convictions.",
     "forYou": "Every candidate's affidavit is public. Check yours on the ECI website or myneta.info before you vote.",
-    "cta": "Send this to the friend who says their vote doesn't matter.",
+    "cta": "Us dost ko bhejo jo bolta hai mere vote se kya farak padta hai.",
     "sourceUrl": "https://www.governancenow.com/news/regular-story/elections-2024-nearly-half-the-winners-have-declared-criminal-cases",
     "tags": [
       "Elections",
@@ -428,7 +430,8 @@
           "Every affidavit is public on the ECI website"
         ]
       }
-    ]
+    ],
+    "captionLang": "hinglish"
   },
   {
     "id": "anaemia-children",
@@ -508,7 +511,7 @@
     "captionHeadline": "Someone made ₹20,000 on a ₹5,000 heart stent. Now the Supreme Court is asking who.",
     "summary": "The Centre told the Supreme Court it has capped trade margins on anti-cancer drugs at 30% of MRP. The court asked why the cap covers only cancer drugs. The Hindu reported mark-ups of up to 1,000% on some cancer drugs, and a made-in-India cardiac stent costing about ₹5,000 sold for over ₹25,000.",
     "forYou": "Cancer medicines should get cheaper. If the court widens it, everyday medicines could follow. Always compare MRP and ask for generics.",
-    "cta": "Send this to anyone with a parent on heart or cancer medicines. They're paying for this.",
+    "cta": "Jiske ghar mein koi heart ya cancer ki dawai leta hai, usse bhejo.",
     "sourceUrl": "https://www.barandbench.com/news/centre-caps-trade-margin-for-cancer-drugs-at-30-after-supreme-court-rap",
     "tags": [
       "Medicines",
@@ -552,7 +555,8 @@
     "coverHook": "A ₹5,000 stent. A ₹25,000 bill. Where did the other ₹20,000 go?",
     "coverOld": "₹5,000",
     "coverBig": "₹25,000",
-    "style": "exposed"
+    "style": "exposed",
+    "captionLang": "hinglish"
   },
   {
     "id": "mental-health-gap",

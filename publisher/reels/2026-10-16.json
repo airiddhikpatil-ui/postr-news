@@ -1,0 +1,80 @@
+[
+  {
+    "id": "reel-failed-medicines",
+    "lang": "en",
+    "sourceShort": "Source: CDSCO alert, Aug 2026",
+    "scenes": [
+      {
+        "text": "Paracetamol. BP pills. Antibiotics.",
+        "ground": "ink",
+        "seconds": 2.5,
+        "size": 104
+      },
+      {
+        "text": "220 samples failed India's own drug tests.",
+        "ground": "signal",
+        "seconds": 2.8
+      },
+      {
+        "text": "One batch may be fake.",
+        "sub": "The company on the label says it never made it.",
+        "ground": "paper",
+        "seconds": 3.2
+      },
+      {
+        "text": "Don't stop your medicine. Do check the batch.",
+        "sub": "CDSCO publishes the list every month.",
+        "ground": "lime",
+        "seconds": 3.2
+      },
+      {
+        "text": "Jo ghar ki dawai laata hai, usse bhejo.",
+        "sub": "@postr.news · Full story in our posts",
+        "ground": "signal",
+        "seconds": 3
+      }
+    ],
+    "caption": "220 medicine samples failed India's own quality tests in August, including paracetamol, BP pills and antibiotics.\n\nCDSCO's August 2026 alert listed 220 samples as \"not of standard quality\"; one Telma AM batch was flagged as purportedly spurious. Failures are for specific batches, not whole brands. Never stop prescribed medicine on your own.\n\nSource: CDSCO monthly drug alert, via The South First\n\nJo ghar ki dawai laata hai, usse zaroor bhejo.\n\n#PostrNews #HiddenIndia #Medicines",
+    "sourceUrl": "https://thesouthfirst.com/health/fake-drugs-in-the-market-cdsco-flags-blood-pressure-drug-telma-am-spurious-220-medicine-batches-fail-tests/"
+  },
+  {
+    "id": "reel-undertrials",
+    "lang": "en",
+    "sourceShort": "Source: NCRB Prison Statistics 2024",
+    "scenes": [
+      {
+        "text": "3 in 4 people in Indian jails…",
+        "ground": "ink",
+        "seconds": 2.5
+      },
+      {
+        "text": "…have not been convicted of anything.",
+        "ground": "signal",
+        "seconds": 2.8
+      },
+      {
+        "text": "73% are undertrials, still waiting for a trial.",
+        "ground": "paper",
+        "seconds": 3
+      },
+      {
+        "text": "9,028 have waited more than 5 years.",
+        "ground": "lime",
+        "seconds": 2.8
+      },
+      {
+        "text": "Innocent until proven guilty?",
+        "ground": "blue",
+        "seconds": 2.2
+      },
+      {
+        "text": "Ye fact sabko pata hona chahiye. Share karo.",
+        "sub": "@postr.news · Full story in our posts",
+        "ground": "signal",
+        "seconds": 3
+      }
+    ],
+    "caption": "3 out of 4 people in Indian jails have not been convicted of any crime.\n\nPrison Statistics India 2024: about 73% of 5.11 lakh+ inmates are undertrials, still awaiting trial. 9,028 have been inside for more than 5 years. Delhi's jails run at 194.6% capacity.\n\nSource: NCRB Prison Statistics India 2024, via Drishti IAS\n\nYe fact sabko pata hona chahiye. Share karo.\n\n#PostrNews #HiddenIndia #Justice",
+    "sourceUrl": "https://www.drishtiias.com/daily-updates/daily-news-analysis/prison-statistics-india-report-2024/print_manually"
+  }
+]

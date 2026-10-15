@@ -1,0 +1,85 @@
+[
+  {
+    "id": "reel-unclaimed-money",
+    "lang": "en",
+    "sourceShort": "Source: Finance Ministry, Rajya Sabha",
+    "scenes": [
+      {
+        "text": "₹86,917 crore.",
+        "ground": "ink",
+        "seconds": 2.2
+      },
+      {
+        "text": "Nobody has claimed it.",
+        "ground": "signal",
+        "seconds": 2.2
+      },
+      {
+        "text": "It's money Indians forgot in old bank accounts.",
+        "sub": "Untouched for 10 years → moved to an RBI fund.",
+        "ground": "paper",
+        "seconds": 3.5
+      },
+      {
+        "text": "It still belongs to them. Or their families.",
+        "ground": "lime",
+        "seconds": 2.8
+      },
+      {
+        "text": "Search your parents' names on RBI's UDGAM portal.",
+        "ground": "blue",
+        "seconds": 3.2
+      },
+      {
+        "text": "Family group mein bhejo. Kisi ka paisa wait kar raha hai.",
+        "sub": "@postr.news · Full story in our posts",
+        "ground": "signal",
+        "seconds": 3
+      }
+    ],
+    "caption": "₹86,917 crore of Indians' money is lying unclaimed with the RBI. Some of it could be your family's.\n\nAs of 30 June 2026, unclaimed bank deposits in the RBI's Depositor Education and Awareness Fund stood at ₹86,917 crore (Finance Ministry, Rajya Sabha). Accounts untouched for 10 years move there, but the money stays payable to owners and heirs. Search on the RBI's UDGAM portal.\n\nSource: Finance Ministry reply in Rajya Sabha, Aug 2026\n\nFamily group mein bhejo. Kisi ke dadaji ka paisa abhi bhi wait kar raha hai.\n\n#PostrNews #HiddenIndia #UnclaimedMoney #RBI",
+    "sourceUrl": "https://knnindia.co.in/news/newsdetails/sectors/unclaimed-bank-deposits-with-rbi-fund-rise-to-rs-86917-crore-govt"
+  },
+  {
+    "id": "reel-road-3min",
+    "lang": "en",
+    "sourceShort": "Source: Road Transport Ministry, 2024",
+    "scenes": [
+      {
+        "text": "Every 3 minutes.",
+        "ground": "ink",
+        "seconds": 2.2
+      },
+      {
+        "text": "Someone dies on an Indian road.",
+        "ground": "signal",
+        "seconds": 2.5
+      },
+      {
+        "text": "1,77,175 deaths in 2024.",
+        "sub": "About 20 every hour.",
+        "ground": "paper",
+        "seconds": 3
+      },
+      {
+        "text": "Almost half were on two-wheelers.",
+        "sub": "46.2% of all road deaths.",
+        "ground": "lime",
+        "seconds": 3
+      },
+      {
+        "text": "Helmet. Every ride. Even 5 minutes.",
+        "ground": "blue",
+        "seconds": 2.8
+      },
+      {
+        "text": "Us dost ko bhejo jo helmet nahi pehenta.",
+        "sub": "@postr.news · Full story in our posts",
+        "ground": "signal",
+        "seconds": 3
+      }
+    ],
+    "caption": "Someone dies on an Indian road every 3 minutes.\n\nIndia recorded 1,77,175 road deaths in 2024, about 20 every hour, per the Road Transport Ministry. Two-wheeler riders were 46.2% of those killed, pedestrians 20.6%.\n\nSource: Road Transport Ministry report, via ETV Bharat/PTI\n\nUs dost ko bhejo jo bolta hai \"5 minute ke liye helmet ki kya zaroorat\".\n\n#PostrNews #HiddenIndia #RoadSafety",
+    "sourceUrl": "https://www.etvbharat.com/en/bharat/road-accidents-in-india-in-2024-enn26061107541"
+  }
+]
