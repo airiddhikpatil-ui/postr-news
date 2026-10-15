@@ -97,7 +97,18 @@ async function postNextReel(outDir, targets) {
   const { file: mp4 } = await renderReel(next, outDir);
   const fbCaption = next.sourceUrl ? `${next.caption}\n\n${next.sourceUrl}` : next.caption;
   const dryRun = process.env.DRY_RUN === 'true';
-  const r = await publishReel(mp4, { facebookCaption: fbCaption, instagramCaption: next.caption, targets, dryRun });
+  let r;
+  try {
+    r = await publishReel(mp4, { facebookCaption: fbCaption, instagramCaption: next.caption, targets, dryRun });
+  } catch (e) {
+    if (!/2207051|restrict certain activity/i.test(e.message)) throw e;
+    await sleep(20000);
+    const hook = String(next.caption || '').split('\n')[0].trim();
+    const live = (await recentMedia()).find((m) => String(m.caption || '').trim().startsWith(hook));
+    if (!live) throw e;
+    note(`${next.id}: Instagram returned a restriction warning but the Reel is live (${live.permalink})`, 'warning');
+    r = { instagram: { permalink: live.permalink }, facebook: null };
+  }
   if (r.dryRun) return note(`DRY RUN ${next.id}: uploaded and processed, nothing published (${JSON.stringify(r)})`);
   posted.push({ id: next.id, at: new Date().toISOString(), instagram: r.instagram && r.instagram.permalink, facebook: r.facebook && r.facebook.permalink });
   fs.writeFileSync(postedFile, `${JSON.stringify(posted, null, 2)}\n`);
