@@ -111,6 +111,7 @@ async function postNextReel(outDir, targets) {
     r = { instagram: { permalink: live.permalink }, facebook: null };
   }
   if (r.dryRun) return note(`DRY RUN ${next.id}: uploaded and processed, nothing published (${JSON.stringify(r)})`);
+  if (r.facebookError) note(`${next.id}: Facebook copy failed (${r.facebookError}); Instagram unaffected`, 'warning');
   posted.push({ id: next.id, at: new Date().toISOString(), instagram: r.instagram && r.instagram.permalink, facebook: r.facebook && r.facebook.permalink });
   fs.writeFileSync(postedFile, `${JSON.stringify(posted, null, 2)}\n`);
   note(`${next.id}: IG ${r.instagram ? r.instagram.permalink : '-'} | FB ${r.facebook ? r.facebook.permalink : '-'}`);
