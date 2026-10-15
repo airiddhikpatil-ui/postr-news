@@ -1,0 +1,30 @@
+name: Photo search
+# Lists free-licence Unsplash photos for each query (Unsplash+ paid photos are skipped).
+on:
+  workflow_dispatch:
+    inputs:
+      queries:
+        description: 'Queries separated by |'
+        required: true
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Search
+        env:
+          QUERIES: ${{ inputs.queries }}
+        run: |
+          node -e '
+            (async () => {
+              for (const q of process.env.QUERIES.split("|")) {
+                const r = await fetch("https://unsplash.com/napi/search/photos?per_page=30&query=" + encodeURIComponent(q.trim()), { headers: { "user-agent": "Mozilla/5.0" } });
+                console.log("### " + q + " (HTTP " + r.status + ")");
+                if (!r.ok) continue;
+                const j = await r.json();
+                for (const p of j.results || []) {
+                  if (p.premium || p.plus) continue;
+                  console.log([p.id, p.width + "x" + p.height, (p.alt_description || p.description || "").slice(0, 110), p.urls && p.urls.raw ? p.urls.raw.split("?")[0] : ""].join(" | "));
+                }
+              }
+            })();
+          '
