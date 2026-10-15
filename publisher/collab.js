@@ -20,6 +20,7 @@ const TOPIC_RULES = {
   planet: /climate|wildlife|himalaya|planet|glacier/i,
   world: /hormuz|black-?sea|pope|world|imf|war|ship/i,
   business: /imf|gdp|economy|business|company/i,
+  india: /hiddenindia|hidden-india|road|court|jail|undertrial|unclaimed|anaemia|mps-/i,
 };
 
 const readJson = (f, d) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return d; } };
