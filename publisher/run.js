@@ -47,7 +47,8 @@ async function postNext(outDir, targets) {
     if (dup) {
       posted.push({ id: next.id, at: dup.timestamp, instagram: dup.permalink, facebook: null, note: 'already on Instagram; not reposted' });
       fs.writeFileSync(postedFile, `${JSON.stringify(posted, null, 2)}\n`);
-      return note(`${next.id}: already on Instagram (${dup.permalink}); skipped to avoid a duplicate`, 'warning');
+      note(`${next.id}: already on Instagram (${dup.permalink}); skipped to avoid a duplicate`, 'warning');
+      return postNext(outDir, targets);
     }
   }
   // Postr Lab designs by default; DESIGN=classic or story.design='classic' uses the original templates.
