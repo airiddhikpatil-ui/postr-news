@@ -11,7 +11,7 @@ const PER_DAY = 10;
 const WEEK = 7 * 24 * 3600 * 1000;
 
 const TOPIC_RULES = {
-  money: /upi|rbi|emi|sip|inflation|cpi|atm|sbi|fee|price|rupee|gold|silver|petrol|lpg|tax|ltcg|money|bank/i,
+  money: /upi|rbi|\bemi\b|sip|inflation|cpi|atm|sbi|fee|price|rupee|gold|silver|petrol|lpg|tax|ltcg|money|bank/i,
   markets: /sensex|nifty|stock|market|kospi|ipo|sip|brent|crude/i,
   scam: /scam|fraud|digital-arrest|fake|whatsapp|forward/i,
   cricket: /cricket|t20|odi|icc|ipl|gill|shefali|wi-|ind-wi/i,
@@ -42,11 +42,11 @@ function pickCollaborators(story, now = Date.now()) {
   const recent = new Set(log.filter((l) => now - Date.parse(l.at) < WEEK).flatMap((l) => l.usernames));
   const topics = storyTopics(story);
   const city = story.place;
-  const score = (t) => (city && (t.cities || []).some((c) => city.includes(c)) ? 3 : 0) + (t.topics || []).filter((x) => topics.includes(x)).length;
+  const score = (t) => (city && (t.cities || []).some((c) => city.includes(c)) ? 3 : 0) + (t.topics || []).filter((x) => topics.includes(x)).reduce((n, x) => n + (x === 'india' ? 1 : 2), 0);
   return targets
     .filter((t) => !recent.has(t.username) && score(t) > 0)
     .filter((t) => !(t.topics || []).includes('city') || !t.cities || (city && t.cities.some((c) => city.includes(c))) || (t.topics || []).some((x) => x !== 'city' && topics.includes(x)))
-    .sort((a, b) => score(b) - score(a) || (a.followers || 0) - (b.followers || 0))
+    .sort((a, b) => score(b) - score(a) || (b.followers || 0) - (a.followers || 0))
     .slice(0, room)
     .map((t) => t.username);
 }
