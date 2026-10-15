@@ -33,6 +33,25 @@ jobs:
               }
             })().catch((e) => { console.error(e); process.exit(1); });
           '
+      - name: Cut out subjects (files named *-cut.png get their background removed)
+        run: |
+          if ls poster-engine/assets/plates/*-cut.png >/dev/null 2>&1; then
+            pip install -q "rembg[cpu]" pillow
+            python3 - <<'PY'
+          import glob
+          from rembg import remove, new_session
+          from PIL import Image
+          s = new_session("isnet-general-use")
+          for f in glob.glob("poster-engine/assets/plates/*-cut.png"):
+              out = f.replace("-cut.png", "-alpha.png")
+              import os
+              if os.path.exists(out):
+                  continue
+              im = Image.open(f).convert("RGB")
+              remove(im, session=s, alpha_matting=True).save(out)
+              print("cut", out)
+          PY
+          fi
       - name: Commit
         run: |
           git config user.name "postr-bot"
