@@ -1,7 +1,7 @@
 [
   {
     "id": "unclaimed-money",
-    "style": "passbook",
+    "style": "collage",
     "format": "number",
     "lang": "en",
     "date": "Parliament, Aug 2026",
@@ -11,7 +11,7 @@
     "note": "Untouched for 10 years, it moves to an RBI fund. It is still yours.",
     "source": "Finance Ministry reply in Rajya Sabha, Aug 2026",
     "coverHook": "₹86,917 crore of Indians' money is lying unclaimed. Some may be your family's.",
-    "captionHeadline": "₹86,917 crore of Indians' money is sitting unclaimed. Some of it could belong to your family.",
+    "captionHeadline": "Your grandparents' forgotten bank account might still have money in it. ₹86,917 crore is waiting to be claimed.",
     "summary": "As of 30 June 2026, ₹86,917 crore of unclaimed bank deposits had been moved to the RBI's Depositor Education and Awareness Fund, the Finance Ministry told the Rajya Sabha. Savings and current accounts become unclaimed after 10 years without activity. Separately, LIC holds ₹7,318.5 crore in unclaimed funds and inactive EPF accounts hold ₹9,330.5 crore. The money stays payable to the owners or their heirs.",
     "forYou": "Search for old accounts of parents and grandparents on the RBI's UDGAM portal, then claim through the bank with ID and documents.",
     "cta": "Send this to your family group. Someone's grandparents' money might still be waiting.",
@@ -71,68 +71,111 @@
         "title": "This could pay for a wedding",
         "body": "Send it to the family group. Somebody's forgotten account is out there."
       }
-    ]
+    ],
+    "collage": {
+      "plate": "elder-passbook",
+      "palette": "yellow",
+      "strips": [
+        "₹86,917 crore",
+        "nobody claimed",
+        "sitting in Indian banks"
+      ],
+      "note": "Is one of these old passbooks in your house?",
+      "cta": "HOW TO CLAIM",
+      "kicker": "MONEY · INDIA",
+      "arrow": true,
+      "sourceShort": "FINANCE MINISTRY, RAJYA SABHA",
+      "who": {
+        "h": 1050
+      }
+    }
   },
   {
-    "id": "failed-medicines",
-    "style": "pharmacy",
-    "format": "alert",
+    "id": "anaemia-children",
+    "style": "collage",
+    "format": "number",
     "lang": "en",
-    "place": "Your medicine box",
-    "headline": "Drug tests failed",
-    "time": "August 2026",
-    "coverBig": "220 FAILED",
-    "note": "Paracetamol, BP pills and antibiotics among them.",
-    "source": "CDSCO monthly drug alert, via The South First, 26 Sep 2026",
-    "coverHook": "Paracetamol, BP pills, antibiotics: 220 samples failed India's own drug tests.",
-    "captionHeadline": "220 medicine samples failed India's own quality tests last month. Paracetamol and BP pills are on the list.",
-    "summary": "In its August 2026 alert, India's drug regulator CDSCO listed 220 samples as \"not of standard quality\". They include batches of paracetamol, the BP drug telmisartan, antibiotics like amoxicillin and azithromycin, and injections. One batch labelled Telma AM was flagged as \"purported to be spurious\": the company named on the label says it never made it. Failures apply to specific batches, not whole brands.",
-    "forYou": "Don't stop prescribed medicine. Buy from licensed chemists, keep the bill, check the batch number against CDSCO's monthly list, and report anything odd to your doctor.",
-    "cta": "Jo ghar ki dawai laata hai, usse zaroor bhejo.",
-    "sourceUrl": "https://thesouthfirst.com/health/fake-drugs-in-the-market-cdsco-flags-blood-pressure-drug-telma-am-spurious-220-medicine-batches-fail-tests/",
+    "date": "NFHS-5",
+    "value": "67%",
+    "coverBig": "2 IN 3",
+    "caption": "of Indian children under 5 are anaemic. It got worse, not better.",
+    "note": "57% of women too, up from 53%.",
+    "source": "National Family Health Survey 5 (2019-21), via Down To Earth",
+    "coverHook": "2 in 3 Indian children under 5 are anaemic. And it's getting worse.",
+    "captionHeadline": "2 in 3 Indian children under 5 are anaemic, according to the government's own health survey. And the number went up.",
+    "summary": "The National Family Health Survey 5 (2019-21) found 67.1% of children aged 6 to 59 months anaemic, up from 58.6% in the previous survey (2015-16). Among women aged 15 to 49, anaemia rose from 53.1% to 57%. Anaemia leaves children tired, slows learning and growth, and raises risks in pregnancy.",
+    "forYou": "A simple haemoglobin blood test is cheap. Iron-rich food (greens, pulses, jaggery, eggs) and doctor-advised supplements help.",
+    "cta": "Send this to every new parent you know.",
+    "sourceUrl": "https://www.downtoearth.org.in/news/health/anaemia-in-women-and-children-on-the-rise-assam-fares-worst-nfhs-5-80357",
     "tags": [
-      "Medicines",
-      "CDSCO",
+      "Health",
+      "Children",
       "HiddenIndia"
     ],
     "slides": [
       {
-        "label": "THE LIST",
-        "title": "Common medicines with failed batches",
-        "points": [
-          "Paracetamol: several batches failed the dissolution test",
-          "Telmisartan (BP): batches failed dissolution and assay tests",
-          "Antibiotics: amoxicillin, azithromycin, cefixime, metronidazole",
-          "Injections: meropenem, amikacin, dexamethasone"
+        "label": "GOING THE WRONG WAY",
+        "title": "Anaemia, then and now",
+        "stats": [
+          {
+            "label": "Children 6-59 months, 2015-16",
+            "value": "58.6%",
+            "num": 58.6
+          },
+          {
+            "label": "Children 6-59 months, 2019-21",
+            "value": "67.1%",
+            "num": 67.1,
+            "hi": true
+          },
+          {
+            "label": "Women 15-49, 2019-21",
+            "value": "57%",
+            "num": 57
+          }
         ]
       },
       {
-        "label": "FAKE, NOT JUST WEAK",
-        "title": "One batch may be a fake",
-        "body": "CDSCO flagged one Telma AM batch (18230791) as purportedly spurious. The company on the label told the regulator it never made it. The investigation is on."
+        "label": "WHY IT MATTERS",
+        "title": "What anaemia does",
+        "points": [
+          "Constant tiredness and weakness",
+          "Slower learning and growth in children",
+          "Higher risks during pregnancy"
+        ]
       },
       {
         "label": "WHAT TO DO",
-        "title": "Protect your family without panic",
+        "title": "Simple steps for families",
         "points": [
-          "Never stop a prescribed medicine on your own",
-          "Buy only from licensed chemists and keep the bill",
-          "Match batch numbers with CDSCO's monthly alert",
-          "Report side effects or odd packaging to your doctor"
+          "Get a haemoglobin test; it costs little",
+          "Iron-rich food: greens, pulses, jaggery, eggs",
+          "Supplements only on a doctor's advice"
         ]
-      },
-      {
-        "label": "SHARE THIS",
-        "kind": "share",
-        "title": "Your parents need this",
-        "body": "Send it to whoever buys the family's medicines."
       }
     ],
-    "captionLang": "hinglish"
+    "labFlag": "HIGH",
+    "collage": {
+      "plate": "mother-child",
+      "palette": "cream",
+      "strips": [
+        "2 in 3 Indian kids",
+        "are anaemic",
+        "and it got worse"
+      ],
+      "note": "A cheap blood test can tell. Most families never get one.",
+      "cta": "WHAT TO DO",
+      "kicker": "HEALTH · INDIA",
+      "sourceShort": "NFHS-5 (2019-21), HEALTH MINISTRY",
+      "who": {
+        "h": 980,
+        "right": -150
+      }
+    }
   },
   {
     "id": "undertrials-73",
-    "style": "headcount",
+    "style": "collage",
     "format": "number",
     "lang": "en",
     "date": "Prison Statistics 2024",
@@ -142,7 +185,7 @@
     "note": "Delhi and Bihar: over 87%.",
     "source": "NCRB Prison Statistics India 2024, via Drishti IAS",
     "coverHook": "3 in 4 people in Indian jails haven't been convicted of anything.",
-    "captionHeadline": "3 out of 4 people locked in Indian jails have not been convicted of any crime. They are waiting for trial.",
+    "captionHeadline": "73% of people in Indian jails have not been convicted. 9,028 have waited more than 5 years just for their trial.",
     "summary": "According to Prison Statistics India 2024, about 73% of the more than 5.11 lakh inmates in Indian jails are undertrials, people still awaiting trial. Only 26.6% are convicts. Jails are at 112.7% of capacity; Delhi's are at 194.6%, and over 87% of prisoners in Delhi and Bihar are undertrials. 9,028 undertrials have been inside for more than 5 years.",
     "forYou": "Under Indian law, anyone is innocent until proven guilty. Most of these people have not been proven guilty of anything yet.",
     "cta": "Send this to the friend who says \"if they're in jail, they must have done something\".",
@@ -208,7 +251,140 @@
       "hit": 3,
       "hitLabel": "NOT CONVICTED · 73%",
       "restLabel": "CONVICTED · 26.6%"
+    },
+    "collage": {
+      "plate": "undertrial-man",
+      "palette": "red",
+      "strips": [
+        "3 in 4 prisoners",
+        "not convicted",
+        "still waiting for trial"
+      ],
+      "note": "Locked up. Not proven guilty.",
+      "cta": "THE NUMBERS",
+      "kicker": "JUSTICE · INDIA",
+      "sourceShort": "NCRB PRISON STATISTICS 2024",
+      "who": {
+        "h": 980,
+        "right": -90
+      }
     }
+  },
+  {
+    "id": "cancer-drug-margin",
+    "format": "number",
+    "lang": "en",
+    "date": "12 Oct",
+    "value": "30%",
+    "caption": "is the new cap on trade margins for cancer drugs, after a Supreme Court push.",
+    "note": "The court asked: why only cancer drugs?",
+    "source": "Bar & Bench, 12 Oct; The Hindu, 13 Oct 2026",
+    "captionHeadline": "Someone made ₹20,000 on a ₹5,000 heart stent. Now the Supreme Court is asking who.",
+    "summary": "The Centre told the Supreme Court it has capped trade margins on anti-cancer drugs at 30% of MRP. The court asked why the cap covers only cancer drugs. The Hindu reported mark-ups of up to 1,000% on some cancer drugs, and a made-in-India cardiac stent costing about ₹5,000 sold for over ₹25,000.",
+    "forYou": "Cancer medicines should get cheaper. If the court widens it, everyday medicines could follow. Always compare MRP and ask for generics.",
+    "cta": "Jiske ghar mein koi heart ya cancer ki dawai leta hai, usse bhejo.",
+    "sourceUrl": "https://www.barandbench.com/news/centre-caps-trade-margin-for-cancer-drugs-at-30-after-supreme-court-rap",
+    "tags": [
+      "Medicines",
+      "SupremeCourt",
+      "Health"
+    ],
+    "slides": [
+      {
+        "label": "THE MARK-UP",
+        "title": "What patients were paying",
+        "stats": [
+          {
+            "label": "Cardiac stent: cost",
+            "value": "₹5,000",
+            "num": 5000
+          },
+          {
+            "label": "Cardiac stent: sold at",
+            "value": "₹25,000+",
+            "num": 25000,
+            "hi": true
+          }
+        ],
+        "statsNote": "Example reported by The Hindu"
+      },
+      {
+        "label": "THE NEW RULE",
+        "title": "Cancer drugs: margin capped at 30%",
+        "points": [
+          "Trade margin limited to 30% of MRP",
+          "Some cancer drug mark-ups reportedly reached 1,000%",
+          "Applies to anti-cancer drugs only, for now"
+        ]
+      },
+      {
+        "label": "WHAT'S NEXT",
+        "title": "\"Why only cancer drugs?\"",
+        "body": "The Supreme Court questioned why the cap should not cover all medicines. Everyday drugs could be next."
+      }
+    ],
+    "coverHook": "A ₹5,000 stent. A ₹25,000 bill. Where did the other ₹20,000 go?",
+    "coverOld": "₹5,000",
+    "coverBig": "₹25,000",
+    "style": "exposed",
+    "captionLang": "hinglish"
+  },
+  {
+    "id": "failed-medicines",
+    "style": "pharmacy",
+    "format": "alert",
+    "lang": "en",
+    "place": "Your medicine box",
+    "headline": "Drug tests failed",
+    "time": "August 2026",
+    "coverBig": "220 FAILED",
+    "note": "Paracetamol, BP pills and antibiotics among them.",
+    "source": "CDSCO monthly drug alert, via The South First, 26 Sep 2026",
+    "coverHook": "Paracetamol, BP pills, antibiotics: 220 samples failed India's own drug tests.",
+    "captionHeadline": "220 medicine samples failed India's own quality tests last month. Paracetamol and BP pills are on the list.",
+    "summary": "In its August 2026 alert, India's drug regulator CDSCO listed 220 samples as \"not of standard quality\". They include batches of paracetamol, the BP drug telmisartan, antibiotics like amoxicillin and azithromycin, and injections. One batch labelled Telma AM was flagged as \"purported to be spurious\": the company named on the label says it never made it. Failures apply to specific batches, not whole brands.",
+    "forYou": "Don't stop prescribed medicine. Buy from licensed chemists, keep the bill, check the batch number against CDSCO's monthly list, and report anything odd to your doctor.",
+    "cta": "Jo ghar ki dawai laata hai, usse zaroor bhejo.",
+    "sourceUrl": "https://thesouthfirst.com/health/fake-drugs-in-the-market-cdsco-flags-blood-pressure-drug-telma-am-spurious-220-medicine-batches-fail-tests/",
+    "tags": [
+      "Medicines",
+      "CDSCO",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "THE LIST",
+        "title": "Common medicines with failed batches",
+        "points": [
+          "Paracetamol: several batches failed the dissolution test",
+          "Telmisartan (BP): batches failed dissolution and assay tests",
+          "Antibiotics: amoxicillin, azithromycin, cefixime, metronidazole",
+          "Injections: meropenem, amikacin, dexamethasone"
+        ]
+      },
+      {
+        "label": "FAKE, NOT JUST WEAK",
+        "title": "One batch may be a fake",
+        "body": "CDSCO flagged one Telma AM batch (18230791) as purportedly spurious. The company on the label told the regulator it never made it. The investigation is on."
+      },
+      {
+        "label": "WHAT TO DO",
+        "title": "Protect your family without panic",
+        "points": [
+          "Never stop a prescribed medicine on your own",
+          "Buy only from licensed chemists and keep the bill",
+          "Match batch numbers with CDSCO's monthly alert",
+          "Report side effects or odd packaging to your doctor"
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Your parents need this",
+        "body": "Send it to whoever buys the family's medicines."
+      }
+    ],
+    "captionLang": "hinglish"
   },
   {
     "id": "court-cases-30yrs",
@@ -431,131 +607,6 @@
         ]
       }
     ],
-    "captionLang": "hinglish"
-  },
-  {
-    "id": "anaemia-children",
-    "style": "labreport",
-    "format": "number",
-    "lang": "en",
-    "date": "NFHS-5",
-    "value": "67%",
-    "coverBig": "2 IN 3",
-    "caption": "of Indian children under 5 are anaemic. It got worse, not better.",
-    "note": "57% of women too, up from 53%.",
-    "source": "National Family Health Survey 5 (2019-21), via Down To Earth",
-    "coverHook": "2 in 3 Indian children under 5 are anaemic. And it's getting worse.",
-    "captionHeadline": "2 in 3 Indian children under 5 are anaemic, according to the government's own health survey. And the number went up.",
-    "summary": "The National Family Health Survey 5 (2019-21) found 67.1% of children aged 6 to 59 months anaemic, up from 58.6% in the previous survey (2015-16). Among women aged 15 to 49, anaemia rose from 53.1% to 57%. Anaemia leaves children tired, slows learning and growth, and raises risks in pregnancy.",
-    "forYou": "A simple haemoglobin blood test is cheap. Iron-rich food (greens, pulses, jaggery, eggs) and doctor-advised supplements help.",
-    "cta": "Send this to every new parent you know.",
-    "sourceUrl": "https://www.downtoearth.org.in/news/health/anaemia-in-women-and-children-on-the-rise-assam-fares-worst-nfhs-5-80357",
-    "tags": [
-      "Health",
-      "Children",
-      "HiddenIndia"
-    ],
-    "slides": [
-      {
-        "label": "GOING THE WRONG WAY",
-        "title": "Anaemia, then and now",
-        "stats": [
-          {
-            "label": "Children 6-59 months, 2015-16",
-            "value": "58.6%",
-            "num": 58.6
-          },
-          {
-            "label": "Children 6-59 months, 2019-21",
-            "value": "67.1%",
-            "num": 67.1,
-            "hi": true
-          },
-          {
-            "label": "Women 15-49, 2019-21",
-            "value": "57%",
-            "num": 57
-          }
-        ]
-      },
-      {
-        "label": "WHY IT MATTERS",
-        "title": "What anaemia does",
-        "points": [
-          "Constant tiredness and weakness",
-          "Slower learning and growth in children",
-          "Higher risks during pregnancy"
-        ]
-      },
-      {
-        "label": "WHAT TO DO",
-        "title": "Simple steps for families",
-        "points": [
-          "Get a haemoglobin test; it costs little",
-          "Iron-rich food: greens, pulses, jaggery, eggs",
-          "Supplements only on a doctor's advice"
-        ]
-      }
-    ],
-    "labFlag": "HIGH"
-  },
-  {
-    "id": "cancer-drug-margin",
-    "format": "number",
-    "lang": "en",
-    "date": "12 Oct",
-    "value": "30%",
-    "caption": "is the new cap on trade margins for cancer drugs, after a Supreme Court push.",
-    "note": "The court asked: why only cancer drugs?",
-    "source": "Bar & Bench, 12 Oct; The Hindu, 13 Oct 2026",
-    "captionHeadline": "Someone made ₹20,000 on a ₹5,000 heart stent. Now the Supreme Court is asking who.",
-    "summary": "The Centre told the Supreme Court it has capped trade margins on anti-cancer drugs at 30% of MRP. The court asked why the cap covers only cancer drugs. The Hindu reported mark-ups of up to 1,000% on some cancer drugs, and a made-in-India cardiac stent costing about ₹5,000 sold for over ₹25,000.",
-    "forYou": "Cancer medicines should get cheaper. If the court widens it, everyday medicines could follow. Always compare MRP and ask for generics.",
-    "cta": "Jiske ghar mein koi heart ya cancer ki dawai leta hai, usse bhejo.",
-    "sourceUrl": "https://www.barandbench.com/news/centre-caps-trade-margin-for-cancer-drugs-at-30-after-supreme-court-rap",
-    "tags": [
-      "Medicines",
-      "SupremeCourt",
-      "Health"
-    ],
-    "slides": [
-      {
-        "label": "THE MARK-UP",
-        "title": "What patients were paying",
-        "stats": [
-          {
-            "label": "Cardiac stent: cost",
-            "value": "₹5,000",
-            "num": 5000
-          },
-          {
-            "label": "Cardiac stent: sold at",
-            "value": "₹25,000+",
-            "num": 25000,
-            "hi": true
-          }
-        ],
-        "statsNote": "Example reported by The Hindu"
-      },
-      {
-        "label": "THE NEW RULE",
-        "title": "Cancer drugs: margin capped at 30%",
-        "points": [
-          "Trade margin limited to 30% of MRP",
-          "Some cancer drug mark-ups reportedly reached 1,000%",
-          "Applies to anti-cancer drugs only, for now"
-        ]
-      },
-      {
-        "label": "WHAT'S NEXT",
-        "title": "\"Why only cancer drugs?\"",
-        "body": "The Supreme Court questioned why the cap should not cover all medicines. Everyday drugs could be next."
-      }
-    ],
-    "coverHook": "A ₹5,000 stent. A ₹25,000 bill. Where did the other ₹20,000 go?",
-    "coverOld": "₹5,000",
-    "coverBig": "₹25,000",
-    "style": "exposed",
     "captionLang": "hinglish"
   },
   {

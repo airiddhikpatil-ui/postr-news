@@ -482,7 +482,94 @@ h2{font:800 84px/1.02 Manrope;letter-spacing:-3px}.bd{font-family:'Space Mono';f
   },
 };
 
-const ORDER = ['extra', 'exposed', 'feed', 'swiss', 'dossier', 'forward', 'riso', 'scoreboard', 'passbook', 'pharmacy', 'headcount', 'calendar', 'highway', 'ballot', 'labreport'];
+// ---------- COLLAGE (studio cut-out style) ----------
+// story.collage = { plate, palette, strips:[3], note, cta, kicker, ai, who:{h,right,bottom}, arrow }
+// plate = poster-engine/assets/plates/<plate>-alpha.png (background already removed).
+const PALETTES = {
+  yellow: { bg: '#F2B705', ink: '#111', strips: [['#111', '#F2B705'], ['#E8432E', '#111'], ['#F4F1EA', '#111']], hi: '#E8432E' },
+  red: { bg: '#E8432E', ink: '#111', strips: [['#111', '#F4F1EA'], ['#F2B705', '#111'], ['#F4F1EA', '#111']], hi: '#111' },
+  cream: { bg: '#EAE3D2', ink: '#111', strips: [['#111', '#EAE3D2'], ['#E8432E', '#F4F1EA'], ['#F2B705', '#111']], hi: '#E8432E' },
+  violet: { bg: '#B9A6E8', ink: '#111', strips: [['#111', '#B9A6E8'], ['#F4F1EA', '#111'], ['#E8432E', '#111']], hi: '#5B2A86' },
+  mint: { bg: '#8FD6B4', ink: '#111', strips: [['#111', '#8FD6B4'], ['#F4F1EA', '#111'], ['#E8432E', '#111']], hi: '#E8432E' },
+};
+const plateCache = {};
+const plate = (name) => {
+  if (!plateCache[name]) plateCache[name] = `data:image/png;base64,${fs.readFileSync(path.join(__dirname, '..', 'assets', 'plates', `${name}-alpha.png`)).toString('base64')}`;
+  return plateCache[name];
+};
+const CRUMPLE = (op = 0.55) => `<svg class="crumple" style="position:absolute;inset:0;mix-blend-mode:multiply;opacity:${op};pointer-events:none" width="1080" height="1350"><filter id="cr"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="5" seed="7"/><feDiffuseLighting lighting-color="#fff" surfaceScale="9"><feDistantLight azimuth="235" elevation="48"/></feDiffuseLighting></filter><rect width="100%" height="100%" filter="url(#cr)"/></svg>
+<svg style="position:absolute;inset:0;mix-blend-mode:multiply;opacity:.16;pointer-events:none" width="1080" height="1350"><filter id="gr"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#gr)"/></svg>`;
+// Torn edges for .torn elements and width-fitting for .strip.
+const TORN = `<script>
+document.querySelectorAll('.torn').forEach((el,k)=>{const p=[];const n=34;let s=11+k*7;const r=()=>{s=(s*9301+49297)%233280;return s/233280};
+for(let i=0;i<=n;i++)p.push((i/n*100).toFixed(2)+'% '+(r()*6).toFixed(2)+'%');
+for(let i=n;i>=0;i--)p.push((i/n*100).toFixed(2)+'% '+(100-r()*6).toFixed(2)+'%');
+el.style.clipPath='polygon('+p.join(',')+')';});
+document.querySelectorAll('.strip').forEach(el=>{const max=+el.dataset.max||980;let f=parseFloat(getComputedStyle(el).fontSize);while(el.getBoundingClientRect().width>max&&f>40){f-=2;el.style.fontSize=f+'px';}});
+</script>`;
+const STICKER = 'filter:grayscale(1) contrast(1.15) brightness(1.03) drop-shadow(7px 0 0 #fff) drop-shadow(-7px 0 0 #fff) drop-shadow(0 7px 0 #fff) drop-shadow(0 -7px 0 #fff) drop-shadow(14px 22px 26px rgba(0,0,0,.35))';
+
+function collageCfg(s) {
+  const c = s.collage || {};
+  return { ...c, P: PALETTES[c.palette] || PALETTES.yellow, who: { h: 1000, right: -120, bottom: -40, ...(c.who || {}) } };
+}
+
+STYLES.collage = {
+  tone: 'ink',
+  cover: (s, d) => {
+    const c = collageCfg(s);
+    const P = c.P;
+    const strips = (c.strips || [d.big, d.hook]).slice(0, 3);
+    const tops = [150, 290, 428];
+    const stripCss = strips.map((_, k) => `.s${k}{left:${[46, 70, 58][k]}px;top:${tops[k]}px;background:${P.strips[k][0]};color:${P.strips[k][1]};${k === 2 ? 'font-size:92px;' : ''}}`).join('');
+    return pageShell('collage', `body{background:${P.bg};color:${P.ink}}
+.who{position:absolute;right:${c.who.right}px;bottom:${c.who.bottom}px;height:${c.who.h}px;${STICKER}}
+.strip{position:absolute;padding:6px 26px 2px;font:400 128px/1 Anton;letter-spacing:-1px;text-transform:uppercase;white-space:nowrap;transform:rotate(-4deg);transform-origin:left center}
+${stripCss}
+.kick{position:absolute;top:58px;left:60px;right:60px;display:flex;justify-content:space-between;align-items:flex-start;font:700 17px/1.4 'Space Mono';letter-spacing:2px;text-transform:uppercase}
+.kick img{width:120px}
+.note{position:absolute;left:62px;top:720px;width:${c.noteW || 340}px;font:italic 400 46px/1.04 'Instrument Serif'}
+.arrow{position:absolute;left:250px;top:850px;width:470px;transform:rotate(-14deg)}
+.foot{position:absolute;left:60px;bottom:56px;width:360px;font:700 14px/1.5 'Space Mono';letter-spacing:1.5px;text-transform:uppercase}
+.foot b{display:inline-block;margin-top:14px;background:#111;color:${P.bg};padding:10px 16px;font-size:17px;letter-spacing:3px}`,
+    `${CRUMPLE()}
+<img class="who" src="${plate(c.plate)}">
+<div class="kick"><span>POSTR FILES · ${esc(c.kicker || d.meta)}<br>${esc(s.date || '')}</span><img src="${wm('ink')}"></div>
+${strips.map((t, k) => `<div class="strip torn s${k}" data-max="${k === 2 ? 940 : 990}">${esc(t)}</div>`).join('')}
+${c.note ? `<div class="note">${esc(c.note)}</div>` : ''}
+${c.arrow ? `<svg class="arrow" viewBox="0 0 330 160"><path d="M8 40 C 90 140, 210 150, 300 70" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/><path d="M262 58 L304 66 L292 106" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>` : ''}
+<div class="foot">SOURCE · ${esc(c.sourceShort || s.source)}${c.ai !== false ? '<br>AI ILLUSTRATION' : ''}<br><b>SWIPE: ${esc(c.cta || 'THE FULL STORY')} →</b></div>${TORN}`);
+  },
+  css: '', // built per story in collageInner
+};
+
+function collageInner(story, sl, i, total) {
+  const c = collageCfg(story);
+  const P = c.P;
+  const last = i === total;
+  const css = `body{background:${P.bg};color:${P.ink}}
+.hdr{font-size:19px}.lbl{background:#111;color:${P.bg};padding:6px 14px}.pgn{background:#F4F1EA;padding:6px 12px}
+h2{top:150px;height:330px;font:400 92px/1.08 Anton;text-transform:uppercase;transform:rotate(-2.5deg);transform-origin:left bottom}
+h2 .hl{background:#111;color:${P.bg};padding:4px 18px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.bd{top:540px;background:#F4F1EA;padding:34px 38px;font:italic 400 48px/1.15 'Instrument Serif';transform:rotate(1.2deg);box-shadow:0 14px 30px rgba(0,0,0,.18)}
+.bd+.cnt{top:820px}
+.pt{background:#F4F1EA;box-shadow:0 10px 22px rgba(0,0,0,.16);font-size:31px}.pt:nth-child(odd){transform:rotate(-1.2deg)}.pt:nth-child(even){transform:rotate(1deg)}
+.pn{color:${P.hi === '#111' ? '#E8432E' : P.hi}}
+.stats{background:#F4F1EA;padding:34px 36px;box-shadow:0 14px 30px rgba(0,0,0,.18);transform:rotate(-1deg)}
+.st{border-bottom:2px dashed #111;padding-bottom:14px}.st:last-child{border-bottom:0}.st.hi .st-v{color:${P.hi === '#111' ? '#E8432E' : P.hi}}
+.st-b{background:rgba(17,17,17,.12)}.st-b i{background:#111}.st.hi .st-b i{background:${P.hi === '#111' ? '#E8432E' : P.hi}}
+.snote{background:#111;color:${P.bg};display:inline-block;padding:6px 12px;align-self:flex-start}
+.sharebox{background:#F4F1EA;box-shadow:0 14px 30px rgba(0,0,0,.18);transform:rotate(-1.5deg);width:600px}.sh-h{font-size:88px;color:${P.hi === '#111' ? '#E8432E' : P.hi}}.sh-acts{flex-wrap:wrap}
+.ft{font-size:15px}.ft span:first-child{max-width:520px}.sw{background:#111;color:${P.bg};padding:8px 14px}
+.who2{position:absolute;right:-160px;bottom:-60px;height:900px;${STICKER}}
+${last ? '.cnt{right:420px}h2{right:300px}.ft img,.ft .sw{display:none}' : ''}`;
+  let html = inner(story, sl, i, total, { tone: 'ink', meta: c.kicker || '' })
+    .replace(/<h2 data-fit data-min="40">([\s\S]*?)<\/h2>/, '<h2 data-fit data-min="40"><span class="hl">$1</span></h2>');
+  html = `${CRUMPLE(0.45)}${last ? `<img class="who2" src="${plate(c.plate)}">` : ''}${html}`;
+  return pageShell('collage', `${INNER_BASE}${css}`, html);
+}
+
+const ORDER = ['extra', 'exposed','feed', 'swiss', 'dossier', 'forward', 'riso', 'scoreboard', 'passbook', 'pharmacy', 'headcount', 'calendar', 'highway', 'ballot', 'labreport'];
 const RULES = [
   ['passbook', (s) => /unclaimed|deposit|passbook|savings|refund|pf-|epf/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
   ['pharmacy', (s) => /medicine|drug|cdsco|pharma|tablet/i.test(`${(s.tags || []).join(' ')} ${s.id}`)],
@@ -515,6 +602,10 @@ function labPages(story, style) {
   const slides = story.slides || [];
   const total = slides.length + 1;
   const pages = [st.cover(story, d)];
+  if (style === 'collage') {
+    slides.forEach((sl, k) => pages.push(collageInner(story, sl, k + 2, total)));
+    return pages;
+  }
   slides.forEach((sl, k) => pages.push(pageShell(style, `${INNER_BASE}${st.css}`, inner(story, sl, k + 2, total, { tone: st.tone, deco: st.deco, meta: d.meta }))));
   return pages;
 }
