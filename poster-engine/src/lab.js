@@ -531,12 +531,14 @@ ${stripCss}
 .note{position:absolute;left:62px;top:720px;width:${c.noteW || 340}px;font:italic 400 46px/1.04 'Instrument Serif'}
 .arrow{position:absolute;left:250px;top:850px;width:470px;transform:rotate(-14deg)}
 .foot{position:absolute;left:60px;bottom:56px;width:360px;font:700 14px/1.5 'Space Mono';letter-spacing:1.5px;text-transform:uppercase}
-.foot b{display:inline-block;margin-top:14px;background:#111;color:${P.bg};padding:10px 16px;font-size:17px;letter-spacing:3px}`,
+.foot b{display:inline-block;margin-top:14px;background:#111;color:${P.bg};padding:10px 16px;font-size:17px;letter-spacing:3px}
+${c.band ? `.bandp{position:absolute;left:-30px;right:-30px;top:${c.band.top || 950}px;height:520px;background:#F4F1EA;transform:rotate(-2deg);box-shadow:0 -14px 34px rgba(0,0,0,.22)}
+.note{top:${(c.band.top || 950) + 52}px;width:940px;font-size:54px}.foot{width:940px}` : ''}`,
     `${CRUMPLE()}
 <img class="who" src="${plate(c.plate)}">
 <div class="kick"><span>POSTR FILES · ${esc(c.kicker || d.meta)}<br>${esc(s.date || '')}</span><img src="${wm('ink')}"></div>
 ${strips.map((t, k) => `<div class="strip torn s${k}" data-max="${k === 2 ? 940 : 990}">${esc(t)}</div>`).join('')}
-${c.note ? `<div class="note">${esc(c.note)}</div>` : ''}
+${c.band ? '<div class="bandp torn"></div>' : ''}${c.note ? `<div class="note">${esc(c.note)}</div>` : ''}
 ${c.arrow ? `<svg class="arrow" viewBox="0 0 330 160"><path d="M8 40 C 90 140, 210 150, 300 70" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/><path d="M262 58 L304 66 L292 106" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>` : ''}
 <div class="foot">SOURCE · ${esc(c.sourceShort || s.source)}${c.ai !== false ? '<br>AI ILLUSTRATION' : ''}<br><b>SWIPE: ${esc(c.cta || 'THE FULL STORY')} →</b></div>${TORN}`);
   },
