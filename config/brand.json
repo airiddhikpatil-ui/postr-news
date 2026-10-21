@@ -1,0 +1,11 @@
+{
+  "_help": "Your page's identity. Change these values, save, and every post uses them. Keep the quotes and commas.",
+  "name": "My News",
+  "shortName": "MYNEWS",
+  "instagramHandle": "mynews.page",
+  "hashtag": "#MyNews",
+  "tagline": "News, designed.",
+  "followLine": "FOLLOW FOR NEWS THAT HITS DIFFERENT",
+  "timezoneOffsetMinutes": 330,
+  "_timezoneHelp": "Minutes ahead of UTC for your country. India = 330, UAE = 240, UK = 0, US Eastern = -240. Decides which day's batch is posted."
+}

@@ -1,0 +1,7 @@
+{
+  "_help": "Public account IDs only. NEVER put your access token here; it goes in GitHub Secrets as META_ACCESS_TOKEN. Run the 'Check Meta connection' action to find both IDs, then paste them below.",
+  "meta": {
+    "facebookPageId": "PASTE_YOUR_FACEBOOK_PAGE_ID",
+    "instagramBusinessAccountId": "PASTE_YOUR_INSTAGRAM_BUSINESS_ACCOUNT_ID"
+  }
+}

@@ -1,0 +1,131 @@
+[
+  {
+    "id": "cancer-drug-margin",
+    "format": "number",
+    "lang": "en",
+    "date": "12 Oct",
+    "value": "30%",
+    "caption": "is the new cap on trade margins for cancer drugs, after a Supreme Court push.",
+    "note": "The court asked: why only cancer drugs?",
+    "source": "Bar & Bench, 12 Oct; The Hindu, 13 Oct 2026",
+    "captionHeadline": "Someone made ₹20,000 on a ₹5,000 heart stent. Now the Supreme Court is asking who.",
+    "summary": "The Centre told the Supreme Court it has capped trade margins on anti-cancer drugs at 30% of MRP. The court asked why the cap covers only cancer drugs. The Hindu reported mark-ups of up to 1,000% on some cancer drugs, and a made-in-India cardiac stent costing about ₹5,000 sold for over ₹25,000.",
+    "forYou": "Cancer medicines should get cheaper. If the court widens it, everyday medicines could follow. Always compare MRP and ask for generics.",
+    "cta": "Send this to someone who needs to see it.",
+    "sourceUrl": "https://www.barandbench.com/news/centre-caps-trade-margin-for-cancer-drugs-at-30-after-supreme-court-rap",
+    "tags": [
+      "Medicines",
+      "SupremeCourt",
+      "Health"
+    ],
+    "slides": [
+      {
+        "label": "THE MARK-UP",
+        "title": "What patients were paying",
+        "stats": [
+          {
+            "label": "Cardiac stent: cost",
+            "value": "₹5,000",
+            "num": 5000
+          },
+          {
+            "label": "Cardiac stent: sold at",
+            "value": "₹25,000+",
+            "num": 25000,
+            "hi": true
+          }
+        ],
+        "statsNote": "Example reported by The Hindu"
+      },
+      {
+        "label": "THE NEW RULE",
+        "title": "Cancer drugs: margin capped at 30%",
+        "points": [
+          "Trade margin limited to 30% of MRP",
+          "Some cancer drug mark-ups reportedly reached 1,000%",
+          "Applies to anti-cancer drugs only, for now"
+        ]
+      },
+      {
+        "label": "WHAT'S NEXT",
+        "title": "\"Why only cancer drugs?\"",
+        "body": "The Supreme Court questioned why the cap should not cover all medicines. Everyday drugs could be next."
+      }
+    ],
+    "coverHook": "A ₹5,000 stent. A ₹25,000 bill. Where did the other ₹20,000 go?",
+    "coverOld": "₹5,000",
+    "coverBig": "₹25,000"
+  },
+  {
+    "id": "road-deaths-3min",
+    "format": "number",
+    "lang": "en",
+    "date": "2024 data",
+    "value": "20",
+    "coverBig": "3 MIN",
+    "caption": "Indians died on the roads every hour in 2024.",
+    "note": "That's one death about every 3 minutes.",
+    "source": "Road Transport Ministry report, via ETV Bharat/PTI",
+    "coverHook": "Someone dies on an Indian road every 3 minutes.",
+    "captionHeadline": "In the time it takes to read this post, someone in India will die on a road. One every 3 minutes, all year.",
+    "summary": "India recorded 4,87,707 road accidents and 1,77,175 deaths in 2024, the Road Transport Ministry reported: about 56 accidents and 20 deaths every hour. Two-wheeler riders were 46.2% of those killed and pedestrians 20.6%. National highways carry a small share of roads but saw 36.6% of deaths.",
+    "forYou": "Helmet on every ride, even for \"just 5 minutes\". Most deaths are two-wheeler riders.",
+    "cta": "Send this to the friend who rides without a helmet.",
+    "sourceUrl": "https://www.etvbharat.com/en/bharat/road-accidents-in-india-in-2024-enn26061107541",
+    "tags": [
+      "RoadSafety",
+      "India",
+      "HiddenIndia"
+    ],
+    "slides": [
+      {
+        "label": "2024 IN NUMBERS",
+        "title": "A year on Indian roads",
+        "stats": [
+          {
+            "label": "Deaths",
+            "value": "1,77,175",
+            "hi": true
+          },
+          {
+            "label": "Accidents",
+            "value": "4,87,707"
+          },
+          {
+            "label": "Injured",
+            "value": "4,71,441"
+          }
+        ]
+      },
+      {
+        "label": "WHO DIES",
+        "title": "Share of road deaths",
+        "stats": [
+          {
+            "label": "Two-wheeler riders",
+            "value": "46.2%",
+            "num": 46.2,
+            "hi": true
+          },
+          {
+            "label": "Pedestrians",
+            "value": "20.6%",
+            "num": 20.6
+          },
+          {
+            "label": "Car and taxi occupants",
+            "value": "12.4%",
+            "num": 12.4
+          }
+        ]
+      },
+      {
+        "label": "SHARE THIS",
+        "kind": "share",
+        "title": "Save one life",
+        "body": "Send this to the person who says \"helmet is not needed for short rides\"."
+      }
+    ],
+    "signLabel": "INDIA · 2024"
+  }
+]

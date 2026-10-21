@@ -1,0 +1,27 @@
+name: Collab targets
+# Checks candidate pages against Meta's API and saves the verified list (config/collab-targets.json).
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+        working-directory: poster-engine
+      - run: node publisher/run.js
+        env:
+          NODE_PATH: ${{ github.workspace }}/poster-engine/node_modules
+          JOB: collab-targets
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+      - name: Save verified list
+        run: |
+          git config user.name "autopilot-bot"
+          git config user.email "autopilot-bot@users.noreply.github.com"
+          git add config/collab-targets.json
+          git diff --cached --quiet || (git commit -m "Verified collab targets" && git pull --rebase -q && git push)

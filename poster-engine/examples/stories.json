@@ -1,0 +1,74 @@
+[
+  {
+    "id": "example-impact",
+    "format": "impact",
+    "lang": "en",
+    "date": "12 Oct",
+    "headline": "Repo rate cut 0.25%",
+    "figure": "₹473",
+    "unit": "less/mo",
+    "assumptions": "EMI on ₹30L, 20 yrs, if your bank moves 8.5% → 8.25%",
+    "source": "RBI policy statement (example)"
+  },
+  {
+    "id": "example-alert",
+    "format": "alert",
+    "lang": "mr",
+    "place": "Ward 12",
+    "headline": "गुरुवारी पाणी बंद",
+    "time": "सकाळी 10 – दुपारी 4",
+    "note": "बाजाराजवळ पाइपलाइन दुरुस्ती. बुधवारी रात्री पाणी भरून ठेवा.",
+    "source": "ward office notice (example)"
+  },
+  {
+    "id": "example-number",
+    "format": "number",
+    "lang": "en",
+    "value": "43",
+    "unit": "%",
+    "share": 43,
+    "caption": "of Indians surveyed trust most news most of the time.",
+    "source": "Reuters Institute Digital News Report 2025"
+  },
+  {
+    "id": "example-tracker",
+    "format": "tracker",
+    "lang": "en",
+    "date": "Example",
+    "headline": "Station junction flyover",
+    "then": { "label": "THEN · MAR 2024", "value": "Dec 2025", "note": "promised finish" },
+    "now": { "label": "NOW · SEP 2026", "value": "Jun 2027", "note": "62% built" },
+    "source": "project dashboard (example)"
+  },
+  {
+    "id": "example-myth",
+    "format": "myth",
+    "lang": "en",
+    "date": "Example",
+    "claim": "Banks will charge ₹10 for every UPI payment from next month. Forward to all.",
+    "verdict": "FAKE",
+    "evidence": "No official notice says this. Check before you forward.",
+    "source": "checked against official notices (example)"
+  },
+  {
+    "id": "example-angles",
+    "format": "angles",
+    "lang": "en",
+    "date": "Example",
+    "headline": "Metro extension approved",
+    "angles": [
+      { "text": "Cost and the 2029 deadline", "outlet": "National daily" },
+      { "text": "Homes hit by land acquisition", "outlet": "Marathi daily" },
+      { "text": "Commuters react", "outlet": "Regional TV" }
+    ],
+    "source": "our summary, links to each outlet (example)"
+  },
+  {
+    "id": "example-rejected",
+    "format": "impact",
+    "lang": "en",
+    "headline": "SHOCKING news about your EMI you need to see right now!",
+    "figure": "₹473",
+    "source": ""
+  }
+]

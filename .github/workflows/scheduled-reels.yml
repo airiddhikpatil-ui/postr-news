@@ -1,0 +1,50 @@
+name: Scheduled Reels
+# Reels: posts the next Reel of the day at 13:00 and 16:00 UTC (6:30 pm and 9:30 pm India time).
+on:
+  schedule:
+    - cron: '0 13 * * *'
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+    inputs:
+      only:
+        description: Post this Reel id now (empty = next in line)
+        required: false
+        default: ''
+      dry_run:
+        description: true = upload and process only, publish nothing
+        required: false
+        default: 'false'
+permissions:
+  contents: write
+concurrency: publish
+jobs:
+  post-reel:
+    # Runs on schedule only after you set the repository variable REELS_ENABLED = true (setup guide, step 7).
+    if: github.event_name == 'workflow_dispatch' || vars.REELS_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+        working-directory: poster-engine
+      - run: npx playwright install --with-deps chromium
+        working-directory: poster-engine
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: node publisher/run.js
+        env:
+          NODE_PATH: ${{ github.workspace }}/poster-engine/node_modules
+          JOB: post-reel
+          ONLY: ${{ inputs.only }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          OUT_DIR: out
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+      - name: Record what was posted
+        if: always()
+        run: |
+          git config user.name "autopilot-bot"
+          git config user.email "autopilot-bot@users.noreply.github.com"
+          git add publisher/reels/*.posted.json 2>/dev/null || true
+          git add publisher/batches/cooldown.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Reel posted log $(date -u +%FT%TZ)" && git pull --rebase -q && git push)

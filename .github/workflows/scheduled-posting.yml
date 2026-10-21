@@ -1,0 +1,40 @@
+name: Scheduled posting
+# Posts the next story from today's approved batch, 6 times a day.
+# Times are in UTC: 02:07, 05:07, 08:07, 11:07, 14:07, 17:07 = 7:37 am to 10:37 pm India time.
+# To change times, edit the cron line (crontab.guru helps). Avoid minute :00 and :30, which GitHub often delays.
+on:
+  schedule:
+    - cron: '7 2,5,8,11,14,17 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: publish
+jobs:
+  post-next:
+    # Runs on schedule only after you set the repository variable POSTING_ENABLED = true (setup guide, step 7).
+    if: github.event_name == 'workflow_dispatch' || vars.POSTING_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+        working-directory: poster-engine
+      - run: npx playwright install --with-deps chromium
+        working-directory: poster-engine
+      - run: node publisher/run.js
+        env:
+          NODE_PATH: ${{ github.workspace }}/poster-engine/node_modules
+          JOB: post-next
+          OUT_DIR: out
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+      - name: Record what was posted
+        if: always()
+        run: |
+          git config user.name "autopilot-bot"
+          git config user.email "autopilot-bot@users.noreply.github.com"
+          git add publisher/batches/*.posted.json 2>/dev/null || true
+          git add publisher/collabs/log.json 2>/dev/null || true
+          git add publisher/batches/cooldown.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Posted log $(date -u +%FT%TZ)" && git pull --rebase -q && git push)

@@ -1,0 +1,61 @@
+name: Fetch studio assets
+# Downloads photo plates (e.g. Canva exports) into poster-engine/assets/plates/ and commits them.
+# Input: a JSON object {"name.png": "https://...", ...}
+on:
+  workflow_dispatch:
+    inputs:
+      assets:
+        description: 'JSON map of file name -> URL'
+        required: true
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        env:
+          ASSETS: ${{ inputs.assets }}
+        run: |
+          mkdir -p poster-engine/assets/plates
+          node -e '
+            const fs = require("fs");
+            const map = JSON.parse(process.env.ASSETS);
+            (async () => {
+              for (const [name, url] of Object.entries(map)) {
+                if (!/^[a-z0-9._-]+\.(png|jpg|jpeg|mp4)$/i.test(name)) throw new Error("bad name " + name);
+                const r = await fetch(url);
+                if (!r.ok) throw new Error(name + " HTTP " + r.status);
+                const buf = Buffer.from(await r.arrayBuffer());
+                fs.writeFileSync("poster-engine/assets/plates/" + name, buf);
+                console.log(name, buf.length, "bytes");
+              }
+            })().catch((e) => { console.error(e); process.exit(1); });
+          '
+      - name: Cut out subjects (files named *-cut.png get their background removed)
+        run: |
+          if ls poster-engine/assets/plates/*-cut.png >/dev/null 2>&1; then
+            pip install -q "rembg[cpu]" pillow
+            python3 - <<'PY'
+          import glob
+          from rembg import remove, new_session
+          from PIL import Image
+          s = new_session("isnet-general-use")
+          for f in glob.glob("poster-engine/assets/plates/*-cut.png"):
+              out = f.replace("-cut.png", "-alpha.png")
+              import os
+              if os.path.exists(out):
+                  continue
+              im = Image.open(f).convert("RGB")
+              remove(im, session=s, alpha_matting=True).save(out)
+              print("cut", out)
+          PY
+          fi
+      - name: Commit
+        run: |
+          git config user.name "autopilot-bot"
+          git config user.email "autopilot-bot@users.noreply.github.com"
+          git add poster-engine/assets/plates
+          git commit -m "Add studio plates" || exit 0
+          git pull --rebase -q && git push

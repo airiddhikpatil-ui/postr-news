@@ -1,0 +1,14 @@
+{
+  "_help": "Optional: related Instagram pages to invite as collaborators. Each entry: username (without @), topics (money, markets, scam, cricket, city, health, planet, world, business, india) and cities. Then run the 'Collab targets' action.",
+  "candidates": [
+    {
+      "username": "example_page",
+      "topics": [
+        "city"
+      ],
+      "cities": [
+        "Mumbai"
+      ]
+    }
+  ]
+}

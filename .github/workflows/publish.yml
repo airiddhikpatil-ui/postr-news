@@ -1,0 +1,61 @@
+name: Publish
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: preview-intro, post-intro, preview-batch or post-batch
+        required: true
+        default: preview-intro
+      batch:
+        description: Batch file name in publisher/batches (without .json)
+        required: false
+        default: ''
+      gap_minutes:
+        description: Minutes between posts in a batch
+        required: false
+        default: '4'
+      only:
+        description: Comma-separated story ids to post (empty = all)
+        required: false
+        default: ''
+      targets:
+        description: Where to post
+        required: false
+        default: facebook,instagram
+permissions:
+  contents: write
+concurrency: publish
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+        working-directory: poster-engine
+      - run: npx playwright install --with-deps chromium
+        working-directory: poster-engine
+      - run: node publisher/run.js
+        env:
+          NODE_PATH: ${{ github.workspace }}/poster-engine/node_modules
+          JOB: ${{ inputs.job }}
+          TARGETS: ${{ inputs.targets }}
+          BATCH: ${{ inputs.batch }}
+          GAP_MINUTES: ${{ inputs.gap_minutes }}
+          ONLY: ${{ inputs.only }}
+          OUT_DIR: out
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+      - name: Save preview image to the previews branch
+        if: startsWith(inputs.job, 'preview')
+        run: |
+          mkdir -p /tmp/p && cp out/*.png /tmp/p/
+          git config user.name "autopilot-bot"
+          git config user.email "autopilot-bot@users.noreply.github.com"
+          git checkout --orphan previews
+          git rm -rf --quiet . || true
+          cp /tmp/p/*.png .
+          git add *.png
+          git commit -m "Preview $(date -u +%FT%TZ)"
+          git push -f origin previews
