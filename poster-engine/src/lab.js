@@ -537,7 +537,7 @@ ${c.band ? `.bandp{position:absolute;left:-30px;right:-30px;top:${c.band.top || 
     `${CRUMPLE()}
 <img class="who" src="${plate(c.plate)}">
 <div class="kick"><span>POSTR FILES · ${esc(c.kicker || d.meta)}<br>${esc(s.date || '')}</span><img src="${wm('ink')}"></div>
-${strips.map((t, k) => `<div class="strip torn s${k}" data-max="${k === 2 ? 940 : 990}">${esc(t)}</div>`).join('')}
+${strips.map((t, k) => `<div class="strip torn s${k}" data-max="${k === 2 ? 940 : k === 0 ? 880 : 990}">${esc(t)}</div>`).join('')}
 ${c.band ? '<div class="bandp torn"></div>' : ''}${c.note ? `<div class="note">${esc(c.note)}</div>` : ''}
 ${c.arrow ? `<svg class="arrow" viewBox="0 0 330 160"><path d="M8 40 C 90 140, 210 150, 300 70" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/><path d="M262 58 L304 66 L292 106" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>` : ''}
 <div class="foot">SOURCE · ${esc(c.sourceShort || s.source)}${c.ai !== false ? '<br>AI ILLUSTRATION' : ''}<br><b>SWIPE: ${esc(c.cta || 'THE FULL STORY')} →</b></div>${TORN}`);
