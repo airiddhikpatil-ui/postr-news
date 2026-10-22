@@ -59,7 +59,7 @@ function html(h) {
 <div id="cam">
 <img id="tex" src="data:image/jpeg;base64,${b64(path.join(A, 'hype', 'crumple.jpg'))}">
 <div id="burst"></div>
-<img id="who" src="data:image/png;base64,${b64(path.join(A, 'plates', `${h.plate}-alpha.png`))}">
+<img id="who" src="${h.plate ? `data:image/png;base64,${b64(path.join(A, 'plates', `${h.plate}-alpha.png`))}` : 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='}">
 <div id="s1" class="strip torn"></div>
 <div id="s2" class="strip torn">${esc(h.s2)}</div>
 <div id="s3" class="strip torn">${esc(h.s3)}</div>
@@ -75,6 +75,7 @@ function html(h) {
 <div class="src">SOURCE · ${esc(h.source)}${h.ai ? '<br>IMAGE · AI ILLUSTRATION' : ''}</div>
 <img id="grain" src="data:image/png;base64,${b64(path.join(A, 'hype', 'grain.png'))}">
 <script>
+(()=>{
 document.querySelectorAll('.torn').forEach((el,k)=>{const p=[];const n=40;let s=11+k*7;const r=()=>{s=(s*9301+49297)%233280;return s/233280};
 for(let i=0;i<=n;i++)p.push((i/n*100).toFixed(2)+'% '+(r()*6).toFixed(2)+'%');
 for(let i=n;i>=0;i--)p.push((i/n*100).toFixed(2)+'% '+(100-r()*6).toFixed(2)+'%');
@@ -88,7 +89,8 @@ const plen=$('cpath').getTotalLength();$('cpath').style.strokeDasharray=plen;
 // shrink strips that are too wide
 const fit=(el,max)=>{let f=parseFloat(getComputedStyle(el).fontSize);while(el.getBoundingClientRect().width>max&&f>40){f-=2;el.style.fontSize=f+'px';}};
 const fmt=(v)=>{const c=H.count;const n=c.decimals?v.toFixed(c.decimals):Math.round(v).toLocaleString('en-IN');return (c.prefix||'')+n+(c.suffix||'');};
-$('s1').textContent=H.count?fmt(H.count.to):H.s1; fit($('s1'),980); fit($('s2'),990); fit($('s3'),960); fit($('c1'),980);
+$('s1').textContent=H.count?fmt(H.count.to):H.s1;
+window.__init=()=>{$('s1').textContent=H.count?fmt(H.count.to):H.s1; fit($('s1'),900); fit($('s2'),940); fit($('s3'),920); fit($('c1'),920); fit($('stamp'),760);};
 window.__frame=(t)=>{
   const ph=(t%B)/B; let sc=1+0.022*Math.exp(-ph*9), sx=0, sy=0, rot=0;
   for(const a of impacts){const d=t-a; if(d>=0&&d<0.25){const k=1-d/0.25; sx+=Math.sin(d*90)*14*k; sy+=Math.cos(d*77)*10*k; rot+=Math.sin(d*60)*0.6*k; sc+=0.04*k;}}
@@ -125,6 +127,7 @@ window.__frame=(t)=>{
   $('wm').style.filter=dark==='#111'?'none':'invert(1)';
 };
 window.__frame(0);
+})();
 </script></body></html>`;
 }
 
@@ -137,7 +140,7 @@ async function renderHype(reel, outDir, { fps = 30, seconds = 12 } = {}) {
     const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
     await page.setContent(html(h), { waitUntil: 'load', timeout: 30000 }).catch(() => {});
     await page.evaluate(() => Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 8000))]));
-    await page.evaluate(() => window.__frame(0));
+    await page.evaluate(() => { window.__init(); window.__frame(0); });
     for (let i = 0; i < fps * seconds; i++) {
       await page.evaluate((t) => window.__frame(t), i / fps);
       await page.screenshot({ path: path.join(work, `${String(i).padStart(4, '0')}.jpg`), type: 'jpeg', quality: 92 });

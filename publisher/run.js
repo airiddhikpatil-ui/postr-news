@@ -10,6 +10,7 @@ const path = require('path');
 const { renderIntro, CAPTION } = require('./intro');
 const { publishPoster, publishCarousel, publishReel, lookupAccount, recentMedia } = require('./meta');
 const { renderReel } = require('./reel');
+const { renderHype } = require('../poster-engine/src/hype');
 const { buildCaption } = require('./caption');
 const { pickCollaborators, logInvites } = require('./collab');
 const { renderAll, renderCarousel, renderLabCarousel } = require('../poster-engine/src/render');
@@ -87,15 +88,18 @@ async function postNext(outDir, targets) {
 async function postNextReel(outDir, targets) {
   const date = new Date(Date.now() + 5.5 * 3600 * 1000).toISOString().slice(0, 10);
   const dir = path.join(__dirname, 'reels');
-  const file = path.join(dir, `${date}.json`);
+  // A queue (reels/queue.json) runs across days; otherwise use today's file.
+  const queue = path.join(dir, 'queue.json');
+  const useQueue = fs.existsSync(queue);
+  const file = useQueue ? queue : path.join(dir, `${date}.json`);
   if (!fs.existsSync(file)) return note(`No Reels for ${date}.`);
-  const postedFile = path.join(dir, `${date}.posted.json`);
+  const postedFile = useQueue ? path.join(dir, 'queue.posted.json') : path.join(dir, `${date}.posted.json`);
   const posted = fs.existsSync(postedFile) ? JSON.parse(fs.readFileSync(postedFile, 'utf8')) : [];
   const reels = JSON.parse(fs.readFileSync(file, 'utf8'));
   const only = process.env.ONLY;
   const next = reels.find((r) => (only ? r.id === only : true) && !posted.some((p) => p.id === r.id));
   if (!next) return note(`All Reels for ${date} are posted.`);
-  const { file: mp4 } = await renderReel(next, outDir);
+  const { file: mp4 } = next.kind === 'hype' ? await renderHype(next, outDir) : await renderReel(next, outDir);
   const fbCaption = next.sourceUrl ? `${next.caption}\n\n${next.sourceUrl}` : next.caption;
   const dryRun = process.env.DRY_RUN === 'true';
   let r;

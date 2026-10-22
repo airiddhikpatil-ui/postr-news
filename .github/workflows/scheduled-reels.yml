@@ -1,9 +1,8 @@
 name: Scheduled Reels
-# Reels: 6:30 pm and 9:30 pm India time (13:00 and 16:00 UTC), next Reel of the day. Discovery engine for non-followers.
+# Reels: next Reel in the queue every 2 hours, 9:37 am to 9:37 pm India time.
 on:
   schedule:
-    - cron: '0 13 * * *'
-    - cron: '0 16 * * *'
+    - cron: '7 4,6,8,10,12,14,16 * * *'
   workflow_dispatch:
     inputs:
       only:

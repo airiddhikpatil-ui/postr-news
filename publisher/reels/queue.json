@@ -1,0 +1,355 @@
+[
+  {
+    "id": "hype-unclaimed-money",
+    "kind": "hype",
+    "sourceUrl": "https://knnindia.co.in/news/newsdetails/sectors/unclaimed-bank-deposits-with-rbi-fund-rise-to-rs-86917-crore-govt",
+    "caption": "₹86,917 crore of Indians' money is sitting unclaimed. Some of it could be your family's.\n\nBank accounts untouched for 10 years move to the RBI's DEA Fund, but the money stays payable to the owners and their heirs. Search your parents' and grandparents' old accounts on the RBI's free UDGAM portal, then claim at the bank.\n\nSource: Finance Ministry reply in Rajya Sabha, Aug 2026\n\nSend this to your family group. Someone's forgotten account might still be waiting.\n\n#UnclaimedMoney #PaisaWapas #RBI #MoneyTips #PostrNews",
+    "hype": {
+      "palette": "yellow",
+      "beat": 1,
+      "plate": "elder-passbook",
+      "kicker": "MONEY",
+      "ai": true,
+      "source": "Finance Ministry, Rajya Sabha, Aug 2026",
+      "count": {
+        "to": 86917,
+        "prefix": "₹",
+        "suffix": " CRORE"
+      },
+      "s2": "NOBODY CLAIMED IT",
+      "s3": "SITTING IN INDIAN BANKS",
+      "circle": {
+        "x": 600,
+        "y": 1030,
+        "w": 600,
+        "h": 460
+      },
+      "scribble": {
+        "text": "yours?",
+        "x": 250,
+        "y": 1120
+      },
+      "strobe": [
+        "YOUR",
+        "DADA-DADI'S",
+        "OLD",
+        "ACCOUNT?"
+      ],
+      "check": "CHECK IN 2 MINUTES",
+      "tape": "UDGAM.RBI.ORG.IN",
+      "label": "FREE · OFFICIAL RBI PORTAL",
+      "stamp": "Send this to your family group"
+    }
+  },
+  {
+    "id": "hype-failed-medicines",
+    "kind": "hype",
+    "sourceUrl": "https://thesouthfirst.com/health/fake-drugs-in-the-market-cdsco-flags-blood-pressure-drug-telma-am-spurious-220-medicine-batches-fail-tests/",
+    "caption": "220 medicine batches failed India's own quality tests in a single month. Paracetamol, BP pills and antibiotics are on the list.\n\nCDSCO's August alert lists the exact batch numbers. Failures apply to those batches, not whole brands. Don't stop prescribed medicine; buy from licensed chemists, keep the bill, and check the batch number.\n\nSource: CDSCO monthly drug alert, via The South First, 26 Sep 2026\n\nJo ghar ki dawai laata hai, usse zaroor bhejo.\n\n#Medicines #CDSCO #HealthAlert #India #PostrNews",
+    "hype": {
+      "palette": "mint",
+      "beat": 2,
+      "plate": "pill-hand",
+      "kicker": "HEALTH",
+      "ai": false,
+      "source": "CDSCO drug alert, Aug 2026",
+      "who": {
+        "h": 1500,
+        "right": -60,
+        "top": 520
+      },
+      "count": {
+        "to": 220,
+        "suffix": " BATCHES"
+      },
+      "s2": "FAILED INDIA'S OWN TESTS",
+      "s3": "PARACETAMOL · BP PILLS · ANTIBIOTICS",
+      "strobe": [
+        "CHECK",
+        "THE",
+        "BATCH",
+        "NUMBER"
+      ],
+      "check": "MATCH IT ONLINE",
+      "tape": "CDSCO.GOV.IN · DRUG ALERTS",
+      "label": "MONTHLY LIST · FREE",
+      "stamp": "Send this to whoever buys the medicines"
+    }
+  },
+  {
+    "id": "hype-sbi-atm",
+    "kind": "hype",
+    "sourceUrl": "https://www.outlookmoney.com/news/new-money-rules-from-october-2026-key-changes-to-know",
+    "caption": "SBI salary account? Your free ATM visits at other banks just got cut in half.\n\nFrom 1 October, SBI Salary Package accounts get 5 free transactions a month at other banks' ATMs, down from 10. Balance checks count too. After that, each cash withdrawal costs ₹23 plus GST. SBI's own ATMs are unchanged.\n\nSource: Outlook Money; Sunday Guardian, Oct 2026\n\nSend this to every SBI salary account holder you know.\n\n#SBI #ATM #BankFees #YeFeeKyun #PostrNews",
+    "hype": {
+      "palette": "blue",
+      "beat": 3,
+      "plate": "atm-card",
+      "kicker": "BANK FEES",
+      "ai": false,
+      "source": "Outlook Money; Sunday Guardian, Oct 2026",
+      "count": {
+        "to": 23,
+        "prefix": "₹",
+        "suffix": " + GST"
+      },
+      "s2": "PER EXTRA ATM WITHDRAWAL",
+      "s3": "SBI SALARY ACCOUNTS · FROM 1 OCT",
+      "strobe": [
+        "ONLY",
+        "5",
+        "FREE",
+        "NOW."
+      ],
+      "check": "FREE LIMIT: 10 → 5",
+      "tape": "OTHER BANKS' ATMS · BALANCE CHECKS COUNT",
+      "label": "SBI'S OWN ATMS UNCHANGED",
+      "stamp": "Send this to every SBI salary account holder",
+      "who": {
+        "h": 1100,
+        "right": -60,
+        "top": 760
+      }
+    }
+  },
+  {
+    "id": "hype-whatsapp-paid",
+    "kind": "hype",
+    "sourceUrl": "https://sundayguardianlive.com/trending/what-changes-from-october-1-2026-check-major-new-rules-on-lpg-subsidy-whatsapp-business-pricing-sbi-atm-charges-upi-payments-tds-rules-immigration-visa-fee-hike-and-more-295963/",
+    "caption": "VIRAL CHECK: \"WhatsApp is now paid.\" False for normal users.\n\nMeta's new India pricing applies only to the WhatsApp Business Platform, which companies use for bulk messages like order updates. Ordinary WhatsApp and the WhatsApp Business app are not affected.\n\nSource: Meta pricing change, via Sunday Guardian, 1 Oct 2026\n\nSend this to the family group before the fake forward does.\n\n#ViralCheck #WhatsApp #FactCheck #FakeNews #PostrNews",
+    "hype": {
+      "palette": "yellow",
+      "beat": 3,
+      "plate": "phone-hand",
+      "kicker": "VIRAL CHECK",
+      "ai": false,
+      "source": "Meta pricing change, via Sunday Guardian, Oct 2026",
+      "s1": "VIRAL CHECK",
+      "s2": "\"WHATSAPP IS NOW PAID\"",
+      "s3": "FALSE · FOR NORMAL USERS",
+      "strobe": [
+        "FAKE",
+        "FORWARD.",
+        "DON'T",
+        "PANIC."
+      ],
+      "check": "ONLY BUSINESS BULK MESSAGES",
+      "tape": "YOUR WHATSAPP STAYS FREE",
+      "label": "META PRICING · OCT 2026",
+      "stamp": "Send this to the family group",
+      "who": {
+        "h": 760,
+        "right": -140,
+        "top": 1000
+      }
+    }
+  },
+  {
+    "id": "hype-road-deaths",
+    "kind": "hype",
+    "sourceUrl": "https://www.etvbharat.com/en/bharat/road-accidents-in-india-in-2024-enn26061107541",
+    "caption": "In the time it takes to watch this Reel, someone in India will die on a road. One every 3 minutes, all year.\n\nIndia recorded 1,77,175 road deaths in 2024. Two-wheeler riders were 46.2% of those killed. A helmet on every ride, even \"just 5 minutes\", is the single biggest thing you can do.\n\nSource: Road Transport Ministry report, via ETV Bharat/PTI\n\nSend this to the friend who rides without a helmet.\n\n#RoadSafety #Helmet #India #Mumbai #PostrNews",
+    "hype": {
+      "palette": "red",
+      "beat": 1,
+      "plate": "helmet-rider",
+      "kicker": "ROADS",
+      "ai": false,
+      "source": "Road Transport Ministry, 2024 data",
+      "count": {
+        "to": 177175,
+        "suffix": " DEATHS"
+      },
+      "s2": "ON INDIAN ROADS IN 2024",
+      "s3": "ONE EVERY 3 MINUTES",
+      "strobe": [
+        "HELMET",
+        "ON.",
+        "EVERY",
+        "RIDE."
+      ],
+      "check": "46% WERE ON TWO-WHEELERS",
+      "tape": "WEAR IT · EVERY RIDE · EVEN 5 MINUTES",
+      "label": "ROAD TRANSPORT MINISTRY",
+      "stamp": "Send this to the no-helmet friend",
+      "who": {
+        "h": 820,
+        "right": 120,
+        "top": 920
+      }
+    }
+  },
+  {
+    "id": "hype-stent-markup",
+    "kind": "hype",
+    "sourceUrl": "https://www.barandbench.com/news/centre-caps-trade-margin-for-cancer-drugs-at-30-after-supreme-court-rap",
+    "caption": "A ₹5,000 stent. A ₹25,000 bill. Where did the other ₹20,000 go?\n\nThe Hindu reported a made-in-India cardiac stent costing about ₹5,000 sold for over ₹25,000, and mark-ups of up to 1,000% on some cancer drugs. The Centre has now capped trade margins on anti-cancer drugs at 30% of MRP, and the Supreme Court asked why only cancer drugs.\n\nSource: The Hindu, 13 Oct 2026; Bar & Bench, 12 Oct 2026\n\nJiske ghar mein koi roz dawai leta hai, usse bhejo.\n\n#Medicines #MRP #SupremeCourt #YeFeeKyun #PostrNews",
+    "hype": {
+      "palette": "mint",
+      "beat": 2,
+      "plate": "doctor",
+      "kicker": "HEALTH MONEY",
+      "ai": false,
+      "source": "The Hindu, 13 Oct 2026; Bar & Bench",
+      "count": {
+        "to": 25000,
+        "prefix": "₹",
+        "suffix": "+"
+      },
+      "s2": "FOR A ₹5,000 STENT",
+      "s3": "WHERE DID ₹20,000 GO?",
+      "strobe": [
+        "MRP",
+        "IS",
+        "NOT",
+        "COST."
+      ],
+      "check": "CANCER DRUG MARGIN NOW 30%",
+      "tape": "COMPARE MRP · ASK FOR GENERICS",
+      "label": "SUPREME COURT: WHY ONLY CANCER?",
+      "stamp": "Send this to anyone on daily medicines",
+      "who": {
+        "h": 1150,
+        "right": -100,
+        "top": 740
+      }
+    }
+  },
+  {
+    "id": "hype-lpg-aadhaar",
+    "kind": "hype",
+    "sourceUrl": "https://newsonair.gov.in/biometric-aadhaar-authentication-mandatory-for-subsidised-lpg-refills-from-october-1/",
+    "caption": "New LPG rule: biometric Aadhaar authentication is now a must to book subsidised refills.\n\nFrom 1 October, domestic LPG refills at the subsidised price need biometric Aadhaar authentication. 27.43 crore consumers have already done it and need to do nothing more. Not sure? Ask your gas agency.\n\nSource: All India Radio News, 19 Sep 2026\n\nSend this to whoever books the cylinder at home.\n\n#LPG #Aadhaar #Household #India #PostrNews",
+    "hype": {
+      "palette": "red",
+      "beat": 3,
+      "plate": null,
+      "kicker": "HOUSEHOLD",
+      "ai": false,
+      "source": "All India Radio News, 19 Sep 2026",
+      "s1": "NEW LPG RULE",
+      "s2": "AADHAAR BIOMETRIC IS A MUST",
+      "s3": "FOR SUBSIDISED REFILLS · FROM 1 OCT",
+      "strobe": [
+        "DONE",
+        "IT",
+        "ALREADY?",
+        "CHECK."
+      ],
+      "check": "27.43 CRORE HAVE DONE IT",
+      "tape": "NOT SURE? ASK YOUR GAS AGENCY",
+      "label": "DONE ONCE = NOTHING MORE",
+      "stamp": "Send this to whoever books the cylinder",
+      "who": {
+        "h": 900,
+        "right": -100,
+        "top": 900
+      }
+    }
+  },
+  {
+    "id": "hype-undertrials",
+    "kind": "hype",
+    "sourceUrl": "https://www.drishtiias.com/daily-updates/daily-news-analysis/prison-statistics-india-report-2024/print_manually",
+    "caption": "3 in 4 people in Indian jails have not been convicted of anything. They are waiting for trial.\n\nAbout 73% of the 5.11 lakh+ inmates in Indian jails are undertrials. 9,028 have been inside for more than 5 years. Under Indian law, everyone is innocent until proven guilty.\n\nSource: NCRB Prison Statistics India 2024, via Drishti IAS\n\nSend this to the friend who says \"jail means guilty\".\n\n#Justice #Prisons #HiddenIndia #India #PostrNews",
+    "hype": {
+      "palette": "red",
+      "beat": 1,
+      "plate": "undertrial-man",
+      "kicker": "JUSTICE",
+      "ai": true,
+      "source": "NCRB Prison Statistics India 2024",
+      "who": {
+        "h": 1080,
+        "right": -80,
+        "top": 790
+      },
+      "count": {
+        "to": 73,
+        "suffix": "%"
+      },
+      "s2": "OF PRISONERS",
+      "s3": "NOT CONVICTED · STILL WAITING",
+      "strobe": [
+        "LOCKED UP.",
+        "NOT",
+        "PROVEN",
+        "GUILTY."
+      ],
+      "check": "9,028 WAITED 5+ YEARS",
+      "tape": "INNOCENT UNTIL PROVEN GUILTY",
+      "label": "NCRB · 2024",
+      "stamp": "Send this to the \"jail = guilty\" friend"
+    }
+  },
+  {
+    "id": "hype-anaemia",
+    "kind": "hype",
+    "sourceUrl": "https://www.downtoearth.org.in/news/health/anaemia-in-women-and-children-on-the-rise-assam-fares-worst-nfhs-5-80357",
+    "caption": "2 in 3 Indian children under 5 are anaemic, according to the government's own health survey. And it went up.\n\nNFHS-5 found 67.1% of children aged 6 to 59 months anaemic, up from 58.6%. Anaemia leaves children tired and slows learning and growth. A haemoglobin test is cheap; iron-rich food and doctor-advised supplements help.\n\nSource: National Family Health Survey 5 (2019-21), via Down To Earth\n\nSend this to every new parent you know.\n\n#Anaemia #ChildHealth #Parenting #India #PostrNews",
+    "hype": {
+      "palette": "cream",
+      "beat": 2,
+      "plate": "mother-child",
+      "kicker": "HEALTH",
+      "ai": true,
+      "source": "NFHS-5 (2019-21), Health Ministry",
+      "who": {
+        "h": 1100,
+        "right": -160,
+        "top": 770
+      },
+      "count": {
+        "to": 67,
+        "suffix": "%"
+      },
+      "s2": "OF KIDS UNDER 5",
+      "s3": "ARE ANAEMIC · AND RISING",
+      "strobe": [
+        "TIRED?",
+        "WEAK?",
+        "SLOW?",
+        "CHECK HB."
+      ],
+      "check": "ONE CHEAP BLOOD TEST",
+      "tape": "HAEMOGLOBIN TEST · ASK YOUR DOCTOR",
+      "label": "NFHS-5 · HEALTH MINISTRY",
+      "stamp": "Send this to every new parent"
+    }
+  },
+  {
+    "id": "hype-mental-health",
+    "kind": "hype",
+    "sourceUrl": "https://www.insightsonindia.com/2026/10/13/upsc-current-affairs-13-october-2026/",
+    "caption": "In India, 83% of people who need mental health care get no treatment at all.\n\nIndia's National Mental Health Survey puts the treatment gap at 83%. There are fewer than 0.75 psychiatrists per lakh people. The government's free Tele-MANAS helpline, 14416, has taken about 47.75 lakh calls in four years.\n\nSource: National Mental Health Survey, via Insights IAS, 13 Oct 2026\n\nSend this to someone who might need it. Tele-MANAS: 14416.\n\n#MentalHealth #TeleMANAS #YouAreNotAlone #India #PostrNews",
+    "hype": {
+      "palette": "violet",
+      "beat": 1,
+      "plate": "sad-man",
+      "kicker": "MENTAL HEALTH",
+      "ai": false,
+      "source": "National Mental Health Survey; Tele-MANAS",
+      "count": {
+        "to": 83,
+        "suffix": "%"
+      },
+      "s2": "WHO NEED MENTAL HEALTH CARE",
+      "s3": "GET NO TREATMENT",
+      "strobe": [
+        "YOU",
+        "ARE",
+        "NOT",
+        "ALONE."
+      ],
+      "check": "FREE GOVT HELPLINE",
+      "tape": "TELE-MANAS · CALL 14416",
+      "label": "24x7 · FREE",
+      "stamp": "Send this to someone who needs it",
+      "who": {
+        "h": 1100,
+        "right": -120,
+        "top": 780
+      }
+    }
+  }
+]
