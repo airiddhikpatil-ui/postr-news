@@ -99,7 +99,9 @@ async function postNextReel(outDir, targets) {
   const only = process.env.ONLY;
   const next = reels.find((r) => (only ? r.id === only : true) && !posted.some((p) => p.id === r.id));
   if (!next) return note(`All Reels for ${date} are posted.`);
-  const { file: mp4 } = next.kind === 'hype' ? await renderHype(next, outDir) : await renderReel(next, outDir);
+  // A pre-rendered video (reel.video, path inside the repo) is posted as-is.
+  const { file: mp4 } = next.video ? { file: path.join(__dirname, '..', next.video) }
+    : next.kind === 'hype' ? await renderHype(next, outDir) : await renderReel(next, outDir);
   const fbCaption = next.sourceUrl ? `${next.caption}\n\n${next.sourceUrl}` : next.caption;
   const dryRun = process.env.DRY_RUN === 'true';
   let r;
