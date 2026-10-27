@@ -24,11 +24,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install --no-audit --no-fund
+      - run: npm install --no-audit --no-fund --ignore-scripts
         working-directory: poster-engine
-      - run: npx playwright install --with-deps chromium
-        working-directory: poster-engine
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
       - run: node publisher/run.js
         env:
           NODE_PATH: ${{ github.workspace }}/poster-engine/node_modules
