@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const A = path.join(__dirname, '..', 'assets');
-const FONTS = 'https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Manrope:wght@500;600;700;800&display=block';
+const FONTS = 'https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&family=Manrope:wght@500;600;700;800&display=block';
 const OR = '#FF5B14';
 const INK = '#0E0E0E';
 const PAPER = '#F3EFE8';
@@ -39,9 +39,17 @@ const BASE = `*{margin:0;padding:0;box-sizing:border-box}html,body{width:1080px;
 .kick{display:inline-block;align-self:flex-start;font:700 20px 'Space Mono';letter-spacing:4px;text-transform:uppercase;margin-bottom:30px}
 .hd{font-weight:800;letter-spacing:-.035em;line-height:1.12}
 .hd em{font-style:normal}
-body .hd.big{font-size:190px;line-height:.95;letter-spacing:-.05em}`;
+body .hd.big{font-size:190px;line-height:.95;letter-spacing:-.05em}
+.grain{position:absolute;inset:0;pointer-events:none;z-index:60;opacity:.32;mix-blend-mode:overlay;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.cm{position:absolute;width:26px;height:26px;z-index:61;border-color:rgba(128,128,128,.55);border-style:solid;border-width:0}
+.cm.a{left:22px;top:22px;border-left-width:1.5px;border-top-width:1.5px}.cm.b{right:22px;top:22px;border-right-width:1.5px;border-top-width:1.5px}
+.cm.c{left:22px;bottom:22px;border-left-width:1.5px;border-bottom-width:1.5px}.cm.d{right:22px;bottom:22px;border-right-width:1.5px;border-bottom-width:1.5px}
+.sf{font-family:'Instrument Serif',serif!important;font-style:italic!important;font-weight:400!important;letter-spacing:-.01em!important}
+.duo{position:absolute;overflow:hidden}.duo div{position:absolute;inset:0;background-size:cover;background-position:center;filter:grayscale(1) contrast(1.3) brightness(1.06)}.duo::after{content:'';position:absolute;inset:0;background:${OR};mix-blend-mode:multiply}
+.bw{filter:grayscale(1) contrast(1.22) brightness(1.02)!important}
+.tape{position:absolute;width:150px;height:44px;background:rgba(243,239,232,.78);box-shadow:0 2px 6px rgba(0,0,0,.12);z-index:5}`;
 
-const shell = (css, body) => `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="${FONTS}"><style>${BASE}${css}</style></head><body>${body}${FIT}</body></html>`;
+const shell = (css, body) => `<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="${FONTS}"><style>${BASE}${css}</style></head><body>${body}<div class="grain"></div><i class="cm a"></i><i class="cm b"></i><i class="cm c"></i><i class="cm d"></i>${FIT}</body></html>`;
 const chrome = (c, dark) => `<div class="top" style="color:${dark ? '#fff' : INK}"><span>POSTR FILES · <b>${esc(c.series)} ${esc(c.file)}</b></span><span>${pad(c.i)} / ${pad(c.total)}</span></div>
 <div class="bot" style="color:${dark ? 'rgba(255,255,255,.7)' : 'rgba(14,14,14,.65)'}"><span>SOURCE · ${esc(c.source)}</span><img src="${wm(dark ? 'paper' : 'ink')}"></div>`;
 const isBig = (t) => String(t || '').replace(/\*/g, '').trim().split(/\s+/).length <= 5;
@@ -60,7 +68,7 @@ L.cover = (s, c) => {
 .cv-a{position:absolute;left:0;top:600px;max-width:1000px;background:${OR};color:#fff;padding:22px 44px 26px 64px;font:800 104px/1 Manrope;letter-spacing:-.045em;white-space:nowrap}
 .cv-b{position:absolute;left:0;top:740px;max-width:960px;background:${INK};color:#fff;padding:18px 40px 20px 64px;font:800 50px/1.05 Manrope;letter-spacing:-.03em;white-space:nowrap}
 .cv-d{position:absolute;left:64px;top:930px;font:700 22px 'Space Mono';letter-spacing:4px;color:${OR};text-transform:uppercase}
-.cv-n{position:absolute;left:64px;top:985px;width:640px;height:150px;font:700 44px/1.18 Manrope;letter-spacing:-.02em}
+.cv-n{position:absolute;left:64px;top:975px;width:660px;height:170px;font:italic 400 66px/1.02 'Instrument Serif';letter-spacing:-.01em}
 .cv-cta{position:absolute;right:64px;top:1000px;background:${INK};color:#fff;font:800 24px Manrope;letter-spacing:2px;padding:22px 30px;text-transform:uppercase}
 .cv-top{position:absolute;top:52px;left:64px;font:700 18px 'Space Mono';letter-spacing:3px;text-transform:uppercase}`,
   `<div class="ph cv-ph" style="background-image:url(${photo(c.photos[0])})"></div>
@@ -79,9 +87,10 @@ L.cover = (s, c) => {
 L.orange = (sl, c) => shell(`body{background:${OR}}
 .t{position:absolute;left:64px;right:150px;top:190px;bottom:180px;display:flex;flex-direction:column;justify-content:center}
 .t .hd{font-size:104px;color:${INK};max-height:900px;overflow:hidden}
-.t .hd em{background:${INK};color:#fff;box-shadow:8px 0 0 ${INK},-8px 0 0 ${INK}}
+.t .hd em{font-family:'Instrument Serif';font-style:italic;font-weight:400;letter-spacing:-.01em;color:#fff;font-size:1.1em}
+.ht{position:absolute;inset:0;background:radial-gradient(rgba(14,14,14,.22) 1.6px,transparent 1.9px) 0 0/15px 15px;-webkit-mask-image:linear-gradient(135deg,transparent 45%,#000 95%)}
 .num{position:absolute;right:30px;bottom:90px;font:400 440px/0.8 Anton;color:transparent;-webkit-text-stroke:3px rgba(14,14,14,.22)}`,
-`${chrome(c, false)}<div class="num">${pad(c.i)}</div><div class="vt" style="right:40px;top:300px;color:${INK}">${esc(c.series)} — ${esc(c.file)}</div>
+`<div class="ht"></div>${chrome(c, false)}<div class="num">${pad(c.i)}</div><div class="vt" style="right:40px;top:300px;color:${INK}">${esc(c.series)} — ${esc(c.file)}</div>
 <div class="t">${kick(sl, INK)}<div class="hd${isBig(sl.body) ? ' big' : ''}" data-fit data-min="40">${mark(sl.body)}</div></div>
 <span class="x" style="left:64px;top:1150px;color:${INK}">×</span><span class="x" style="left:120px;top:1150px;color:${INK}">×</span>`);
 
@@ -89,7 +98,7 @@ L.orange = (sl, c) => shell(`body{background:${OR}}
 L.photo = (sl, c, p) => shell(`body{background:${INK}}
 .fade{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,14,14,.96) 38%,rgba(14,14,14,.55) 62%,rgba(14,14,14,.15))}
 .t{position:absolute;left:64px;right:64px;bottom:150px;height:640px;display:flex;flex-direction:column;justify-content:flex-end}
-.t .hd{font-size:92px;color:#fff;max-height:560px;overflow:hidden}.t .hd em{color:${OR}}`,
+.t .hd{font-size:92px;color:#fff;max-height:560px;overflow:hidden}.t .hd em{color:${OR};font-family:'Instrument Serif';font-style:italic;font-weight:400;letter-spacing:-.01em;font-size:1.12em}`,
 `<div class="ph" style="inset:0;background-image:url(${photo(p)})"></div><div class="fade"></div>${chrome(c, true)}
 <div class="t">${kick(sl, INK, OR)}<div class="hd${isBig(sl.body) ? ' big' : ''}" data-fit data-min="40">${mark(sl.body)}</div></div>`);
 
@@ -100,7 +109,7 @@ L.print = (sl, c, p) => shell(`
 .sq{position:absolute;right:40px;top:120px;width:390px;height:470px;border:4px solid ${OR}}
 .t{position:absolute;left:64px;right:64px;top:660px;bottom:150px;display:flex;flex-direction:column;justify-content:flex-start}
 .t .hd{font-size:88px;max-height:480px;overflow:hidden}.t .hd em{background:${OR};box-shadow:7px 0 0 ${OR},-7px 0 0 ${OR}}`,
-`${chrome(c, false)}<div class="sq"></div><div class="fr"><div style="background-image:url(${photo(p)})"></div></div>
+`${chrome(c, false)}<div class="sq"></div><div class="fr"><div style="background-image:url(${photo(p)})"></div></div><div class="tape" style="right:300px;top:130px;transform:rotate(-24deg)"></div><div class="tape" style="right:50px;top:580px;transform:rotate(-20deg)"></div>
 <div class="vt" style="left:40px;top:180px;color:${OR}">POSTR // ${esc(c.file)}</div>
 <div class="t">${kick(sl, OR)}<div class="hd${isBig(sl.body) ? ' big' : ''}" data-fit data-min="38">${mark(sl.body)}</div></div>
 <span class="x" style="left:110px;top:200px">×</span><span class="x" style="left:170px;top:200px">×</span><span class="o" style="left:110px;top:270px"></span>`);
@@ -109,7 +118,7 @@ L.print = (sl, c, p) => shell(`
 L.split = (sl, c) => shell(`body{background:${INK}}
 .dg{position:absolute;inset:0;background:${OR};clip-path:polygon(0 70%,100% 46%,100% 100%,0 100%)}
 .t{position:absolute;left:64px;right:64px;top:170px;height:560px;display:flex;flex-direction:column;justify-content:center}
-.t .hd{font-size:90px;color:#fff;max-height:480px;overflow:hidden}.t .hd em{color:${OR}}
+.t .hd{font-size:90px;color:#fff;max-height:480px;overflow:hidden}.t .hd em{color:${OR};font-family:'Instrument Serif';font-style:italic;font-weight:400;letter-spacing:-.01em;font-size:1.12em}
 .w{position:absolute;left:50px;right:50px;bottom:140px;height:300px;font:400 280px/1 Anton;color:${INK};text-transform:uppercase;letter-spacing:-2px;white-space:nowrap;overflow:hidden;display:flex;align-items:flex-end}`,
 `<div class="dg"></div>${chrome(c, true)}
 <div class="t"><div class="hd${isBig(sl.body) ? ' big' : ''}" data-fit data-min="40">${mark(sl.body)}</div></div>
@@ -149,7 +158,7 @@ L.list = (sl, c, p) => shell(`
 .li{display:flex;gap:24px;align-items:flex-start;padding:24px 0;border-top:2px solid rgba(14,14,14,.14)}
 .li b{font:400 64px/0.9 Anton;color:${OR};min-width:70px}.li span{font:600 30px/1.32 Manrope}
 .lbl{position:absolute;left:0;top:1060px;background:${OR};color:${INK};font:700 20px 'Space Mono';letter-spacing:4px;padding:14px 22px;text-transform:uppercase}`,
-`<div class="ph st" style="background-image:url(${photo(p)})"></div><div class="lbl">${esc(sl.label)}</div>
+`<div class="duo" style="left:0;top:0;width:380px;height:1350px"><div style="background-image:url(${photo(p)})"></div></div><div class="lbl">${esc(sl.label)}</div>
 <div class="top" style="left:440px"><span><b>${esc(c.file)}</b></span><span>${pad(c.i)} / ${pad(c.total)}</span></div>
 <div class="r"><h2 data-fit data-min="34">${esc(sl.title)}</h2>${(sl.points || []).map((t, k) => `<div class="li"><b>${pad(k + 1)}</b><span>${esc(t)}</span></div>`).join('')}</div>
 <div class="bot" style="left:440px;color:rgba(14,14,14,.65)"><span>SOURCE · ${esc(c.source)}</span><img src="${wm('ink')}"></div>`);
@@ -176,9 +185,17 @@ L.body = (sl, c, p) => shell(`body{background:${INK};color:#fff}
 .tp{left:0;top:0;width:1080px;height:610px}
 .tt{position:absolute;left:0;top:540px;max-width:960px;background:${OR};color:${INK};padding:24px 40px 26px 64px;font:800 60px/1.06 Manrope;letter-spacing:-.03em;max-height:200px;overflow:hidden}
 .bd{position:absolute;left:64px;right:110px;top:800px;bottom:160px;font:500 40px/1.42 Manrope;color:rgba(255,255,255,.92);overflow:hidden}`,
-`<div class="ph tp" style="background-image:url(${photo(p)})"></div>${chrome(c, true).replace('class="top"', 'class="top" style="text-shadow:0 1px 8px rgba(0,0,0,.6)"')}
+`<div class="ph tp bw" style="background-image:url(${photo(p)})"></div>${chrome(c, true).replace('class="top"', 'class="top" style="text-shadow:0 1px 8px rgba(0,0,0,.6)"')}
 <div class="tt" data-fit data-min="34">${esc(sl.title)}</div><div class="bd" data-fit data-min="26">${esc(sl.body)}</div>
 <div class="vt" style="right:40px;top:820px;color:${OR}">${esc(sl.label)}</div>`);
+
+// Big reveal: giant words filled with the photograph.
+L.reveal = (sl, c, p) => shell(`body{background:${INK}}
+.rk{position:absolute;left:64px;top:190px;font:700 22px 'Space Mono';letter-spacing:5px;color:${OR};text-transform:uppercase}
+.rv{position:absolute;left:50px;right:50px;top:250px;height:820px;font:800 250px/0.88 Manrope;letter-spacing:-.06em;background:url(${photo(p)}) center/cover;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.35);display:flex;align-items:center;overflow:hidden}
+.rv em{font-style:normal}
+.rl{position:absolute;left:64px;right:64px;top:1110px;height:3px;background:${OR}}`,
+`${chrome(c, true)}<div class="rk">${esc(sl.title || sl.label)}</div><div class="rv" data-fit data-min="90">${mark(sl.body)}</div><div class="rl"></div>`);
 
 // Follow page.
 L.share = (sl, c) => shell(`body{background:${OR}}
@@ -194,7 +211,7 @@ L.share = (sl, c) => shell(`body{background:${OR}}
 
 // ---------- assembly ----------
 const BEATS = ['orange', 'photo', 'print', 'split', 'quote', 'urban'];
-const PHOTO_BEATS = new Set(['photo', 'print']);
+const PHOTO_BEATS = new Set(['photo', 'print', 'reveal']);
 
 function studioPages(story) {
   const cfg = story.studio || {};
@@ -214,8 +231,8 @@ function studioPages(story) {
     else if (sl.stats) html = L.stats(sl, c);
     else if (sl.points) html = L.list(sl, c, nextPhoto());
     else if (sl.kind === 'beat') {
-      let lay = BEATS[(b + offset) % BEATS.length];
-      b++;
+      let lay = isBig(sl.body) && photos.length ? 'reveal' : BEATS[(b + offset) % BEATS.length];
+      if (lay !== 'reveal') b++;
       if (PHOTO_BEATS.has(lay) && !photos.length) lay = 'orange';
       html = PHOTO_BEATS.has(lay) ? L[lay](sl, c, nextPhoto()) : L[lay](sl, c);
     } else html = photos.length ? L.body(sl, c, nextPhoto()) : L.quote({ ...sl, body: sl.body }, c);
