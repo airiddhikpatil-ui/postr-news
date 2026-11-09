@@ -498,6 +498,7 @@ const PALETTES = {
   cream: { bg: '#EAE3D2', ink: '#111', strips: [['#111', '#EAE3D2'], ['#E8432E', '#F4F1EA'], ['#F2B705', '#111']], hi: '#E8432E' },
   violet: { bg: '#B9A6E8', ink: '#111', strips: [['#111', '#B9A6E8'], ['#F4F1EA', '#111'], ['#E8432E', '#111']], hi: '#5B2A86' },
   mint: { bg: '#8FD6B4', ink: '#111', strips: [['#111', '#8FD6B4'], ['#F4F1EA', '#111'], ['#E8432E', '#111']], hi: '#E8432E' },
+  future: { bg: '#07060D', ink: '#F4F1EA', dark: true, future: true, strips: [['#D7FF3A', '#07060D'], ['#8B5CFF', '#FFFFFF'], ['transparent', '#3DF5FF']], hi: '#D7FF3A' },
   noir: { bg: '#0A0A0A', ink: '#F4F1EA', dark: true, strips: [['#D4A72C', '#0A0A0A'], ['#C1121F', '#F4F1EA'], ['#F4F1EA', '#0A0A0A']], hi: '#C1121F' },
 };
 // Overrides for dark palettes: gold labels, light ink, paper cards keep dark text, wordmark inverted.
@@ -513,6 +514,42 @@ const NOIR_CSS = `.crumple{mix-blend-mode:screen!important;opacity:.07!important
 .bt em:nth-of-type(2n){background:#C1121F;color:#F4F1EA}
 .ghost{position:absolute;left:-40px;top:840px;font:400 330px/0.86 Anton;color:transparent;-webkit-text-stroke:3px #D4A72C;opacity:.3;text-transform:uppercase;transform:rotate(-4deg);white-space:nowrap}
 .redact{position:absolute;left:60px;height:44px;background:#F4F1EA;opacity:.9}`;
+
+// Futuristic designer-news look: dark glow mesh + grid, acid lime / violet / pink / cyan, glass cards, HUD corners.
+const FUTURE_CSS = `.crumple,.crumple+svg{display:none}
+.pg{background:radial-gradient(760px 620px at 92% 6%,rgba(139,92,255,.55),transparent 62%),radial-gradient(700px 640px at -4% 104%,rgba(255,61,139,.38),transparent 60%),radial-gradient(520px 420px at 30% 40%,rgba(61,245,255,.10),transparent 70%),repeating-linear-gradient(0deg,rgba(255,255,255,.045) 0 1px,transparent 1px 54px),repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 54px),#07060D}
+.pg::after{content:'';position:absolute;inset:26px;pointer-events:none;z-index:50;background:linear-gradient(#D7FF3A,#D7FF3A) left top/44px 3px no-repeat,linear-gradient(#D7FF3A,#D7FF3A) left top/3px 44px no-repeat,linear-gradient(#D7FF3A,#D7FF3A) right top/44px 3px no-repeat,linear-gradient(#D7FF3A,#D7FF3A) right top/3px 44px no-repeat,linear-gradient(#D7FF3A,#D7FF3A) left bottom/44px 3px no-repeat,linear-gradient(#D7FF3A,#D7FF3A) left bottom/3px 44px no-repeat,linear-gradient(#D7FF3A,#D7FF3A) right bottom/44px 3px no-repeat,linear-gradient(#D7FF3A,#D7FF3A) right bottom/3px 44px no-repeat}
+body::after{content:'POSTR//FILES — CLASSIFIED — 2026 — FOLLOW THE MONEY —';position:absolute;right:30px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;font:700 13px 'Space Mono';letter-spacing:5px;color:rgba(255,255,255,.28);z-index:40}
+.strip{clip-path:none!important;transform:none!important;font-family:Unbounded!important;font-weight:900!important;letter-spacing:-3px!important;padding:14px 26px 12px!important;border-radius:6px}
+.s0{font-size:104px;box-shadow:0 0 60px rgba(215,255,58,.35)}
+.s1{font-size:84px;box-shadow:0 0 60px rgba(139,92,255,.45)}
+.s2{font:700 34px 'Space Mono'!important;letter-spacing:3px!important;border:2.5px solid #3DF5FF;border-radius:999px!important;padding:10px 26px!important}
+.s0{top:150px!important}.s1{top:290px!important}.s2{top:420px!important}
+.who,.who2{filter:grayscale(1) contrast(1.3) brightness(1.08) drop-shadow(5px 0 0 #D7FF3A) drop-shadow(-5px 0 0 #FF3D8B) drop-shadow(0 30px 60px rgba(0,0,0,.6))!important}
+.kick{color:rgba(255,255,255,.75)!important}.kick>span::before{content:'● ';color:#FF3D8B}
+.note{color:#fff!important;font:italic 400 52px/1.05 'Instrument Serif'!important}
+.foot{color:rgba(255,255,255,.6)!important}
+.foot b,.lbl,.snote,.sw{background:#D7FF3A!important;color:#07060D!important;border-radius:999px;padding-left:20px!important;padding-right:20px!important}
+.ghost{font-family:Unbounded!important;font-weight:900!important;-webkit-text-stroke:2px rgba(215,255,58,.4)!important;opacity:.5!important;transform:none!important;letter-spacing:-6px}
+.hdr .mt{color:rgba(255,255,255,.55)}.pgn{background:transparent!important;border:2px solid #3DF5FF;color:#3DF5FF!important;border-radius:999px}
+h2{font:800 74px/1.08 Unbounded!important;letter-spacing:-2px;transform:none!important;color:#fff}
+h2 .hl{background:linear-gradient(90deg,#D7FF3A,#3DF5FF)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;padding:0!important}
+.bd,.pt,.stats,.sharebox{background:rgba(255,255,255,.06)!important;border:1.5px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:26px;color:#fff!important;transform:none!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 30px 70px rgba(0,0,0,.45)!important}
+.bd{font:600 38px/1.42 Manrope!important}
+.pt{font-size:30px}.pn{color:#D7FF3A!important;font-family:Unbounded!important;font-weight:900}
+.st{border-bottom:1px solid rgba(255,255,255,.14)!important}.st-v{font:900 62px/1 Unbounded!important;letter-spacing:-2px}.st.hi .st-v{color:#D7FF3A!important}
+.st-b{background:rgba(255,255,255,.1)!important;border-radius:9px;overflow:hidden}.st-b i{background:#fff!important}.st.hi .st-b i{background:linear-gradient(90deg,#D7FF3A,#3DF5FF)!important}
+.sh-k{color:#3DF5FF}.sh-h{font:900 58px/1 Unbounded!important;letter-spacing:-3px;background:linear-gradient(90deg,#FF3D8B,#8B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.sh-acts span{border-radius:999px;border-color:rgba(255,255,255,.5)!important}
+.ft{color:rgba(255,255,255,.5)}
+.bt-k{color:#3DF5FF!important}
+.bt{font-family:Unbounded!important;font-weight:900!important;font-size:88px;line-height:1.14!important;letter-spacing:-3px;color:#fff!important}
+.beat{right:96px!important}
+.who2{display:none}
+.bt em{background:#D7FF3A!important;color:#07060D!important;border-radius:4px;padding:0!important;line-height:inherit!important;box-shadow:0 0 0 8px #D7FF3A}
+.bt em:nth-of-type(2n){background:#FF3D8B!important;color:#fff!important;box-shadow:0 0 0 8px #FF3D8B}
+.bt.big{font-size:200px;line-height:1!important;letter-spacing:-8px;background:linear-gradient(120deg,#D7FF3A,#3DF5FF 55%,#8B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.bt.big em{background:none!important;color:inherit!important;padding:0;box-shadow:none}`;
 const plateCache = {};
 const plate = (name) => {
   if (!plateCache[name]) plateCache[name] = `data:image/png;base64,${fs.readFileSync(path.join(__dirname, '..', 'assets', 'plates', `${name}-alpha.png`)).toString('base64')}`;
@@ -555,6 +592,7 @@ ${stripCss}
 .foot b{display:inline-block;margin-top:14px;background:#111;color:${P.bg};padding:10px 16px;font-size:17px;letter-spacing:3px}
 ${P.dark ? NOIR_CSS : ''}
 ${P.dark && c.band ? '.note{color:#111}' : ''}
+${P.future ? FUTURE_CSS : ''}
 ${c.band ? `.bandp{position:absolute;left:-30px;right:-30px;top:${c.band.top || 950}px;height:520px;background:#F4F1EA;transform:rotate(-2deg);box-shadow:0 -14px 34px rgba(0,0,0,.22)}
 .note{top:${(c.band.top || 950) + 52}px;width:940px;font-size:54px}.foot{width:940px}` : ''}`,
     `${CRUMPLE()}
@@ -588,7 +626,8 @@ h2 .hl{background:#111;color:${P.bg};padding:4px 18px;-webkit-box-decoration-bre
 .ft{font-size:15px}.ft span:first-child{max-width:520px}.sw{background:#111;color:${P.bg};padding:8px 14px}
 .who2{position:absolute;right:-160px;bottom:-60px;height:900px;${STICKER}}
 ${last && c.plate ? '.cnt{right:420px}h2{right:300px}.ft img,.ft .sw{display:none}' : ''}
-${P.dark ? NOIR_CSS : ''}`;
+${P.dark ? NOIR_CSS : ''}
+${P.future ? FUTURE_CSS : ''}`;
   let html = inner(story, sl, i, total, { tone: 'ink', meta: c.kicker || '' })
     .replace(/<h2 data-fit data-min="40">([\s\S]*?)<\/h2>/, '<h2 data-fit data-min="40"><span class="hl">$1</span></h2>');
   html = `${CRUMPLE(0.45)}${last && c.plate ? `<img class="who2" src="${plate(c.plate)}">` : ''}${html}`;
