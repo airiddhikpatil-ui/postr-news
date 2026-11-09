@@ -491,7 +491,15 @@ const PALETTES = {
   cream: { bg: '#EAE3D2', ink: '#111', strips: [['#111', '#EAE3D2'], ['#E8432E', '#F4F1EA'], ['#F2B705', '#111']], hi: '#E8432E' },
   violet: { bg: '#B9A6E8', ink: '#111', strips: [['#111', '#B9A6E8'], ['#F4F1EA', '#111'], ['#E8432E', '#111']], hi: '#5B2A86' },
   mint: { bg: '#8FD6B4', ink: '#111', strips: [['#111', '#8FD6B4'], ['#F4F1EA', '#111'], ['#E8432E', '#111']], hi: '#E8432E' },
+  noir: { bg: '#0A0A0A', ink: '#F4F1EA', dark: true, strips: [['#D4A72C', '#0A0A0A'], ['#C1121F', '#F4F1EA'], ['#F4F1EA', '#0A0A0A']], hi: '#C1121F' },
 };
+// Overrides for dark palettes: gold labels, light ink, paper cards keep dark text, wordmark inverted.
+const NOIR_CSS = `.crumple{mix-blend-mode:screen!important;opacity:.07!important}
+.foot b,.lbl,.snote,.sw,h2 .hl{background:#D4A72C!important;color:#0A0A0A!important}
+.kick img,.hdr img,.ft img{filter:invert(1)}
+.pgn,.pt,.bd,.stats,.sharebox{color:#111}
+.ghost{position:absolute;left:-40px;top:840px;font:400 330px/0.86 Anton;color:transparent;-webkit-text-stroke:3px #D4A72C;opacity:.3;text-transform:uppercase;transform:rotate(-4deg);white-space:nowrap}
+.redact{position:absolute;left:60px;height:44px;background:#F4F1EA;opacity:.9}`;
 const plateCache = {};
 const plate = (name) => {
   if (!plateCache[name]) plateCache[name] = `data:image/png;base64,${fs.readFileSync(path.join(__dirname, '..', 'assets', 'plates', `${name}-alpha.png`)).toString('base64')}`;
@@ -532,14 +540,16 @@ ${stripCss}
 .arrow{position:absolute;left:250px;top:850px;width:470px;transform:rotate(-14deg)}
 .foot{position:absolute;left:60px;bottom:56px;width:360px;font:700 14px/1.5 'Space Mono';letter-spacing:1.5px;text-transform:uppercase}
 .foot b{display:inline-block;margin-top:14px;background:#111;color:${P.bg};padding:10px 16px;font-size:17px;letter-spacing:3px}
+${P.dark ? NOIR_CSS : ''}
+${P.dark && c.band ? '.note{color:#111}' : ''}
 ${c.band ? `.bandp{position:absolute;left:-30px;right:-30px;top:${c.band.top || 950}px;height:520px;background:#F4F1EA;transform:rotate(-2deg);box-shadow:0 -14px 34px rgba(0,0,0,.22)}
 .note{top:${(c.band.top || 950) + 52}px;width:940px;font-size:54px}.foot{width:940px}` : ''}`,
     `${CRUMPLE()}
-<img class="who" src="${plate(c.plate)}">
+${c.plate ? `<img class="who" src="${plate(c.plate)}">` : ''}${c.ghost ? `<div class="ghost">${esc(c.ghost).split('|').join('<br>')}</div>` : ''}
 <div class="kick"><span>POSTR FILES · ${esc(c.kicker || d.meta)}<br>${esc(s.date || '')}</span><img src="${wm('ink')}"></div>
 ${strips.map((t, k) => `<div class="strip torn s${k}" data-max="${k === 2 ? 940 : k === 0 ? 880 : 990}">${esc(t)}</div>`).join('')}
 ${c.band ? '<div class="bandp torn"></div>' : ''}${c.note ? `<div class="note">${esc(c.note)}</div>` : ''}
-${c.arrow ? `<svg class="arrow" viewBox="0 0 330 160"><path d="M8 40 C 90 140, 210 150, 300 70" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/><path d="M262 58 L304 66 L292 106" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>` : ''}
+${c.arrow ? `<svg class="arrow" viewBox="0 0 330 160"><path d="M8 40 C 90 140, 210 150, 300 70" fill="none" stroke="${P.ink}" stroke-width="6" stroke-linecap="round"/><path d="M262 58 L304 66 L292 106" fill="none" stroke="${P.ink}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>` : ''}
 <div class="foot">SOURCE · ${esc(c.sourceShort || s.source)}${c.ai !== false ? '<br>AI ILLUSTRATION' : ''}<br><b>SWIPE: ${esc(c.cta || 'THE FULL STORY')} →</b></div>${TORN}`);
   },
   css: '', // built per story in collageInner
@@ -564,10 +574,11 @@ h2 .hl{background:#111;color:${P.bg};padding:4px 18px;-webkit-box-decoration-bre
 .sharebox{background:#F4F1EA;box-shadow:0 14px 30px rgba(0,0,0,.18);transform:rotate(-1.5deg);width:600px}.sh-h{font-size:88px;color:${P.hi === '#111' ? '#E8432E' : P.hi}}.sh-acts{flex-wrap:wrap}
 .ft{font-size:15px}.ft span:first-child{max-width:520px}.sw{background:#111;color:${P.bg};padding:8px 14px}
 .who2{position:absolute;right:-160px;bottom:-60px;height:900px;${STICKER}}
-${last ? '.cnt{right:420px}h2{right:300px}.ft img,.ft .sw{display:none}' : ''}`;
+${last && c.plate ? '.cnt{right:420px}h2{right:300px}.ft img,.ft .sw{display:none}' : ''}
+${P.dark ? NOIR_CSS : ''}`;
   let html = inner(story, sl, i, total, { tone: 'ink', meta: c.kicker || '' })
     .replace(/<h2 data-fit data-min="40">([\s\S]*?)<\/h2>/, '<h2 data-fit data-min="40"><span class="hl">$1</span></h2>');
-  html = `${CRUMPLE(0.45)}${last ? `<img class="who2" src="${plate(c.plate)}">` : ''}${html}`;
+  html = `${CRUMPLE(0.45)}${last && c.plate ? `<img class="who2" src="${plate(c.plate)}">` : ''}${html}`;
   return pageShell('collage', `${INNER_BASE}${css}`, html);
 }
 

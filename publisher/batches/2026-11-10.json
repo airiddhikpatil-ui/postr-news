@@ -1,0 +1,465 @@
+[
+  {
+    "style": "collage",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-demonetisation",
+    "headline": "Notebandi's missing money",
+    "coverBig": "99.3%",
+    "time": "Nov 2016",
+    "source": "RBI Annual Report 2017-18",
+    "sourceUrl": "https://rbi.org.in/",
+    "tags": [
+      "BlackMoney",
+      "Demonetisation",
+      "Notebandi"
+    ],
+    "captionHeadline": "The note ban was meant to trap black money. Then 99.3% of the banned cash walked straight back into the banks.",
+    "summary": "₹15.41 lakh crore of ₹500 and ₹1,000 notes were cancelled overnight in November 2016. By the RBI's own count, ₹15.31 lakh crore came back. Only about ₹10,720 crore never returned.",
+    "forYou": "If the black money never stayed in cash, it was already somewhere else. Gold. Property. Abroad.",
+    "cta": "Send this to the uncle who still says \"notebandi finished black money\".",
+    "slides": [
+      {
+        "label": "THE PLAN",
+        "title": "Trap the cash overnight",
+        "body": "8 November 2016, 8 pm. 86% of India's cash stops being money at midnight. The idea: black money hoarders can't bring it back without getting caught."
+      },
+      {
+        "label": "THE COUNT",
+        "title": "What came back",
+        "stats": [
+          {
+            "label": "Notes banned",
+            "value": "₹15.41 L CR",
+            "num": 15.41
+          },
+          {
+            "label": "Came back",
+            "value": "₹15.31 L CR",
+            "num": 15.31,
+            "hi": true
+          },
+          {
+            "label": "Never returned",
+            "value": "₹0.11 L CR",
+            "num": 0.11
+          }
+        ],
+        "statsNote": "RBI ANNUAL REPORT 2017-18"
+      },
+      {
+        "label": "THE TWIST",
+        "title": "So where did the black money go?",
+        "body": "If 99.3% came back, either there was far less black cash than believed, or it was laundered back in. Either way, the cash pile everyone imagined was never found."
+      },
+      {
+        "label": "SEND THIS",
+        "kind": "share",
+        "title": "Notebandi, by the numbers",
+        "body": "Send this to the uncle who still believes the note ban worked."
+      }
+    ],
+    "collage": {
+      "palette": "noir",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #01",
+      "plate": "cash-hand",
+      "strips": [
+        "99.3% came back",
+        "of the banned notes",
+        "notebandi · 2016"
+      ],
+      "note": "All of it came home.",
+      "cta": "WHERE IT WENT",
+      "sourceShort": "RBI ANNUAL REPORT 2017-18",
+      "who": {
+        "h": 980,
+        "right": -250,
+        "bottom": -60
+      }
+    }
+  },
+  {
+    "style": "collage",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-biggest-raid",
+    "headline": "₹351 crore cash",
+    "coverBig": "₹351 CR",
+    "time": "Dec 2023",
+    "source": "Income Tax Department searches, Dec 2023 (as reported by PTI and others)",
+    "sourceUrl": "https://incometaxindia.gov.in/",
+    "tags": [
+      "BlackMoney",
+      "IncomeTaxRaid",
+      "TrueCrimeIndia"
+    ],
+    "captionHeadline": "₹351 crore. In cash. Officers needed 36 counting machines and about 10 days to count it.",
+    "summary": "In December 2023, Income Tax searches on a liquor business group in Odisha found cash stacked in cupboards and bags. It was reported as the biggest cash seizure by any agency in a single operation in India.",
+    "forYou": "Even the counting machines struggled to keep up.",
+    "cta": "Send this to someone who thinks they work hard for their money.",
+    "slides": [
+      {
+        "label": "THE RAID",
+        "title": "It started as a tax search",
+        "body": "Income Tax teams searched premises linked to a liquor group in Odisha and Jharkhand. Then they opened the cupboards."
+      },
+      {
+        "label": "THE COUNT",
+        "title": "What it took to count it",
+        "stats": [
+          {
+            "label": "Cash seized",
+            "value": "₹351 CR",
+            "hi": true
+          },
+          {
+            "label": "Counting machines",
+            "value": "36"
+          },
+          {
+            "label": "Days of counting",
+            "value": "~10"
+          }
+        ],
+        "statsNote": "AS REPORTED, DEC 2023"
+      },
+      {
+        "label": "THE TWIST",
+        "title": "All of it in cash",
+        "body": "Not bank balances. Not shares. Physical notes, in an economy that had already gone through a note ban to kill exactly this."
+      },
+      {
+        "label": "SEND THIS",
+        "kind": "share",
+        "title": "India's biggest cash haul",
+        "body": "Send this to the friend who complains about their salary."
+      }
+    ],
+    "collage": {
+      "palette": "noir",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #02",
+      "plate": "cash-hand",
+      "strips": [
+        "₹351 crore",
+        "in cash. one raid.",
+        "36 counting machines"
+      ],
+      "note": "Ten days to count it.",
+      "cta": "INSIDE THE RAID",
+      "sourceShort": "INCOME TAX SEARCHES, DEC 2023",
+      "who": {
+        "h": 980,
+        "right": -250,
+        "bottom": -60
+      }
+    }
+  },
+  {
+    "style": "collage",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-gold-toilet",
+    "headline": "Gold in toilet",
+    "coverBig": "12 KG",
+    "time": "Jul 2026",
+    "source": "Directorate of Revenue Intelligence, via PIB, 25 Jul 2026",
+    "sourceUrl": "https://pib.gov.in/",
+    "tags": [
+      "GoldSmuggling",
+      "DRI",
+      "TrueCrimeIndia"
+    ],
+    "captionHeadline": "About 12 kg of gold bars, hidden behind the ceiling panels of a plane's rear toilet.",
+    "summary": "That was one catch on a flight from Addis Ababa. In a single week, the Directorate of Revenue Intelligence says it seized 27 kg of smuggled gold, including gold dust hidden in wax, and arrested 12 people.",
+    "forYou": "The gold flew in. The smuggler didn't have to carry it.",
+    "cta": "Send this to the friend who always takes forever in the airplane toilet.",
+    "slides": [
+      {
+        "label": "THE HIDING PLACE",
+        "title": "Behind the ceiling panel",
+        "body": "Officers opened the ceiling panels of the rear lavatory on a flight from Addis Ababa and found gold bars packed inside."
+      },
+      {
+        "label": "ONE WEEK",
+        "title": "What DRI caught in 7 days",
+        "stats": [
+          {
+            "label": "Gold in the toilet",
+            "value": "~12 KG",
+            "num": 12,
+            "hi": true
+          },
+          {
+            "label": "Total that week",
+            "value": "27 KG",
+            "num": 27
+          },
+          {
+            "label": "Arrested",
+            "value": "12"
+          }
+        ],
+        "statsNote": "DRI VIA PIB, 25 JUL 2026"
+      },
+      {
+        "label": "THE TWIST",
+        "title": "Gold dust in wax",
+        "body": "Other catches that week were gold turned into dust and hidden in wax, so it passes as something else."
+      },
+      {
+        "label": "SEND THIS",
+        "kind": "share",
+        "title": "Check the ceiling next time",
+        "body": "Send this to your travel buddy."
+      }
+    ],
+    "collage": {
+      "palette": "noir",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #06",
+      "plate": "gold-bars",
+      "strips": [
+        "12 kg gold",
+        "in a plane toilet",
+        "behind the ceiling"
+      ],
+      "note": "Seriously.",
+      "cta": "ONE WEEK OF SMUGGLING",
+      "sourceShort": "DRI VIA PIB, JUL 2026",
+      "who": {
+        "h": 1150,
+        "right": -200,
+        "bottom": -80
+      }
+    }
+  },
+  {
+    "style": "collage",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-election-cash",
+    "headline": "Votes for sale",
+    "coverBig": "₹8,889 CR",
+    "time": "Lok Sabha 2024",
+    "source": "Election Commission of India, 18 May 2024",
+    "sourceUrl": "https://www.eci.gov.in/",
+    "tags": [
+      "BlackMoney",
+      "Elections",
+      "LokSabha2024"
+    ],
+    "captionHeadline": "₹8,889 crore. That's what was seized to buy votes before the 2024 Lok Sabha election had even finished.",
+    "summary": "Cash, liquor, drugs, precious metals and freebies were picked up by enforcement teams by 18 May 2024, with phases still left to vote. Drugs alone made up about 45% of it.",
+    "forYou": "This is only what got caught.",
+    "cta": "Send this to the friend who says \"my one vote doesn't matter\". Someone thought it was worth paying for.",
+    "slides": [
+      {
+        "label": "THE HAUL",
+        "title": "Seized before you voted",
+        "body": "Every election, flying squads stop cars, raid godowns and check bags. In 2024 they found more than ever before."
+      },
+      {
+        "label": "WHAT THEY FOUND",
+        "title": "The price of a vote",
+        "points": [
+          "Cash",
+          "Liquor",
+          "Drugs: about 45% of the total",
+          "Gold, silver and free gifts"
+        ]
+      },
+      {
+        "label": "THE TWIST",
+        "title": "This is only what got caught",
+        "body": "₹8,889 crore was seized by 18 May 2024, with phases still to go. What wasn't seized never shows up in any report."
+      },
+      {
+        "label": "SEND THIS",
+        "kind": "share",
+        "title": "Your vote has a price tag",
+        "body": "Send this to the friend who skips voting."
+      }
+    ],
+    "collage": {
+      "palette": "noir",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #03",
+      "plate": null,
+      "ghost": "VOTE|FOR|SALE",
+      "strips": [
+        "₹8,889 crore",
+        "seized before you voted",
+        "lok sabha 2024"
+      ],
+      "note": "And that's only what got caught.",
+      "cta": "WHAT THEY FOUND",
+      "sourceShort": "ECI, 18 MAY 2024"
+    }
+  },
+  {
+    "style": "collage",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-narco-hawala",
+    "headline": "Narco hawala trail",
+    "coverBig": "₹100 CR",
+    "time": "Oct 2026",
+    "source": "Enforcement Directorate, as reported 23-25 Oct 2026",
+    "sourceUrl": "https://enforcementdirectorate.gov.in/",
+    "tags": [
+      "Hawala",
+      "DrugMoney",
+      "TrueCrimeIndia"
+    ],
+    "captionHeadline": "A ₹100 crore drug-money trail, running through bank accounts in Mizoram towns and out to suppliers in Myanmar.",
+    "summary": "The Enforcement Directorate says it froze 1,424 accounts, arrested 18 people, attached ₹17.82 crore and found 500 detonators in its hawala probe. All accused are innocent until proven guilty.",
+    "forYou": "1,424 accounts. Most of them in other people's names.",
+    "cta": "Send this to the friend who binge-watches Narcos.",
+    "slides": [
+      {
+        "label": "THE ROUTE",
+        "title": "Follow the money",
+        "body": "Drug money collected in Mizoram, the ED says, was pushed through local bank accounts and moved out through hawala to suppliers across the border in Myanmar."
+      },
+      {
+        "label": "THE BUST",
+        "title": "What the ED says it found",
+        "stats": [
+          {
+            "label": "Money trail",
+            "value": "₹100 CR",
+            "hi": true
+          },
+          {
+            "label": "Accounts frozen",
+            "value": "1,424"
+          },
+          {
+            "label": "Arrested",
+            "value": "18"
+          },
+          {
+            "label": "Detonators",
+            "value": "500"
+          }
+        ],
+        "statsNote": "ED, OCT 2026"
+      },
+      {
+        "label": "THE TWIST",
+        "title": "Hawala leaves no receipt",
+        "body": "Money never actually crosses the border. One side pays, the other side hands out cash, and the books are settled in trust."
+      },
+      {
+        "label": "SEND THIS",
+        "kind": "share",
+        "title": "India's own Narcos",
+        "body": "Send this to the friend who loves a true-crime series."
+      }
+    ],
+    "collage": {
+      "palette": "noir",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #05",
+      "plate": "hood",
+      "strips": [
+        "₹100 crore",
+        "drug money trail",
+        "mizoram → myanmar"
+      ],
+      "note": "No receipts. No border crossed.",
+      "cta": "FOLLOW THE MONEY",
+      "sourceShort": "ED, OCT 2026",
+      "who": {
+        "h": 1100,
+        "right": -40,
+        "bottom": -40
+      }
+    }
+  },
+  {
+    "style": "collage",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-swiss-banks",
+    "headline": "Swiss bank money",
+    "coverBig": "₹36,793 CR",
+    "time": "End 2025",
+    "source": "Swiss National Bank annual data, released 19 Jun 2026",
+    "sourceUrl": "https://data.snb.ch/",
+    "tags": [
+      "SwissBank",
+      "BlackMoney",
+      "MoneyTrail"
+    ],
+    "captionHeadline": "₹36,793 crore. Money linked to India sitting in Swiss banks at the end of 2025.",
+    "summary": "The total (CHF 3.25 billion) fell 8%, but customer deposits jumped more than 50% to CHF 524 million. Swiss authorities say these figures \"cannot be considered as black money\": most of it belongs to banks and companies.",
+    "forYou": "Officially, it's not black money. So whose is it?",
+    "cta": "Send this to the friend who still says \"Swiss account\".",
+    "slides": [
+      {
+        "label": "THE VAULT",
+        "title": "What the Swiss data shows",
+        "stats": [
+          {
+            "label": "Total Indian funds",
+            "value": "₹36,793 CR",
+            "hi": true
+          },
+          {
+            "label": "Change in total",
+            "value": "−8%"
+          },
+          {
+            "label": "Customer deposits",
+            "value": "+50%"
+          }
+        ],
+        "statsNote": "SNB, END 2025"
+      },
+      {
+        "label": "THE CATCH",
+        "title": "Swiss say: not black money",
+        "body": "Most of this money sits with banks and Indian companies' branches. Swiss authorities say it \"cannot be considered as black money\"."
+      },
+      {
+        "label": "THE TWIST",
+        "title": "Deposits still jumped 50%",
+        "body": "Even as the total fell, money held by customers in India rose more than 50% to CHF 524 million in one year."
+      },
+      {
+        "label": "SEND THIS",
+        "kind": "share",
+        "title": "The Swiss account myth",
+        "body": "Send this to the friend who blames everything on Swiss accounts."
+      }
+    ],
+    "collage": {
+      "palette": "noir",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #07",
+      "plate": "gold-bars",
+      "strips": [
+        "₹36,793 crore",
+        "in swiss banks",
+        "end of 2025"
+      ],
+      "note": "\"Not black money,\" they say.",
+      "cta": "WHOSE MONEY IS IT",
+      "sourceShort": "SWISS NATIONAL BANK, JUN 2026",
+      "who": {
+        "h": 1150,
+        "right": -200,
+        "bottom": -80
+      }
+    }
+  }
+]

@@ -1,0 +1,318 @@
+[
+  {
+    "style": "collage",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-mule-accounts",
+    "headline": "Mule account army",
+    "coverBig": "24.67 LAKH",
+    "time": "Dec 2025",
+    "source": "Lok Sabha reply on the I4C suspect registry, Dec 2025",
+    "sourceUrl": "https://sansad.in/ls",
+    "tags": [
+      "MuleAccount",
+      "CyberFraud",
+      "BlackMoney"
+    ],
+    "captionHeadline": "24.67 lakh bank accounts in India were flagged as \"mules\", used to move scam money so it can't be traced.",
+    "summary": "The government's cyber crime centre (I4C) runs a suspect registry with banks. It says the registry has helped block ₹8,031.56 crore. Many mules are ordinary people who \"rent out\" an account for a small cut.",
+    "forYou": "The scammer disappears. The account holder is the one the police find.",
+    "cta": "Send this to the cousin who got a \"₹5,000 a month for your account\" offer.",
+    "slides": [
+      {
+        "label": "HOW IT WORKS",
+        "title": "Your account, their money",
+        "points": [
+          "Someone offers easy money for \"using\" your account",
+          "Scam money lands in it and is moved out in minutes",
+          "It hops through more accounts until it vanishes",
+          "Your name is the one left on the trail"
+        ]
+      },
+      {
+        "label": "THE SCALE",
+        "title": "What the registry found",
+        "stats": [
+          {
+            "label": "Layer-1 mule accounts",
+            "value": "24.67 LAKH",
+            "hi": true
+          },
+          {
+            "label": "Money blocked",
+            "value": "₹8,031 CR"
+          }
+        ],
+        "statsNote": "LOK SABHA REPLY, DEC 2025"
+      },
+      {
+        "label": "THE TWIST",
+        "title": "The mule takes the fall",
+        "body": "The person behind the scam stays hidden. The account in the middle has a real name, a real address and a real KYC."
+      },
+      {
+        "label": "SEND THIS",
+        "kind": "share",
+        "title": "Never rent your account",
+        "body": "Send this to anyone who got an \"easy money\" job offer."
+      }
+    ],
+    "collage": {
+      "palette": "noir",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #04",
+      "plate": "atm-card",
+      "strips": [
+        "24.67 lakh",
+        "mule accounts",
+        "moving scam money"
+      ],
+      "note": "Rented for a cut. Left holding the case.",
+      "cta": "HOW IT WORKS",
+      "sourceShort": "LOK SABHA REPLY, DEC 2025",
+      "who": {
+        "h": 1050,
+        "right": -230,
+        "bottom": -60
+      }
+    }
+  },
+  {
+    "style": "collage",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-leaked-papers",
+    "headline": "Leaked offshore files",
+    "coverBig": "₹14,636 CR",
+    "time": "Mar 2026",
+    "source": "Government reply in Lok Sabha, 23 Mar 2026",
+    "sourceUrl": "https://sansad.in/ls",
+    "tags": [
+      "PanamaPapers",
+      "PandoraPapers",
+      "BlackMoney"
+    ],
+    "captionHeadline": "₹14,636 crore of hidden foreign income, taxed after the Panama, Paradise and Pandora leaks.",
+    "summary": "And under the Black Money Act, the tax department raised ₹4,009.64 crore in FY26 (April to December), with 1,368 assessments and 167 prosecutions filed.",
+    "forYou": "None of it was found by a raid. It was found because someone leaked the files.",
+    "cta": "Send this to someone who thinks offshore means safe.",
+    "slides": [
+      {
+        "label": "THE LEAKS",
+        "title": "Three leaks, one pattern",
+        "points": [
+          "Panama Papers, 2016",
+          "Paradise Papers, 2017",
+          "Pandora Papers, 2021",
+          "Secret offshore companies, exposed by journalists"
+        ]
+      },
+      {
+        "label": "THE BILL",
+        "title": "What India collected",
+        "stats": [
+          {
+            "label": "Hidden income taxed",
+            "value": "₹14,636 CR",
+            "hi": true
+          },
+          {
+            "label": "Black Money Act tax, FY26",
+            "value": "₹4,010 CR"
+          },
+          {
+            "label": "Prosecutions, FY26",
+            "value": "167"
+          }
+        ],
+        "statsNote": "LOK SABHA, 23 MAR 2026"
+      },
+      {
+        "label": "THE TWIST",
+        "title": "Found by a leak, not a raid",
+        "body": "Offshore money is built to be invisible. It took millions of leaked documents for it to show up."
+      },
+      {
+        "label": "SEND THIS",
+        "kind": "share",
+        "title": "Offshore isn't safe",
+        "body": "Send this to the friend who says the rich never get caught."
+      }
+    ],
+    "collage": {
+      "palette": "noir",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #08",
+      "plate": "hood",
+      "strips": [
+        "₹14,636 crore",
+        "hidden abroad. taxed.",
+        "panama · paradise · pandora"
+      ],
+      "note": "Exposed by a leak.",
+      "cta": "WHAT INDIA COLLECTED",
+      "sourceShort": "LOK SABHA, 23 MAR 2026",
+      "who": {
+        "h": 1100,
+        "right": -40,
+        "bottom": -40
+      }
+    }
+  },
+  {
+    "style": "collage",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-fake-firms",
+    "headline": "Ghost GST firms",
+    "coverBig": "17,818",
+    "time": "Apr–Oct 2024",
+    "source": "Government reply in Lok Sabha, Dec 2024",
+    "sourceUrl": "https://sansad.in/ls",
+    "tags": [
+      "GST",
+      "FakeCompanies",
+      "TaxFraud"
+    ],
+    "captionHeadline": "17,818 companies that existed only on paper. Between them: ₹35,132 crore of suspected GST tax credit claimed.",
+    "summary": "That's what tax officers found in a special drive against fake GST registrations from April to October 2024. 69 people were arrested.",
+    "forYou": "No office. No goods. Just invoices.",
+    "cta": "Send this to your CA friend. They already know.",
+    "slides": [
+      {
+        "label": "THE TRICK",
+        "title": "How a ghost firm makes money",
+        "points": [
+          "Register a company on paper",
+          "Issue invoices for goods that never move",
+          "Claim tax credit on those fake invoices",
+          "Shut it down before anyone visits"
+        ]
+      },
+      {
+        "label": "THE DRIVE",
+        "title": "What officers found",
+        "stats": [
+          {
+            "label": "Fake firms",
+            "value": "17,818",
+            "hi": true
+          },
+          {
+            "label": "Suspected tax credit",
+            "value": "₹35,132 CR"
+          },
+          {
+            "label": "Arrested",
+            "value": "69"
+          }
+        ],
+        "statsNote": "APR–OCT 2024 · LOK SABHA"
+      },
+      {
+        "label": "THE TWIST",
+        "title": "Some used other people's IDs",
+        "body": "Fake registrations are often made with borrowed or stolen identity documents, so the real owner stays out of sight."
+      },
+      {
+        "label": "SEND THIS",
+        "kind": "share",
+        "title": "Ghost companies are real",
+        "body": "Send this to your friend who runs a small business."
+      }
+    ],
+    "collage": {
+      "palette": "noir",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #09",
+      "plate": null,
+      "ghost": "GHOST|FIRMS",
+      "strips": [
+        "17,818",
+        "fake firms",
+        "₹35,132 cr tax credit"
+      ],
+      "note": "No office. No goods. Just invoices.",
+      "cta": "HOW THE TRICK WORKS",
+      "sourceShort": "LOK SABHA, DEC 2024"
+    }
+  },
+  {
+    "style": "collage",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-betting-apps",
+    "headline": "Betting app machine",
+    "coverBig": "₹3.3 CR",
+    "time": "Jul 2025",
+    "source": "Enforcement Directorate, July 2025",
+    "sourceUrl": "https://enforcementdirectorate.gov.in/",
+    "tags": [
+      "BettingApps",
+      "Hawala",
+      "TrueCrimeIndia"
+    ],
+    "captionHeadline": "₹3.3 crore in cash, plus counting machines, found in raids on illegal betting and \"dabba trading\" apps.",
+    "summary": "The Enforcement Directorate says ready-made \"white-label\" betting apps were handed out with admin rights in return for a share of the profits, and a hawala operator moved the money. All accused are innocent until proven guilty.",
+    "forYou": "The app doesn't need you to win. It just needs you to keep playing.",
+    "cta": "Send this to the friend who says \"bas ek last bet\".",
+    "slides": [
+      {
+        "label": "THE MODEL",
+        "title": "A betting app, franchised",
+        "points": [
+          "A ready-made betting app is built once",
+          "Copies are handed out with admin control",
+          "Each operator shares the profit",
+          "Hawala moves the cash, says the ED"
+        ]
+      },
+      {
+        "label": "THE RAID",
+        "title": "What the ED says it found",
+        "stats": [
+          {
+            "label": "Cash",
+            "value": "₹3.3 CR",
+            "hi": true
+          },
+          {
+            "label": "Counting machines",
+            "value": "SEIZED"
+          }
+        ],
+        "statsNote": "ED, MUMBAI, JUL 2025"
+      },
+      {
+        "label": "THE TWIST",
+        "title": "The house always wins",
+        "body": "With admin rights, the operator controls the app. Players see odds. The operator sees everything."
+      },
+      {
+        "label": "SEND THIS",
+        "kind": "share",
+        "title": "Bas ek last bet?",
+        "body": "Send this to the friend who is always on a betting app."
+      }
+    ],
+    "collage": {
+      "palette": "noir",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #10",
+      "plate": null,
+      "ghost": "HOUSE|WINS",
+      "strips": [
+        "₹3.3 crore cash",
+        "betting-app raids",
+        "mumbai · july 2025"
+      ],
+      "note": "Bas ek last bet?",
+      "cta": "INSIDE THE MACHINE",
+      "sourceShort": "ED, JUL 2025"
+    }
+  }
+]
