@@ -1,6 +1,6 @@
 [
   {
-    "style": "collage",
+    "style": "studio",
     "format": "alert",
     "lang": "en",
     "forYouLabel": "The twist",
@@ -109,10 +109,19 @@
         "right": -230,
         "bottom": -60
       }
+    },
+    "studio": {
+      "photos": [
+        "atm-card-cut",
+        "ph-phone-man"
+      ],
+      "file": "#07",
+      "series": "BLACK MONEY FILES",
+      "offset": 6
     }
   },
   {
-    "style": "collage",
+    "style": "studio",
     "format": "alert",
     "lang": "en",
     "forYouLabel": "The twist",
@@ -229,10 +238,20 @@
         "right": -40,
         "bottom": -40
       }
+    },
+    "studio": {
+      "photos": [
+        "ph-papers-fly",
+        "ph-papers-desk",
+        "ph-hood"
+      ],
+      "file": "#08",
+      "series": "BLACK MONEY FILES",
+      "offset": 7
     }
   },
   {
-    "style": "collage",
+    "style": "studio",
     "format": "alert",
     "lang": "en",
     "forYouLabel": "The twist",
@@ -341,10 +360,19 @@
       "note": "No office. No goods. Just invoices.",
       "cta": "HOW THE TRICK WORKS",
       "sourceShort": "LOK SABHA, DEC 2024"
+    },
+    "studio": {
+      "photos": [
+        "ph-hallway",
+        "ph-papers-desk"
+      ],
+      "file": "#09",
+      "series": "BLACK MONEY FILES",
+      "offset": 8
     }
   },
   {
-    "style": "collage",
+    "style": "studio",
     "format": "alert",
     "lang": "en",
     "forYouLabel": "The twist",
@@ -438,6 +466,15 @@
       "note": "Bas ek last bet?",
       "cta": "INSIDE THE MACHINE",
       "sourceShort": "ED, JUL 2025"
+    },
+    "studio": {
+      "photos": [
+        "ph-phone-man",
+        "phone-hand-cut"
+      ],
+      "file": "#10",
+      "series": "BLACK MONEY FILES",
+      "offset": 9
     }
   }
 ]

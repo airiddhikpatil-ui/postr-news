@@ -1,6 +1,6 @@
 [
   {
-    "style": "collage",
+    "style": "studio",
     "format": "alert",
     "lang": "en",
     "forYouLabel": "The twist",
@@ -118,10 +118,20 @@
         "right": -250,
         "bottom": -60
       }
+    },
+    "studio": {
+      "photos": [
+        "ph-note500",
+        "ph-cash",
+        "ph-notes"
+      ],
+      "file": "#01",
+      "series": "BLACK MONEY FILES",
+      "offset": 0
     }
   },
   {
-    "style": "collage",
+    "style": "studio",
     "format": "alert",
     "lang": "en",
     "forYouLabel": "The twist",
@@ -230,10 +240,20 @@
         "right": -250,
         "bottom": -60
       }
+    },
+    "studio": {
+      "photos": [
+        "ph-cash",
+        "ph-hallway",
+        "ph-notes"
+      ],
+      "file": "#02",
+      "series": "BLACK MONEY FILES",
+      "offset": 1
     }
   },
   {
-    "style": "collage",
+    "style": "studio",
     "format": "alert",
     "lang": "en",
     "forYouLabel": "The twist",
@@ -348,10 +368,19 @@
         "right": -200,
         "bottom": -80
       }
+    },
+    "studio": {
+      "photos": [
+        "ph-gold",
+        "ph-plane"
+      ],
+      "file": "#03",
+      "series": "BLACK MONEY FILES",
+      "offset": 2
     }
   },
   {
-    "style": "collage",
+    "style": "studio",
     "format": "alert",
     "lang": "en",
     "forYouLabel": "The twist",
@@ -446,10 +475,20 @@
       "note": "And that's only what got caught.",
       "cta": "WHAT THEY FOUND",
       "sourceShort": "ECI, 18 MAY 2024"
+    },
+    "studio": {
+      "photos": [
+        "ph-notes",
+        "ph-night-exit",
+        "ph-note500"
+      ],
+      "file": "#04",
+      "series": "BLACK MONEY FILES",
+      "offset": 3
     }
   },
   {
-    "style": "collage",
+    "style": "studio",
     "format": "alert",
     "lang": "en",
     "forYouLabel": "The twist",
@@ -566,10 +605,19 @@
         "right": -40,
         "bottom": -40
       }
+    },
+    "studio": {
+      "photos": [
+        "ph-hood",
+        "ph-aizawl"
+      ],
+      "file": "#05",
+      "series": "BLACK MONEY FILES",
+      "offset": 4
     }
   },
   {
-    "style": "collage",
+    "style": "studio",
     "format": "alert",
     "lang": "en",
     "forYouLabel": "The twist",
@@ -681,6 +729,15 @@
         "right": -200,
         "bottom": -80
       }
+    },
+    "studio": {
+      "photos": [
+        "ph-night-exit",
+        "ph-gold"
+      ],
+      "file": "#06",
+      "series": "BLACK MONEY FILES",
+      "offset": 5
     }
   }
 ]

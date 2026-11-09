@@ -573,6 +573,7 @@ function collageCfg(s) {
   return { ...c, P: PALETTES[c.palette] || PALETTES.yellow, who: { h: 1000, right: -120, bottom: -40, ...(c.who || {}) } };
 }
 
+STYLES.studio = { tone: 'ink', css: '', cover: () => '' }; // rendered by studio.js
 STYLES.collage = {
   tone: 'ink',
   cover: (s, d) => {
@@ -663,6 +664,7 @@ function pickStyle(story, prev) {
 }
 
 function labPages(story, style) {
+  if (style === 'studio') return require('./studio').studioPages(story);
   const st = STYLES[style];
   const d = coverData(story);
   const slides = story.slides || [];
