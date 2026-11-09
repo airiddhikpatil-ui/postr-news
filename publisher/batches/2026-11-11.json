@@ -18,14 +18,30 @@
     "captionHeadline": "24.67 lakh bank accounts in India were flagged as \"mules\", used to move scam money so it can't be traced.",
     "summary": "The government's cyber crime centre (I4C) runs a suspect registry with banks. It says the registry has helped block ₹8,031.56 crore. Many mules are ordinary people who \"rent out\" an account for a small cut.",
     "forYou": "The scammer disappears. The account holder is the one the police find.",
-    "cta": "Send this to the cousin who got a \"₹5,000 a month for your account\" offer.",
+    "cta": "Send this to the cousin who got a \"₹5,000 a month for your account\" offer. Follow @postr.news: File #08 drops next.",
     "slides": [
+      {
+        "label": "THE OFFER",
+        "kind": "beat",
+        "body": "*\"₹5,000 a month. Just let us use your bank account.\"*",
+        "title": "A TYPICAL OFFER"
+      },
+      {
+        "label": "IT SOUNDS EASY",
+        "kind": "beat",
+        "body": "You do nothing. Money comes in. Money goes out. *You keep a cut.*"
+      },
+      {
+        "label": "WHAT YOU BECAME",
+        "kind": "beat",
+        "body": "A *money mule.* The last link in someone else's scam."
+      },
       {
         "label": "HOW IT WORKS",
         "title": "Your account, their money",
         "points": [
-          "Someone offers easy money for \"using\" your account",
-          "Scam money lands in it and is moved out in minutes",
+          "A scam victim sends money to your account",
+          "It's moved out within minutes",
           "It hops through more accounts until it vanishes",
           "Your name is the one left on the trail"
         ]
@@ -47,21 +63,38 @@
         "statsNote": "LOK SABHA REPLY, DEC 2025"
       },
       {
-        "label": "THE TWIST",
-        "title": "The mule takes the fall",
-        "body": "The person behind the scam stays hidden. The account in the middle has a real name, a real address and a real KYC."
+        "label": "THE NUMBER",
+        "kind": "beat",
+        "body": "*24.67 lakh* accounts. Flagged by the government's cyber crime centre."
       },
       {
-        "label": "SEND THIS",
+        "label": "WHO THEY ARE",
+        "title": "Mostly ordinary people",
+        "body": "Often students, gig workers or people who needed a little extra money. Many were told it was a \"job\". The I4C suspect registry shares these accounts with banks so the money can be frozen."
+      },
+      {
+        "label": "THE TWIST",
+        "kind": "beat",
+        "body": "The scammer disappears. *The mule takes the fall.*"
+      },
+      {
+        "label": "NEXT FILE",
+        "kind": "beat",
+        "body": "At the other end: the very rich, hiding money in *secret companies abroad.* Until the files leaked.",
+        "title": "FILE #08"
+      },
+      {
+        "label": "FOLLOW THE FILES",
         "kind": "share",
         "title": "Never rent your account",
-        "body": "Send this to anyone who got an \"easy money\" job offer."
+        "body": "Send this to the cousin who got an \"easy money\" job offer.",
+        "followLine": "FILE #08 DROPS NEXT. FOLLOW SO YOU DON'T MISS IT."
       }
     ],
     "collage": {
       "palette": "noir",
       "ai": false,
-      "kicker": "BLACK MONEY FILES · #04",
+      "kicker": "BLACK MONEY FILES · #07",
       "plate": "atm-card",
       "strips": [
         "24.67 lakh",
@@ -97,21 +130,42 @@
     "captionHeadline": "₹14,636 crore of hidden foreign income, taxed after the Panama, Paradise and Pandora leaks.",
     "summary": "And under the Black Money Act, the tax department raised ₹4,009.64 crore in FY26 (April to December), with 1,368 assessments and 167 prosecutions filed.",
     "forYou": "None of it was found by a raid. It was found because someone leaked the files.",
-    "cta": "Send this to someone who thinks offshore means safe.",
+    "cta": "Send this to someone who thinks offshore means safe. Follow @postr.news: File #09 drops next.",
     "slides": [
       {
-        "label": "THE LEAKS",
-        "title": "Three leaks, one pattern",
+        "label": "2016",
+        "kind": "beat",
+        "body": "A law firm in *Panama* that kept the world's secrets. Then someone *leaked* them.",
+        "title": "THE FIRST LEAK"
+      },
+      {
+        "label": "11.5 MILLION FILES",
+        "kind": "beat",
+        "body": "Secret companies. Hidden owners. *Indian names among them.*"
+      },
+      {
+        "label": "THEN TWO MORE",
+        "kind": "beat",
+        "body": "*Paradise Papers*, 2017. *Pandora Papers*, 2021."
+      },
+      {
+        "label": "HOW IT WORKS",
+        "title": "How money hides offshore",
         "points": [
-          "Panama Papers, 2016",
-          "Paradise Papers, 2017",
-          "Pandora Papers, 2021",
-          "Secret offshore companies, exposed by journalists"
+          "Set up a company in a tax haven",
+          "Put someone else's name on it as owner",
+          "Move money in, out of sight of tax officers",
+          "Bring it back as \"investment\" years later"
         ]
       },
       {
-        "label": "THE BILL",
-        "title": "What India collected",
+        "label": "INDIA'S BILL",
+        "kind": "beat",
+        "body": "*₹14,636 crore* of hidden foreign income, taxed after the leaks."
+      },
+      {
+        "label": "THE CRACKDOWN",
+        "title": "Under the Black Money Act",
         "stats": [
           {
             "label": "Hidden income taxed",
@@ -119,8 +173,12 @@
             "hi": true
           },
           {
-            "label": "Black Money Act tax, FY26",
+            "label": "Tax raised, FY26 (Apr–Dec)",
             "value": "₹4,010 CR"
+          },
+          {
+            "label": "Assessments, FY26",
+            "value": "1,368"
           },
           {
             "label": "Prosecutions, FY26",
@@ -131,14 +189,26 @@
       },
       {
         "label": "THE TWIST",
-        "title": "Found by a leak, not a raid",
-        "body": "Offshore money is built to be invisible. It took millions of leaked documents for it to show up."
+        "kind": "beat",
+        "body": "None of it was found by a raid. It was found because *someone leaked the files.*"
       },
       {
-        "label": "SEND THIS",
+        "label": "THE QUESTION",
+        "kind": "beat",
+        "body": "How many offshore companies *haven't* leaked yet?"
+      },
+      {
+        "label": "NEXT FILE",
+        "kind": "beat",
+        "body": "You don't need a tax haven. *17,818* companies existed only on paper. *Right here.*",
+        "title": "FILE #09"
+      },
+      {
+        "label": "FOLLOW THE FILES",
         "kind": "share",
         "title": "Offshore isn't safe",
-        "body": "Send this to the friend who says the rich never get caught."
+        "body": "Send this to the friend who says the rich never get caught.",
+        "followLine": "FILE #09 DROPS NEXT. FOLLOW SO YOU DON'T MISS IT."
       }
     ],
     "collage": {
@@ -180,21 +250,42 @@
     "captionHeadline": "17,818 companies that existed only on paper. Between them: ₹35,132 crore of suspected GST tax credit claimed.",
     "summary": "That's what tax officers found in a special drive against fake GST registrations from April to October 2024. 69 people were arrested.",
     "forYou": "No office. No goods. Just invoices.",
-    "cta": "Send this to your CA friend. They already know.",
+    "cta": "Send this to your CA friend. They already know. Follow @postr.news: File #10 drops next.",
     "slides": [
+      {
+        "label": "THE ADDRESS",
+        "kind": "beat",
+        "body": "A company registered at a shop. A flat. Sometimes *a place that doesn't exist.*",
+        "title": "ON PAPER"
+      },
+      {
+        "label": "THE BUSINESS",
+        "kind": "beat",
+        "body": "No office. No staff. No goods. *Just invoices.*"
+      },
+      {
+        "label": "THE MONEY",
+        "kind": "beat",
+        "body": "Every fake invoice lets someone claim *tax credit* from the government."
+      },
       {
         "label": "THE TRICK",
         "title": "How a ghost firm makes money",
         "points": [
           "Register a company on paper",
           "Issue invoices for goods that never move",
-          "Claim tax credit on those fake invoices",
+          "Claim GST tax credit on those invoices",
           "Shut it down before anyone visits"
         ]
       },
       {
         "label": "THE DRIVE",
-        "title": "What officers found",
+        "kind": "beat",
+        "body": "April to October 2024. Officers start checking the addresses. *17,818* firms are fake."
+      },
+      {
+        "label": "WHAT THEY FOUND",
+        "title": "The ghost company count",
         "stats": [
           {
             "label": "Fake firms",
@@ -213,15 +304,27 @@
         "statsNote": "APR–OCT 2024 · LOK SABHA"
       },
       {
-        "label": "THE TWIST",
+        "label": "THE FACES",
         "title": "Some used other people's IDs",
-        "body": "Fake registrations are often made with borrowed or stolen identity documents, so the real owner stays out of sight."
+        "body": "Fake registrations are often made with borrowed or stolen identity documents. The person named as owner may have no idea a company exists in their name."
       },
       {
-        "label": "SEND THIS",
+        "label": "THE TWIST",
+        "kind": "beat",
+        "body": "You don't need a Swiss bank. You need *a PAN card* and *a printer.*"
+      },
+      {
+        "label": "NEXT FILE",
+        "kind": "beat",
+        "body": "The last file: an app on your phone, where *the house always wins.*",
+        "title": "FILE #10"
+      },
+      {
+        "label": "FOLLOW THE FILES",
         "kind": "share",
         "title": "Ghost companies are real",
-        "body": "Send this to your friend who runs a small business."
+        "body": "Send this to your CA friend. They already know.",
+        "followLine": "FILE #10 DROPS NEXT. FOLLOW SO YOU DON'T MISS IT."
       }
     ],
     "collage": {
@@ -259,44 +362,66 @@
     "captionHeadline": "₹3.3 crore in cash, plus counting machines, found in raids on illegal betting and \"dabba trading\" apps.",
     "summary": "The Enforcement Directorate says ready-made \"white-label\" betting apps were handed out with admin rights in return for a share of the profits, and a hawala operator moved the money. All accused are innocent until proven guilty.",
     "forYou": "The app doesn't need you to win. It just needs you to keep playing.",
-    "cta": "Send this to the friend who says \"bas ek last bet\".",
+    "cta": "Send this to the friend who says \"bas ek last bet\". Follow @postr.news for Season 2.",
     "slides": [
+      {
+        "label": "THE AD",
+        "kind": "beat",
+        "body": "*\"Win ₹10 lakh today.\"* On your Instagram. Your Telegram. Your cricket stream.",
+        "title": "YOU'VE SEEN IT"
+      },
+      {
+        "label": "THE APP",
+        "kind": "beat",
+        "body": "Looks like a game. Feels like a game. *Isn't a game.*"
+      },
+      {
+        "label": "JULY 2025",
+        "kind": "beat",
+        "body": "The Enforcement Directorate raids betting and *dabba trading* apps in *Mumbai.*"
+      },
       {
         "label": "THE MODEL",
         "title": "A betting app, franchised",
         "points": [
-          "A ready-made betting app is built once",
+          "A ready-made \"white-label\" betting app is built once",
           "Copies are handed out with admin control",
-          "Each operator shares the profit",
-          "Hawala moves the cash, says the ED"
+          "Each operator shares the profits",
+          "A hawala operator moves the cash, the ED says"
         ]
       },
       {
         "label": "THE RAID",
-        "title": "What the ED says it found",
-        "stats": [
-          {
-            "label": "Cash",
-            "value": "₹3.3 CR",
-            "hi": true
-          },
-          {
-            "label": "Counting machines",
-            "value": "SEIZED"
-          }
-        ],
-        "statsNote": "ED, MUMBAI, JUL 2025"
+        "kind": "beat",
+        "body": "*₹3.3 crore* in cash. And *counting machines.*"
+      },
+      {
+        "label": "DABBA TRADING",
+        "title": "Fake stock market, real losses",
+        "body": "Dabba trading means betting on share prices outside the stock exchange. No regulator, no protection, and the money never touches a real market. All accused are innocent until proven guilty."
       },
       {
         "label": "THE TWIST",
-        "title": "The house always wins",
-        "body": "With admin rights, the operator controls the app. Players see odds. The operator sees everything."
+        "kind": "beat",
+        "body": "With admin rights, the operator *controls the app.* The player controls nothing."
       },
       {
-        "label": "SEND THIS",
+        "label": "THE LESSON",
+        "kind": "beat",
+        "body": "The app doesn't need you to win. It needs you to *keep playing.*"
+      },
+      {
+        "label": "THAT'S THE FILES",
+        "kind": "beat",
+        "body": "10 files. One pattern. *Follow the money.*",
+        "title": "SEASON 1"
+      },
+      {
+        "label": "FOLLOW THE FILES",
         "kind": "share",
         "title": "Bas ek last bet?",
-        "body": "Send this to the friend who is always on a betting app."
+        "body": "Send this to the friend who is always on a betting app.",
+        "followLine": "NEW FILES EVERY WEEK. FOLLOW THE MONEY."
       }
     ],
     "collage": {

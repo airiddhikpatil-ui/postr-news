@@ -57,11 +57,11 @@ function validate(story) {
   }
   if (story.note) need(words(story.note) <= 14, 'context line: 14 words maximum');
   if (story.slides !== undefined) {
-    need(Array.isArray(story.slides) && story.slides.length >= 2 && story.slides.length <= 4, 'carousel: 2 to 4 detail pages after the cover (3 to 5 pages in all)');
+    need(Array.isArray(story.slides) && story.slides.length >= 2 && story.slides.length <= 12, 'carousel: 2 to 12 detail pages after the cover (3 to 13 pages in all)');
     (story.slides || []).forEach((sl, i) => {
       const n = `page ${i + 2}`;
       need(sl && sl.label, `${n}: label is required`);
-      need(sl && sl.title && words(sl.title) <= 12, `${n}: title is required, 12 words maximum`);
+      need(sl && (sl.title || sl.kind === 'beat') && words(sl.title || '') <= 12, `${n}: title is required, 12 words maximum`);
       need(!/!/.test((sl && sl.title) || ''), `${n}: no exclamation marks in titles`);
       if (sl && sl.body) need(words(sl.body) <= 55, `${n}: body 55 words maximum`);
       if (sl && sl.points) need(sl.points.length <= 4 && sl.points.every((pt) => words(pt) <= 16), `${n}: up to 4 points, 16 words each`);

@@ -48,10 +48,17 @@ const pageShell = (cls, css, body) => `<!doctype html><html><head><meta charset=
 ${css}</style></head><body class="${cls}"><div class="pg">${body}</div>${FIT}</body></html>`;
 
 // Shared inner-page markup; each style themes it with CSS.
+const mark = (t) => esc(t).replace(/\*(.+?)\*/g, '<em>$1</em>');
 function inner(story, sl, i, total, o) {
+  if (sl.kind === 'beat') {
+    return `${o.deco || ''}
+<div class="hdr"><span class="lbl">${esc(sl.label)}</span><span class="mt">${esc(o.meta || '')}</span><span class="pgn">${String(i).padStart(2, '0')}/${String(total).padStart(2, '0')}</span></div>
+<div class="beat">${sl.title ? `<div class="bt-k">${esc(sl.title)}</div>` : ''}<div class="bt${String(sl.body).split(/\s+/).length <= 5 ? ' big' : ''}" data-fit data-min="44">${mark(sl.body)}</div></div>
+<div class="ft"><span>SOURCE · ${esc(story.source)}</span><span class="sw">${i < total ? 'SWIPE →' : 'SHARE ↗'}</span><img src="${wm(o.tone)}"></div>`;
+  }
   let content = '';
   if (sl.kind === 'share') {
-    content = `<div class="sharebox"><div class="sh-k">FOLLOW FOR NEWS THAT HITS DIFFERENT</div><div class="sh-h">@postr.news</div><div class="sh-acts"><span>SAVE</span><span>SEND</span><span>FOLLOW</span></div></div>`;
+    content = `<div class="sharebox"><div class="sh-k">${esc(sl.followLine || 'FOLLOW FOR NEWS THAT HITS DIFFERENT')}</div><div class="sh-h">@postr.news</div><div class="sh-acts"><span>SAVE</span><span>SEND</span><span>FOLLOW</span></div></div>`;
   } else if (sl.stats) {
     const max = Math.max(...sl.stats.map((x) => (typeof x.num === 'number' ? x.num : 0)));
     content = `<div class="stats">${sl.stats.map((x) => `<div class="st${x.hi ? ' hi' : ''}"><div class="st-l">${esc(x.label)}</div><div class="st-v">${esc(x.value)}</div>${max > 0 && typeof x.num === 'number' ? `<div class="st-b"><i style="width:${Math.max(4, (x.num / max) * 100)}%"></i></div>` : ''}</div>`).join('')}</div>${sl.statsNote ? `<div class="snote">${esc(sl.statsNote)}</div>` : ''}`;
@@ -498,6 +505,12 @@ const NOIR_CSS = `.crumple{mix-blend-mode:screen!important;opacity:.07!important
 .foot b,.lbl,.snote,.sw,h2 .hl{background:#D4A72C!important;color:#0A0A0A!important}
 .kick img,.hdr img,.ft img{filter:invert(1)}
 .pgn,.pt,.bd,.stats,.sharebox{color:#111}
+.beat{position:absolute;left:64px;right:64px;top:170px;bottom:150px;display:flex;flex-direction:column;justify-content:center;gap:34px}
+.bt-k{font:700 26px 'Space Mono';letter-spacing:4px;text-transform:uppercase;color:#D4A72C}
+.bt{font:400 112px/1.16 Anton;text-transform:uppercase;color:#F4F1EA;max-height:900px;overflow:hidden}
+.bt.big{font-size:230px;line-height:1}
+.bt em{font-style:normal;color:#0A0A0A;background:#D4A72C;padding:0 12px;line-height:1.16;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.bt em:nth-of-type(2n){background:#C1121F;color:#F4F1EA}
 .ghost{position:absolute;left:-40px;top:840px;font:400 330px/0.86 Anton;color:transparent;-webkit-text-stroke:3px #D4A72C;opacity:.3;text-transform:uppercase;transform:rotate(-4deg);white-space:nowrap}
 .redact{position:absolute;left:60px;height:44px;background:#F4F1EA;opacity:.9}`;
 const plateCache = {};
