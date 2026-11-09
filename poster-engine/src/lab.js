@@ -11,6 +11,7 @@ const NOISE = `<svg class="noise" width="1080" height="1350"><filter id="nz"><fe
 
 // Fit script: shrink any [data-fit] box until its text fits both ways.
 const FIT = `<script>window.__fit=()=>{
+document.querySelectorAll('.strip').forEach(el=>{el.style.fontSize='';const max=+el.dataset.max||980;let f=parseFloat(getComputedStyle(el).fontSize);while(el.getBoundingClientRect().width>max&&f>40){f-=2;el.style.fontSize=f+'px';}});
 const tall=(el)=>{const r=document.createRange();r.selectNodeContents(el);const tops=[];[...r.getClientRects()].forEach(x=>{if(x.width>1&&!tops.some(t=>Math.abs(t-x.top)<4))tops.push(x.top)});const cs=getComputedStyle(el);const lh=parseFloat(cs.lineHeight)||parseFloat(cs.fontSize)*1.2;return tops.length*lh;};
 const wide=(el)=>{const r=document.createRange();r.selectNodeContents(el);const a=r.getBoundingClientRect(),b=el.getBoundingClientRect();const t=parseFloat(getComputedStyle(el).fontSize)*0.06;return a.right>b.right+t||a.left<b.left-t;};
 const over=(el)=>el.scrollWidth>el.clientWidth+1||wide(el)||tall(el)>el.clientHeight+2;
