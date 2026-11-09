@@ -183,7 +183,8 @@ async function postNextReel(outDir, targets) {
   const pagesById = {};
   let bad = 0;
   for (const st of stories) {
-    const { files, errors } = await renderCarousel(st, outDir);
+    const classic = process.env.DESIGN === 'classic' || st.design === 'classic';
+    const { files, errors } = classic ? await renderCarousel(st, outDir) : await renderLabCarousel(st, outDir);
     if (errors.length) { bad++; note(`Rejected ${st.id}: ${errors.join('; ')}`, 'warning'); }
     pagesById[st.id] = files;
   }
