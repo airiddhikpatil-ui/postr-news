@@ -4,259 +4,6 @@
     "format": "alert",
     "lang": "en",
     "forYouLabel": "The twist",
-    "id": "bm-demonetisation",
-    "headline": "Notebandi's missing money",
-    "coverBig": "99.3%",
-    "time": "Nov 2016",
-    "source": "RBI Annual Report 2017-18",
-    "sourceUrl": "https://rbi.org.in/",
-    "tags": [
-      "BlackMoney",
-      "Demonetisation",
-      "Notebandi"
-    ],
-    "captionHeadline": "The note ban was meant to trap black money. Then 99.3% of the banned cash walked straight back into the banks.",
-    "summary": "₹15.41 lakh crore of ₹500 and ₹1,000 notes were cancelled overnight in November 2016. By the RBI's own count, ₹15.31 lakh crore came back. Only about ₹10,720 crore never returned.",
-    "forYou": "If the black money never stayed in cash, it was already somewhere else. Gold. Property. Abroad.",
-    "cta": "Send this to the uncle who still says \"notebandi finished black money\". Follow @postr.news: File #02 drops next.",
-    "slides": [
-      {
-        "label": "8 NOV 2016",
-        "kind": "beat",
-        "body": "The Prime Minister comes on TV. In *four hours*, every ₹500 and ₹1,000 note becomes paper.",
-        "title": "8:00 PM"
-      },
-      {
-        "label": "THE PANIC",
-        "kind": "beat",
-        "body": "86% of India's cash. *Gone overnight.* Queues outside every bank and ATM."
-      },
-      {
-        "label": "THE PLAN",
-        "title": "Trap the hoarders",
-        "body": "The logic: anyone sitting on sacks of black cash can't walk into a bank and deposit it without being asked where it came from. So that money would simply die."
-      },
-      {
-        "label": "THE COUNT",
-        "kind": "beat",
-        "body": "Then the RBI started counting what came back. *It took almost two years.*"
-      },
-      {
-        "label": "THE NUMBERS",
-        "title": "What came back",
-        "stats": [
-          {
-            "label": "Notes banned",
-            "value": "₹15.41 L CR",
-            "num": 15.41
-          },
-          {
-            "label": "Came back",
-            "value": "₹15.31 L CR",
-            "num": 15.31,
-            "hi": true
-          },
-          {
-            "label": "Never returned",
-            "value": "₹10,720 CR",
-            "num": 0.11
-          }
-        ],
-        "statsNote": "RBI ANNUAL REPORT 2017-18"
-      },
-      {
-        "label": "THE RESULT",
-        "kind": "beat",
-        "body": "*99.3%* came back.",
-        "title": "ALMOST ALL OF IT"
-      },
-      {
-        "label": "THE THEORIES",
-        "title": "Two ways to explain it",
-        "points": [
-          "There was far less black cash than everyone believed",
-          "Or it was pushed back in through other people's accounts",
-          "The tax department launched \"Operation Clean Money\" to chase deposits",
-          "The sacks of cash everyone imagined were never found"
-        ]
-      },
-      {
-        "label": "THE TWIST",
-        "kind": "beat",
-        "body": "Black money was never really sitting in cash. It was in *gold*, in *land*, and *abroad*.",
-        "title": "THE LIKELY ANSWER"
-      },
-      {
-        "label": "BUT",
-        "kind": "beat",
-        "body": "Some of it was still in cash. *₹351 crore* of it, in cupboards, seven years later.",
-        "title": "NEXT FILE"
-      },
-      {
-        "label": "FOLLOW THE FILES",
-        "kind": "share",
-        "title": "Notebandi, by the numbers",
-        "body": "Send this to the uncle who still believes the note ban finished black money.",
-        "followLine": "FILE #02 DROPS NEXT. FOLLOW SO YOU DON'T MISS IT."
-      }
-    ],
-    "collage": {
-      "palette": "future",
-      "ai": false,
-      "kicker": "BLACK MONEY FILES · #01",
-      "plate": "cash-hand",
-      "strips": [
-        "99.3% came back",
-        "of the banned notes",
-        "notebandi · 2016"
-      ],
-      "note": "All of it came home.",
-      "cta": "WHERE IT WENT",
-      "sourceShort": "RBI ANNUAL REPORT 2017-18",
-      "who": {
-        "h": 980,
-        "right": -250,
-        "bottom": -60
-      }
-    },
-    "studio": {
-      "photos": [
-        "ph-note500",
-        "ph-cash",
-        "ph-notes"
-      ],
-      "file": "#01",
-      "series": "BLACK MONEY FILES",
-      "offset": 0
-    }
-  },
-  {
-    "style": "studio",
-    "format": "alert",
-    "lang": "en",
-    "forYouLabel": "The twist",
-    "id": "bm-biggest-raid",
-    "headline": "₹351 crore cash",
-    "coverBig": "₹351 CR",
-    "time": "Dec 2023",
-    "source": "Income Tax Department searches, Dec 2023 (as reported by PTI and others)",
-    "sourceUrl": "https://incometaxindia.gov.in/",
-    "tags": [
-      "BlackMoney",
-      "IncomeTaxRaid",
-      "TrueCrimeIndia"
-    ],
-    "captionHeadline": "₹351 crore. In cash. Officers needed 36 counting machines and about 10 days to count it.",
-    "summary": "In December 2023, Income Tax searches on a liquor business group in Odisha found cash stacked in cupboards and bags. It was reported as the biggest cash seizure by any agency in a single operation in India.",
-    "forYou": "Even the counting machines struggled to keep up.",
-    "cta": "Send this to someone who thinks they work hard for their money. Follow @postr.news: File #03 drops next.",
-    "slides": [
-      {
-        "label": "DECEMBER 2023",
-        "kind": "beat",
-        "body": "Income Tax officers search premises of a liquor business group in *Odisha*.",
-        "title": "A TAX SEARCH"
-      },
-      {
-        "label": "THEN",
-        "kind": "beat",
-        "body": "They open the cupboards. *Bundles.* Then the bags. *More bundles.*"
-      },
-      {
-        "label": "THE COUNTING",
-        "kind": "beat",
-        "body": "*36* cash-counting machines. Running for about *10 days*."
-      },
-      {
-        "label": "THE SCALE",
-        "title": "What the searches turned up",
-        "stats": [
-          {
-            "label": "Cash seized",
-            "value": "₹351 CR",
-            "hi": true
-          },
-          {
-            "label": "Counting machines",
-            "value": "36"
-          },
-          {
-            "label": "Days to count",
-            "value": "~10"
-          }
-        ],
-        "statsNote": "AS REPORTED, DEC 2023"
-      },
-      {
-        "label": "THE RECORD",
-        "kind": "beat",
-        "body": "Reported as the *biggest cash seizure* by any agency in a single operation in India."
-      },
-      {
-        "label": "WHY CASH",
-        "title": "Why anyone keeps this much paper",
-        "body": "Cash leaves no bank record. No statement, no transfer, no trail. That's exactly why it's the oldest way to hide money, and why a note ban was supposed to kill it."
-      },
-      {
-        "label": "THE TWIST",
-        "kind": "beat",
-        "body": "This was *seven years after* demonetisation.",
-        "title": "REMEMBER FILE #01?"
-      },
-      {
-        "label": "THE QUESTION",
-        "kind": "beat",
-        "body": "If this much was in cupboards, *how much was never found?*"
-      },
-      {
-        "label": "NEXT FILE",
-        "kind": "beat",
-        "body": "Some people don't hide it in cupboards. They hide it *inside a plane toilet.*",
-        "title": "FILE #03"
-      },
-      {
-        "label": "FOLLOW THE FILES",
-        "kind": "share",
-        "title": "India's biggest cash haul",
-        "body": "Send this to the friend who complains about their salary.",
-        "followLine": "FILE #03 DROPS NEXT. FOLLOW SO YOU DON'T MISS IT."
-      }
-    ],
-    "collage": {
-      "palette": "future",
-      "ai": false,
-      "kicker": "BLACK MONEY FILES · #02",
-      "plate": "cash-hand",
-      "strips": [
-        "₹351 crore",
-        "in cash. one raid.",
-        "36 counting machines"
-      ],
-      "note": "Ten days to count it.",
-      "cta": "INSIDE THE RAID",
-      "sourceShort": "INCOME TAX SEARCHES, DEC 2023",
-      "who": {
-        "h": 980,
-        "right": -250,
-        "bottom": -60
-      }
-    },
-    "studio": {
-      "photos": [
-        "ph-cash",
-        "ph-hallway",
-        "ph-notes"
-      ],
-      "file": "#02",
-      "series": "BLACK MONEY FILES",
-      "offset": 1
-    }
-  },
-  {
-    "style": "studio",
-    "format": "alert",
-    "lang": "en",
-    "forYouLabel": "The twist",
     "id": "bm-gold-toilet",
     "headline": "Gold in toilet",
     "coverBig": "12 KG",
@@ -738,6 +485,257 @@
       "file": "#06",
       "series": "BLACK MONEY FILES",
       "offset": 5
+    }
+  },
+  {
+    "style": "studio",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-mule-accounts",
+    "headline": "Mule account army",
+    "coverBig": "24.67 LAKH",
+    "time": "Dec 2025",
+    "source": "Lok Sabha reply on the I4C suspect registry, Dec 2025",
+    "sourceUrl": "https://sansad.in/ls",
+    "tags": [
+      "MuleAccount",
+      "CyberFraud",
+      "BlackMoney"
+    ],
+    "captionHeadline": "24.67 lakh bank accounts in India were flagged as \"mules\", used to move scam money so it can't be traced.",
+    "summary": "The government's cyber crime centre (I4C) runs a suspect registry with banks. It says the registry has helped block ₹8,031.56 crore. Many mules are ordinary people who \"rent out\" an account for a small cut.",
+    "forYou": "The scammer disappears. The account holder is the one the police find.",
+    "cta": "Send this to the cousin who got a \"₹5,000 a month for your account\" offer. Follow @postr.news: File #08 drops next.",
+    "slides": [
+      {
+        "label": "THE OFFER",
+        "kind": "beat",
+        "body": "*\"₹5,000 a month. Just let us use your bank account.\"*",
+        "title": "A TYPICAL OFFER"
+      },
+      {
+        "label": "IT SOUNDS EASY",
+        "kind": "beat",
+        "body": "You do nothing. Money comes in. Money goes out. *You keep a cut.*"
+      },
+      {
+        "label": "WHAT YOU BECAME",
+        "kind": "beat",
+        "body": "A *money mule.* The last link in someone else's scam."
+      },
+      {
+        "label": "HOW IT WORKS",
+        "title": "Your account, their money",
+        "points": [
+          "A scam victim sends money to your account",
+          "It's moved out within minutes",
+          "It hops through more accounts until it vanishes",
+          "Your name is the one left on the trail"
+        ]
+      },
+      {
+        "label": "THE SCALE",
+        "title": "What the registry found",
+        "stats": [
+          {
+            "label": "Layer-1 mule accounts",
+            "value": "24.67 LAKH",
+            "hi": true
+          },
+          {
+            "label": "Money blocked",
+            "value": "₹8,031 CR"
+          }
+        ],
+        "statsNote": "LOK SABHA REPLY, DEC 2025"
+      },
+      {
+        "label": "THE NUMBER",
+        "kind": "beat",
+        "body": "*24.67 lakh* accounts. Flagged by the government's cyber crime centre."
+      },
+      {
+        "label": "WHO THEY ARE",
+        "title": "Mostly ordinary people",
+        "body": "Often students, gig workers or people who needed a little extra money. Many were told it was a \"job\". The I4C suspect registry shares these accounts with banks so the money can be frozen."
+      },
+      {
+        "label": "THE TWIST",
+        "kind": "beat",
+        "body": "The scammer disappears. *The mule takes the fall.*"
+      },
+      {
+        "label": "NEXT FILE",
+        "kind": "beat",
+        "body": "At the other end: the very rich, hiding money in *secret companies abroad.* Until the files leaked.",
+        "title": "FILE #08"
+      },
+      {
+        "label": "FOLLOW THE FILES",
+        "kind": "share",
+        "title": "Never rent your account",
+        "body": "Send this to the cousin who got an \"easy money\" job offer.",
+        "followLine": "FILE #08 DROPS NEXT. FOLLOW SO YOU DON'T MISS IT."
+      }
+    ],
+    "collage": {
+      "palette": "future",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #07",
+      "plate": "atm-card",
+      "strips": [
+        "24.67 lakh",
+        "mule accounts",
+        "moving scam money"
+      ],
+      "note": "Rented for a cut. Left holding the case.",
+      "cta": "HOW IT WORKS",
+      "sourceShort": "LOK SABHA REPLY, DEC 2025",
+      "who": {
+        "h": 1050,
+        "right": -230,
+        "bottom": -60
+      }
+    },
+    "studio": {
+      "photos": [
+        "atm-card-cut",
+        "ph-phone-man"
+      ],
+      "file": "#07",
+      "series": "BLACK MONEY FILES",
+      "offset": 6
+    }
+  },
+  {
+    "style": "studio",
+    "format": "alert",
+    "lang": "en",
+    "forYouLabel": "The twist",
+    "id": "bm-leaked-papers",
+    "headline": "Leaked offshore files",
+    "coverBig": "₹14,636 CR",
+    "time": "Mar 2026",
+    "source": "Government reply in Lok Sabha, 23 Mar 2026",
+    "sourceUrl": "https://sansad.in/ls",
+    "tags": [
+      "PanamaPapers",
+      "PandoraPapers",
+      "BlackMoney"
+    ],
+    "captionHeadline": "₹14,636 crore of hidden foreign income, taxed after the Panama, Paradise and Pandora leaks.",
+    "summary": "And under the Black Money Act, the tax department raised ₹4,009.64 crore in FY26 (April to December), with 1,368 assessments and 167 prosecutions filed.",
+    "forYou": "None of it was found by a raid. It was found because someone leaked the files.",
+    "cta": "Send this to someone who thinks offshore means safe. Follow @postr.news: File #09 drops next.",
+    "slides": [
+      {
+        "label": "2016",
+        "kind": "beat",
+        "body": "A law firm in *Panama* that kept the world's secrets. Then someone *leaked* them.",
+        "title": "THE FIRST LEAK"
+      },
+      {
+        "label": "11.5 MILLION FILES",
+        "kind": "beat",
+        "body": "Secret companies. Hidden owners. *Indian names among them.*"
+      },
+      {
+        "label": "THEN TWO MORE",
+        "kind": "beat",
+        "body": "*Paradise Papers*, 2017. *Pandora Papers*, 2021."
+      },
+      {
+        "label": "HOW IT WORKS",
+        "title": "How money hides offshore",
+        "points": [
+          "Set up a company in a tax haven",
+          "Put someone else's name on it as owner",
+          "Move money in, out of sight of tax officers",
+          "Bring it back as \"investment\" years later"
+        ]
+      },
+      {
+        "label": "INDIA'S BILL",
+        "kind": "beat",
+        "body": "*₹14,636 crore* of hidden foreign income, taxed after the leaks."
+      },
+      {
+        "label": "THE CRACKDOWN",
+        "title": "Under the Black Money Act",
+        "stats": [
+          {
+            "label": "Hidden income taxed",
+            "value": "₹14,636 CR",
+            "hi": true
+          },
+          {
+            "label": "Tax raised, FY26 (Apr–Dec)",
+            "value": "₹4,010 CR"
+          },
+          {
+            "label": "Assessments, FY26",
+            "value": "1,368"
+          },
+          {
+            "label": "Prosecutions, FY26",
+            "value": "167"
+          }
+        ],
+        "statsNote": "LOK SABHA, 23 MAR 2026"
+      },
+      {
+        "label": "THE TWIST",
+        "kind": "beat",
+        "body": "None of it was found by a raid. It was found because *someone leaked the files.*"
+      },
+      {
+        "label": "THE QUESTION",
+        "kind": "beat",
+        "body": "How many offshore companies *haven't* leaked yet?"
+      },
+      {
+        "label": "NEXT FILE",
+        "kind": "beat",
+        "body": "You don't need a tax haven. *17,818* companies existed only on paper. *Right here.*",
+        "title": "FILE #09"
+      },
+      {
+        "label": "FOLLOW THE FILES",
+        "kind": "share",
+        "title": "Offshore isn't safe",
+        "body": "Send this to the friend who says the rich never get caught.",
+        "followLine": "FILE #09 DROPS NEXT. FOLLOW SO YOU DON'T MISS IT."
+      }
+    ],
+    "collage": {
+      "palette": "future",
+      "ai": false,
+      "kicker": "BLACK MONEY FILES · #08",
+      "plate": "hood",
+      "strips": [
+        "₹14,636 crore",
+        "hidden abroad. taxed.",
+        "panama · paradise · pandora"
+      ],
+      "note": "Exposed by a leak.",
+      "cta": "WHAT INDIA COLLECTED",
+      "sourceShort": "LOK SABHA, 23 MAR 2026",
+      "who": {
+        "h": 1100,
+        "right": -40,
+        "bottom": -40
+      }
+    },
+    "studio": {
+      "photos": [
+        "ph-papers-fly",
+        "ph-papers-desk",
+        "ph-hood"
+      ],
+      "file": "#08",
+      "series": "BLACK MONEY FILES",
+      "offset": 7
     }
   }
 ]
